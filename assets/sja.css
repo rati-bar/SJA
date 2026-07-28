@@ -68,7 +68,7 @@ small { color: var(--muted); }
   position: sticky; top: 0; height: 100vh; overflow-y: auto;
 }
 .brand { display: flex; align-items: center; gap: 10px; padding: 6px 8px 16px; }
-.brand img { width: 40px; height: 40px; background:#fff; border-radius: 10px; padding:3px; }
+.brand img { width: 42px; height: 42px; background:#fff; border-radius: 10px; padding:5px 8px; object-fit: contain; }
 .brand .b-title { color: #fff; font-weight: 700; font-size: 14px; letter-spacing:.2px; line-height:1.1; }
 .brand .b-sub { color: #9aa6cf; font-size: 10.5px; text-transform: uppercase; letter-spacing: 1px; }
 
