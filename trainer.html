@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SJA — ტრენერის ინტერფეისი</title>
+<link rel="icon" href="assets/logo.svg">
+<link rel="stylesheet" href="assets/sja.css">
+</head>
+<body>
+<span class="blob b2"></span>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html" title="მთავარი / როლის არჩევა">
+      <img src="assets/logo.svg" alt="SJA">
+      <div><div class="b-title">Steve Jobs<br>American Academy</div><div class="b-sub">Trainer</div></div>
+    </a>
+    <span class="role-chip" style="background:rgba(170,203,92,.22); border-color:rgba(170,203,92,.4)">🎓 ტრენერი</span>
+
+    <div class="nav-group-label">მთავარი</div>
+    <div class="nav-item active" data-target="dashboard" data-title="მთავარი პანელი" data-crumb="Dashboard"><span class="ic">📊</span> მთავარი პანელი</div>
+
+    <div class="nav-group-label">სასწავლო</div>
+    <div class="nav-item" data-target="groups"    data-title="ჩემი ჯგუფები"><span class="ic">👥</span> ჩემი ჯგუფები <span class="count">3</span></div>
+    <div class="nav-item" data-target="schedule"  data-title="განრიგი"><span class="ic">📅</span> განრიგი</div>
+    <div class="nav-item" data-target="attendance" data-title="დასწრება და შეფასება"><span class="ic">✅</span> დასწრება</div>
+    <div class="nav-item" data-target="materials" data-title="სასწავლო მასალა"><span class="ic">📚</span> სასწავლო მასალა</div>
+
+    <div class="nav-group-label">დოკუმენტბრუნვა</div>
+    <div class="nav-item" data-target="reports"     data-title="რეპორტები"><span class="ic">📑</span> რეპორტები <span class="count">2</span></div>
+    <div class="nav-item" data-target="evaluations" data-title="შეფასებები"><span class="ic">⭐</span> შეფასებები</div>
+
+    <div class="nav-group-label">დახმარება</div>
+    <div class="nav-item" data-target="knowledge" data-title="AI ასისტენტი"><span class="ic">🤖</span> AI ასისტენტი</div>
+    <div class="nav-item" data-target="profile"   data-title="პროფილი"><span class="ic">👤</span> პროფილი</div>
+
+    <div class="sidebar-foot"><div class="who"><span class="avatar green">ს.ა</span>
+      <div><div style="color:#fff; font-size:13px; font-weight:600">სანდრო აბაშიძე</div><div style="color:#9aa6cf; font-size:11px">Front-end · ვაკე</div></div></div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div><div class="crumb"><span id="crumb">Dashboard</span></div><h1 id="page-title">მთავარი პანელი</h1></div>
+      <div class="spacer"></div>
+      <div class="search">🔎 <span>ძებნა — მოსწავლე, ჯგუფი…</span></div>
+      <div class="icon-btn">🔔<span class="dot"></span></div>
+    </div>
+
+    <div class="content">
+
+    <!-- DASHBOARD -->
+    <section class="view active" data-view="dashboard">
+      <div class="page-head">
+        <div class="titles"><h2>გამარჯობა, სანდრო 👋</h2><p>დღეს ორშაბათია · გაქვთ 1 ლექცია და 2 შესავსები რეპორტი</p></div>
+        <div class="actions"><button class="btn primary" data-goto="attendance">დღევანდელი დასწრება</button></div>
+      </div>
+      <div class="grid g-4">
+        <div class="kpi"><div class="k-ic tint-savoy">👥</div><div class="k-val">3</div><div class="k-label">აქტიური ჯგუფი</div></div>
+        <div class="kpi"><div class="k-ic tint-green">🧑‍🎓</div><div class="k-val">51</div><div class="k-label">სულ მოსწავლე</div></div>
+        <div class="kpi"><div class="k-ic tint-yellow">📑</div><div class="k-val">2</div><div class="k-label">შესავსები რეპორტი</div><span class="k-delta down">1 ვადა 2 დღეში</span></div>
+        <div class="kpi"><div class="k-ic tint-cerise">⭐</div><div class="k-val">4.8</div><div class="k-label">საშ. შეფასება</div></div>
+      </div>
+
+      <div class="grid g-2-1 mt-2">
+        <div class="card">
+          <div class="card-head"><h3>დღევანდელი განრიგი</h3><div class="actions"><a href="#" data-goto="schedule">სრული →</a></div></div>
+          <div class="card-body">
+            <div class="list-row"><div class="badge b-info plain" style="flex-direction:column; padding:8px 12px"><b>19:00</b></div><div class="grow"><b>WEB-A1 · React Hooks</b><div class="muted" style="font-size:12px">ვაკე · ოთახი 201 · 18 მოსწ.</div></div><button class="btn sm primary" data-goto="attendance">დასწრება</button></div>
+            <div class="list-row"><div class="badge b-muted plain" style="flex-direction:column; padding:8px 12px"><b>—</b></div><div class="grow"><b>WEB-A3 · დასვენება</b><div class="muted" style="font-size:12px">ხვალ 19:00</div></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>საჭიროებს ყურადღებას</h3></div>
+          <div class="card-body">
+            <div class="list-row"><span class="badge b-danger">!</span><div class="grow"><b>ჯგუფის პროგრესი — WEB-A1</b><div class="muted" style="font-size:12px">ვადა: 2 აგვ</div></div><button class="btn sm" data-goto="reports">შევსება</button></div>
+            <div class="list-row"><span class="badge b-warn">!</span><div class="grow"><b>თვითშეფასება — ივლისი</b><div class="muted" style="font-size:12px">ვადა: 5 აგვ</div></div><button class="btn sm" data-goto="evaluations">შევსება</button></div>
+            <div class="list-row"><span class="badge b-info">3</span><div class="grow"><b>ახალი მასალა უნდა აიტვირთოს</b><div class="muted" style="font-size:12px">WEB-A3 · Module 4</div></div><button class="btn sm" data-goto="materials">ატვირთვა</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUPS -->
+    <section class="view" data-view="groups">
+      <div class="page-head"><div class="titles"><h2>ჩემი ჯგუფები</h2><p>მიბმული ჯგუფები · მოსწავლეები, პროგრესი და განრიგი</p></div></div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-info plain">WEB-A1</span><span class="badge b-ok">მიმდინარე</span></div>
+          <h3 class="mt-1">Front-end Development</h3>
+          <div class="muted" style="font-size:12.5px">ვაკე · ორშ/სამ/ხუთ 19:00</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>18</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>საშ. დასწრება</span><b>92%</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>პროგრესი</span><b>64%</b></div>
+          <div class="progress mt-1"><span class="green" style="width:64%"></span></div>
+          <button class="btn block mt-2" data-goto="attendance">ჯგუფის მართვა</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-info plain">WEB-A3</span><span class="badge b-ok">მიმდინარე</span></div>
+          <h3 class="mt-1">Front-end Development</h3>
+          <div class="muted" style="font-size:12.5px">ვაკე · სამ/ხუთ 19:00</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>16</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>საშ. დასწრება</span><b>88%</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>პროგრესი</span><b>40%</b></div>
+          <div class="progress mt-1"><span class="yellow" style="width:40%"></span></div>
+          <button class="btn block mt-2" data-goto="attendance">ჯგუფის მართვა</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-info plain">WEB-B1</span><span class="badge b-warn">იწყება 5 ოქტ</span></div>
+          <h3 class="mt-1">Front-end (საღამო)</h3>
+          <div class="muted" style="font-size:12.5px">ვაკე · ხუთ 19:00</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>17</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>საშ. დასწრება</span><b>—</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>პროგრესი</span><b>0%</b></div>
+          <div class="progress mt-1"><span style="width:2%"></span></div>
+          <button class="btn block mt-2" data-goto="attendance">ჯგუფის მართვა</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="view" data-view="schedule">
+      <div class="page-head"><div class="titles"><h2>განრიგი</h2><p>ლექციების კალენდარი · მიმდინარე კვირა</p></div>
+        <div class="actions"><span class="pill-tabbar"><span class="p active">კვირა</span><span class="p">თვე</span></span></div>
+      </div>
+      <div class="card">
+        <table class="tbl">
+          <thead><tr><th>დღე</th><th>დრო</th><th>ჯგუფი</th><th>თემა</th><th>ოთახი</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><b>ორშაბათი</b><div class="muted" style="font-size:12px">28 ივლ</div></td><td>19:00–21:00</td><td>WEB-A1</td><td>React Hooks</td><td>ვაკე · 201</td><td class="text-r"><button class="btn sm" data-goto="attendance">დასწრება</button></td></tr>
+            <tr><td><b>სამშაბათი</b><div class="muted" style="font-size:12px">29 ივლ</div></td><td>19:00–21:00</td><td>WEB-A3</td><td>CSS Grid</td><td>ვაკე · 201</td><td class="text-r"><button class="btn sm ghost">დეტალები</button></td></tr>
+            <tr><td><b>ხუთშაბათი</b><div class="muted" style="font-size:12px">31 ივლ</div></td><td>19:00–21:00</td><td>WEB-A1</td><td>State Management</td><td>ვაკე · 201</td><td class="text-r"><button class="btn sm ghost">დეტალები</button></td></tr>
+            <tr><td><b>ხუთშაბათი</b><div class="muted" style="font-size:12px">31 ივლ</div></td><td>21:00–22:00</td><td>WEB-A3</td><td>Flexbox პრაქტიკა</td><td>ვაკე · 201</td><td class="text-r"><button class="btn sm ghost">დეტალები</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ATTENDANCE -->
+    <section class="view" data-view="attendance">
+      <div class="page-head"><div class="titles"><h2>დასწრება და შეფასება</h2><p>WEB-A1 · React Hooks · ორშ 28 ივლ, 19:00</p></div>
+        <div class="actions"><div class="select" style="width:auto">ჯგუფი: WEB-A1 ▾</div><button class="btn primary">💾 შენახვა</button></div>
+      </div>
+      <div class="card">
+        <table class="tbl">
+          <thead><tr><th>მოსწავლე</th><th>დასწრება</th><th>ქულა (ლექცია)</th><th>კომენტარი</th></tr></thead>
+          <tbody>
+            <tr><td><div class="u"><span class="avatar sm">გ.ბ</span><span class="nm">გიორგი ბერიძე</span></div></td><td><span class="pill-tabbar"><span class="p active">✔</span><span class="p">✖</span><span class="p">დაგვ.</span></span></td><td><input class="input" style="width:70px; padding:6px" value="9"></td><td><input class="input" style="padding:6px" placeholder="—"></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">ა.გ</span><span class="nm">ანა გელაშვილი</span></div></td><td><span class="pill-tabbar"><span class="p active">✔</span><span class="p">✖</span><span class="p">დაგვ.</span></span></td><td><input class="input" style="width:70px; padding:6px" value="10"></td><td><input class="input" style="padding:6px" placeholder="—"></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">ლ.ც</span><span class="nm">ლუკა ცერცვაძე</span></div></td><td><span class="pill-tabbar"><span class="p">✔</span><span class="p active">✖</span><span class="p">დაგვ.</span></span></td><td><input class="input" style="width:70px; padding:6px" placeholder="—"></td><td><input class="input" style="padding:6px" value="ვერ დაესწრო"></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">ს.ტ</span><span class="nm">სოფო ტაბაღუა</span></div></td><td><span class="pill-tabbar"><span class="p">✔</span><span class="p">✖</span><span class="p active">დაგვ.</span></span></td><td><input class="input" style="width:70px; padding:6px" value="8"></td><td><input class="input" style="padding:6px" placeholder="—"></td></tr>
+          </tbody>
+        </table>
+        <div class="card-body flex between"><small>დაესწრო: 3 / 18 გამოჩენილია · ცხრილი შემოკლებულია</small><button class="btn green">💾 დასწრების შენახვა</button></div>
+      </div>
+    </section>
+
+    <!-- MATERIALS -->
+    <section class="view" data-view="materials">
+      <div class="page-head"><div class="titles"><h2>სასწავლო მასალა</h2><p>ჯგუფებზე მიბმული მასალები · ატვირთვა და გაზიარება მოსწავლეებთან</p></div>
+        <div class="actions"><button class="btn primary">⤴ მასალის ატვირთვა</button></div>
+      </div>
+      <div class="card">
+        <table class="tbl">
+          <thead><tr><th>მასალა</th><th>ჯგუფი</th><th>ტიპი</th><th>თარიღი</th><th>ხილვადობა</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>📄 React_module_3.pdf</td><td>WEB-A1</td><td>PDF</td><td>27 ივლ</td><td><span class="badge b-ok">გამოქვეყნებული</span></td><td class="text-r"><a href="#">✏️</a> · <a href="#">🗑</a></td></tr>
+            <tr><td>🔗 Sandbox — Hooks</td><td>WEB-A1</td><td>ბმული</td><td>27 ივლ</td><td><span class="badge b-ok">გამოქვეყნებული</span></td><td class="text-r"><a href="#">✏️</a> · <a href="#">🗑</a></td></tr>
+            <tr><td>📄 CSS_Grid_slides.pdf</td><td>WEB-A3</td><td>PDF</td><td>25 ივლ</td><td><span class="badge b-warn">დრაფტი</span></td><td class="text-r"><a href="#">✏️</a> · <a href="#">🗑</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- REPORTS -->
+    <section class="view" data-view="reports">
+      <div class="page-head"><div class="titles"><h2>რეპორტები</h2><p>დანიშნული შაბლონები · ვადები · ავტომატური შეხსენება</p></div></div>
+      <div class="card" style="margin-bottom:16px">
+        <table class="tbl">
+          <thead><tr><th>რეპორტი</th><th>ჯგუფი</th><th>პერიოდი</th><th>ვადა</th><th>სტატუსი</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><b>ჯგუფის პროგრესი</b></td><td>WEB-A1</td><td>2-კვირიანი</td><td><span class="badge b-danger">2 აგვ (2 დღე)</span></td><td><span class="badge b-warn">შესავსები</span></td><td class="text-r"><button class="btn sm primary">შევსება</button></td></tr>
+            <tr><td><b>ჯგუფის პროგრესი</b></td><td>WEB-A3</td><td>2-კვირიანი</td><td>9 აგვ</td><td><span class="badge b-muted">დაგეგმილი</span></td><td class="text-r"><button class="btn sm ghost">ნახვა</button></td></tr>
+            <tr><td><b>ჯგუფის პროგრესი</b></td><td>WEB-A1</td><td>წინა პერიოდი</td><td>19 ივლ</td><td><span class="badge b-ok">შევსებული</span></td><td class="text-r"><button class="btn sm ghost">ნახვა</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card pad">
+        <h3>რეპორტის შევსება — ჯგუფის პროგრესი (WEB-A1) <span class="wire-tag">ფორმის მაკეტი</span></h3>
+        <div class="form-row mt-2">
+          <div class="field"><label>საშ. დასწრება (%)</label><input class="input" value="92"></div>
+          <div class="field"><label>დასრულებული მოდულები</label><input class="input" value="3 / 6"></div>
+        </div>
+        <div class="field"><label>ზოგადი შეფასება</label><textarea class="textarea" placeholder="ჯგუფის მიმდინარეობა, გამოწვევები, რეკომენდაციები…"></textarea></div>
+        <div class="field"><label>რისკის ქვეშ მყოფი მოსწავლეები</label><input class="input" placeholder="მიუთითეთ სახელები"></div>
+        <div class="flex"><button class="btn">დრაფტად შენახვა</button><button class="btn primary">გაგზავნა</button></div>
+      </div>
+    </section>
+
+    <!-- EVALUATIONS -->
+    <section class="view" data-view="evaluations">
+      <div class="page-head"><div class="titles"><h2>შეფასებები</h2><p>ტრენერის მიერ შესავსები გამოკითხვები (თვითშეფასება) · ჩემი მიღებული შეფასებები</p></div></div>
+      <div class="grid g-2-1">
+        <div class="card pad">
+          <h3>① შესავსები — თვითშეფასება (ივლისი) <span class="wire-tag">ფორმის მაკეტი</span></h3>
+          <div class="field mt-1"><label>ჯგუფის მიმდინარეობის შეფასება</label><span class="pill-tabbar"><span class="p">1</span><span class="p">2</span><span class="p">3</span><span class="p active">4</span><span class="p">5</span></span></div>
+          <div class="field"><label>საჭირო რესურსები</label><textarea class="textarea" placeholder="აღწერეთ…"></textarea></div>
+          <div class="field"><label>გამოწვევები</label><textarea class="textarea" placeholder="აღწერეთ…"></textarea></div>
+          <button class="btn primary">გაგზავნა</button>
+        </div>
+        <div class="card pad">
+          <h3>② ჩემი მიღებული შეფასება</h3>
+          <div style="text-align:center; padding:10px 0"><div style="font-size:40px; font-weight:800; color:var(--navy)">4.8</div><div class="muted">142 პასუხის საფუძველზე</div></div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>ცოდნის გადაცემა</span><b>4.9</b></div><div class="progress mt-1"><span class="green" style="width:98%"></span></div>
+          <div class="flex between mt-2" style="font-size:13px"><span>კომუნიკაცია</span><b>4.7</b></div><div class="progress mt-1"><span class="green" style="width:94%"></span></div>
+          <div class="flex between mt-2" style="font-size:13px"><span>მასალის ხარისხი</span><b>4.6</b></div><div class="progress mt-1"><span style="width:92%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KNOWLEDGE -->
+    <section class="view" data-view="knowledge">
+      <div class="page-head"><div class="titles"><h2>AI ასისტენტი</h2><p>ონბორდინგი, პროცედურები და წესები · პასუხობს ცოდნის ბაზის საფუძველზე</p></div></div>
+      <div class="card" style="max-width:760px">
+        <div class="card-head"><h3>🤖 SJA ასისტენტი</h3><span class="badge b-ok">ონლაინ</span></div>
+        <div class="card-body">
+          <div class="chatbubble bot">გამარჯობა სანდრო 👋 რით დაგეხმაროთ?</div>
+          <div class="chatbubble me">როგორ ვნახო ჩემი ჯგუფის დასწრების ისტორია?</div>
+          <div class="chatbubble bot">„დასწრება“ განყოფილებაში აირჩიეთ ჯგუფი და გადადით ისტორიის ტაბზე. იქ ნახავთ თითოეული ლექციის დასწრებას…</div>
+          <div class="chatbubble me">რა ვადაა ჯგუფის პროგრესის რეპორტისთვის?</div>
+          <div class="chatbubble bot">WEB-A1-ის ჯგუფის პროგრესის რეპორტის ვადაა <b>2 აგვისტო</b>. დარჩა 2 დღე.</div>
+          <div class="flex mt-1"><input class="input" placeholder="დაწერეთ შეკითხვა…"><button class="btn primary">➤</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="view" data-view="profile">
+      <div class="page-head"><div class="titles"><h2>პროფილი</h2><p>პირადი მონაცემები, კვალიფიკაცია და გრაფიკი</p></div></div>
+      <div class="grid g-1-2">
+        <div class="card pad" style="text-align:center">
+          <span class="avatar green" style="width:80px; height:80px; font-size:28px; margin:0 auto">ს.ა</span>
+          <h3 class="mt-2 mb-0">სანდრო აბაშიძე</h3>
+          <div class="muted">Front-end ტრენერი · ვაკე</div>
+          <div class="flex" style="justify-content:center; margin-top:10px"><span class="badge b-ok">⭐ 4.8</span><span class="badge b-info">3 ჯგუფი</span></div>
+        </div>
+        <div class="card pad">
+          <h3>დეტალები</h3>
+          <div class="form-row mt-1">
+            <div class="field"><label>სახელი გვარი</label><input class="input" value="სანდრო აბაშიძე"></div>
+            <div class="field"><label>ტელეფონი</label><input class="input" value="+995 599 00 00 00"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Email</label><input class="input" value="s.abashidze@sja.ge"></div>
+            <div class="field"><label>მიმართულება</label><input class="input" value="React, TypeScript"></div>
+          </div>
+          <div class="field"><label>კვალიფიკაცია / ბიო</label><textarea class="textarea">Senior Front-end Engineer, 8 წლიანი გამოცდილება. Meta & AWS სერტიფიცირებული.</textarea></div>
+          <button class="btn primary">შენახვა</button>
+        </div>
+      </div>
+    </section>
+
+    </div>
+  </div>
+</div>
+<script src="assets/sja.js"></script>
+</body>
+</html>

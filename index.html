@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SJA — მართვის პლატფორმა | ვაერფრეიმები</title>
+<link rel="icon" href="assets/logo.svg">
+<link rel="stylesheet" href="assets/sja.css">
+<style>
+  body{ background:
+      radial-gradient(1100px 520px at 85% -10%, #eaeefb 0, transparent 60%),
+      radial-gradient(900px 500px at -5% 110%, #eef7e2 0, transparent 55%),
+      #f4f6fb; }
+  .landing{ max-width:1080px; margin:0 auto; padding:40px 24px 70px; position:relative; z-index:1; }
+  .top{ display:flex; align-items:center; gap:14px; margin-bottom:44px; }
+  .top .b-title{ color:var(--navy); font-weight:800; font-size:18px; line-height:1; }
+  .top .b-sub{ color:var(--savoy); font-size:10.5px; letter-spacing:2px; text-transform:uppercase; }
+  .top img{ width:52px; height:52px; }
+  .top .env{ margin-left:auto; }
+  .hero{ text-align:center; margin: 22px 0 40px; }
+  .hero .eyebrow{ display:inline-block; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--savoy); background:#eef1fb; border:1px solid #dbe2f6; padding:6px 14px; border-radius:999px; }
+  .hero h1{ font-size:40px; letter-spacing:-1px; margin:18px 0 10px; }
+  .hero h1 .g{ background:linear-gradient(90deg,var(--cerise),var(--yellow),var(--green),var(--savoy)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p{ color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; }
+  .roles{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media (max-width:880px){ .roles{ grid-template-columns:1fr; } .hero h1{font-size:30px;} }
+  .role{ background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:var(--shadow); display:flex; flex-direction:column; text-decoration:none; color:inherit; transition:transform .15s, box-shadow .15s, border-color .15s; position:relative; overflow:hidden; }
+  .role:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(34,49,95,.14); border-color:#cdd7f2; }
+  .role .top-strip{ position:absolute; inset:0 0 auto; height:5px; }
+  .role .ic{ width:56px; height:56px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:27px; margin-bottom:16px; }
+  .role h3{ font-size:19px; margin-bottom:6px; }
+  .role .desc{ color:var(--muted); font-size:13.5px; flex:1; }
+  .role ul{ list-style:none; padding:0; margin:14px 0 18px; font-size:12.5px; color:var(--ink); }
+  .role li{ display:flex; gap:8px; padding:4px 0; align-items:flex-start; }
+  .role li::before{ content:"✓"; color:var(--green); font-weight:800; }
+  .enter{ display:inline-flex; align-items:center; justify-content:space-between; font-weight:700; font-size:13.5px; color:#fff; padding:11px 16px; border-radius:11px; }
+  .soon{ margin-top:40px; }
+  .soon h4{ font-size:13px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); text-align:center; margin-bottom:16px; }
+  .soon-grid{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+  .soon-grid .chip{ background:#fff; border:1px solid var(--line); border-radius:999px; padding:8px 15px; font-size:12.5px; color:var(--muted); display:flex; align-items:center; gap:8px; }
+  .soon-grid .chip .lock{ opacity:.5; }
+  .foot{ text-align:center; margin-top:46px; color:var(--muted); font-size:12px; }
+  .foot .tagline{ font-style:italic; color:var(--savoy); font-weight:600; }
+</style>
+</head>
+<body>
+<span class="blob b1"></span><span class="blob b2"></span>
+<div class="landing">
+  <div class="top">
+    <img src="assets/logo.svg" alt="SJA">
+    <div>
+      <div class="b-title">Steve Jobs American Academy</div>
+      <div class="b-sub">Management Platform</div>
+    </div>
+    <span class="env badge b-warn plain">🧩 Wireframe / Prototype</span>
+  </div>
+
+  <div class="hero">
+    <span class="eyebrow">როლის არჩევა</span>
+    <h1>აირჩიეთ <span class="g">როლის ინტერფეისი</span></h1>
+    <p>ერთიანი მართვის პლატფორმის ვაერფრეიმები — მრავალფილიალიანი სასწავლო აკადემიისთვის.
+       თითოეული როლისთვის მომზადებულია სრული ფუნქციონალის დეტალური მაკეტი.</p>
+  </div>
+
+  <div class="roles">
+    <!-- ADMIN -->
+    <a class="role" href="admin.html">
+      <span class="top-strip" style="background:linear-gradient(90deg,var(--savoy),var(--savoy-700))"></span>
+      <span class="ic tint-savoy">🛠️</span>
+      <h3>ადმინისტრატორი</h3>
+      <div class="desc">პლატფორმის სრული მართვა — ფილიალები, მომხმარებლები, ფინანსები, რეპორტები და ცოდნის ბაზა.</div>
+      <ul>
+        <li>ფილიალები, სტუდენტები და ტრენერები</li>
+        <li>ჩარიცხვები და ფინანსური მართვა</li>
+        <li>რეპორტები, დოკუმენტები, შეტყობინებები</li>
+        <li>როლები, წვდომები და AI ცოდნის ბაზა</li>
+      </ul>
+      <span class="enter" style="background:var(--savoy)">შესვლა ინტერფეისში <span>→</span></span>
+    </a>
+
+    <!-- TRAINER -->
+    <a class="role" href="trainer.html">
+      <span class="top-strip" style="background:linear-gradient(90deg,var(--green),#8fb63f)"></span>
+      <span class="ic tint-green">🎓</span>
+      <h3>ტრენერი</h3>
+      <div class="desc">სასწავლო პროცესის მართვა — ჯგუფები, განრიგი, დასწრება, შეფასებები და რეპორტები.</div>
+      <ul>
+        <li>ჩემი ჯგუფები და სტუდენტები</li>
+        <li>ლექციების განრიგი და დასწრება</li>
+        <li>რეპორტების შევსება ვადებით</li>
+        <li>თვითშეფასება და ცოდნის ბაზა</li>
+      </ul>
+      <span class="enter" style="background:#7ba233">შესვლა ინტერფეისში <span>→</span></span>
+    </a>
+
+    <!-- STUDENT -->
+    <a class="role" href="student.html">
+      <span class="top-strip" style="background:linear-gradient(90deg,var(--yellow),var(--cerise))"></span>
+      <span class="ic tint-yellow">🧑‍💻</span>
+      <h3>სტუდენტი</h3>
+      <div class="desc">პირადი კაბინეტი — განრიგი, გადახდები, ბარათით გადახდა, შეფასებები და შეტყობინებები.</div>
+      <ul>
+        <li>ჩემი განრიგი და საგნები</li>
+        <li>გადახდის სტატუსი და ისტორია</li>
+        <li>ბარათით / საბსქრიფშენ გადახდა</li>
+        <li>ტრენერის შეფასება და AI დახმარება</li>
+      </ul>
+      <span class="enter" style="background:var(--yellow); color:#4a3410">შესვლა ინტერფეისში <span>→</span></span>
+    </a>
+  </div>
+
+  <div class="soon">
+    <h4>დამატებითი როლები — მომდევნო ეტაპებზე</h4>
+    <div class="soon-grid">
+      <span class="chip"><span class="lock">🔒</span> სუპერ ადმინისტრატორი</span>
+      <span class="chip"><span class="lock">🔒</span> დირექტორი (ვიუერი)</span>
+      <span class="chip"><span class="lock">🔒</span> ფილიალის მენეჯერი</span>
+      <span class="chip"><span class="lock">🔒</span> ფინანსური დეპარტამენტი</span>
+      <span class="chip"><span class="lock">🔒</span> მარკეტინგი</span>
+      <span class="chip"><span class="lock">🔒</span> HR დეპარტამენტი</span>
+      <span class="chip"><span class="lock">🔒</span> იურიდიული დეპარტამენტი</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="tagline">“I don't follow, I lead — preparing our students not just to keep up with the future, but to shape it.”</div>
+    <div style="margin-top:8px">SJA Management Platform · ვაერფრეიმები (Etape 0 — UX/UI მაკეტი) · v0.1</div>
+  </div>
+</div>
+</body>
+</html>
