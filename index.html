@@ -11,7 +11,7 @@
       radial-gradient(1100px 520px at 85% -10%, #eaeefb 0, transparent 60%),
       radial-gradient(900px 500px at -5% 110%, #eef7e2 0, transparent 55%),
       #f4f6fb; }
-  .landing{ max-width:1080px; margin:0 auto; padding:40px 24px 70px; position:relative; z-index:1; }
+  .landing{ max-width:1240px; margin:0 auto; padding:40px 24px 70px; position:relative; z-index:1; }
   .top{ display:flex; align-items:center; gap:14px; margin-bottom:44px; }
   .top .b-title{ color:var(--navy); font-weight:800; font-size:18px; line-height:1; }
   .top .b-sub{ color:var(--savoy); font-size:10.5px; letter-spacing:2px; text-transform:uppercase; }
@@ -22,8 +22,9 @@
   .hero h1{ font-size:40px; letter-spacing:-1px; margin:18px 0 10px; }
   .hero h1 .g{ background:linear-gradient(90deg,var(--cerise),var(--yellow),var(--green),var(--savoy)); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .hero p{ color:var(--muted); font-size:16px; max-width:640px; margin:0 auto; }
-  .roles{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-  @media (max-width:880px){ .roles{ grid-template-columns:1fr; } .hero h1{font-size:30px;} }
+  .roles{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  @media (max-width:1000px){ .roles{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .roles{ grid-template-columns:1fr; } .hero h1{font-size:30px;} }
   .role{ background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:var(--shadow); display:flex; flex-direction:column; text-decoration:none; color:inherit; transition:transform .15s, box-shadow .15s, border-color .15s; position:relative; overflow:hidden; }
   .role:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(34,49,95,.14); border-color:#cdd7f2; }
   .role .top-strip{ position:absolute; inset:0 0 auto; height:5px; }
@@ -78,6 +79,21 @@
       <span class="enter" style="background:var(--savoy)">შესვლა ინტერფეისში <span>→</span></span>
     </a>
 
+    <!-- BRANCH MANAGER -->
+    <a class="role" href="manager.html">
+      <span class="top-strip" style="background:linear-gradient(90deg,var(--savoy),var(--cerise))"></span>
+      <span class="ic tint-cerise">🏢</span>
+      <h3>ფილიალის მენეჯერი</h3>
+      <div class="desc">ერთი ფილიალის მართვა — ადმინის ფუნქციონალი, შემოფარგლული საკუთარი ფილიალით.</div>
+      <ul>
+        <li>მოსწავლის რეგისტრაცია და მართვა</li>
+        <li>ჯგუფები, ტრენერები, გამოცდები</li>
+        <li>ფილიალის ჩარიცხვები და დავალიანება</li>
+        <li>რეპორტები და შეტყობინებები</li>
+      </ul>
+      <span class="enter" style="background:linear-gradient(90deg,var(--savoy),var(--cerise))">შესვლა ინტერფეისში <span>→</span></span>
+    </a>
+
     <!-- TRAINER -->
     <a class="role" href="trainer.html">
       <span class="top-strip" style="background:linear-gradient(90deg,var(--green),#8fb63f)"></span>
@@ -114,7 +130,6 @@
     <div class="soon-grid">
       <span class="chip"><span class="lock">🔒</span> სუპერ ადმინისტრატორი</span>
       <span class="chip"><span class="lock">🔒</span> დირექტორი (ვიუერი)</span>
-      <span class="chip"><span class="lock">🔒</span> ფილიალის მენეჯერი</span>
       <span class="chip"><span class="lock">🔒</span> ფინანსური დეპარტამენტი</span>
       <span class="chip"><span class="lock">🔒</span> მარკეტინგი</span>
       <span class="chip"><span class="lock">🔒</span> HR დეპარტამენტი</span>
