@@ -30,6 +30,7 @@
     <div class="nav-item" data-target="students"  data-title="მოსწავლეთა ბაზა"><span class="ic">🧑‍🎓</span> მოსწავლეები <span class="count">1 248</span></div>
     <div class="nav-item" data-target="trainers"  data-title="ტრენერების ბაზა"><span class="ic">👩‍🏫</span> ტრენერები <span class="count">84</span></div>
     <div class="nav-item" data-target="groups"    data-title="სასწავლო ჯგუფები"><span class="ic">👥</span> ჯგუფები <span class="count">96</span></div>
+    <div class="nav-item" data-target="exams"     data-title="გამოცდები / კალენდარი"><span class="ic">🗓️</span> გამოცდები</div>
 
     <div class="nav-group-label">ფინანსები</div>
     <div class="nav-item" data-target="finance"   data-title="ჩარიცხვები და ფინანსები"><span class="ic">💳</span> ჩარიცხვები</div>
@@ -424,6 +425,37 @@
       </div>
     </section>
 
+    <!-- ==================== EXAMS ==================== -->
+    <section class="view" data-view="exams">
+      <div class="page-head">
+        <div class="titles"><h2>გამოცდები და აკადემიური კალენდარი</h2><p>ქვიზი · შუალედური · დასკვნითი გამოცდა — ნებისმიერი ფილიალისთვის (I სემესტრი 2025/26)</p></div>
+        <div class="actions"><button class="btn">⤓ ექსპორტი</button><button class="btn primary" data-modal="mAddExam">＋ გამოცდის დამატება</button></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-body flex wrap">
+          <div class="select" style="width:auto">ფილიალი: ყველა ▾</div>
+          <span class="badge b-info">🟦 ქვიზი</span>
+          <span class="badge b-warn">🟧 შუალედური</span>
+          <span class="badge b-danger">🟥 დასკვნითი</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>გამოცდების განრიგი ჯგუფების მიხედვით</h3></div>
+        <table class="tbl">
+          <thead><tr><th>ფილიალი</th><th>ჯგუფი</th><th>პროგრამა</th><th>ასაკ. კატ.</th><th>ქვიზი</th><th>შუალედური</th><th>დასკვნითი</th></tr></thead>
+          <tbody>
+            <tr><td>თბილისი</td><td><b>#1</b></td><td>Robotics</td><td>მინიონები</td><td>15 ნოე</td><td><span class="badge b-warn">29 ნოე</span></td><td><span class="badge b-danger">24 იან</span></td></tr>
+            <tr><td>თბილისი</td><td><b>#3</b></td><td>Robotics</td><td>ჯუნიორები</td><td>2 დეკ</td><td><span class="badge b-warn">6 დეკ</span></td><td><span class="badge b-danger">31 იან</span></td></tr>
+            <tr><td>თბილისი</td><td><b>#7</b></td><td>Web Development</td><td>თინეიჯერები</td><td>22 ნოე</td><td><span class="badge b-warn">29 ნოე</span></td><td><span class="badge b-danger">7 თებ</span></td></tr>
+            <tr><td>ბათუმი</td><td><b>#3</b></td><td>Web Development</td><td>თინეიჯერები</td><td>28 ნოე</td><td><span class="badge b-warn">5 დეკ</span></td><td><span class="badge b-danger">13 თებ</span></td></tr>
+            <tr><td>ქუთაისი</td><td><b>#6</b></td><td>Minecraft</td><td>თვინსები</td><td>25 ნოე</td><td><span class="badge b-warn">2 დეკ</span></td><td><span class="badge b-danger">10 თებ</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- ==================== FINANCE ==================== -->
     <section class="view" data-view="finance">
       <div class="page-head">
@@ -727,10 +759,7 @@
         <div class="field"><label>ასაკ. კატეგორია</label><select class="select"><option>მინიონები</option><option>ჯუნიორები</option><option>თვინსები</option><option>თინეიჯერები</option></select></div>
       </div>
       <div class="field"><label>ტრენერზე მიბმა</label><select class="select"><option>ლ. ბერიძე (Robotics)</option><option>ს. აბაშიძე (Web Dev)</option><option>ნ. ჯავახიშვილი (Mob App)</option><option>ი. კვარაცხელია (Minecraft)</option><option>თ. მამულაშვილი (Global Leadership)</option></select></div>
-      <div class="form-row">
-        <div class="field"><label>სემესტრი</label><select class="select"><option>I (შემოდგომა)</option><option>II (გაზაფხული)</option></select></div>
-        <div class="field"><label>დღე / დრო</label><input class="input" placeholder="ორშ 17:00"></div>
-      </div>
+      <div class="field"><label>ოთახი</label><input class="input" placeholder="Lab 1"></div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">ჯგუფის შექმნა</button></div>
   </div>
@@ -751,11 +780,30 @@
       </div>
       <div class="field"><label>ტრენერი</label><select class="select"><option>ლ. ბერიძე (Robotics)</option><option>ს. აბაშიძე (Web Dev)</option><option>ნ. ჯავახიშვილი (Mob App)</option><option>ი. კვარაცხელია (Minecraft)</option></select></div>
       <div class="form-row">
-        <div class="field"><label>დღე / დრო</label><input class="input" value="ორშ 15:00"></div>
+        <div class="field"><label>ოთახი</label><input class="input" value="Lab 1"></div>
         <div class="field"><label>სტატუსი</label><select class="select"><option>მიმდინარე</option><option>დაგეგმილი</option><option>დასრულებული</option></select></div>
       </div>
     </div>
     <div class="m-foot"><button class="btn danger m-close">ჯგუფის წაშლა</button><button class="btn m-close" style="margin-left:auto">გაუქმება</button><button class="btn primary m-close">შენახვა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add exam (any branch) -->
+<div class="modal-overlay" id="mAddExam">
+  <div class="modal">
+    <div class="m-head"><h3>გამოცდის დამატება</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>ტიპი</label>
+        <span class="pill-tabbar"><span class="p active">ქვიზი</span><span class="p">შუალედური გამოცდა</span><span class="p">დასკვნითი გამოცდა</span></span>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>ფილიალი</label><select class="select"><option>თბილისი</option><option>ბათუმი</option><option>ქუთაისი</option><option>ზუგდიდი</option><option>ფოთი</option><option>ზესტაფონი</option></select></div>
+        <div class="field"><label>ჯგუფი</label><select class="select"><option>ჯგუფი #1 · Robotics</option><option>ჯგუფი #3 · Robotics</option><option>ჯგუფი #7 · Web Development</option></select></div>
+      </div>
+      <div class="field"><label>თარიღი</label><input class="input" type="date" value="2025-11-29"></div>
+      <div class="field"><label>შენიშვნა (არასავალდებულო)</label><input class="input" placeholder="მაგ. Module 3 შემაჯამებელი"></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დამატება</button></div>
   </div>
 </div>
 
