@@ -25,7 +25,6 @@
     <div class="nav-group-label">სწავლა</div>
     <div class="nav-item" data-target="schedule"  data-title="განრიგი"><span class="ic">📅</span> განრიგი</div>
     <div class="nav-item" data-target="programs"  data-title="ჩემი პროგრამა"><span class="ic">📚</span> ჩემი პროგრამა <span class="count">2</span></div>
-    <div class="nav-item" data-target="homework"  data-title="საშინაო დავალებები"><span class="ic">📝</span> საშ. დავალებები <span class="count">1</span></div>
 
     <div class="nav-group-label">ჯილდოები</div>
     <div class="nav-item" data-target="stevecoin" data-title="SteveCoin"><span class="ic">🪙</span> SteveCoin <span class="count">340</span></div>
@@ -163,23 +162,24 @@
               </tbody>
             </table>
           </div>
-          <!-- Grades & attendance -->
+          <!-- Grades & attendance (all sessions) -->
           <div class="tab-panel" data-panel="r4">
-            <div class="grid g-2">
-              <div>
-                <h4 style="font-size:13px">ბოლო ქულები</h4>
-                <table class="tbl compact"><thead><tr><th>თარიღი</th><th>თემა</th><th>ქულა</th></tr></thead><tbody>
-                  <tr><td>17 ნოე</td><td>Motors</td><td><span class="badge b-ok">10</span></td></tr>
-                  <tr><td>15 ნოე</td><td>ქვიზი (სესია 5)</td><td><span class="badge b-ok">9</span></td></tr>
-                  <tr><td>10 ნოე</td><td>Sensors</td><td><span class="badge b-warn">8</span></td></tr>
-                </tbody></table>
-              </div>
-              <div>
-                <h4 style="font-size:13px">დასწრება</h4>
-                <div style="text-align:center; padding:6px 0"><div style="font-size:34px; font-weight:800; color:var(--navy)">94%</div><div class="muted">13-დან 12 დაესწარი</div></div>
-                <div class="progress mt-1"><span class="green" style="width:94%"></span></div>
-              </div>
-            </div>
+            <div class="flex between"><h4 style="font-size:13px; margin:0">დასწრება — ყველა სესია</h4><span class="badge b-ok">94% · 12/13</span></div>
+            <table class="tbl compact mt-1">
+              <thead><tr><th>სესია</th><th>თარიღი</th><th>თემა</th><th>დასწრება</th><th>ქულა</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>18 ოქტ</td><td>Bricks — Intro</td><td><span class="badge b-ok">დაესწრო</span></td><td>—</td></tr>
+                <tr><td>2</td><td>20 ოქტ</td><td>Bricks — Gears</td><td><span class="badge b-ok">დაესწრო</span></td><td>9</td></tr>
+                <tr><td>3</td><td>25 ოქტ</td><td>Bricks — Motors</td><td><span class="badge b-ok">დაესწრო</span></td><td>10</td></tr>
+                <tr><td>4</td><td>27 ოქტ</td><td>Bricks — Sensors</td><td><span class="badge b-ok">დაესწრო</span></td><td>8</td></tr>
+                <tr><td>5</td><td>1 ნოე</td><td>ქვიზი</td><td><span class="badge b-ok">დაესწრო</span></td><td>9</td></tr>
+                <tr><td>6</td><td>3 ნოე</td><td>Bricks — პროექტი</td><td><span class="badge b-danger">გააცდინა</span></td><td>—</td></tr>
+                <tr><td>7</td><td>8 ნოე</td><td>Galileo — Intro</td><td><span class="badge b-ok">დაესწრო</span></td><td>—</td></tr>
+                <tr><td>8</td><td>10 ნოე</td><td>Galileo — Loops</td><td><span class="badge b-ok">დაესწრო</span></td><td>10</td></tr>
+                <tr><td>9–13</td><td>15–29 ნოე</td><td>Galileo — გაგრძელება</td><td><span class="badge b-ok">დაესწრო</span></td><td>9 (საშ.)</td></tr>
+                <tr><td>14</td><td>1 დეკ</td><td>Galileo — Robot Arm</td><td><span class="badge b-muted">მომავალი</span></td><td>—</td></tr>
+              </tbody>
+            </table>
           </div>
           <!-- Exams -->
           <div class="tab-panel" data-panel="r5">
@@ -240,18 +240,18 @@
             </table>
           </div>
           <div class="tab-panel" data-panel="l4">
-            <div class="grid g-2">
-              <div><h4 style="font-size:13px">ბოლო ქულები</h4>
-                <table class="tbl compact"><thead><tr><th>თარიღი</th><th>თემა</th><th>ქულა</th></tr></thead><tbody>
-                  <tr><td>16 ნოე</td><td>Public Speaking</td><td><span class="badge b-ok">9</span></td></tr>
-                  <tr><td>9 ნოე</td><td>Teamwork</td><td><span class="badge b-ok">10</span></td></tr>
-                </tbody></table>
-              </div>
-              <div><h4 style="font-size:13px">დასწრება</h4>
-                <div style="text-align:center; padding:6px 0"><div style="font-size:34px; font-weight:800; color:var(--navy)">96%</div><div class="muted">12-დან 12 დაესწარი</div></div>
-                <div class="progress mt-1"><span class="green" style="width:96%"></span></div>
-              </div>
-            </div>
+            <div class="flex between"><h4 style="font-size:13px; margin:0">დასწრება — ყველა სესია</h4><span class="badge b-ok">96% · 12/12</span></div>
+            <table class="tbl compact mt-1">
+              <thead><tr><th>სესია</th><th>თარიღი</th><th>თემა</th><th>დასწრება</th><th>ქულა</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>18 ოქტ</td><td>Intro · გუნდი</td><td><span class="badge b-ok">დაესწრო</span></td><td>—</td></tr>
+                <tr><td>2</td><td>25 ოქტ</td><td>Teamwork</td><td><span class="badge b-ok">დაესწრო</span></td><td>10</td></tr>
+                <tr><td>3–7</td><td>1–29 ნოე</td><td>კომუნიკაცია</td><td><span class="badge b-ok">დაესწრო</span></td><td>9 (საშ.)</td></tr>
+                <tr><td>8</td><td>16 ნოე</td><td>Public Speaking</td><td><span class="badge b-ok">დაესწრო</span></td><td>9</td></tr>
+                <tr><td>9–12</td><td>22 ნოე–6 დეკ</td><td>ლიდერობა</td><td><span class="badge b-ok">დაესწრო</span></td><td>—</td></tr>
+                <tr><td>13</td><td>8 დეკ</td><td>პრეზენტაცია</td><td><span class="badge b-muted">მომავალი</span></td><td>—</td></tr>
+              </tbody>
+            </table>
           </div>
           <div class="tab-panel" data-panel="l5">
             <table class="tbl compact">
@@ -270,21 +270,6 @@
             <button class="btn primary">გაგზავნა</button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- HOMEWORK (aggregate) -->
-    <section class="view" data-view="homework">
-      <div class="page-head"><div class="titles"><h2>საშინაო დავალებები</h2><p>ყველა პროგრამის დავალება · ნახვა და შესრულებული სამუშაოს ატვირთვა</p></div></div>
-      <div class="card">
-        <table class="tbl">
-          <thead><tr><th>დავალება</th><th>პროგრამა</th><th>ვადა</th><th>სტატუსი</th><th></th></tr></thead>
-          <tbody>
-            <tr><td><b>Galileo — Robot Arm პროექტი</b></td><td>Robotics</td><td><span class="badge b-warn">30 ივლ</span></td><td><span class="badge b-warn">ჩასაბარებელი</span></td><td class="text-r"><button class="btn sm primary" data-modal="mUpload">⤴ ატვირთვა</button></td></tr>
-            <tr><td><b>„ჩემი გუნდი“ პრეზენტაცია</b></td><td>Global Leadership</td><td>2 აგვ</td><td><span class="badge b-muted">დაგეგმილი</span></td><td class="text-r"><button class="btn sm ghost">დეტალები</button></td></tr>
-            <tr><td><b>Bricks — Sensors ამოცანა</b></td><td>Robotics</td><td>17 ივლ</td><td><span class="badge b-ok">ჩაბარებული · 10</span></td><td class="text-r"><a href="#">👁 ნახვა</a></td></tr>
-          </tbody>
-        </table>
       </div>
     </section>
 
@@ -325,20 +310,14 @@
         <div class="card pad">
           <h3>პირადი მონაცემები</h3>
           <div class="form-row mt-1">
-            <div class="field"><label>სახელი გვარი</label><input class="input" value="ნიკა ბერიძე"></div>
+            <div class="field"><label>სახელი გვარი</label><input class="input" value="ნიკა ბერიძე" disabled></div>
             <div class="field"><label>პ/ნ (მომხმარებელი)</label><input class="input" value="61001xxxxxx" disabled></div>
           </div>
           <div class="form-row">
-            <div class="field"><label>მშობლის ტელეფონი</label><input class="input" value="+995 599 12 34 56"></div>
-            <div class="field"><label>Email</label><input class="input" value="beridze.family@mail.ge"></div>
+            <div class="field"><label>მშობლის ტელეფონი</label><input class="input" value="+995 599 12 34 56" disabled></div>
+            <div class="field"><label>Email</label><input class="input" value="beridze.family@mail.ge" disabled></div>
           </div>
-          <hr class="sep">
-          <h4 style="font-size:13px">პაროლის შეცვლა</h4>
-          <div class="form-row">
-            <div class="field"><label>ახალი პაროლი</label><input class="input" type="password" value="········"></div>
-            <div class="field"><label>გაიმეორეთ</label><input class="input" type="password" value="········"></div>
-          </div>
-          <button class="btn primary mt-2">შენახვა</button>
+          <div class="note mt-1">🔒 პირადი მონაცემების რედაქტირება სტუდენტს არ შეუძლია — ცვლილება ხდება ფილიალის მენეჯერის მიერ.</div>
         </div>
       </div>
     </section>
