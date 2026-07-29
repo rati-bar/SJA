@@ -37,6 +37,35 @@
     var pill = e.target.closest('.pill-tabbar .p');
     if (pill) {
       pill.parentElement.querySelectorAll('.p').forEach(p => p.classList.toggle('active', p === pill));
+      return;
+    }
+
+    // Open a modal: [data-modal="modalId"]
+    var opener = e.target.closest('[data-modal]');
+    if (opener) {
+      e.preventDefault();
+      var m = document.getElementById(opener.dataset.modal);
+      if (m) m.classList.add('open');
+      return;
+    }
+
+    // Close a modal: click on .m-close or on the overlay backdrop
+    var closer = e.target.closest('.m-close');
+    if (closer) {
+      var ov = closer.closest('.modal-overlay');
+      if (ov) ov.classList.remove('open');
+      return;
+    }
+    if (e.target.classList && e.target.classList.contains('modal-overlay')) {
+      e.target.classList.remove('open');
+      return;
+    }
+  });
+
+  // Esc closes any open modal
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
     }
   });
 

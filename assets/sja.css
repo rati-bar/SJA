@@ -260,6 +260,30 @@ hr.sep { border:none; border-top:1px solid var(--line); margin:18px 0; }
 .pill-tabbar .p{ padding:6px 14px; border-radius:999px; font-size:12.5px; font-weight:600; color:var(--muted); cursor:pointer;}
 .pill-tabbar .p.active{ background:var(--savoy); color:#fff; }
 
+/* Modals */
+.modal-overlay{ position:fixed; inset:0; background:rgba(27,38,74,.5); backdrop-filter:blur(2px); display:none; align-items:center; justify-content:center; z-index:60; padding:20px; }
+.modal-overlay.open{ display:flex; animation:fade .15s ease; }
+.modal{ background:#fff; border-radius:16px; box-shadow:0 24px 70px rgba(0,0,0,.28); width:100%; max-width:560px; max-height:90vh; overflow:auto; }
+.modal.lg{ max-width:720px; }
+.modal .m-head{ display:flex; align-items:center; gap:10px; padding:16px 20px; border-bottom:1px solid var(--line); position:sticky; top:0; background:#fff; }
+.modal .m-head h3{ margin:0; font-size:16px; }
+.modal .m-close{ margin-left:auto; cursor:pointer; font-size:22px; line-height:1; color:var(--muted); background:none; border:none; }
+.modal .m-body{ padding:18px 20px; }
+.modal .m-foot{ padding:14px 20px; border-top:1px solid var(--line); display:flex; justify-content:flex-end; gap:8px; position:sticky; bottom:0; background:#fff; }
+
+/* Back link for inner pages */
+.back-link{ display:inline-flex; align-items:center; gap:6px; color:var(--muted); font-size:13px; font-weight:600; cursor:pointer; margin-bottom:10px; }
+.back-link:hover{ color:var(--savoy); }
+
+/* Add / tile card (dashed) */
+.add-tile{ border:2px dashed var(--line); border-radius:var(--radius); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; padding:24px; color:var(--muted); cursor:pointer; background:var(--surface-2); min-height:150px; text-align:center; }
+.add-tile:hover{ border-color:var(--savoy); color:var(--savoy); background:#fff; }
+.add-tile .plus{ font-size:30px; line-height:1; }
+
+.coming-soon{ text-align:center; padding:70px 20px; color:var(--muted); }
+.coming-soon .cs-ic{ font-size:52px; }
+.coming-soon h2{ margin:14px 0 6px; }
+
 @media (max-width: 860px){
   .app{ grid-template-columns: 1fr; }
   .sidebar{ position:relative; height:auto; flex-direction:row; flex-wrap:wrap; }
