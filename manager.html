@@ -74,14 +74,14 @@
     <!-- ==================== DASHBOARD ==================== -->
     <section class="view active" data-view="dashboard">
       <div class="page-head">
-        <div class="titles"><h2>თბილისის ფილიალი</h2><p>I სემესტრი (შემოდგომა 2025/26) · წვდომა შეზღუდულია მხოლოდ თბილისის ფილიალით</p></div>
+        <div class="titles"><h2>თბილისის ფილიალი</h2><p>I სემესტრი (შემოდგომა 2025/26) · სრული მართვა თბილისში · სხვა ფილიალები — მხოლოდ ნახვა</p></div>
         <div class="actions">
           <button class="btn">⤓ ექსპორტი</button>
           <button class="btn primary" data-goto="students">＋ მოსწავლის რეგისტრაცია</button>
         </div>
       </div>
 
-      <div class="note">ℹ️ ეს არის <b>ფილიალის მენეჯერის</b> პროფილი — ადმინისტრატორის მენიუდან გადმოტანილი ფუნქციონალი, შემოფარგლული <b>თბილისის ფილიალით</b> (ფილიალზე დაფუძნებული წვდომა).</div>
+      <div class="note">ℹ️ ეს არის <b>ფილიალის მენეჯერის</b> პროფილი — <b>View+Edit</b> თბილისის ყველა საქაღალდეზე (გარდა ხელმოწერილი ხელშეკრულებებისა — View), ხოლო <b>სხვა ფილიალები — მხოლოდ View</b>.</div>
 
       <div class="grid g-4 mt-2">
         <div class="kpi"><div class="k-ic tint-savoy">🧑‍🎓</div><div class="k-val">384</div><div class="k-label">მოსწავლე (თბილისი)</div><span class="k-delta up">▲ 24 ახალი ჩარიცხვა</span></div>
@@ -477,16 +477,19 @@
     <!-- ==================== DOCUMENTS ==================== -->
     <section class="view" data-view="documents">
       <div class="page-head">
-        <div class="titles"><h2>დოკუმენტები — თბილისი</h2><p>ფილიალის დოკუმენტების საცავი · როლებზე დაფუძნებული წვდომა</p></div>
-        <div class="actions"><button class="btn primary">⤴ ატვირთვა</button></div>
+        <div class="titles"><h2>დოკუმენტები — თბილისი</h2><p>საქაღალდეები · View+Edit თბილისში, გარდა ხელმოწერილი ხელშეკრულებებისა (View)</p></div>
+        <div class="actions"><div class="select" style="width:auto">ფილიალი: თბილისი ▾</div><button class="btn primary">⤴ ატვირთვა</button></div>
       </div>
-      <div class="card">
+      <div class="note">🔐 <b>წვდომის წესი:</b> თბილისის ყველა საქაღალდე — <b>View+Edit</b>; <b>Contracts — ხელმოწერილი დოკუმენტები</b> — მხოლოდ View; <b>სხვა ფილიალების</b> ყველა საქაღალდე/ფაილი — მხოლოდ View.</div>
+      <div class="card mt-2">
         <table class="tbl">
-          <thead><tr><th>ფაილი</th><th>კატეგორია</th><th>წვდომა</th><th>ატვირთა</th><th>თარიღი</th><th></th></tr></thead>
+          <thead><tr><th>საქაღალდე / ფაილი</th><th>კატეგორია</th><th>წვდომა</th><th>ატვირთა</th><th></th></tr></thead>
           <tbody>
-            <tr><td>📄 ხელშეკრულება_ბერიძე.pdf</td><td>ხელშეკრულებები</td><td><span class="badge b-muted plain">მენეჯერი, ადმინი</span></td><td>ქ. დოლიძე</td><td>28 ივლ</td><td class="text-r"><a href="#">⤓</a></td></tr>
-            <tr><td>📄 Robotics_module_2.pdf</td><td>სასწავლო მასალა</td><td><span class="badge b-muted plain">ტრენერი, სტუდ.</span></td><td>ლ. ბერიძე</td><td>27 ივლ</td><td class="text-r"><a href="#">⤓</a></td></tr>
-            <tr><td>📄 თბილისი_აკად_კალენდარი.xlsx</td><td>კალენდარი</td><td><span class="badge b-muted plain">ყველა</span></td><td>ადმინი</td><td>25 ივლ</td><td class="text-r"><a href="#">⤓</a></td></tr>
+            <tr><td>📁 სასწავლო ცხრილები / ჯგუფები</td><td>Academic</td><td><span class="badge b-ok plain">View + Edit</span></td><td>ქ. დოლიძე</td><td class="text-r"><a href="#">გახსნა</a></td></tr>
+            <tr><td>📁 Teaching Materials</td><td>Academic</td><td><span class="badge b-ok plain">View + Edit</span></td><td>ტრენერები</td><td class="text-r"><a href="#">გახსნა</a></td></tr>
+            <tr><td>📁 Contracts — ხელმოწერილი დოკ.</td><td>Legal</td><td><span class="badge b-warn plain">View (მხოლოდ ნახვა)</span></td><td>ადმინი</td><td class="text-r"><a href="#">👁 ნახვა</a></td></tr>
+            <tr><td>📄 თბილისი_აკად_კალენდარი.xlsx</td><td>Calendar</td><td><span class="badge b-ok plain">View + Edit</span></td><td>ადმინი</td><td class="text-r"><a href="#">⤓</a></td></tr>
+            <tr><td>🏢 ბათუმი / ქუთაისი / … (სხვა ფილიალები)</td><td>All folders</td><td><span class="badge b-warn plain">View (მხოლოდ ნახვა)</span></td><td>—</td><td class="text-r"><a href="#">👁 ნახვა</a></td></tr>
           </tbody>
         </table>
       </div>

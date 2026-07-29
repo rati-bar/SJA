@@ -662,22 +662,19 @@
         <div class="actions"><button class="btn primary">＋ მომხმარებლის დამატება</button></div>
       </div>
       <div class="card">
-        <div class="card-head"><h3>წვდომების მატრიცა</h3></div>
-        <table class="tbl compact">
-          <thead><tr><th>როლი</th><th>ფილიალები</th><th>ფინანსები</th><th>მოსწავლ.</th><th>რეპორტ.</th><th>დოკუმ.</th><th>წვდომის არეალი</th></tr></thead>
+        <div class="card-head"><h3>წვდომების მატრიცა</h3><span class="badge b-info plain">როლების განაწილების დოკ.</span></div>
+        <table class="tbl">
+          <thead><tr><th>როლი</th><th>ძირითადი ფუნქცია</th><th>Edit (რედაქტირება)</th><th>View (ნახვა)</th></tr></thead>
           <tbody>
-            <tr><td><b>სუპერ ადმინისტრატორი</b></td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td><span class="badge b-info">ყველა ფილიალი</span></td></tr>
-            <tr><td><b>დირექტორი</b></td><td>👁</td><td>👁</td><td>👁</td><td>👁</td><td>👁</td><td><span class="badge b-info">ყველა (ვიუერი)</span></td></tr>
-            <tr><td><b>ფილიალის მენეჯერი</b></td><td>👁</td><td>👁</td><td>✅</td><td>✅</td><td>✅</td><td><span class="badge b-warn">მხოლოდ თავისი ფილიალი</span></td></tr>
-            <tr><td><b>ფინანსური დეპ.</b></td><td>—</td><td>✅</td><td>👁</td><td>✅</td><td>👁</td><td><span class="badge b-info">ყველა ფილიალი</span></td></tr>
-            <tr><td><b>მარკეტინგი</b></td><td>—</td><td>—</td><td>👁</td><td>✅</td><td>👁</td><td><span class="badge b-info">ყველა ფილიალი</span></td></tr>
-            <tr><td><b>HR</b></td><td>—</td><td>—</td><td>👁</td><td>✅</td><td>✅</td><td><span class="badge b-info">ყველა ფილიალი</span></td></tr>
-            <tr><td><b>იურიდიული</b></td><td>—</td><td>👁</td><td>👁</td><td>✅</td><td>✅</td><td><span class="badge b-info">ყველა ფილიალი</span></td></tr>
-            <tr><td><b>ტრენერი</b></td><td>—</td><td>—</td><td>👁 (თავისი ჯგუფი)</td><td>✅</td><td>👁</td><td><span class="badge b-warn">მიბმული ჯგუფები</span></td></tr>
-            <tr><td><b>სტუდენტი</b></td><td>—</td><td>👁 (საკუთარი)</td><td>👁 (საკუთარი)</td><td>—</td><td>👁</td><td><span class="badge b-muted">პირადი კაბინეტი</span></td></tr>
+            <tr><td><b>სუპერ ადმინისტრატორი</b></td><td>პროგრამულად ყველა ცვლილება, ახალი ფუნქციების დამატება</td><td><span class="badge b-ok">ყველაფერი + სისტემა</span></td><td>ყველაფერი</td></tr>
+            <tr><td><b>დირექტორი</b></td><td>ყველაფრის ვიუერი/რედაქტორი</td><td><span class="badge b-ok">ყველაფერი</span></td><td>ყველაფერი</td></tr>
+            <tr><td><b>ფილიალის მენეჯერი</b></td><td>თავისი ფილიალის მართვა</td><td><span class="badge b-ok">ყველა საქაღალდე (თავისი ფილიალი)</span></td><td>Contracts (ხელმოწ. დოკ.) · სხვა ფილიალების ყველა საქაღალდე/ფაილი</td></tr>
+            <tr><td><b>ტრენერი</b></td><td>სწავლება + ClassDojo</td><td><span class="badge b-warn">ClassDojo — SteveCoin-ის მინიჭება</span></td><td>ცხრილები, ჯგუფები, სტუდენტები · Teaching Materials · QA — ინდივ. შეფასების შედეგები (ექსელი)</td></tr>
+            <tr><td><b>სტუდენტი</b></td><td>სწავლა</td><td><span class="badge b-warn">საშ. დავალების/პროექტის ატვირთვა</span></td><td>თავისი ჯგუფის ცხრილი · საშ. დავალებები · სიახლეები · ყველა პირადი მონაცემი</td></tr>
+            <tr><td><b>მშობელი</b></td><td>შვილის მონიტორინგი</td><td><span class="badge b-warn">სწავლის საფასურის გადახდა</span></td><td>შვილის ჯგუფის ცხრილი · შვილის საშ. დავალებები · სიახლეები · შვილის ყველა პირადი მონაცემი</td></tr>
           </tbody>
         </table>
-        <div class="card-body"><small>✅ სრული წვდომა · 👁 მხოლოდ ნახვა · — წვდომა არ აქვს</small></div>
+        <div class="card-body"><small>წყარო: „როლების განაწილება პლათფორმაზე“. Edit = ნახვა + რედაქტირება; View = მხოლოდ ნახვა.</small></div>
       </div>
       <div class="card mt-2">
         <div class="card-head"><h3>მომხმარებლები</h3><div class="actions"><div class="search" style="min-width:200px">🔎 <span>ძებნა…</span></div></div></div>
@@ -687,6 +684,7 @@
             <tr><td><div class="u"><span class="avatar sm">ნ.კ</span><span class="nm">ნინო კვარაცხელია</span></div></td><td>სუპერ ადმინი</td><td>ყველა</td><td>ახლა</td><td><span class="badge b-ok">აქტიური</span></td></tr>
             <tr><td><div class="u"><span class="avatar sm green">ქ.დ</span><span class="nm">ქეთი დოლიძე</span></div></td><td>ფილიალის მენეჯერი</td><td>თბილისი</td><td>1 სთ წინ</td><td><span class="badge b-ok">აქტიური</span></td></tr>
             <tr><td><div class="u"><span class="avatar sm yellow">ს.ა</span><span class="nm">სანდრო აბაშიძე</span></div></td><td>ტრენერი</td><td>თბილისი</td><td>დღეს</td><td><span class="badge b-ok">აქტიური</span></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">თ.ბ</span><span class="nm">თამარ ბერიძე</span></div></td><td>მშობელი (ნიკა ბერიძე)</td><td>თბილისი</td><td>2 სთ წინ</td><td><span class="badge b-ok">აქტიური</span></td></tr>
           </tbody>
         </table>
       </div>
