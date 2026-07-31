@@ -50,6 +50,7 @@
 
     <div class="nav-group-label">სისტემა</div>
     <div class="nav-item" data-target="roles"     data-title="მომხმარებლების მართვა"><span class="ic">👥</span> მომხმარებლები</div>
+    <div class="nav-item" data-target="params"    data-title="პარამეტრები — სასწავლო წლები/სემესტრები"><span class="ic">⚙️</span> პარამეტრები</div>
 
     <div class="sidebar-foot">
       <div class="who">
@@ -292,6 +293,7 @@
             <div class="tabs">
               <div class="tab active" data-tab="sp1">მიმოხილვა</div>
               <div class="tab" data-tab="sp3">პროგრესი</div>
+              <div class="tab" data-tab="sp7">ისტორია</div>
               <div class="tab" data-tab="sp5">ფაილები</div>
             </div>
             <!-- Overview: all student fields -->
@@ -366,6 +368,47 @@
                   <tr><td>Demo Day</td><td><span class="badge b-info">მონაწილეობა</span></td><td>+15</td></tr>
                 </tbody>
               </table>
+            </div>
+            <!-- History: groups / closed semesters / modules -->
+            <div class="tab-panel" data-panel="sp7">
+              <div class="note">🎓 მოსწავლის ისტორია — რომელ ჯგუფებში იყო, რომელი სემესტრები დახურა, რა მოდულები ისწავლა, რა ქულებითა და SteveCoins-ით დახურა თითოეული.</div>
+              <div class="mt-2"></div>
+              <div class="hist-block current">
+                <div class="h-head"><b>2025/26 · I სემესტრი · ჯგუფი #1_Juniors · ჯუნიორები II</b><span class="badge b-ok" style="margin-left:auto">მიმდინარე</span></div>
+                <div class="h-body">
+                  <table class="tbl compact">
+                    <thead><tr><th>მოდული</th><th>პროგრესი</th><th>P</th><th>Q</th><th>🪙</th></tr></thead>
+                    <tbody>
+                  <tr><td>🤖 Robotics (Galileo)</td><td>13 / 20</td><td>—</td><td>—</td><td>130</td></tr>
+                  <tr><td>💼 Global Leadership</td><td>26 / 40</td><td>—</td><td>—</td><td>120</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="hist-block ">
+                <div class="h-head"><b>2024/25 · II სემესტრი · ჯგუფი #1_Juniors · ჯუნიორები I</b><span class="badge b-muted" style="margin-left:auto">დახურული</span></div>
+                <div class="h-body">
+                  <table class="tbl compact">
+                    <thead><tr><th>მოდული</th><th>პროგრესი</th><th>P</th><th>Q</th><th>🪙</th></tr></thead>
+                    <tbody>
+                  <tr><td>💻 Coding Basics (Algo Play)</td><td>20 / 20</td><td>—</td><td>91</td><td>90</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="hist-block ">
+                <div class="h-head"><b>2024/25 · I სემესტრი · ჯგუფი #1_Juniors · ჯუნიორები I</b><span class="badge b-muted" style="margin-left:auto">დახურული</span></div>
+                <div class="h-body">
+                  <table class="tbl compact">
+                    <thead><tr><th>მოდული</th><th>პროგრესი</th><th>P</th><th>Q</th><th>🪙</th></tr></thead>
+                    <tbody>
+                  <tr><td>🤖 Robotics (Galileo)</td><td>20 / 20</td><td>88</td><td>—</td><td>130</td></tr>
+                  <tr><td>💼 Global Leadership</td><td>40 / 40</td><td>—</td><td>—</td><td>120</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="note">ℹ️ „დახურული" სემესტრი = ჯგუფის სემესტრი დაიხურა; მოდულის საბოლოო ქულები (P/Q) და SteveCoins ფიქსირდება ისტორიაში.</div>
             </div>
             <!-- Files -->
             <div class="tab-panel" data-panel="sp5">
@@ -449,42 +492,45 @@
       </div>
       <div class="grid g-3">
         <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">ჯგუფი #1</span><span class="badge b-ok">მიმდინარე</span></div>
+          <div class="flex between"><span class="badge b-info plain">#4_Minions</span><span class="badge b-ok">I სემ. · მიმდინარე</span></div>
           <h3 class="mt-1">Robotics</h3>
-          <div class="muted" style="font-size:12.5px">თბილისი · მინიონები · ლ. ბერიძე</div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 მინიონები</span><span class="badge b-muted plain">2025/26</span></div>
+          <div class="muted mt-1" style="font-size:12.5px">თბილისი · ტრენერი: ლ. ბერიძე</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>14 / 16</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>განრიგი</span><b>ორშ 15:00</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>მოდული (კატეგ.)</span><a data-goto="module-detail">რობოტიკა &amp; კოდირება →</a></div>
           <div class="flex between mt-1" style="font-size:13px"><span>პროგრესი (20 ტრენინგი)</span><b>13/20</b></div>
           <div class="progress mt-1"><span class="green" style="width:65%"></span></div>
-          <button class="btn block mt-2" data-modal="mEditGroup">მართვა (Edit)</button>
+          <button class="btn block mt-2" data-goto="group-detail">ჯგუფის გვერდი →</button>
         </div>
         <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">ჯგუფი #5</span><span class="badge b-ok">მიმდინარე</span></div>
+          <div class="flex between"><span class="badge b-info plain">#2_Tweens</span><span class="badge b-ok">II სემ. · მიმდინარე</span></div>
           <h3 class="mt-1">Mob Application</h3>
-          <div class="muted" style="font-size:12.5px">თბილისი · თვინსები · ნ. ჯავახიშვილი</div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 თვინსები</span><span class="badge b-muted plain">2025/26</span></div>
+          <div class="muted mt-1" style="font-size:12.5px">თბილისი · ტრენერი: ნ. ჯავახიშვილი</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>12 / 15</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>განრიგი</span><b>ორშ 17:00</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>მოდული (კატეგ.)</span><a data-goto="module-detail">Mobile App Development →</a></div>
           <div class="flex between mt-1" style="font-size:13px"><span>პროგრესი (5 მოდული)</span><b>M2/5</b></div>
           <div class="progress mt-1"><span class="yellow" style="width:45%"></span></div>
-          <button class="btn block mt-2" data-modal="mEditGroup">მართვა (Edit)</button>
+          <button class="btn block mt-2" data-goto="group-detail">ჯგუფის გვერდი →</button>
         </div>
         <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">ჯგუფი #9</span><span class="badge b-warn">იწყება 15 თებ</span></div>
+          <div class="flex between"><span class="badge b-info plain">#9_Juniors</span><span class="badge b-warn">იწყება 15 თებ</span></div>
           <h3 class="mt-1">Robotics</h3>
-          <div class="muted" style="font-size:12.5px">თბილისი · ჯუნიორები · II სემესტრი</div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 ჯუნიორები</span><span class="badge b-muted plain">2025/26</span></div>
+          <div class="muted mt-1" style="font-size:12.5px">თბილისი · ტრენერზე მიბმა მიმდინარეობს</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>9 / 16</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>განრიგი</span><b>კვ 12:00</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>მოდული (კატეგ.)</span><a data-goto="module-detail">რობოტიკა → პროგრამირება →</a></div>
           <div class="flex between mt-1" style="font-size:13px"><span>პროგრესი</span><b>0%</b></div>
           <div class="progress mt-1"><span style="width:2%"></span></div>
-          <button class="btn block mt-2" data-modal="mEditGroup">მართვა (Edit)</button>
+          <button class="btn block mt-2" data-goto="group-detail">ჯგუფის გვერდი →</button>
         </div>
         <div class="add-tile" data-modal="mAddGroup">
           <span class="plus">＋</span>
           <div><b>ახალი ჯგუფის დამატება</b></div>
-          <small>ფილიალი, პროგრამა და ტრენერზე მიბმა</small>
+          <small>ასაკ. კატეგორია · სასწავლო წელი (I სემესტრი) · ტრენერი</small>
         </div>
       </div>
       <div class="card mt-2">
@@ -500,6 +546,47 @@
           </table>
         </div>
       </div>
+    </section>
+
+    <!-- ==================== GROUP DETAIL (inner) ==================== -->
+    <section class="view" data-view="group-detail">
+      <span class="back-link" data-goto="groups">← სასწავლო ჯგუფები</span>
+      <div class="page-head">
+        <div class="titles"><h2>ჯგუფი #4_Minions — Robotics</h2><p>თბილისი · მინიონები (6–8) · სასწავლო წელი 2025/26 · I სემესტრი · ტრენერი: ლ. ბერიძე</p></div>
+        <div class="actions"><button class="btn" data-goto="module-detail">📚 მოდული</button><button class="btn" data-modal="mEditGroup">✏️ რედაქტირება</button></div>
+      </div>
+      <div class="grid g-4" style="margin-bottom:16px">
+        <div class="kpi"><div class="k-ic tint-savoy">👥</div><div class="k-val">14 / 16</div><div class="k-label">მოსწავლე</div></div>
+        <div class="kpi"><div class="k-ic tint-yellow">🎒</div><div class="k-val" style="font-size:18px">მინიონები</div><div class="k-label">ასაკ. კატეგორია</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val" style="font-size:18px">I სემესტრი</div><div class="k-label">2025/26</div></div>
+        <div class="kpi"><div class="k-ic tint-cerise">📋</div><div class="k-val">13 / 20</div><div class="k-label">ტრეინინგი</div></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-body flex wrap" style="align-items:center">
+          <b style="font-size:13px">🔁 სემესტრის მართვა:</b>
+          <span class="badge b-ok">I სემესტრი — მიმდინარე</span>
+          <span class="badge b-muted plain">II სემესტრი — დახურული</span>
+          <span class="wire-tag" style="margin-left:auto; align-self:center">სემესტრის „დახურულად" მონიშვნით ჯგუფი ავტომ. გადადის მომდევნო სემესტრში/კატეგორიაში</span>
+          <button class="btn sm primary" data-modal="mCloseSemester">✔ I სემესტრის დახურვა</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>ჯგუფში ჩარიცხული მოსწავლეები</h3><div class="actions"><button class="btn sm primary" data-modal="mAddStudentToGroup">＋ მოსწავლის ჩამატება</button></div></div>
+        <div style="overflow-x:auto">
+        <table class="tbl" style="min-width:820px">
+          <thead><tr><th>მოსწავლე</th><th>მშობელი</th><th>სტუდენტის ტელ.</th><th>მშობლის ტელ.</th><th>მშობლის ელ.ფოსტა</th><th>სტატუსი</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="u"><span class="avatar sm ">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td>თამარ ბერიძე</td><td>—</td><td>+995 599 12 34 56</td><td>beridze.family@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">ამოკლება</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">ა.ხ</span><div><div class="nm">ანა ხარაზი</div><div class="sub">პ/ნ 01030…</div></div></div></td><td>ლევან ხარაზი</td><td>+995 555 20 40 60</td><td>+995 577 11 22 33</td><td>kharazi.l@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">ამოკლება</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">ს.გ</span><div><div class="nm">საბა გელაშვილი</div><div class="sub">პ/ნ 61010…</div></div></div></td><td>ნინო გელაშვილი</td><td>—</td><td>+995 599 44 55 66</td><td>nino.g@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">ამოკლება</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">მ.კ</span><div><div class="nm">მარიამ კვირკველია</div><div class="sub">პ/ნ 60022…</div></div></div></td><td>ია კვირკველია</td><td>+995 558 70 80 90</td><td>+995 591 30 20 10</td><td>ia.kvirkvelia@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">ამოკლება</button></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ მოსწავლის ჩამატება/ამოკლება ხდება ამ გვერდიდან. ჯგუფი მიბმულია <b>მინიონების</b> ასაკობრივი კატეგორიის მოდულზე და გადის მის ტრეინინგებს თანმიმდევრობით.</div>
     </section>
 
     <!-- ==================== EXAMS ==================== -->
@@ -1087,6 +1174,42 @@
       </div>
     </section>
 
+    <!-- ==================== PARAMETERS (academic years / semesters, per branch) ==================== -->
+    <section class="view" data-view="params">
+      <div class="page-head">
+        <div class="titles"><h2>პარამეტრები — სასწავლო წლები და სემესტრები</h2><p>სასწავლო წლები და სემესტრები იმართება <b>ფილიალის ჭრილში</b> — თითო ფილიალს უნიკალური კალენდარი</p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddYear">＋ სასწავლო წლის დამატება</button></div>
+      </div>
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-body flex wrap">
+          <div class="select" style="width:auto">ფილიალი: თბილისი ▾</div>
+          <span class="wire-tag" style="margin-left:auto; align-self:center">ფილიალზე მიბმული სასწავლო წლები/სემესტრები — უნიკალური</span>
+        </div>
+      </div>
+      <div class="grid g-2">
+        <div class="card pad">
+          <div class="flex between"><h3 class="mb-0">2025/26</h3><span class="badge b-ok">მიმდინარე</span></div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>I სემესტრი · 05 ოქტ – 07 თებ</span><span class="badge b-ok plain">მიმდინარე</span></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>II სემესტრი · 15 თებ – 27 ივნ</span><span class="badge b-muted plain">დაგეგმილი</span></div>
+          <button class="btn block mt-2" data-modal="mManageYear">✏️ სემესტრების მართვა</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><h3 class="mb-0">2024/25</h3><span class="badge b-muted">დახურული</span></div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>I სემესტრი · 06 ოქტ – 09 თებ</span><span class="badge b-muted plain">დახურული</span></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>II სემესტრი · 16 თებ – 28 ივნ</span><span class="badge b-muted plain">დახურული</span></div>
+          <button class="btn block mt-2" data-modal="mManageYear">✏️ სემესტრების მართვა</button>
+        </div>
+        <div class="add-tile" data-modal="mAddYear">
+          <span class="plus">＋</span>
+          <div><b>ახალი სასწავლო წელი</b></div>
+          <small>ორი სემესტრი · თარიღები · ფილიალზე უნიკალური</small>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ სემესტრის „დახურულად" მონიშვნა პარამეტრებში ავტომ. ამოძრავებს ამ ფილიალის ჯგუფებს მომდევნო სემესტრზე/კატეგორიაზე.</div>
+    </section>
+
 
     </div><!-- /content -->
   </div><!-- /main -->
@@ -1162,11 +1285,16 @@
         <div class="field"><label>ჯგუფის ნომერი</label><input class="input" placeholder="მაგ. #13"></div>
       </div>
       <div class="form-row">
+        <div class="field"><label>ასაკ. კატეგორია</label><select class="select"><option>მინიონები (6–8)</option><option>ჯუნიორები (9–11)</option><option>თვინსები (12–13)</option><option>თინეიჯერები (14–16)</option></select></div>
         <div class="field"><label>პროგრამა</label><select class="select"><option>Robotics</option><option>Mob Application</option><option>Web Development</option><option>Minecraft</option><option>Global Leadership</option></select></div>
-        <div class="field"><label>ასაკ. კატეგორია</label><select class="select"><option>მინიონები</option><option>ჯუნიორები</option><option>თვინსები</option><option>თინეიჯერები</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>სასწავლო წელი</label><select class="select"><option>2025/26</option><option>2026/27</option></select></div>
+        <div class="field"><label>დაწყების სემესტრი</label><input class="input" value="I სემესტრი" readonly></div>
       </div>
       <div class="field"><label>ტრენერზე მიბმა</label><select class="select"><option>ლ. ბერიძე (Robotics)</option><option>ს. აბაშიძე (Web Dev)</option><option>ნ. ჯავახიშვილი (Mob App)</option><option>ი. კვარაცხელია (Minecraft)</option><option>თ. მამულაშვილი (Global Leadership)</option></select></div>
       <div class="field"><label>ოთახი</label><input class="input" placeholder="Lab 1"></div>
+      <div class="note">ℹ️ ჯგუფი იქმნება ერთ ასაკობრივ კატეგორიაში, სასწავლო წლის <b>I სემესტრში</b>, და ავტომ. ებმება ამ კატეგორიის მოდულს. მისი გადასვლა მომდევნო სემესტრზე/კატეგორიაზე ხდება სემესტრის „დახურულად" მონიშვნით.</div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">ჯგუფის შექმნა</button></div>
   </div>
@@ -1192,6 +1320,88 @@
       </div>
     </div>
     <div class="m-foot"><button class="btn danger m-close">ჯგუფის წაშლა</button><button class="btn m-close" style="margin-left:auto">გაუქმება</button><button class="btn primary m-close">შენახვა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add a student to a group -->
+<div class="modal-overlay" id="mAddStudentToGroup">
+  <div class="modal">
+    <div class="m-head"><h3>მოსწავლის ჩამატება — ჯგუფი #4_Minions</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>მოსწავლე</label><input class="input" placeholder="🔎 ძებნა სახელით ან პ/ნ-ით…"></div>
+      <div class="note">ℹ️ ჩამოთვლილია მხოლოდ ამ ასაკობრივი კატეგორიის (მინიონები) მოსწავლეები — Active ან მომლოდინეთა სიიდან. ჩამატებისას ჯგუფის ადგილები ნაწილდება.</div>
+      <div class="list-row mt-1"><span class="avatar sm green">დ.ნ</span><div class="grow"><div class="nm">დათო ნადირაძე</div><div class="sub">მომლოდინეთა სია · მინიონები</div></div><button class="btn sm primary m-close">＋ ჩამატება</button></div>
+      <div class="list-row"><span class="avatar sm yellow">ე.ჩ</span><div class="grow"><div class="nm">ელენე ჩხეიძე</div><div class="sub">Active · მინიონები</div></div><button class="btn sm primary m-close">＋ ჩამატება</button></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">დახურვა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: remove a student from a group -->
+<div class="modal-overlay" id="mRemoveFromGroup">
+  <div class="modal">
+    <div class="m-head"><h3>მოსწავლის ამოკლება ჯგუფიდან</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="note">⚠️ მოსწავლე ამოვა ჯგუფიდან #4_Minions. მისი ისტორია (დახურული სემესტრები, მოდულები, ქულები) შენარჩუნდება პროფილში.</div>
+      <div class="field mt-2"><label>მიზეზი</label><select class="select"><option>გადავიდა სხვა ჯგუფში</option><option>შეაჩერა სწავლა</option><option>სხვა</option></select></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn danger m-close">ამოკლება</button></div>
+  </div>
+</div>
+
+<!-- MODAL: close a semester → group auto-progresses -->
+<div class="modal-overlay" id="mCloseSemester">
+  <div class="modal">
+    <div class="m-head"><h3>სემესტრის დახურვა — ჯგუფი #4_Minions</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="note">🔁 I სემესტრის დახურვისას ჯგუფი ავტომ. გადადის მომდევნო ეტაპზე. მოსწავლეებს ეთვლებათ დახურული სემესტრი და დასწავლილი მოდულ(ებ)ი — ქულებითა და SteveCoins-ით (იხ. მოსწავლის ისტორია).</div>
+      <div class="form-row mt-2">
+        <div class="field"><label>დახურული სემესტრი</label><input class="input" value="2025/26 · I სემესტრი" readonly></div>
+        <div class="field"><label>დახურვის თარიღი</label><input class="input" type="date"></div>
+      </div>
+      <div class="field"><label>მომდევნო ეტაპი (ავტომ.)</label><select class="select"><option>II სემესტრი (იმავე კატეგორიაში)</option><option>მომდევნო წელი — I სემესტრი</option><option>მომდევნო ასაკობრივი კატეგორია</option><option>პროგრამის დასრულება</option></select></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დახურვა და გადაყვანა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add academic year (per branch) -->
+<div class="modal-overlay" id="mAddYear">
+  <div class="modal">
+    <div class="m-head"><h3>ახალი სასწავლო წელი</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>ფილიალი</label><select class="select"><option>თბილისი</option><option>ბათუმი</option><option>ქუთაისი</option><option>ზუგდიდი</option><option>ფოთი</option><option>ზესტაფონი</option></select></div>
+        <div class="field"><label>სასწავლო წელი</label><input class="input" placeholder="მაგ. 2026/27"></div>
+      </div>
+      <hr class="sep">
+      <b style="font-size:13px">I სემესტრი</b>
+      <div class="form-row mt-1">
+        <div class="field"><label>დაწყება</label><input class="input" type="date"></div>
+        <div class="field"><label>დასრულება</label><input class="input" type="date"></div>
+      </div>
+      <b style="font-size:13px">II სემესტრი</b>
+      <div class="form-row mt-1">
+        <div class="field"><label>დაწყება</label><input class="input" type="date"></div>
+        <div class="field"><label>დასრულება</label><input class="input" type="date"></div>
+      </div>
+      <div class="note">ℹ️ სასწავლო წელი და მისი ორი სემესტრი უნიკალურია არჩეული ფილიალისთვის.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">შექმნა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: manage semesters of a year (open/close per branch) -->
+<div class="modal-overlay" id="mManageYear">
+  <div class="modal">
+    <div class="m-head"><h3>სემესტრების მართვა — 2025/26 · თბილისი</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="train-row"><span class="t-num">I</span><span class="t-title">I სემესტრი · 05 ოქტ – 07 თებ</span><span class="badge b-ok plain">მიმდინარე</span></div>
+      <div class="train-row"><span class="t-num">II</span><span class="t-title">II სემესტრი · 15 თებ – 27 ივნ</span><span class="badge b-muted plain">დაგეგმილი</span></div>
+      <div class="field mt-2"><label>სემესტრის სტატუსი</label><select class="select"><option>მიმდინარე</option><option>დაგეგმილი</option><option>დახურული</option></select></div>
+      <div class="note">🔁 სემესტრის „დახურულად" მონიშვნა ავტომ. ამოძრავებს ამ ფილიალის ჯგუფებს მომდევნო სემესტრზე/კატეგორიაზე.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">შენახვა</button></div>
   </div>
 </div>
 
