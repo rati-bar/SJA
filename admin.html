@@ -235,6 +235,7 @@
             <div class="select" style="width:auto">ფილიალი: ყველა ▾</div>
             <div class="select" style="width:auto">ასაკ. კატეგორია: ყველა ▾</div>
             <div class="select" style="width:auto">Year (1–11): ყველა ▾</div>
+            <div class="select" style="width:auto">🎓 ალუმნი (დასრ. წელი): ყველა ▾</div>
             <div class="select" style="width:auto">მიღება: ყველა ▾</div>
             <div class="search" style="min-width:220px; margin-left:auto">🔎 <span>ძებნა სახელით ან პ/ნ-ით…</span></div>
           </div>
@@ -253,21 +254,20 @@
         <div class="card-head" style="gap:0">
           <div class="tabs" style="margin:0; border:none">
             <div class="tab active">ყველა <span class="badge b-muted plain" style="margin-left:6px">1 248</span></div>
-            <div class="tab">Active <span class="badge b-ok plain" style="margin-left:6px">1 060</span></div>
+            <div class="tab">Active <span class="badge b-ok plain" style="margin-left:6px">1 091</span></div>
             <div class="tab">Waiting list <span class="badge b-info plain" style="margin-left:6px">59</span></div>
             <div class="tab">Suspended <span class="badge b-muted plain" style="margin-left:6px">98</span></div>
-            <div class="tab">Alumni <span class="badge b-warn plain" style="margin-left:6px">31</span></div>
           </div>
         </div>
         <table class="tbl">
-          <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>ჯგუფი</th><th>Year</th><th>ფილიალი</th><th>🪙 SteveCoins</th><th>სტატუსი</th><th></th></tr></thead>
+          <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>ჯგუფი</th><th>Year</th><th title="ბოლო დასრულებული სასწავლო წელი">🎓 ალუმნი</th><th>ფილიალი</th><th>🪙 SteveCoins</th><th>სტატუსი</th><th></th></tr></thead>
           <tbody>
-            <tr><td><div class="u"><span class="avatar sm">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td>ჯუნიორები</td><td>#1_Juniors</td><td>Year 2</td><td>თბილისი</td><td>340</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td>თვინსები</td><td>#2_Tweens</td><td>Year 4</td><td>თბილისი</td><td>210</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm yellow">დ.ხ</span><div><div class="nm">დავით ხარაზი</div><div class="sub">პ/ნ 01027…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>Year 6</td><td>ბათუმი</td><td>180</td><td><span class="badge b-muted">Suspended</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm cerise">თ.გ</span><div><div class="nm">თეონა გოგიჩაიშვილი</div><div class="sub">პ/ნ 60018…</div></div></div></td><td>მინიონები</td><td>—</td><td>—</td><td>ბათუმი</td><td>0</td><td><span class="badge b-info">Waiting list</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>Year 11</td><td>თბილისი</td><td>410</td><td><span class="badge b-warn">Alumni</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">ა.ხ</span><div><div class="nm">ანა ხარაზი</div><div class="sub">პ/ნ 01030…</div></div></div></td><td>ჯუნიორები</td><td>#1_Juniors</td><td>Year 2</td><td>თბილისი</td><td>260</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td>ჯუნიორები</td><td>#1_Juniors</td><td>Year 2</td><td><span class="badge b-warn plain">Year 1</span></td><td>თბილისი</td><td>340</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td>თვინსები</td><td>#2_Tweens</td><td>Year 4</td><td><span class="badge b-warn plain">Year 3</span></td><td>თბილისი</td><td>210</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">დ.ხ</span><div><div class="nm">დავით ხარაზი</div><div class="sub">პ/ნ 01027…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>Year 6</td><td><span class="badge b-warn plain">Year 5</span></td><td>ბათუმი</td><td>180</td><td><span class="badge b-muted">Suspended</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">თ.გ</span><div><div class="nm">თეონა გოგიჩაიშვილი</div><div class="sub">პ/ნ 60018…</div></div></div></td><td>მინიონები</td><td>—</td><td>—</td><td class="text-muted">—</td><td>ბათუმი</td><td>0</td><td><span class="badge b-info">Waiting list</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>Year 11</td><td><span class="badge b-warn plain">Year 10</span></td><td>თბილისი</td><td>410</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">ა.ხ</span><div><div class="nm">ანა ხარაზი</div><div class="sub">პ/ნ 01030…</div></div></div></td><td>ჯუნიორები</td><td>#1_Juniors</td><td>Year 1</td><td class="text-muted">—</td><td>თბილისი</td><td>260</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -277,14 +277,14 @@
     <section class="view" data-view="student-profile">
       <span class="back-link" data-goto="students">← მოსწავლეთა ბაზა</span>
       <div class="page-head"><div class="titles"><h2>ნიკა ბერიძე</h2><p>თბილისი · ჯგუფი #1_Juniors · Year 2 · მიღება 2025_შემოდგომა</p></div>
-        <div class="actions"><button class="btn" data-modal="mChangeStatus">🔁 სტატუსის შეცვლა</button><button class="btn">✏️ რედაქტირება</button></div>
+        <div class="actions"><button class="btn" data-modal="mCompleteYear">🎓 წლის დასრულება</button><button class="btn" data-modal="mChangeStatus">🔁 სტატუსის შეცვლა</button><button class="btn">✏️ რედაქტირება</button></div>
       </div>
       <div class="grid g-1-2">
         <div class="card pad" style="text-align:center">
           <span class="avatar" style="width:80px; height:80px; font-size:28px; margin:0 auto">ნ.ბ</span>
           <h3 class="mt-2 mb-0">ნიკა ბერიძე</h3>
           <div class="muted">ჯგუფი #1_Juniors · თბილისი</div>
-          <div class="flex" style="justify-content:center; margin-top:10px; flex-wrap:wrap"><span class="badge b-ok">Active</span><span class="badge b-info">ჯუნიორები</span><span class="badge b-muted plain">Year 2 / 11</span></div>
+          <div class="flex" style="justify-content:center; margin-top:10px; flex-wrap:wrap"><span class="badge b-ok">Active</span><span class="badge b-info">ჯუნიორები</span><span class="badge b-muted plain">Year 2 / 11</span><span class="badge b-warn plain">🎓 ალუმნი: Year 1</span></div>
         </div>
         <div class="card">
           <div class="card-body" data-tabs>
@@ -309,6 +309,7 @@
                 <div><small>ჯგუფი</small><div><b>#1_Juniors</b></div></div>
                 <div><small>მიღება</small><div><b>2025_შემოდგომა</b></div></div>
                 <div><small>Year (პროგრამა)</small><div><b>Year 2 / 11</b></div></div>
+                <div><small>🎓 ალუმნი (ბოლო დასრ. წელი)</small><div><span class="badge b-warn plain">Year 1</span></div></div>
                 <div><small>ასაკ. კატეგორია</small><div><b>ჯუნიორები</b></div></div>
                 <div><small>სტატუსი</small><div><span class="badge b-ok">Active</span></div></div>
               </div>
@@ -955,9 +956,9 @@
     <div class="m-head"><h3>სტატუსის შეცვლა — ნიკა ბერიძე</h3><button class="m-close">×</button></div>
     <div class="m-body">
       <div class="field"><label>ახალი სტატუსი</label>
-        <span class="pill-tabbar"><span class="p active">Active</span><span class="p">Waiting list</span><span class="p">Suspended</span><span class="p">Alumni</span></span>
+        <span class="pill-tabbar"><span class="p active">Active</span><span class="p">Waiting list</span><span class="p">Suspended</span></span>
       </div>
-      <div class="note">ℹ️ ახალი სტატუსისთვის დამახასიათებელი ველები ივსება ხელით.</div>
+      <div class="note">ℹ️ ახალი სტატუსისთვის დამახასიათებელი ველები ივსება ხელით. „ალუმნი" ცალკე სტატუსი არ არის — ის სასწავლო წლის დასრულებით ენიჭება (იხ. პროფილი).</div>
       <div class="mt-2"><b style="font-size:13px">Suspended — დამატებითი ველები</b>
         <div class="form-row mt-1">
           <div class="field"><label>გასვლის თარიღი</label><input class="input" type="date"></div>
@@ -968,11 +969,24 @@
       <div class="mt-1"><b style="font-size:13px">Waiting list — დამატებითი ველი</b>
         <div class="field mt-1"><label>სიაში შეყვანის თარიღი</label><input class="input" type="date"></div>
       </div>
-      <div class="mt-1"><b style="font-size:13px">Alumni — დამატებითი ველი</b>
-        <div class="field mt-1"><label>პროგრამის დასრულების თარიღი</label><input class="input" type="date"></div>
-      </div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">სტატუსის განახლება</button></div>
+  </div>
+</div>
+
+<!-- MODAL: mark academic year complete → grants/updates Alumni (last completed year) -->
+<div class="modal-overlay" id="mCompleteYear">
+  <div class="modal">
+    <div class="m-head"><h3>სასწავლო წლის დასრულება — ნიკა ბერიძე</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="note">🎓 სასწავლო წლის დასრულებისას მოსწავლეს ენიჭება „ალუმნი" — მიეთითება ბოლო დასრულებული წელი. მოსწავლეს შეუძლია გააგრძელოს მომდევნო კურსზე.</div>
+      <div class="form-row mt-2">
+        <div class="field"><label>დასრულებული სასწავლო წელი</label><select class="select"><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4</option><option>Year 5</option><option>Year 6</option><option>Year 7</option><option>Year 8</option><option>Year 9</option><option>Year 10</option><option>Year 11</option></select></div>
+        <div class="field"><label>დასრულების თარიღი</label><input class="input" type="date"></div>
+      </div>
+      <div class="field"><label>მომდევნო წელი / კურსი</label><select class="select"><option>გადადის მომდევნო წელზე</option><option>ასრულებს 11-წლიან პროგრამას</option><option>აგრძელებს დამატებით კურსზე</option></select></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დადასტურება</button></div>
   </div>
 </div>
 
