@@ -388,33 +388,126 @@
     <!-- ==================== SCHEDULE ==================== -->
     <section class="view" data-view="schedule">
       <div class="page-head">
-        <div class="titles"><h2>სასწავლო ცხრილი — თბილისი</h2><p>ჯგუფები გადიან პროგრამას ROADMAP-ის მიხედვით · ლექტორი თითო სლოტზე იცვლება</p></div>
-        <div class="actions"><button class="btn" data-modal="mRoadmap">📋 ROADMAP</button><button class="btn primary" data-modal="mEditSlot">＋ სლოტის დამატება</button></div>
+        <div class="titles"><h2>სასწავლო ცხრილი — თბილისი</h2><p>თვის ცხრილი — მეცადინეობები მხოლოდ შაბათ-კვირას · გადმოათრიეთ კვირის ლექციები ცარიელ სლოტებში</p></div>
+        <div class="actions"><button class="btn" data-modal="mRoadmap">📋 ROADMAP</button><button class="btn primary" data-modal="mAssignLecturer">✏️ სლოტის რედაქტ.</button></div>
       </div>
       <div class="card" style="margin-bottom:16px">
         <div class="card-body flex wrap">
-          <div class="select" style="width:auto">კვირა: 26 ოქტ ▾</div>
+          <div class="select" style="width:auto">თვე: ოქტომბერი 2025 ▾</div>
           <div class="select" style="width:auto">ჯგუფი: ყველა ▾</div>
-          <span class="wire-tag" style="margin-left:auto; align-self:center">დააჭირეთ სლოტს რედაქტირებისთვის</span>
+          <span class="wire-tag" style="margin-left:auto; align-self:center">🖱️ drag &amp; drop — ლექცია → სლოტი → ლექტორი</span>
         </div>
       </div>
-      <div class="card">
-        <div class="card-head"><h3>26 ოქტომბერი · კვირა</h3></div>
-        <div style="overflow-x:auto">
-        <table class="tbl" style="min-width:720px">
-          <thead><tr><th>დრო</th><th>ჯგუფი</th><th>ლექცია (გეგმიდან)</th><th>ლექტორი</th><th></th></tr></thead>
-          <tbody>
-            <tr><td>10:00–11:15</td><td>#2 Tweens</td><td>Global Leaders — Signature Day</td><td>საბა სამხარაძე</td><td class="text-r"><button class="btn sm" data-modal="mEditSlot">✏️ სლოტი</button></td></tr>
-            <tr><td>11:30–12:45</td><td>#2 Tweens</td><td>MOB.APP — MOD#1 · DAY#1</td><td>საბა სამხარაძე</td><td class="text-r"><button class="btn sm" data-modal="mEditSlot">✏️ სლოტი</button></td></tr>
-            <tr><td>13:00–14:15</td><td>#3 Teenagers</td><td>Global Leaders — Signature Day</td><td>საბა სამხარაძე</td><td class="text-r"><button class="btn sm" data-modal="mEditSlot">✏️ სლოტი</button></td></tr>
-            <tr><td>14:30–15:45</td><td>#3 Teenagers</td><td>WEB — LESSON #1.1</td><td>საბა სამხარაძე</td><td class="text-r"><button class="btn sm" data-modal="mEditSlot">✏️ სლოტი</button></td></tr>
-            <tr><td>16:00–17:15</td><td>#1 Juniors</td><td>Global Leaders — Signature Day</td><td>საბა სამხარაძე</td><td class="text-r"><button class="btn sm" data-modal="mEditSlot">✏️ სლოტი</button></td></tr>
-            <tr><td>17:30–18:45</td><td>#1 Juniors</td><td>RB #1 — Br.1 Pirate Ship</td><td>საბა სამხარაძე</td><td class="text-r"><button class="btn sm" data-modal="mEditSlot">✏️ სლოტი</button></td></tr>
-          </tbody>
-        </table>
+
+      <div class="sched-wrap">
+        <div class="card palette">
+          <div class="card-head"><h3 style="font-size:14px">ამ კვირის ლექციები</h3></div>
+          <div class="palette-list">
+            <div class="pal-group">წინასწ. განსაზღვრული (ROADMAP)</div>
+          <div class="dnd-chip" draggable="true" data-grp="#2 Tweens" data-lesson="GL_ALPHA #31 — Signature Day"><div class="c-grp">#2 Tweens</div><div class="c-les">GL_ALPHA #31 — Signature Day</div></div>
+          <div class="dnd-chip" draggable="true" data-grp="#3 Teenagers" data-lesson="GL_ALPHA #31 — Signature Day"><div class="c-grp">#3 Teenagers</div><div class="c-les">GL_ALPHA #31 — Signature Day</div></div>
+          <div class="dnd-chip g-green" draggable="true" data-grp="#3 Teenagers" data-lesson="Web 17 — Lesson 1 (Part C)"><div class="c-grp">#3 Teenagers</div><div class="c-les">Web 17 — Lesson 1 (Part C)</div></div>
+          <div class="dnd-chip g-yellow" draggable="true" data-grp="#2 Tweens" data-lesson="Mobile App — MOD#1 · DAY#2"><div class="c-grp">#2 Tweens</div><div class="c-les">Mobile App — MOD#1 · DAY#2</div></div>
+          <div class="dnd-chip g-cerise" draggable="true" data-grp="#1 Juniors" data-lesson="Cod #12 — Al.19 Jumpover"><div class="c-grp">#1 Juniors</div><div class="c-les">Cod #12 — Al.19 Jumpover</div></div>
+          <div class="dnd-chip g-cerise" draggable="true" data-grp="#1 Juniors" data-lesson="RB #19 — Br.31 Fortune"><div class="c-grp">#1 Juniors</div><div class="c-les">RB #19 — Br.31 Fortune</div></div>
+            <div class="note" style="margin-top:8px">📋 ჩამონათვალი ჯგუფის მოდულის ROADMAP-იდან — რომელი ლექციებია ამ თვეში ჩასატარებელი.</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="month-grid">
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">4 ოქტ</div><div class="d-dow">შაბათი</div></div>
+            <div class="day-slots">
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-grp">#2 Tweens</div><div class="s-les">GL_ALPHA #30</div><div class="s-lect">👤 ენრი ლომინაძე</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-grp">#3 Teenagers</div><div class="s-les">GL_ALPHA #30</div><div class="s-lect">👤 ენრი ლომინაძე</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-grp">#1 Juniors</div><div class="s-les">GL_ALPHA #27</div><div class="s-lect">👤 ენრი ლომინაძე</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">5 ოქტ</div><div class="d-dow">კვირა</div></div>
+            <div class="day-slots">
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-grp">#2 Tweens</div><div class="s-les">Mobile App — MOD#1 · DAY#1</div><div class="s-lect">👤 თომა ფოცხვერაშვილი</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">11 ოქტ</div><div class="d-dow">შაბათი</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">12 ოქტ</div><div class="d-dow">კვირა</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">18 ოქტ</div><div class="d-dow">შაბათი</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">19 ოქტ</div><div class="d-dow">კვირა</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">25 ოქტ</div><div class="d-dow">შაბათი</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">26 ოქტ</div><div class="d-dow">კვირა</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ ჩააგდეთ ლექცია</div></div>
+            </div>
+          </div>
+          </div>
+          <div class="note mt-2">ℹ️ სლოტში ლექციის ჩაგდების შემდეგ ავტომ. იხსნება <b>ლექტორის მითითების ველი</b>. ლექტორი იცვლება თითო სლოტზე.</div>
         </div>
       </div>
-      <div class="note mt-2">ℹ️ ლექცია ავტომ. მოდის ჯგუფის ROADMAP-ის მიმდინარე საფეხურიდან; <b>ლექტორის შეცვლა</b> შესაძლებელია ცალკეულ სლოტზე.</div>
     </section>
 
     <!-- ==================== EXAMS ==================== -->
@@ -831,17 +924,17 @@
 </div>
 
 <!-- MODAL: edit schedule slot -->
-<div class="modal-overlay" id="mEditSlot">
+<div class="modal-overlay" id="mAssignLecturer">
   <div class="modal">
-    <div class="m-head"><h3>ცხრილის სლოტი</h3><button class="m-close">×</button></div>
+    <div class="m-head"><h3>ლექტორის მითითება</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="form-row">
-        <div class="field"><label>ჯგუფი</label><select class="select"><option>#2 Tweens</option><option>#3 Teenagers</option><option>#1 Juniors</option></select></div>
-        <div class="field"><label>დრო</label><select class="select"><option>10:00–11:15</option><option>11:30–12:45</option><option>13:00–14:15</option><option>14:30–15:45</option><option>16:00–17:15</option><option>17:30–18:45</option></select></div>
+      <div class="note">ℹ️ ლექცია სლოტში ჩააგდეთ გეგმიდან — ახლა მიუთითეთ ვინ ჩაატარებს (ერთ მოდულს სხვადასხვა ლექტორი ატარებს).</div>
+      <div class="form-row mt-2">
+        <div class="field"><label>ჯგუფი</label><input class="input" value="#2 Tweens" readonly></div>
+        <div class="field"><label>დრო</label><input class="input" value="10:00–11:15" readonly></div>
       </div>
-      <div class="field"><label>ლექცია (ROADMAP-ის მიხედვით)</label><select class="select"><option>Global Leaders — Signature Day</option><option>MOB.APP — MOD#1 · DAY#1</option><option>WEB — LESSON #1.1</option><option>RB #1 — Br.1 Pirate Ship</option></select></div>
-      <div class="field"><label>ლექტორი (იცვლება)</label><select class="select"><option>საბა სამხარაძე</option><option>თომა ფოცხვერაშვილი</option><option>ბესო მესხია</option><option>ლ. ბერიძე</option><option>ს. აბაშიძე</option></select></div>
-      <div class="note">ℹ️ ლექცია გეგმიდან მოდის თანმიმდევრობით; ლექტორის შეცვლა შესაძლებელია სლოტზე.</div>
+      <div class="field"><label>ლექცია (გეგმიდან)</label><input class="input" value="GL_ALPHA #31 — Signature Day" readonly></div>
+      <div class="field"><label>ლექტორი *</label><select class="select"><option value="">— აირჩიეთ ლექტორი —</option><option>ენრი ლომინაძე</option><option>თომა ფოცხვერაშვილი</option><option>ბესო მესხია</option><option>რეზო დარსაველიძე</option><option>საბა სამხარაძე</option></select></div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">შენახვა</button></div>
   </div>

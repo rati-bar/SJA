@@ -77,3 +77,59 @@
   window.addEventListener('DOMContentLoaded', openFromHash);
   window.addEventListener('hashchange', openFromHash);
 })();
+
+/* ===== Schedule builder — drag & drop lecture placement ===== */
+(function () {
+  var dragged = null;
+
+  document.addEventListener('dragstart', function (e) {
+    var chip = e.target.closest('.dnd-chip');
+    if (!chip || chip.classList.contains('used')) return;
+    dragged = chip;
+    chip.classList.add('dragging');
+    if (e.dataTransfer) {
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', chip.dataset.lesson || chip.textContent.trim());
+    }
+  });
+
+  document.addEventListener('dragend', function () {
+    if (dragged) dragged.classList.remove('dragging');
+    dragged = null;
+    document.querySelectorAll('.slot.over').forEach(s => s.classList.remove('over'));
+  });
+
+  document.addEventListener('dragover', function (e) {
+    var slot = e.target.closest('.slot.empty');
+    if (!slot) return;
+    e.preventDefault();
+    if (e.dataTransfer) e.dataTransfer.dropEffect = 'move';
+    slot.classList.add('over');
+  });
+
+  document.addEventListener('dragleave', function (e) {
+    var slot = e.target.closest('.slot.empty');
+    if (slot && !slot.contains(e.relatedTarget)) slot.classList.remove('over');
+  });
+
+  document.addEventListener('drop', function (e) {
+    var slot = e.target.closest('.slot.empty');
+    if (!slot || !dragged) return;
+    e.preventDefault();
+    var time = slot.dataset.time || '';
+    var grp = dragged.dataset.grp || '';
+    var les = dragged.dataset.lesson || dragged.querySelector('.c-les') && dragged.querySelector('.c-les').textContent || '';
+    slot.classList.remove('empty', 'over');
+    slot.classList.add('filled', 'need-lect');
+    slot.setAttribute('data-modal', 'mAssignLecturer');
+    slot.innerHTML =
+      '<div class="s-time">' + time + '</div>' +
+      '<div class="s-grp">' + grp + '</div>' +
+      '<div class="s-les">' + les + '</div>' +
+      '<div class="s-lect">⚠ ლექტორი მიუთითეთ</div>';
+    dragged.classList.add('used');
+    // Dropping a lecture pops the lecturer-assignment field
+    var m = document.getElementById('mAssignLecturer');
+    if (m) m.classList.add('open');
+  });
+})();
