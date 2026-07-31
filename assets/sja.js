@@ -33,10 +33,14 @@
       return;
     }
 
-    // Pill tab bars (visual only)
+    // Pill tab bars (visual; optional data-show reveals a matching .opt-block)
     var pill = e.target.closest('.pill-tabbar .p');
     if (pill) {
       pill.parentElement.querySelectorAll('.p').forEach(p => p.classList.toggle('active', p === pill));
+      if (pill.dataset.show) {
+        var scope = pill.closest('.m-body') || pill.closest('[data-optswitch]') || document;
+        scope.querySelectorAll('.opt-block').forEach(b => b.classList.toggle('active', b.id === pill.dataset.show));
+      }
       return;
     }
 
