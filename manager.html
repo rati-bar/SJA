@@ -29,6 +29,7 @@
     <div class="nav-item" data-target="students" data-title="მოსწავლეები"><span class="ic">🧑‍🎓</span> მოსწავლეები <span class="count">384</span></div>
     <div class="nav-item" data-target="trainers" data-title="ტრენერები"><span class="ic">👩‍🏫</span> ტრენერები <span class="count">21</span></div>
     <div class="nav-item" data-target="groups"   data-title="ჯგუფები"><span class="ic">👥</span> ჯგუფები <span class="count">26</span></div>
+    <div class="nav-item" data-target="modules"  data-title="სასწავლო მოდულები"><span class="ic">📚</span> სასწავლო მოდულები</div>
     <div class="nav-item" data-target="schedule" data-title="სასწავლო ცხრილი"><span class="ic">📆</span> სასწავლო ცხრილი</div>
     <div class="nav-item" data-target="exams"    data-title="გამოცდები / კალენდარი"><span class="ic">🗓️</span> გამოცდები</div>
 
@@ -145,8 +146,8 @@
           <div class="flex wrap">
             <div class="select" style="width:auto">სტატუსი: ყველა ▾</div>
             <div class="select" style="width:auto">ასაკ. კატეგორია: ყველა ▾</div>
-            <div class="select" style="width:auto">Year (1–11): ყველა ▾</div>
-            <div class="select" style="width:auto">🎓 ალუმნი (დასრ. წელი): ყველა ▾</div>
+            <div class="select" style="width:auto">წელი (კატეგ.): ყველა ▾</div>
+            <div class="select" style="width:auto">🎓 ალუმნი (კატეგ. · წელი): ყველა ▾</div>
             <div class="select" style="width:auto">ჯგუფი: ყველა ▾</div>
             <div class="select" style="width:auto">მიღება: ყველა ▾</div>
             <div class="search" style="min-width:220px; margin-left:auto">🔎 <span>ძებნა სახელით ან პ/ნ-ით…</span></div>
@@ -171,13 +172,13 @@
           </div>
         </div>
         <table class="tbl">
-          <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>ჯგუფი</th><th>Year</th><th title="ბოლო დასრულებული სასწავლო წელი">🎓 ალუმნი</th><th>🪙 SteveCoins</th><th>სტატუსი</th><th></th></tr></thead>
+          <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>ჯგუფი</th><th title="მიმდინარე წელი კატეგორიაში">წელი</th><th title="ბოლო დასრულებული კატეგორია · წელი">🎓 ალუმნი</th><th>🪙 SteveCoins</th><th>სტატუსი</th><th></th></tr></thead>
           <tbody>
-            <tr><td><div class="u"><span class="avatar sm">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td>ჯუნიორები</td><td>#1_Juniors</td><td>Year 2</td><td><span class="badge b-warn plain">Year 1</span></td><td>340</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">ბ.გ</span><div><div class="nm">ბარბარე გელაშვილი</div><div class="sub">პ/ნ 60011…</div></div></div></td><td>მინიონები</td><td>#4_Minions</td><td>Year 1</td><td class="text-muted">—</td><td>120</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm yellow">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td>თვინსები</td><td>#2_Tweens</td><td>Year 4</td><td><span class="badge b-warn plain">Year 3</span></td><td>210</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm cerise">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>Year 11</td><td><span class="badge b-warn plain">Year 10</span></td><td>410</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm">ს.ტ</span><div><div class="nm">საბა ტაბაღუა</div><div class="sub">პ/ნ 61005…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>Year 6</td><td><span class="badge b-warn plain">Year 5</span></td><td>60</td><td><span class="badge b-muted">Suspended</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td>ჯუნიორები</td><td>#1_Juniors</td><td>II</td><td><span class="badge b-warn plain">ჯუნიორები · I</span></td><td>340</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">ბ.გ</span><div><div class="nm">ბარბარე გელაშვილი</div><div class="sub">პ/ნ 60011…</div></div></div></td><td>მინიონები</td><td>#4_Minions</td><td>I</td><td class="text-muted">—</td><td>120</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td>თვინსები</td><td>#2_Tweens</td><td>I</td><td><span class="badge b-warn plain">ჯუნიორები · II</span></td><td>210</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>II</td><td><span class="badge b-warn plain">თინეიჯერები · I</span></td><td>410</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm">ს.ტ</span><div><div class="nm">საბა ტაბაღუა</div><div class="sub">პ/ნ 61005…</div></div></div></td><td>თინეიჯერები</td><td>#3_Teenagers</td><td>II</td><td><span class="badge b-warn plain">თინეიჯერები · I</span></td><td>60</td><td><span class="badge b-muted">Suspended</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
             <tr><td><div class="u"><span class="avatar sm green">თ.გ</span><div><div class="nm">თეონა გოგიჩაიშვილი</div><div class="sub">პ/ნ 60018…</div></div></div></td><td>მინიონები</td><td>—</td><td>—</td><td class="text-muted">—</td><td>0</td><td><span class="badge b-info">Waiting list</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
           </tbody>
         </table>
@@ -188,7 +189,7 @@
     <!-- ==================== STUDENT PROFILE (inner) ==================== -->
     <section class="view" data-view="student-profile">
       <span class="back-link" data-goto="students">← მოსწავლეები</span>
-      <div class="page-head"><div class="titles"><h2>ნიკა ბერიძე</h2><p>ჯგუფი #1_Juniors · Year 2 · მიღება 2025_შემოდგომა · თბილისი</p></div>
+      <div class="page-head"><div class="titles"><h2>ნიკა ბერიძე</h2><p>ჯგუფი #1_Juniors · ჯუნიორები · II წელი · მიღება 2025_შემოდგომა · თბილისი</p></div>
         <div class="actions"><button class="btn" data-modal="mCompleteYear">🎓 წლის დასრულება</button><button class="btn" data-modal="mChangeStatus">🔁 სტატუსის შეცვლა</button><button class="btn">✏️ რედაქტირება</button></div>
       </div>
       <div class="grid g-1-2">
@@ -196,7 +197,7 @@
           <span class="avatar yellow" style="width:80px; height:80px; font-size:28px; margin:0 auto">ნ.ბ</span>
           <h3 class="mt-2 mb-0">ნიკა ბერიძე</h3>
           <div class="muted">ჯგუფი #1_Juniors · თბილისი</div>
-          <div class="flex" style="justify-content:center; margin-top:10px; flex-wrap:wrap"><span class="badge b-ok">Active</span><span class="badge b-info">ჯუნიორები</span><span class="badge b-muted plain">Year 2 / 11</span><span class="badge b-warn plain">🎓 ალუმნი: Year 1</span></div>
+          <div class="flex" style="justify-content:center; margin-top:10px; flex-wrap:wrap"><span class="badge b-ok">Active</span><span class="badge b-info">ჯუნიორები</span><span class="badge b-muted plain">II წელი</span><span class="badge b-warn plain">🎓 ალუმნი: ჯუნიორები · I</span></div>
         </div>
         <div class="card">
           <div class="card-body" data-tabs>
@@ -218,8 +219,8 @@
                 <div><small>დაფინანსება</small><div><b>40%</b></div></div>
                 <div><small>ჯგუფი</small><div><b>#1_Juniors</b></div></div>
                 <div><small>მიღება</small><div><b>2025_შემოდგომა</b></div></div>
-                <div><small>Year</small><div><b>Year 2 / 11</b></div></div>
-                <div><small>🎓 ალუმნი (ბოლო დასრ. წელი)</small><div><span class="badge b-warn plain">Year 1</span></div></div>
+                <div><small>წელი (კატეგორიაში)</small><div><b>ჯუნიორები · II წელი</b></div></div>
+                <div><small>🎓 ალუმნი (ბოლო დასრ. კატეგ. · წელი)</small><div><span class="badge b-warn plain">ჯუნიორები · I</span></div></div>
                 <div><small>სტატუსი</small><div><span class="badge b-ok">Active</span></div></div>
               </div>
               <hr class="sep"><div><small>კომენტარი</small><div>—</div></div>
@@ -232,17 +233,39 @@
                 <div class="kpi"><div class="k-ic tint-cerise">✅</div><div class="k-val">94%</div><div class="k-label">დასწრება</div></div>
               </div>
               <hr class="sep">
-              <h4 style="font-size:13px">დასწრება — ლექციაზე მინიჭებული SteveCoins</h4>
-              <table class="tbl compact">
+              <h4 style="font-size:13px">დასწრება მოდულების მიხედვით — ლექციაზე მინიჭებული SteveCoins</h4>
+
+              <div class="flex between mt-2"><b style="font-size:12.5px">💼 Global Leadership</b><span class="nowrap"><span class="badge b-ok plain">დასწრება 95%</span> <span class="badge b-warn plain">🪙 ჯამი 120</span></span></div>
+              <table class="tbl compact mt-1">
                 <thead><tr><th>თარიღი</th><th>ლექცია</th><th>ლექტორი</th><th>დასწრება</th><th>🪙</th></tr></thead>
                 <tbody>
-                  <tr><td>18 ოქტ</td><td>Global Leaders — Signature Day</td><td>ს. სამხარაძე</td><td><span class="badge b-ok">დაესწრო</span></td><td>+10</td></tr>
-                  <tr><td>2 ნოე</td><td>International Education</td><td>თ. ფოცხვერაშვილი</td><td><span class="badge b-ok">დაესწრო</span></td><td>+8</td></tr>
+                  <tr><td>18 ოქტ</td><td>GL_ALPHA #27 — Signature Day</td><td>ე. ლომინაძე</td><td><span class="badge b-ok">დაესწრო</span></td><td>+10</td></tr>
+                  <tr><td colspan="4" class="text-muted">… 12 ლექცია</td><td>120</td></tr>
                 </tbody>
               </table>
+
+              <div class="flex between mt-2"><b style="font-size:12.5px">🤖 Robotics (Galileo Technic)</b><span class="nowrap"><span class="badge b-ok plain">დასწრება 92%</span> <span class="badge b-warn plain">🪙 ჯამი 130</span></span></div>
+              <table class="tbl compact mt-1">
+                <thead><tr><th>თარიღი</th><th>ლექცია</th><th>ლექტორი</th><th>დასწრება</th><th>🪙</th></tr></thead>
+                <tbody>
+                  <tr><td>18 ოქტ</td><td>RB #18 — Br.30 Pumpjack</td><td>თ. ფოცხვერაშვილი</td><td><span class="badge b-ok">დაესწრო</span></td><td>+10</td></tr>
+                  <tr><td>25 ოქტ</td><td>RB #19 — Br.31 Fortune</td><td>თ. ფოცხვერაშვილი</td><td><span class="badge b-danger">გააცდინა</span></td><td>0</td></tr>
+                  <tr><td colspan="4" class="text-muted">… 20 ლექცია</td><td>130</td></tr>
+                </tbody>
+              </table>
+
+              <div class="flex between mt-2"><b style="font-size:12.5px">💻 Coding Basics (Algo Play)</b><span class="nowrap"><span class="badge b-ok plain">დასწრება 96%</span> <span class="badge b-warn plain">🪙 ჯამი 90</span></span></div>
+              <table class="tbl compact mt-1">
+                <thead><tr><th>თარიღი</th><th>ლექცია</th><th>ლექტორი</th><th>დასწრება</th><th>🪙</th></tr></thead>
+                <tbody>
+                  <tr><td>1 ნოე</td><td>Cod #12 — Al.19 Jumpover</td><td>ბ. მესხია</td><td><span class="badge b-ok">დაესწრო</span></td><td>+9</td></tr>
+                  <tr><td colspan="4" class="text-muted">… 20 ლექცია</td><td>90</td></tr>
+                </tbody>
+              </table>
+
               <hr class="sep">
-              <h4 style="font-size:13px">პროექტებში მონაწილეობა</h4>
-              <table class="tbl compact">
+              <div class="flex between"><h4 style="font-size:13px">პროექტებში მონაწილეობა</h4><button class="btn sm primary" data-modal="mLinkToProject">＋ პროექტზე მიბმა</button></div>
+              <table class="tbl compact mt-1">
                 <thead><tr><th>პროექტი</th><th>შედეგი</th><th>🪙</th></tr></thead>
                 <tbody>
                   <tr><td>Robotics ჩემპიონატი 2025</td><td><span class="badge b-warn">გაიმარჯვა</span></td><td>+50</td></tr>
@@ -386,6 +409,152 @@
     </section>
 
     <!-- ==================== SCHEDULE ==================== -->
+    <!-- ==================== LEARNING MODULES ==================== -->
+    <section class="view" data-view="modules">
+      <div class="page-head">
+        <div class="titles"><h2>სასწავლო მოდულები</h2><p>თითო ასაკობრივ კატეგორიაზე — მრავალწლიანი კურსი; ტრეინინგები, შუალედური და გამოცდები ნაწილდება წლების სემესტრებზე, მასალის მიბმით</p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddModule">＋ მოდულის შექმნა</button></div>
+      </div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-info plain">🤖 Minions</span><span class="badge b-muted plain">2 წელი</span></div>
+          <h3 class="mt-1">რობოტიკა &amp; კოდირება</h3>
+          <div class="muted" style="font-size:12.5px">Minions · ასაკი 6–8</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>80</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>64</b></div>
+          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-ok plain">🤖 Juniors</span><span class="badge b-muted plain">2 წელი</span></div>
+          <h3 class="mt-1">რობოტიკა → პროგრამირება</h3>
+          <div class="muted" style="font-size:12.5px">Juniors · ასაკი 9–11</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>84</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>70</b></div>
+          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-warn plain">🧠 Tweens</span><span class="badge b-muted plain">2 წელი</span></div>
+          <h3 class="mt-1">Mobile App Development</h3>
+          <div class="muted" style="font-size:12.5px">Tweens · ასაკი 12–13</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>128</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>96</b></div>
+          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-danger plain">🌐 Teenagers</span><span class="badge b-muted plain">2 წელი</span></div>
+          <h3 class="mt-1">Web Development</h3>
+          <div class="muted" style="font-size:12.5px">Teenagers · ასაკი 14–16</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>144</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>112</b></div>
+          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-info plain">💼 All</span><span class="badge b-muted plain">2 წელი</span></div>
+          <h3 class="mt-1">Global Leadership</h3>
+          <div class="muted" style="font-size:12.5px">ყველა ასაკ. კატეგორია</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>80</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>80</b></div>
+          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
+        </div>
+        <div class="add-tile" data-modal="mAddModule">
+          <span class="plus">＋</span>
+          <div><b>ახალი მოდული</b></div>
+          <small>ასაკ. კატეგორია · წლების რაოდენობა · ტრეინინგები სემესტრებზე</small>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ მოდულის ტრეინინგები კვებავს <b>სასწავლო ცხრილს</b> — ჯგუფი გადის მოდულში წინასწარ გაწერილ ტრეინინგებს თანმიმდევრობით, რაც განსაზღვრავს რომელი ლექციებია კონკრეტულ თვეში ჩასატარებელი.</div>
+    </section>
+
+    <!-- ==================== MODULE DETAIL (inner) ==================== -->
+    <section class="view" data-view="module-detail">
+      <span class="back-link" data-goto="modules">← სასწავლო მოდულები</span>
+      <div class="page-head">
+        <div class="titles"><h2>Juniors — რობოტიკა → პროგრამირება</h2><p>Juniors (9–11) · 2 კურსი (წელი) · 4 სემესტრი · ტრეინინგები / შუალედური / გამოცდა ნაწილდება სემესტრებზე</p></div>
+        <div class="actions"><button class="btn">✏️ რედაქტირება</button></div>
+      </div>
+      <div class="grid g-4" style="margin-bottom:16px">
+        <div class="kpi"><div class="k-ic tint-savoy">🎓</div><div class="k-val">2</div><div class="k-label">კურსი (წელი)</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val">4</div><div class="k-label">სემესტრი</div></div>
+        <div class="kpi"><div class="k-ic tint-yellow">📋</div><div class="k-val">84</div><div class="k-label">ტრეინინგი</div></div>
+        <div class="kpi"><div class="k-ic tint-cerise">📎</div><div class="k-val">70</div><div class="k-label">მიბმული მასალა</div></div>
+      </div>
+        <div class="mod-year">
+          <div class="y-head"><span>🎓</span><h4>I კურსი — რობოტიკა &amp; კოდირება</h4><span class="badge b-warn plain" style="margin-left:auto">კურსი 1</span></div>
+          <div class="mod-sems">
+            <div class="mod-sem">
+              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-info plain">5 ჩანაწერი</span></div>
+              <div class="train-row"><span class="t-num">1</span><span class="t-title">RB — Br.1 Pirate Ship</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">2</span><span class="t-title">RB — Br.2 Merry-Go-Round</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">3</span><span class="t-title">RB — Br.3 Crane</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა — პროგრამის ბოლოს</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ტრეინინგები ROADMAP-ის თანმიმდევრობით</div>
+            </div>
+            <div class="mod-sem">
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-ok plain">5 ჩანაწერი</span></div>
+              <div class="train-row"><span class="t-num">1</span><span class="t-title">AlgoPlay — პროგრამირების საფუძვლები</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">2</span><span class="t-title">Al.2 Waving Flag — კოდი</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">3</span><span class="t-title">Al.3 Cowboy — მუდმ. მოძრაობა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა — სემესტრის ბოლოს</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">სემესტრი სრულდება გამოცდით</div>
+            </div>
+          </div>
+        </div>
+        <div class="mod-year">
+          <div class="y-head"><span>🎓</span><h4>II კურსი — პროგრამირება (Mobile App)</h4><span class="badge b-warn plain" style="margin-left:auto">კურსი 2</span></div>
+          <div class="mod-sems">
+            <div class="mod-sem">
+              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-info plain">4 ჩანაწერი</span></div>
+              <div class="train-row"><span class="t-num">1</span><span class="t-title">Mobile App — MOD#1 · DAY#1</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">2</span><span class="t-title">Mobile App — MOD#1 · DAY#2</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">…</span><span class="t-title">(16 ტრეინინგი / სემ.)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა — 1–2 მოდულის შემდეგ</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ტრეინინგები ROADMAP-ის თანმიმდევრობით</div>
+            </div>
+            <div class="mod-sem">
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-ok plain">4 ჩანაწერი</span></div>
+              <div class="train-row"><span class="t-num">1</span><span class="t-title">Mobile App — MOD#3 · DAY#1</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">2</span><span class="t-title">Mobile App — MOD#4 · DAY#1</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">…</span><span class="t-title">(24 ტრეინინგი / სემ.)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა — 3–5 მოდულის შემდეგ</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">სემესტრი სრულდება გამოცდით</div>
+            </div>
+          </div>
+        </div>
+      <div class="note">ℹ️ თითო სემესტრზე ემატება <b>ტრეინინგი</b>, <b>შუალედური</b> და <b>გამოცდა</b> (სამი ღილაკი). ყველა ჩანაწერზე იბმება სასწავლო მასალა. ჯგუფი გადის ამ თანმიმდევრობას თითო სესიაზე.</div>
+    </section>
+
     <section class="view" data-view="schedule">
       <div class="page-head">
         <div class="titles"><h2>სასწავლო ცხრილი — თბილისი</h2><p>თვის ცხრილი — მეცადინეობები მხოლოდ შაბათ-კვირას · გადმოათრიეთ კვირის ლექციები ცარიელ სლოტებში</p></div>
@@ -898,14 +1067,17 @@
 <!-- MODAL: mark academic year complete → grants/updates Alumni (last completed year) -->
 <div class="modal-overlay" id="mCompleteYear">
   <div class="modal">
-    <div class="m-head"><h3>სასწავლო წლის დასრულება — ნიკა ბერიძე</h3><button class="m-close">×</button></div>
+    <div class="m-head"><h3>წლის დასრულება — ნიკა ბერიძე</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="note">🎓 სასწავლო წლის დასრულებისას მოსწავლეს ენიჭება „ალუმნი" — მიეთითება ბოლო დასრულებული წელი. მოსწავლეს შეუძლია გააგრძელოს მომდევნო კურსზე.</div>
+      <div class="note">🎓 „ალუმნი" ნიშნავს ასაკობრივ კატეგორიაში პროგრამის წლის დასრულებას (არა 1–11 წლის). მიეთითება ბოლო დასრულებული კატეგორია და მისი წელი; მოსწავლეს შეუძლია გააგრძელოს მომდევნო წელი ან კატეგორია.</div>
       <div class="form-row mt-2">
-        <div class="field"><label>დასრულებული სასწავლო წელი</label><select class="select"><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4</option><option>Year 5</option><option>Year 6</option><option>Year 7</option><option>Year 8</option><option>Year 9</option><option>Year 10</option><option>Year 11</option></select></div>
-        <div class="field"><label>დასრულების თარიღი</label><input class="input" type="date"></div>
+        <div class="field"><label>ასაკობრივი კატეგორია</label><select class="select"><option>მინიონები (6–8)</option><option selected>ჯუნიორები (9–11)</option><option>თვინსები (12–13)</option><option>თინეიჯერები (14–16)</option></select></div>
+        <div class="field"><label>დასრულებული წელი (კატეგორიაში)</label><select class="select"><option>I წელი</option><option>II წელი</option><option>III წელი</option></select></div>
       </div>
-      <div class="field"><label>მომდევნო წელი / კურსი</label><select class="select"><option>გადადის მომდევნო წელზე</option><option>ასრულებს 11-წლიან პროგრამას</option><option>აგრძელებს დამატებით კურსზე</option></select></div>
+      <div class="form-row">
+        <div class="field"><label>დასრულების თარიღი</label><input class="input" type="date"></div>
+        <div class="field"><label>მომდევნო ეტაპი</label><select class="select"><option>მომდევნო წელი იმავე კატეგორიაში</option><option>გადადის მომდევნო ასაკობრივ კატეგორიაში</option><option>ასრულებს პროგრამას (კურსდამთავრებული)</option></select></div>
+      </div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დადასტურება</button></div>
   </div>
@@ -957,6 +1129,101 @@
       </table>
     </div>
     <div class="m-foot"><button class="btn primary m-close">დახურვა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: create learning module -->
+<div class="modal-overlay" id="mAddModule">
+  <div class="modal">
+    <div class="m-head"><h3>ახალი სასწავლო მოდული</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>ასაკობრივი კატეგორია</label><select class="select"><option>Minions (6–8)</option><option>Juniors (9–11)</option><option>Tweens (12–13)</option><option>Teenagers (14–16)</option><option>ყველა კატეგორია</option></select></div>
+      <div class="field"><label>მოდულის დასახელება</label><input class="input" placeholder="მაგ. რობოტიკა → პროგრამირება"></div>
+      <div class="form-row">
+        <div class="field"><label>ხანგრძლივობა (წელი)</label><select class="select"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></div>
+        <div class="field"><label>სემესტრი / წელი</label><input class="input" value="2" readonly></div>
+      </div>
+      <div class="note">ℹ️ არჩეული წლების მიხედვით ავტომ. იქმნება სემესტრები (2 თითო წელზე). თითო სემესტრზე ემატება ტრეინინგები, შუალედური და გამოცდა — მასალის მიბმით.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">შექმნა და სტრუქტურის გახსნა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add training to a semester -->
+<div class="modal-overlay" id="mAddTraining">
+  <div class="modal">
+    <div class="m-head"><h3>ტრეინინგის დამატება</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>კურსი (წელი)</label><select class="select"><option>I კურსი</option><option>II კურსი</option></select></div>
+        <div class="field"><label>სემესტრი</label><select class="select"><option>I სემესტრი</option><option>II სემესტრი</option></select></div>
+      </div>
+      <div class="field"><label>ტრეინინგის სათაური</label><input class="input" placeholder="მაგ. Al.5 Pendulum Ride — მოძრაობის ხანგრძლივობა"></div>
+      <div class="field"><label>თანმიმდევრობა (# სესია)</label><input class="input" type="number" value="6"></div>
+      <div class="field"><label>სასწავლო მასალა</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ მიაბით სილაბუსი / გაკვეთილის გეგმა / დავალება</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დამატება</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add midterm to a semester -->
+<div class="modal-overlay" id="mAddMidterm">
+  <div class="modal">
+    <div class="m-head"><h3>შუალედური გამოცდის დამატება</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>კურსი (წელი)</label><select class="select"><option>I კურსი</option><option>II კურსი</option></select></div>
+        <div class="field"><label>სემესტრი</label><select class="select"><option>I სემესტრი</option><option>II სემესტრი</option></select></div>
+      </div>
+      <div class="field"><label>ჩატარების მომენტი</label><input class="input" placeholder="მაგ. 1–2 მოდულის დასრულების შემდეგ (16 ტრეინინგი)"></div>
+      <div class="field"><label>შუალედური (P) — მაქს. ქულა</label><input class="input" type="number" value="100"></div>
+      <div class="field"><label>გამოცდის მასალა</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ მიაბით გამოცდის მასალა / პროცედურა</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დამატება</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add final exam to a semester -->
+<div class="modal-overlay" id="mAddModExam">
+  <div class="modal">
+    <div class="m-head"><h3>დასკვნითი გამოცდის დამატება</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>კურსი (წელი)</label><select class="select"><option>I კურსი</option><option>II კურსი</option></select></div>
+        <div class="field"><label>სემესტრი</label><select class="select"><option>I სემესტრი</option><option selected>II სემესტრი</option></select></div>
+      </div>
+      <div class="field"><label>ჩატარების მომენტი</label><input class="input" placeholder="მაგ. სემესტრის / პროგრამის დასრულების შემდეგ"></div>
+      <div class="field"><label>დასკვნითი (Q) — მაქს. ქულა</label><input class="input" type="number" value="100"></div>
+      <div class="field"><label>გამოცდის მასალა</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ მიაბით გამოცდის მასალა / პროცედურა</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დამატება</button></div>
+  </div>
+</div>
+
+<!-- MODAL: attach learning material to a training -->
+<div class="modal-overlay" id="mAttachMaterial">
+  <div class="modal">
+    <div class="m-head"><h3>სასწავლო მასალის მიბმა</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>მასალის ტიპი</label><select class="select"><option>სილაბუსი</option><option>გაკვეთილის გეგმა</option><option>საშინაო დავალება</option><option>გამოცდის მასალა</option><option>პრეზენტაცია / სხვა</option></select></div>
+      <div class="field"><label>ფაილი ან ბმული</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ გადმოათრიეთ ფაილი ან ჩასვით ბმული</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">მიბმა</button></div>
+  </div>
+</div>
+
+<!-- MODAL: link THIS student to a project from the profile (project + outcome → coins) -->
+<div class="modal-overlay" id="mLinkToProject">
+  <div class="modal">
+    <div class="m-head"><h3>პროექტზე მიბმა — ნიკა ბერიძე</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>პროექტი</label><select class="select"><option>Robotics ჩემპიონატი 2025</option><option>Demo Day</option><option>Web Hackathon 2026</option></select></div>
+      <div class="field"><label>შედეგი</label>
+        <span class="pill-tabbar"><span class="p active">მონაწილეობა</span><span class="p">გამარჯვება</span><span class="p">განხორციელება</span></span>
+      </div>
+      <div class="note">🪙 არჩეული პროექტის შედეგისთვის განსაზღვრული SteveCoins ავტომატურად დაემატება მოსწავლის ბალანსს. პროექტებს ქმნის ადმინი.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">მიბმა და დარიცხვა</button></div>
   </div>
 </div>
 

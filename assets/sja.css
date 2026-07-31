@@ -333,6 +333,12 @@ hr.sep { border:none; border-top:1px solid var(--line); margin:18px 0; }
 .train-row .t-title{ flex:1; }
 .train-row .t-mat{ font-size:11px; color:var(--muted); white-space:nowrap; cursor:pointer; }
 .train-row .t-mat:hover{ color:var(--savoy); }
+.train-row.assess{ border-left:3px solid var(--yellow); background:#fdf8ee; }
+.train-row.assess .t-num{ background:#fbeccb; color:#8a5f13; }
+.train-row.exam{ border-left:3px solid var(--cerise); background:#fceff1; }
+.train-row.exam .t-num{ background:#f8d8de; color:var(--cerise); }
+.sem-actions{ display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
+.sem-actions .btn{ flex:1; min-width:92px; }
 @media (max-width:760px){ .mod-sems{ grid-template-columns:1fr; } .mod-sem + .mod-sem{ border-left:none; border-top:1px solid var(--line); } }
 
 @media (max-width: 980px){ .sched-wrap{ grid-template-columns:1fr; } .palette{ position:static; } }
