@@ -207,6 +207,7 @@
             <div class="tab" data-tab="active">Active <span class="badge b-ok plain" style="margin-left:6px">1 091</span></div>
             <div class="tab" data-tab="waiting">Waiting list <span class="badge b-info plain" style="margin-left:6px">59</span></div>
             <div class="tab" data-tab="suspended">Suspended <span class="badge b-muted plain" style="margin-left:6px">98</span></div>
+            <div class="tab" data-tab="graduated">Graduated <span class="badge b-warn plain" style="margin-left:6px">42</span></div>
           </div>
         </div>
         <div class="tab-panel active" data-panel="all">
@@ -252,7 +253,16 @@
             </tbody>
           </table>
         </div>
-        <div class="note" style="margin:0 16px 14px">ℹ️ ტაბზე დაკლიკებით გრიდი აჩვენებს ამ სტატუსის განსხვავებულ ველებს — Waiting list: სიაში ჩასმის თარიღი; Suspended: გასვლის თარიღი და მიზეზი.</div>
+        <div class="tab-panel" data-panel="graduated">
+          <table class="tbl">
+            <thead><tr><th>მოსწავლე</th><th>მიღება</th><th>ბოლო კატეგ.</th><th>ფილიალი</th><th>🎓 დამთავრების თარიღი</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <tbody>
+            <tr><td><div class="u"><span class="avatar sm ">ლ.ც</span><div><div class="nm">ლანა ცქიტიშვილი</div><div class="sub">პ/ნ 01099…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>Apex · II</td><td>თბილისი</td><td><span class="badge b-warn plain">28/06/2025</span></td><td>980</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">გ.კ</span><div><div class="nm">გიო კიკნაძე</div><div class="sub">პ/ნ 01077…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>Apex · II</td><td>ბათუმი</td><td><span class="badge b-warn plain">28/06/2025</span></td><td>1120</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note" style="margin:0 16px 14px">ℹ️ ტაბზე დაკლიკებით გრიდი აჩვენებს ამ სტატუსის განსხვავებულ ველებს — Waiting list: სიაში ჩასმის თარიღი; Suspended: გასვლის თარიღი და მიზეზი; Graduated: დამთავრების თარიღი.</div>
       </div>
     </section>
 
@@ -322,6 +332,7 @@
             </div>
             <!-- Progress -->
             <div class="tab-panel" data-panel="sp3">
+              <div class="flex between" style="margin-bottom:10px"><b style="font-size:13px">მიმდინარე სემესტრის პროგრესი</b><button class="btn sm" data-tab-goto="sp7">📅 განვლილი სემესტრების პროგრესი →</button></div>
               <div class="grid g-4">
                 <div class="kpi"><div class="k-ic tint-yellow">🪙</div><div class="k-val">340</div><div class="k-label">SteveCoins (ჯამი)</div></div>
                 <div class="kpi"><div class="k-ic tint-savoy">P</div><div class="k-val">92</div><div class="k-label">შუალედური (P)</div></div>
@@ -430,12 +441,12 @@
       </div>
       <div class="card">
         <table class="tbl">
-          <thead><tr><th>ტრენერი</th><th>პროგრამა</th><th>ფილიალი</th><th>ლექცია/კვ</th><th>სამუშაო გრაფიკი</th><th>რეიტინგი</th><th></th></tr></thead>
+          <thead><tr><th>ტრენერი</th><th>პროგრამა</th><th>ფილიალი</th><th>რეიტინგი</th><th></th></tr></thead>
           <tbody>
-            <tr><td><div class="u"><span class="avatar sm">ლ.ბ</span><div><div class="nm">ლევან ბერიძე</div><div class="sub">Robotics ინსტრუქტორი</div></div></div></td><td>Robotics</td><td>თბილისი</td><td>3</td><td>ორშ/კვ, 15:00</td><td><span class="badge b-ok">⭐ 4.8</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">ს.ა</span><div><div class="nm">სანდრო აბაშიძე</div><div class="sub">Web Dev ინსტრუქტორი</div></div></div></td><td>Web Development</td><td>თბილისი</td><td>2</td><td>ორშ/კვ, 19:00</td><td><span class="badge b-ok">⭐ 4.9</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm yellow">თ.მ</span><div><div class="nm">თამარ მამულაშვილი</div><div class="sub">Global Leadership</div></div></div></td><td>Global Leadership</td><td>თბილისი</td><td>8</td><td>მოქნილი</td><td><span class="badge b-ok">⭐ 4.9</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm cerise">ნ.ჯ</span><div><div class="nm">ნათია ჯავახიშვილი</div><div class="sub">Mob App ინსტრუქტორი</div></div></div></td><td>Mob Application</td><td>ბათუმი</td><td>2</td><td>ორშ/კვ, 17:00</td><td><span class="badge b-ok">⭐ 4.7</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm">ლ.ბ</span><div><div class="nm">ლევან ბერიძე</div><div class="sub">Robotics ინსტრუქტორი</div></div></div></td><td>Robotics</td><td>თბილისი</td><td><span class="badge b-ok">⭐ 4.8</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">ს.ა</span><div><div class="nm">სანდრო აბაშიძე</div><div class="sub">Web Dev ინსტრუქტორი</div></div></div></td><td>Web Development</td><td>თბილისი</td><td><span class="badge b-ok">⭐ 4.9</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">თ.მ</span><div><div class="nm">თამარ მამულაშვილი</div><div class="sub">Global Leadership</div></div></div></td><td>Global Leadership</td><td>თბილისი</td><td><span class="badge b-ok">⭐ 4.9</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">ნ.ჯ</span><div><div class="nm">ნათია ჯავახიშვილი</div><div class="sub">Mob App ინსტრუქტორი</div></div></div></td><td>Mob Application</td><td>ბათუმი</td><td><span class="badge b-ok">⭐ 4.7</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -536,7 +547,7 @@
       <span class="back-link" data-goto="groups">← სასწავლო ჯგუფები</span>
       <div class="page-head">
         <div class="titles"><h2>ჯგუფი #4_Genesis — Robotics</h2><p>თბილისი · Genesis (6–8) · მიღება: Alpha · I სემესტრი</p></div>
-        <div class="actions"><button class="btn" data-goto="module-detail">📚 მოდული</button><button class="btn" data-modal="mEditGroup">✏️ რედაქტირება</button></div>
+        <div class="actions"><button class="btn" data-modal="mEditGroup">✏️ რედაქტირება</button></div>
       </div>
       <div class="grid g-4" style="margin-bottom:16px">
         <div class="kpi"><div class="k-ic tint-savoy">👥</div><div class="k-val">14 / 16</div><div class="k-label">მოსწავლე</div></div>
@@ -550,7 +561,7 @@
           <b style="font-size:13px">🔁 სემესტრის მართვა:</b>
           <span class="badge b-ok">I სემესტრი — მიმდინარე</span>
           <span class="badge b-muted plain">II სემესტრი — დახურული</span>
-          <span class="wire-tag" style="margin-left:auto; align-self:center">სემესტრის „დახურულად" მონიშვნით ჯგუფი ავტომ. გადადის მომდევნო სემესტრში/კატეგორიაში</span>
+          
           <button class="btn sm primary" data-modal="mCloseSemester">✔ I სემესტრის დახურვა</button>
         </div>
       </div>
@@ -690,7 +701,7 @@
       <span class="back-link" data-goto="modules-list">← მოდულები (Alpha · Nexus)</span>
       <div class="page-head">
         <div class="titles"><h2>Nexus — რობოტიკა → პროგრამირება</h2><p>მიღება: Alpha · Nexus (9–11) · 12 სემესტრი — წინასწარ განსაზღვრული სლოტები</p></div>
-        <div class="actions"><button class="btn">✏️ რედაქტირება</button></div>
+        <div class="actions"></div>
       </div>
       <div class="grid g-4" style="margin-bottom:16px">
         <div class="kpi"><div class="k-ic tint-savoy">🎓</div><div class="k-val">6</div><div class="k-label">წელი</div></div>
@@ -1077,77 +1088,15 @@
     </section>
 
     <!-- ==================== REPORTS ==================== -->
-    <section class="view" data-view="reports">
-      <div class="page-head">
-        <div class="titles"><h2>რეპორტები</h2><p>შაბლონები · შევსების განრიგი · ავტომატური შეხსენება · ცენტრალიზებული საცავი და არქივი</p></div>
-        <div class="actions"><button class="btn">🗂 არქივი</button><button class="btn primary">＋ შაბლონის შექმნა</button></div>
-      </div>
-
-      <div class="grid g-2-1">
-        <div class="card">
-          <div class="card-head"><h3>რეპორტების შაბლონები და განრიგი</h3></div>
-          <table class="tbl">
-            <thead><tr><th>შაბლონი</th><th>პასუხისმგებელი როლი</th><th>პერიოდულობა</th><th>შემდეგი deadline</th><th>სტატუსი</th></tr></thead>
-            <tbody>
-              <tr><td><b>თვიური დასწრება</b></td><td>ფილიალის ადმინი</td><td>ყოველთვიური</td><td>31 ივლ</td><td><span class="badge b-warn">9 შესავსები</span></td></tr>
-              <tr><td><b>ფინანსური ანგარიში</b></td><td>ფილიალის ადმინი</td><td>ყოველთვიური</td><td>5 აგვ</td><td><span class="badge b-info">დაგეგმილი</span></td></tr>
-              <tr><td><b>ჯგუფის პროგრესი</b></td><td>ტრენერი</td><td>2-კვირიანი</td><td>2 აგვ</td><td><span class="badge b-ok">42/48 შევსებული</span></td></tr>
-              <tr><td><b>ინვენტარი / ინფრასტ.</b></td><td>ფილიალის მენეჯერი</td><td>კვარტალური</td><td>30 სექ</td><td><span class="badge b-muted">არააქტიური</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card pad">
-          <h3>ავტომატური შეხსენება</h3>
-          <p class="muted" style="font-size:13px">თუ რეპორტი არ ივსება deadline-მდე, სისტემა ავტომატურად ახსენებს პასუხისმგებელს.</p>
-          <div class="list-row"><span class="badge b-warn">!</span><div class="grow"><b>თვიური დასწრება</b><div class="muted" style="font-size:12px">ზუგდიდი · 3 დღე ვადამდე</div></div></div>
-          <div class="list-row"><span class="badge b-danger">!!</span><div class="grow"><b>თვიური დასწრება</b><div class="muted" style="font-size:12px">ფოთი · ვადაგადაცილებული</div></div></div>
-          <button class="btn block mt-1" data-goto="notifications">შეხსენების პარამეტრები</button>
-        </div>
-      </div>
-
-      <div class="card mt-2">
-        <div class="card-head"><h3>შევსებული რეპორტების საცავი და ისტორია</h3><div class="actions"><div class="search" style="min-width:200px">🔎 <span>ძებნა…</span></div></div></div>
-        <table class="tbl">
-          <thead><tr><th>რეპორტი</th><th>ფილიალი</th><th>შემვსები</th><th>თარიღი</th><th></th></tr></thead>
-          <tbody>
-            <tr><td>თვიური დასწრება — ივნისი</td><td>თბილისი</td><td>ქ. დოლიძე</td><td>30 ივნ 2025</td><td class="text-r"><a href="#">👁 ნახვა</a> · <a href="#">⤓</a></td></tr>
-            <tr><td>ფინანსური ანგარიში — ივნისი</td><td>ბათუმი</td><td>რ. ბერიძე</td><td>5 ივლ 2025</td><td class="text-r"><a href="#">👁 ნახვა</a> · <a href="#">⤓</a></td></tr>
-            <tr><td>ჯგუფის პროგრესი — #7</td><td>თბილისი</td><td>ს. აბაშიძე</td><td>15 ივლ 2025</td><td class="text-r"><a href="#">👁 ნახვა</a> · <a href="#">⤓</a></td></tr>
-          </tbody>
-        </table>
-      </div>
+        <section class="view" data-view="reports">
+      <div class="page-head"><div class="titles"><h2>რეპორტები</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>ეს სექცია მალე დაემატება.</p></div>
     </section>
 
     <!-- ==================== EVALUATIONS ==================== -->
-    <section class="view" data-view="evaluations">
-      <div class="page-head">
-        <div class="titles"><h2>შეფასებები / გამოკითხვები</h2><p>ორი ტიპი: ტრენერების მიერ შესავსები · სხვების მიერ ტრენერზე/საგანზე შესავსები</p></div>
-        <div class="actions"><button class="btn">🔗 Google Forms ინტეგრაცია <span class="wire-tag">დასადგენია</span></button><button class="btn primary">＋ გამოკითხვის შექმნა</button></div>
-      </div>
-      <div class="grid g-2">
-        <div class="card">
-          <div class="card-head"><h3>① ტრენერების მიერ შესავსები</h3></div>
-          <table class="tbl compact">
-            <thead><tr><th>გამოკითხვა</th><th>პერიოდი</th><th>შევსება</th></tr></thead>
-            <tbody>
-              <tr><td>ჯგუფის თვიური თვითშეფასება</td><td>ივლისი</td><td><span class="badge b-ok">78/84</span></td></tr>
-              <tr><td>რესურსების საჭიროება</td><td>კვარტალი</td><td><span class="badge b-warn">51/84</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card">
-          <div class="card-head"><h3>② ტრენერზე/საგანზე შესავსები</h3></div>
-          <table class="tbl compact">
-            <thead><tr><th>ტრენერი</th><th>საშ. შეფასება</th><th>პასუხი</th></tr></thead>
-            <tbody>
-              <tr><td>ს. აბაშიძე</td><td><span class="badge b-ok">⭐ 4.8</span></td><td>142</td></tr>
-              <tr><td>თ. მამულაშვილი</td><td><span class="badge b-ok">⭐ 4.9</span></td><td>118</td></tr>
-              <tr><td>ი. კვარაცხელია</td><td><span class="badge b-warn">⭐ 4.2</span></td><td>96</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="note mt-2">❓ <b>გადასაწყვეტია:</b> ტრენერზე/საგანზე გამოკითხვები Google Forms-ით მოხდება თუ პლატფორმის შიდა მოდულით — ინტეგრაცია დასადგენია.</div>
+        <section class="view" data-view="evaluations">
+      <div class="page-head"><div class="titles"><h2>შეფასებები</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>ეს სექცია მალე დაემატება.</p></div>
     </section>
 
     <!-- ==================== DOCUMENTS ==================== -->
@@ -1174,31 +1123,23 @@
       <div class="card">
         <div class="card-head"><h3>გაგზავნის ლოგი</h3><div class="actions"><div class="search" style="min-width:200px">🔎 <span>ძებნა…</span></div></div></div>
         <table class="tbl">
-          <thead><tr><th>დრო</th><th>მიმღები</th><th>ფილიალი</th><th>არხი</th><th>ტიპი</th><th>სტატუსი</th></tr></thead>
+          <thead><tr><th>დრო</th><th>მიმღები</th><th>ესკალაციის დონე</th></tr></thead>
           <tbody>
-            <tr><td>დღეს 09:12</td><td>დავით ხარაზი</td><td>ბათუმი</td><td>📞 Voice</td><td>ესკალაცია ე.3</td><td><span class="badge b-ok">მიწოდებული</span></td></tr>
-            <tr><td>დღეს 09:05</td><td>მარიამ ლომიძე</td><td>თბილისი</td><td>💬 SMS</td><td>ესკალაცია ე.2</td><td><span class="badge b-ok">მიწოდებული</span></td></tr>
-            <tr><td>დღეს 08:40</td><td>ახალი მოსწ. (5)</td><td>თბილისი</td><td>✉️ Email</td><td>რეგისტრ. ბმული</td><td><span class="badge b-ok">გაგზავნილი</span></td></tr>
-            <tr><td>დღეს 08:22</td><td>საბა ტაბაღუა</td><td>თბილისი</td><td>💬 SMS</td><td>გარიცხვის გაფრთხ.</td><td><span class="badge b-warn">მიმდინარე</span></td></tr>
-            <tr><td>გუშინ 18:30</td><td>ანა ხარაზი</td><td>თბილისი</td><td>✉️ Email</td><td>გადახდის შეხსენება</td><td><span class="badge b-ok">მიწოდებული</span></td></tr>
-            <tr><td>გუშინ 17:10</td><td>ლუკა ცერცვაძე</td><td>თბილისი</td><td>📞 Voice</td><td>ესკალაცია ე.2</td><td><span class="badge b-ok">მიწოდებული</span></td></tr>
+            <tr><td>დღეს 09:12</td><td>დავით ხარაზი</td><td><span class="badge b-danger">დონე 3</span></td></tr>
+            <tr><td>დღეს 09:05</td><td>მარიამ ლომიძე</td><td><span class="badge b-warn">დონე 2</span></td></tr>
+            <tr><td>დღეს 08:40</td><td>ახალი მოსწ. (5)</td><td><span class="badge b-muted">დონე 0 · ინფო</span></td></tr>
+            <tr><td>დღეს 08:22</td><td>საბა ტაბაღუა</td><td><span class="badge b-danger">დონე 3</span></td></tr>
+            <tr><td>გუშინ 18:30</td><td>ანა ხარაზი</td><td><span class="badge b-info">დონე 1</span></td></tr>
+            <tr><td>გუშინ 17:10</td><td>ლუკა ცერცვაძე</td><td><span class="badge b-warn">დონე 2</span></td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <!-- ==================== KNOWLEDGE / AI ==================== -->
-    <section class="view" data-view="knowledge">
-      <div class="page-head">
-        <div class="titles"><h2>AI / ცოდნის ბაზა</h2><p>AI ჩათბოტი თანამშრომლების ონბორდინგისთვის · ცოდნის ბაზის მართვა</p></div>
-      </div>
-      <div class="card">
-        <div class="coming-soon">
-          <div class="cs-ic">🤖</div>
-          <h2>Coming soon</h2>
-          <p>AI ჩათბოტი და ცოდნის ბაზის მოდული მუშავდება — გამოჩნდება ეტაპი 4-ზე.</p>
-        </div>
-      </div>
+        <section class="view" data-view="knowledge">
+      <div class="page-head"><div class="titles"><h2>AI / ცოდნის ბაზა</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>ეს სექცია მალე დაემატება.</p></div>
     </section>
 
     <!-- ==================== ROLES ==================== -->
@@ -1267,19 +1208,48 @@
   <div class="modal">
     <div class="m-head"><h3>მომხმარებლის დამატება</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="field"><label>როლი</label><select class="select"><option>მოსწავლე</option><option>მშობელი</option><option>ტრენერი</option><option>ფილიალის მენეჯერი</option><option>ფინანსური დეპარტამენტი</option><option>დირექტორი</option><option>ბექოფისი (კადრები)</option><option>სუპერ ადმინისტრატორი</option></select></div>
-      <div class="form-row">
-        <div class="field"><label>სახელი და გვარი</label><input class="input" placeholder="სახელი გვარი"></div>
-        <div class="field"><label>პირადი ნომერი <small>(მომხმარებელი)</small></label><input class="input" placeholder="01001xxxxxx"></div>
+      <div class="field"><label>როლი</label>
+        <select class="select" data-optselect>
+          <option value="roleStudent">მოსწავლე</option>
+          <option value="roleParent">მშობელი</option>
+          <option value="roleGeneric">ტრენერი</option>
+          <option value="roleManager">ფილიალის მენეჯერი</option>
+          <option value="roleGeneric">ფინანსური დეპარტამენტი</option>
+          <option value="roleGeneric">დირექტორი</option>
+          <option value="roleGeneric">ბექოფისი (კადრები)</option>
+          <option value="roleGeneric">სუპერ ადმინისტრატორი</option>
+        </select>
       </div>
-      <div class="form-row">
-        <div class="field"><label>ტელეფონი</label><input class="input" placeholder="+995"></div>
+
+      <div class="opt-block active" id="roleStudent">
+        <div class="note">🔄 მოსწავლეები სინქრონდება გარე სისტემიდან. აირჩიეთ მოსწავლე, რომელსაც ჯერ არ აქვს უსერი.</div>
+        <div class="field mt-1"><label>მოსწავლე (უსერის გარეშე)</label>
+          <select class="select"><option>ნიკოლოზ ბერიძე · პ/ნ 61001…</option><option>ანა ხარაზი · პ/ნ 01030…</option><option>საბა გელაშვილი · პ/ნ 61010…</option><option>მარიამ კვირკველია · პ/ნ 60022…</option><option>დათო ნადირაძე · პ/ნ 61022…</option></select>
+        </div>
+        <div class="field"><label>Email (უსერისთვის)</label><input class="input" placeholder="mail@example.com"></div>
+      </div>
+
+      <div class="opt-block" id="roleParent">
+        <div class="note">👪 აირჩიეთ მოსწავლე, რომელსაც მშობელი მიება.</div>
+        <div class="field mt-1"><label>მოსწავლე (მიბმისთვის)</label>
+          <select class="select"><option>ნიკა ბერიძე · პ/ნ 61001…</option><option>მარიამ ლომიძე · პ/ნ 60012…</option><option>ანა ხარაზი · პ/ნ 01030…</option><option>ლუკა ცერცვაძე · პ/ნ 61003…</option><option>საბა გელაშვილი · პ/ნ 61010…</option></select>
+        </div>
+        <div class="form-row"><div class="field"><label>სახელი და გვარი</label><input class="input" placeholder="მშობლის სახელი გვარი"></div><div class="field"><label>ტელეფონი</label><input class="input" placeholder="+995"></div></div>
         <div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div>
       </div>
-      <div class="field"><label>ფილიალის მინიჭება</label>
-        <select class="select"><option>თბილისი</option><option>ბათუმი</option><option>ქუთაისი</option><option>ზუგდიდი</option><option>ფოთი</option><option>ზესტაფონი</option><option>ბექოფისი (საერთო — ყველა ფილიალი)</option></select>
+
+      <div class="opt-block" id="roleManager">
+        <div class="note">🏢 აირჩიეთ ფილიალი, რომელსაც მენეჯერი მიება.</div>
+        <div class="field mt-1"><label>ფილიალი (მისაბმელად)</label><select class="select"><option>თბილისი</option><option>ბათუმი</option><option>ქუთაისი</option><option>ზუგდიდი</option><option>ფოთი</option><option>ზესტაფონი</option></select></div>
+        <div class="form-row"><div class="field"><label>სახელი და გვარი</label><input class="input" placeholder="სახელი გვარი"></div><div class="field"><label>ტელეფონი</label><input class="input" placeholder="+995"></div></div>
+        <div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div>
       </div>
-      <div class="note">🏢 ადმინისტრატორს შეუძლია ფილიალის მინიჭება. <b>ბექოფისი</b> საერთოა ყველა ფილიალისთვის (კადრებისთვის).</div>
+
+      <div class="opt-block" id="roleGeneric">
+        <div class="form-row"><div class="field"><label>სახელი და გვარი</label><input class="input" placeholder="სახელი გვარი"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
+        <div class="field"><label>ფილიალის მინიჭება</label><select class="select"><option>თბილისი</option><option>ბათუმი</option><option>ქუთაისი</option><option>ზუგდიდი</option><option>ფოთი</option><option>ზესტაფონი</option><option>ბექოფისი (საერთო — ყველა ფილიალი)</option></select></div>
+      </div>
+
       <div class="note mt-1">📩 დამატების შემდეგ ავტომატურად იგზავნება SMS + Email სარეგისტრაციო ბმულით.</div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დამატება</button></div>

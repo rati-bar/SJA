@@ -23,6 +23,18 @@
     var jump = e.target.closest('[data-goto]');
     if (jump) { e.preventDefault(); activateView(jump.dataset.goto); return; }
 
+    // Jump to a specific in-page tab from anywhere (e.g. a button)
+    var tabGoto = e.target.closest('[data-tab-goto]');
+    if (tabGoto) {
+      var grp = tabGoto.closest('[data-tabs]');
+      if (grp) {
+        var key = tabGoto.dataset.tabGoto;
+        grp.querySelectorAll('.tab[data-tab]').forEach(t => t.classList.toggle('active', t.dataset.tab === key));
+        grp.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === key));
+        return;
+      }
+    }
+
     // In-page tab groups
     var tab = e.target.closest('.tab[data-tab]');
     if (tab) {
@@ -64,6 +76,15 @@
       e.target.classList.remove('open');
       return;
     }
+  });
+
+  // Select-driven option blocks: <select data-optselect> whose option values match .opt-block ids
+  document.addEventListener('change', function (e) {
+    var sel = e.target.closest('select[data-optselect]');
+    if (!sel) return;
+    var scope = sel.closest('.m-body') || sel.closest('[data-optswitch]') || document;
+    var val = sel.value;
+    scope.querySelectorAll('.opt-block').forEach(b => b.classList.toggle('active', b.id === val));
   });
 
   // Esc closes any open modal
