@@ -22,11 +22,8 @@
     </a>
     <span class="role-chip" style="background:rgba(229,164,54,.20); border-color:rgba(229,164,54,.4)">🏢 ფილიალის მენეჯერი · თბილისი</span>
 
-    <div class="nav-group-label">მთავარი</div>
-    <div class="nav-item active" data-target="dashboard" data-title="მთავარი პანელი" data-crumb="Dashboard"><span class="ic">📊</span> მთავარი პანელი</div>
-
     <div class="nav-group-label">ფილიალი — თბილისი</div>
-    <div class="nav-item" data-target="students" data-title="მოსწავლეები"><span class="ic">🧑‍🎓</span> მოსწავლეები <span class="count">384</span></div>
+    <div class="nav-item active" data-target="students" data-title="მოსწავლეები"><span class="ic">🧑‍🎓</span> მოსწავლეები <span class="count">384</span></div>
     <div class="nav-item" data-target="trainers" data-title="ტრენერები"><span class="ic">👩‍🏫</span> ტრენერები <span class="count">21</span></div>
     <div class="nav-item" data-target="groups"   data-title="ჯგუფები"><span class="ic">👥</span> ჯგუფები <span class="count">26</span></div>
     <div class="nav-item" data-target="modules"  data-title="სასწავლო მოდულები"><span class="ic">📚</span> სასწავლო მოდულები</div>
@@ -68,8 +65,8 @@
   <div class="main">
     <div class="topbar">
       <div>
-        <div class="crumb"><span id="crumb">Dashboard</span></div>
-        <h1 id="page-title">მთავარი პანელი</h1>
+        <div class="crumb"><span id="crumb">ფილიალი — თბილისი</span></div>
+        <h1 id="page-title">მოსწავლეები</h1>
       </div>
       <div class="spacer"></div>
       <div class="search">🔎 <span>ძებნა — მოსწავლე, ჯგუფი, ჩარიცხვა…</span></div>
@@ -80,63 +77,7 @@
     <div class="content">
 
     <!-- ==================== DASHBOARD ==================== -->
-    <section class="view active" data-view="dashboard">
-      <div class="page-head">
-        <div class="titles"><h2>თბილისის ფილიალი</h2><p>I სემესტრი (შემოდგომა 2025/26) · სრული მართვა თბილისში · სხვა ფილიალები — მხოლოდ ნახვა</p></div>
-        <div class="actions">
-          <button class="btn">⤓ ექსპორტი</button>
-          <button class="btn primary" data-modal="mAddUser">＋ მომხმარებელი</button>
-        </div>
-      </div>
-
-      <div class="note">ℹ️ ეს არის <b>ფილიალის მენეჯერის</b> პროფილი — <b>View+Edit</b> თბილისის ყველა საქაღალდეზე (გარდა ხელმოწერილი ხელშეკრულებებისა — View), ხოლო <b>სხვა ფილიალები — მხოლოდ View</b>.</div>
-
-      <div class="grid g-4 mt-2">
-        <div class="kpi"><div class="k-ic tint-savoy">🧑‍🎓</div><div class="k-val">384</div><div class="k-label">მოსწავლე (თბილისი)</div><span class="k-delta up">▲ 24 ახალი ჩარიცხვა</span></div>
-        <div class="kpi"><div class="k-ic tint-green">💰</div><div class="k-val">₾ 96k</div><div class="k-label">შემოსავალი (თვე)</div><span class="k-delta up">▲ 3.4%</span></div>
-        <div class="kpi"><div class="k-ic tint-yellow">⏳</div><div class="k-val">₾ 9.2k</div><div class="k-label">დავალიანება</div><span class="k-delta down">11 მოსწავლე</span></div>
-        <div class="kpi"><div class="k-ic tint-cerise">📥</div><div class="k-val">4</div><div class="k-label">დაუხარისხებელი ჩარიცხვა</div><span class="k-delta down">მიბმა საჭირო</span></div>
-      </div>
-
-      <div class="grid g-2-1 mt-2">
-        <div class="card">
-          <div class="card-head"><h3>მოსწავლეები პროგრამების მიხედვით — თბილისი</h3></div>
-          <div class="card-body">
-            <div class="chart-bars">
-              <div class="bar" style="height:88%"><span>Robotics</span></div>
-              <div class="bar alt" style="height:64%"><span>Mob App</span></div>
-              <div class="bar" style="height:58%"><span>Web Dev</span></div>
-              <div class="bar alt" style="height:40%"><span>Minecraft</span></div>
-              <div class="bar" style="height:96%"><span>G. Leader.</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-head"><h3>გადახდის სტატუსი</h3></div>
-          <div class="card-body flex" style="gap:20px">
-            <div class="donut"><div class="hole"><b style="font-size:22px;color:var(--navy)">85%</b><small>გადახდილი</small></div></div>
-            <div class="legend">
-              <div class="li"><span class="sw" style="background:var(--green)"></span> გადახდილი — 85%</div>
-              <div class="li"><span class="sw" style="background:var(--yellow)"></span> ნაწილობრივ — 6%</div>
-              <div class="li"><span class="sw" style="background:var(--cerise)"></span> გადაუხდელი — 5%</div>
-              <div class="li"><span class="sw" style="background:var(--line)"></span> გადავადებული — 4%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mt-2">
-        <div class="card-head"><h3>მოახლოებული გამოცდები</h3><div class="actions"><a href="#" data-goto="exams">კალენდარი →</a></div></div>
-        <div class="card-body">
-          <div class="list-row"><span class="badge b-warn">შუალედური</span><div class="grow"><b>ჯგუფი #7 · Web Development</b><div class="muted" style="font-size:12px">Apex · სესია 10</div></div><b class="nowrap">29 ნოე</b></div>
-          <div class="list-row"><span class="badge b-info">ქვიზი</span><div class="grow"><b>ჯგუფი #3 · Robotics</b><div class="muted" style="font-size:12px">Nexus · სესია 15</div></div><b class="nowrap">2 დეკ</b></div>
-          <div class="list-row"><span class="badge b-danger">დასკვნითი</span><div class="grow"><b>ჯგუფი #1 · Robotics</b><div class="muted" style="font-size:12px">Genesis · სესია 20</div></div><b class="nowrap">24 იან</b></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== STUDENTS ==================== -->
-    <section class="view" data-view="students">
+    <section class="view active" data-view="students">
       <div class="page-head">
         <div class="titles"><h2>მოსწავლეები — თბილისი</h2><p>რეგისტრაცია ხდება ცენტრალიზებულად · მენეჯერის მიერ დამატებული ავტომატურად ებმება თბილისს</p></div>
         <div class="actions"><button class="btn">⤓ ექსპორტი</button></div>
@@ -174,50 +115,49 @@
         </div>
         <div class="tab-panel active" data-panel="all">
           <table class="tbl">
-            <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>ჯგუფი</th><th title="მიმდინარე წელი კატეგორიაში">წელი</th><th title="ბოლო დასრ. კატეგ. · წელი">🎓 ალუმნი</th><th>🪙 SteveCoins</th><th>სტატუსი</th><th></th></tr></thead>
+            <thead><tr><th>მოსწავლე</th><th>მიღება</th><th>ჯგუფი</th><th title="მიმდინარე წელი კატეგორიაში">წელი</th><th title="ბოლო დასრ. კატეგ. · წელი">🎓 ალუმნი</th><th>🪙 SteveCoins</th><th>სტატუსი</th><th></th></tr></thead>
             <tbody>
-            <tr><td><div class="u"><span class="avatar sm ">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td>Nexus</td><td>#1_Nexus</td><td>II</td><td><span class="badge b-warn plain">Nexus · I</span></td><td>340</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td>Quantum</td><td>#2_Quantum</td><td>I</td><td><span class="badge b-warn plain">Nexus · II</span></td><td>210</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm yellow">დ.ხ</span><div><div class="nm">დავით ხარაზი</div><div class="sub">პ/ნ 01027…</div></div></div></td><td>Apex</td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>180</td><td><span class="badge b-muted">Suspended</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm cerise">თ.გ</span><div><div class="nm">თეონა გოგიჩაიშვილი</div><div class="sub">პ/ნ 60018…</div></div></div></td><td>Genesis</td><td>—</td><td>—</td><td class="text-muted">—</td><td>0</td><td><span class="badge b-info">Waiting list</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm ">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td>Apex</td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>410</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">ა.ხ</span><div><div class="nm">ანა ხარაზი</div><div class="sub">პ/ნ 01030…</div></div></div></td><td>Nexus</td><td>#1_Nexus</td><td>I</td><td class="text-muted">—</td><td>260</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>II</td><td><span class="badge b-warn plain">Nexus · I</span></td><td>340</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#2_Quantum</td><td>I</td><td><span class="badge b-warn plain">Nexus · II</span></td><td>210</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">დ.ხ</span><div><div class="nm">დავით ხარაზი</div><div class="sub">პ/ნ 01027…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>180</td><td><span class="badge b-muted">Suspended</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">თ.გ</span><div><div class="nm">თეონა გოგიჩაიშვილი</div><div class="sub">პ/ნ 60018…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td>—</td><td>—</td><td class="text-muted">—</td><td>0</td><td><span class="badge b-info">Waiting list</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>410</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">ა.ხ</span><div><div class="nm">ანა ხარაზი</div><div class="sub">პ/ნ 01030…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>I</td><td class="text-muted">—</td><td>260</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
             </tbody>
           </table>
         </div>
         <div class="tab-panel" data-panel="active">
           <table class="tbl">
-            <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>ჯგუფი</th><th>წელი</th><th>🎓 ალუმნი</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <thead><tr><th>მოსწავლე</th><th>მიღება</th><th>ჯგუფი</th><th>წელი</th><th>🎓 ალუმნი</th><th>🪙 SteveCoins</th><th></th></tr></thead>
             <tbody>
-            <tr><td><div class="u"><span class="avatar sm ">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td>Nexus</td><td>#1_Nexus</td><td>II</td><td><span class="badge b-warn plain">Nexus · I</span></td><td>340</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td>Quantum</td><td>#2_Quantum</td><td>I</td><td><span class="badge b-warn plain">Nexus · II</span></td><td>210</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm ">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td>Apex</td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>410</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">ა.ხ</span><div><div class="nm">ანა ხარაზი</div><div class="sub">პ/ნ 01030…</div></div></div></td><td>Nexus</td><td>#1_Nexus</td><td>I</td><td class="text-muted">—</td><td>260</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">ნ.ბ</span><div><div class="nm">ნიკა ბერიძე</div><div class="sub">პ/ნ 61001…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>II</td><td><span class="badge b-warn plain">Nexus · I</span></td><td>340</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">მ.ლ</span><div><div class="nm">მარიამ ლომიძე</div><div class="sub">პ/ნ 60012…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#2_Quantum</td><td>I</td><td><span class="badge b-warn plain">Nexus · II</span></td><td>210</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">ლ.ც</span><div><div class="nm">ლუკა ცერცვაძე</div><div class="sub">პ/ნ 61003…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>410</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">ა.ხ</span><div><div class="nm">ანა ხარაზი</div><div class="sub">პ/ნ 01030…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>I</td><td class="text-muted">—</td><td>260</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
             </tbody>
           </table>
         </div>
         <div class="tab-panel" data-panel="waiting">
           <table class="tbl">
-            <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>🕒 სიაში ჩასმის თარიღი</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <thead><tr><th>მოსწავლე</th><th>მიღება</th><th>🕒 სიაში ჩასმის თარიღი</th><th>🪙 SteveCoins</th><th></th></tr></thead>
             <tbody>
-            <tr><td><div class="u"><span class="avatar sm cerise">თ.გ</span><div><div class="nm">თეონა გოგიჩაიშვილი</div><div class="sub">პ/ნ 60018…</div></div></div></td><td>Genesis</td><td><span class="badge b-info plain">05/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">დ.ნ</span><div><div class="nm">დათო ნადირაძე</div><div class="sub">პ/ნ 61022…</div></div></div></td><td>Genesis</td><td><span class="badge b-info plain">12/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm yellow">ე.ჩ</span><div><div class="nm">ელენე ჩხეიძე</div><div class="sub">პ/ნ 60031…</div></div></div></td><td>Nexus</td><td><span class="badge b-info plain">20/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">თ.გ</span><div><div class="nm">თეონა გოგიჩაიშვილი</div><div class="sub">პ/ნ 60018…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td><span class="badge b-info plain">05/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">დ.ნ</span><div><div class="nm">დათო ნადირაძე</div><div class="sub">პ/ნ 61022…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td><span class="badge b-info plain">12/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">ე.ჩ</span><div><div class="nm">ელენე ჩხეიძე</div><div class="sub">პ/ნ 60031…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td><span class="badge b-info plain">20/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
             </tbody>
           </table>
         </div>
         <div class="tab-panel" data-panel="suspended">
           <table class="tbl">
-            <thead><tr><th>მოსწავლე</th><th>ასაკ. კატ.</th><th>ჯგუფი (ბოლო)</th><th>🚪 გასვლის თარიღი</th><th>გასვლის მიზეზი</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <thead><tr><th>მოსწავლე</th><th>მიღება</th><th>ჯგუფი (ბოლო)</th><th>🚪 გასვლის თარიღი</th><th>გასვლის მიზეზი</th><th>🪙 SteveCoins</th><th></th></tr></thead>
             <tbody>
-            <tr><td><div class="u"><span class="avatar sm yellow">დ.ხ</span><div><div class="nm">დავით ხარაზი</div><div class="sub">პ/ნ 01027…</div></div></div></td><td>Apex</td><td>#3_Apex</td><td><span class="badge b-muted plain">12/03/2025</span></td><td>ფინანსური</td><td>180</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
-            <tr><td><div class="u"><span class="avatar sm ">გ.ტ</span><div><div class="nm">გიორგი ტყეშელაშვილი</div><div class="sub">პ/ნ 61044…</div></div></div></td><td>Quantum</td><td>#2_Quantum</td><td><span class="badge b-muted plain">28/01/2025</span></td><td>ინტერესის დაკარგვა</td><td>95</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">დ.ხ</span><div><div class="nm">დავით ხარაზი</div><div class="sub">პ/ნ 01027…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#3_Apex</td><td><span class="badge b-muted plain">12/03/2025</span></td><td>ფინანსური</td><td>180</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">გ.ტ</span><div><div class="nm">გიორგი ტყეშელაშვილი</div><div class="sub">პ/ნ 61044…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#2_Quantum</td><td><span class="badge b-muted plain">28/01/2025</span></td><td>ინტერესის დაკარგვა</td><td>95</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">პროფილი →</button></td></tr>
             </tbody>
           </table>
         </div>
         <div class="note" style="margin:0 16px 14px">ℹ️ ტაბზე დაკლიკებით გრიდი აჩვენებს ამ სტატუსის განსხვავებულ ველებს — Waiting list: სიაში ჩასმის თარიღი; Suspended: გასვლის თარიღი და მიზეზი.</div>
       </div>
-
     </section>
 
     <!-- ==================== STUDENT PROFILE (inner) ==================== -->
@@ -231,7 +171,7 @@
             <p style="margin:2px 0 0">ჯგუფი #1_Nexus · Nexus · II წელი · მიღება Alpha (2025 შემოდგომა) · თბილისი</p>
           </div>
         </div>
-        <div class="actions"><button class="btn" data-modal="mCompleteYear">🎓 წლის დასრულება</button><button class="btn" data-modal="mChangeStatus">🔁 სტატუსის შეცვლა</button><button class="btn">✏️ რედაქტირება</button></div>
+        <div class="actions"><button class="btn" data-modal="mChangeStatus">🔁 სტატუსის შეცვლა</button><button class="btn">✏️ რედაქტირება</button></div>
       </div>
       <div class="flex wrap" style="margin-bottom:14px; gap:6px"><span class="badge b-ok">Active</span><span class="badge b-info">Nexus</span><span class="badge b-muted plain">II წელი</span><span class="badge b-warn plain">🎓 ალუმნი: Nexus · I</span></div>
       <div>
@@ -385,7 +325,7 @@
       </div>
       <div class="card">
         <table class="tbl">
-          <thead><tr><th>ტრენერი</th><th>პროგრამა</th><th>ასაკ. კატეგორია</th><th>ჯგუფები</th><th>გრაფიკი</th><th>რეიტინგი</th><th></th></tr></thead>
+          <thead><tr><th>ტრენერი</th><th>პროგრამა</th><th>ასაკ. კატეგორია</th><th>ლექცია/კვ</th><th>გრაფიკი</th><th>რეიტინგი</th><th></th></tr></thead>
           <tbody>
             <tr><td><div class="u"><span class="avatar sm">ლ.ბ</span><div><div class="nm">ლევან ბერიძე</div><div class="sub">Robotics ინსტრუქტორი</div></div></div></td><td>Robotics</td><td>Genesis, Nexus</td><td>#1, #3, #4</td><td>ორშ/კვ 15:00</td><td><span class="badge b-ok">⭐ 4.8</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
             <tr><td><div class="u"><span class="avatar sm green">ნ.ჯ</span><div><div class="nm">ნათია ჯავახიშვილი</div><div class="sub">Mob App ინსტრუქტორი</div></div></div></td><td>Mob Application</td><td>Quantum</td><td>#5, #6</td><td>ორშ/კვ 17:00</td><td><span class="badge b-ok">⭐ 4.7</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">პროფილი →</button></td></tr>
@@ -408,7 +348,7 @@
           <span class="avatar" style="width:80px; height:80px; font-size:28px; margin:0 auto">ლ.ბ</span>
           <h3 class="mt-2 mb-0">ლევან ბერიძე</h3>
           <div class="muted">Robotics · თბილისი</div>
-          <div class="flex" style="justify-content:center; margin-top:10px"><span class="badge b-ok">⭐ 4.8</span><span class="badge b-info">3 ჯგუფი</span></div>
+          <div class="flex" style="justify-content:center; margin-top:10px"><span class="badge b-ok">⭐ 4.8</span></div>
         </div>
         <div class="card pad">
           <h3>დეტალები</h3>
@@ -422,31 +362,15 @@
           </div>
         </div>
       </div>
-      <div class="grid g-2 mt-2">
-        <div class="card pad">
-          <h3>მიბმული ჯგუფები</h3>
-          <div class="flex wrap"><span class="badge b-info plain">#1 · Genesis</span><span class="badge b-info plain">#3 · Nexus</span><span class="badge b-info plain">#4 · Nexus</span></div>
-        </div>
-        <div class="card pad">
-          <h3>სამუშაო გრაფიკი</h3>
-          <table class="tbl compact mt-1">
-            <thead><tr><th>დღე</th><th>დრო</th><th>ჯგუფი</th></tr></thead>
-            <tbody>
-              <tr><td>ორშაბათი</td><td>15:00–17:00</td><td>#1</td></tr>
-              <tr><td>ორშაბათი</td><td>17:30–19:30</td><td>#3</td></tr>
-              <tr><td>კვირა</td><td>12:00–14:00</td><td>#4</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
       <div class="card pad mt-2">
-        <div class="flex between"><h3 class="mb-0">🎓 მასწავლებელი მოდულებზე</h3><button class="btn sm primary" data-modal="mAssignModuleTeacher">＋ მოდულზე მიბმა</button></div>
-        <div class="note mt-1">ℹ️ ლექტორი მიბმულია მოდულ(ებ)ზე როგორც ამ მოდულის მასწავლებელი — ცხრილის შედგენისას ის ამოვა <b>მხოლოდ ამ მოდულის ლექციის ჩანიშვნისას</b>.</div>
+        <h3>სამუშაო გრაფიკი</h3>
+        <div class="note mt-1">ℹ️ ტრენერი ჯგუფებსა და მოდულებზე არ იბმება — მისი გრაფიკი დგება სასწავლო ცხრილში ლექტორის მითითებით.</div>
         <table class="tbl compact mt-1">
-          <thead><tr><th>მოდული</th><th>ასაკ. კატეგორია</th><th>როლი</th><th></th></tr></thead>
+          <thead><tr><th>დღე</th><th>დრო</th><th>ლექცია</th></tr></thead>
           <tbody>
-            <tr><td>🤖 რობოტიკა &amp; კოდირება</td><td>Genesis</td><td><span class="badge b-ok">მასწავლებელი</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
-            <tr><td>🤖 რობოტიკა → პროგრამირება</td><td>Nexus</td><td><span class="badge b-ok">მასწავლებელი</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
+            <tr><td>ორშაბათი</td><td>15:00–17:00</td><td>Robotics — RB #18</td></tr>
+            <tr><td>ორშაბათი</td><td>17:30–19:30</td><td>Robotics — RB #19</td></tr>
+            <tr><td>კვირა</td><td>12:00–14:00</td><td>Coding — Al.19</td></tr>
           </tbody>
         </table>
       </div>
@@ -455,15 +379,14 @@
     <!-- ==================== GROUPS ==================== -->
     <section class="view" data-view="groups">
       <div class="page-head">
-        <div class="titles"><h2>ჯგუფები — თბილისი</h2><p>ჯგუფების მართვა · ასაკობრივი კატეგორია, პროგრამა და მეცადინეობების განრიგი</p></div>
+        <div class="titles"><h2>ჯგუფები — თბილისი</h2><p>ჯგუფის პროგრამა განისაზღვრება <b>მიღებისა</b> და <b>ასაკობრივი კატეგორიის</b> მიხედვით</p></div>
         <div class="actions"><button class="btn primary" data-modal="mAddGroup">＋ ჯგუფის შექმნა</button></div>
       </div>
       <div class="grid g-3">
         <div class="card pad">
           <div class="flex between"><span class="badge b-info plain">#4_Genesis</span><span class="badge b-ok">I სემ. · მიმდინარე</span></div>
           <h3 class="mt-1">Robotics</h3>
-          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Genesis</span><span class="badge b-muted plain">2025/26</span></div>
-          <div class="muted mt-1" style="font-size:12.5px">ტრენერი: ლ. ბერიძე</div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Genesis</span><span class="badge b-muted plain">🎟️ Alpha</span></div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>14 / 16</b></div>
           <div class="flex between mt-1" style="font-size:13px"><span>მოდული (კატეგ.)</span><a data-goto="module-detail">რობოტიკა &amp; კოდირება →</a></div>
@@ -474,8 +397,7 @@
         <div class="card pad">
           <div class="flex between"><span class="badge b-info plain">#2_Quantum</span><span class="badge b-ok">II სემ. · მიმდინარე</span></div>
           <h3 class="mt-1">Mob Application</h3>
-          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Quantum</span><span class="badge b-muted plain">2025/26</span></div>
-          <div class="muted mt-1" style="font-size:12.5px">ტრენერი: ნ. ჯავახიშვილი</div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Quantum</span><span class="badge b-muted plain">🎟️ Sigma</span></div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>12 / 15</b></div>
           <div class="flex between mt-1" style="font-size:13px"><span>მოდული (კატეგ.)</span><a data-goto="module-detail">Mobile App Development →</a></div>
@@ -486,8 +408,7 @@
         <div class="card pad">
           <div class="flex between"><span class="badge b-info plain">#3_Apex</span><span class="badge b-ok">II სემ. · მიმდინარე</span></div>
           <h3 class="mt-1">Web Development</h3>
-          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Apex</span><span class="badge b-muted plain">2025/26</span></div>
-          <div class="muted mt-1" style="font-size:12.5px">ტრენერი: ს. აბაშიძე</div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Apex</span><span class="badge b-muted plain">🎟️ Alpha</span></div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლეები</span><b>16 / 18</b></div>
           <div class="flex between mt-1" style="font-size:13px"><span>მოდული (კატეგ.)</span><a data-goto="module-detail">Web Development →</a></div>
@@ -498,21 +419,7 @@
         <div class="add-tile" data-modal="mAddGroup">
           <span class="plus">＋</span>
           <div><b>ახალი ჯგუფის დამატება</b></div>
-          <small>ასაკ. კატეგორია · სასწავლო წელი (I სემესტრი) · ტრენერი</small>
-        </div>
-      </div>
-      <div class="card mt-2">
-        <div class="card-head"><h3>მეცადინეობების განრიგი — მიმდინარე კვირა</h3><div class="actions"><button class="btn sm">＋ მეცადინეობის დამატება</button></div></div>
-        <div class="card-body">
-          <table class="tbl compact">
-            <thead><tr><th>დღე / დრო</th><th>ჯგუფი</th><th>პროგრამა</th><th>თემა</th><th>ტრენერი</th><th>ოთახი</th></tr></thead>
-            <tbody>
-              <tr><td>ორშ 15:00</td><td>#1</td><td>Robotics</td><td>Bricks Challenge — სესია 13</td><td>ლ. ბერიძე</td><td>თბ · Lab 1</td></tr>
-              <tr><td>ორშ 17:00</td><td>#5</td><td>Mob Application</td><td>Module 2 — UI</td><td>ნ. ჯავახიშვილი</td><td>თბ · Lab 2</td></tr>
-              <tr><td>ორშ 19:00</td><td>#7</td><td>Web Development</td><td>Module 3 — JS</td><td>ს. აბაშიძე</td><td>თბ · Lab 3</td></tr>
-              <tr><td>სამ 16:00</td><td>#12</td><td>Minecraft</td><td>Redstone Logic</td><td>ი. კვარაცხელია</td><td>თბ · Lab 2</td></tr>
-            </tbody>
-          </table>
+          <small>ასაკ. კატეგორია · მიღება (Intake)</small>
         </div>
       </div>
     </section>
@@ -521,13 +428,13 @@
     <section class="view" data-view="group-detail">
       <span class="back-link" data-goto="groups">← ჯგუფები</span>
       <div class="page-head">
-        <div class="titles"><h2>ჯგუფი #4_Genesis — Robotics</h2><p>თბილისი · Genesis (6–8) · სასწავლო წელი 2025/26 · I სემესტრი · ტრენერი: ლ. ბერიძე</p></div>
+        <div class="titles"><h2>ჯგუფი #4_Genesis — Robotics</h2><p>თბილისი · Genesis (6–8) · მიღება: Alpha · I სემესტრი</p></div>
         <div class="actions"><button class="btn" data-goto="module-detail">📚 მოდული</button><button class="btn" data-modal="mEditGroup">✏️ რედაქტირება</button></div>
       </div>
       <div class="grid g-4" style="margin-bottom:16px">
         <div class="kpi"><div class="k-ic tint-savoy">👥</div><div class="k-val">14 / 16</div><div class="k-label">მოსწავლე</div></div>
         <div class="kpi"><div class="k-ic tint-yellow">🎒</div><div class="k-val" style="font-size:18px">Genesis</div><div class="k-label">ასაკ. კატეგორია</div></div>
-        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val" style="font-size:18px">I სემესტრი</div><div class="k-label">2025/26</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val" style="font-size:18px">Alpha</div><div class="k-label">მიღება · I სემესტრი</div></div>
         <div class="kpi"><div class="k-ic tint-cerise">📋</div><div class="k-val">13 / 20</div><div class="k-label">ტრეინინგი</div></div>
       </div>
 
@@ -1181,7 +1088,7 @@
     <!-- ==================== PARAMETERS (academic years / semesters) ==================== -->
     <section class="view" data-view="params">
       <div class="page-head">
-        <div class="titles"><h2>პარამეტრები — კატეგორიები, მიღებები, სასწავლო წლები</h2><p>მოსწავლის პროგრამას განსაზღვრავს <b>ასაკობრივი კატეგორია</b> + <b>მიღება</b> · სასწავლო წლები — თბილისის ჭრილში</p></div>
+        <div class="titles"><h2>პარამეტრები — კატეგორიები და სემესტრები</h2><p>მოსწავლის პროგრამას განსაზღვრავს <b>ასაკობრივი კატეგორია</b> + <b>მიღება</b> (Intake / სემესტრი)</p></div>
       </div>
 
       <h3 style="margin:0 0 8px">🎓 სასწავლო კურსის კატეგორიები</h3>
@@ -1193,42 +1100,19 @@
         <div class="card pad"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">2 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 წ.</h3><div class="muted" style="font-size:12px">მოსვლის ასაკი</div></div>
       </div>
 
-      <h3 style="margin:0 0 8px">🎟️ მიღებები (Intakes)</h3>
-      <div class="note" style="margin-bottom:10px">ℹ️ მიღება ხდება ყოველ სემესტრში; მოსწავლის პროგრამა = ასაკ. კატეგორია + მიღება.</div>
-      <div class="card" style="margin-bottom:20px">
+      <div class="flex between" style="margin-bottom:8px"><h3 class="mb-0">🎟️ სემესტრები (მიღებები)</h3><button class="btn sm primary" data-modal="mAddSemester">＋ სემესტრის დამატება</button></div>
+      <div class="note" style="margin-bottom:10px">ℹ️ ყოველ სემესტრს აქვს სახელი (Sigma / Alpha / Delta …) და დაწყება/დასრულების თარიღი. მოსწავლის პროგრამა = ასაკ. კატეგორია + მიღება.</div>
+      <div class="card">
         <table class="tbl compact">
-          <thead><tr><th>მიღება</th><th>სემესტრი</th><th>პერიოდი</th><th>სტატუსი</th></tr></thead>
+          <thead><tr><th>სახელი</th><th>დაწყება</th><th>დასრულება</th><th>სტატუსი</th><th></th></tr></thead>
           <tbody>
-            <tr><td><b>Delta</b></td><td>გაზაფხული</td><td>2026</td><td><span class="badge b-info">დაგეგმილი</span></td></tr>
-            <tr><td><b>Alpha</b></td><td>შემოდგომა</td><td>2025</td><td><span class="badge b-ok">მიმდინარე</span></td></tr>
-            <tr><td><b>Sigma</b></td><td>გაზაფხული</td><td>2025</td><td><span class="badge b-muted">დახურული</span></td></tr>
+            <tr><td><b>Delta</b></td><td>15 თებ 2026</td><td>27 ივნ 2026</td><td><span class="badge b-info">დაგეგმილი</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
+            <tr><td><b>Alpha</b></td><td>05 ოქტ 2025</td><td>07 თებ 2026</td><td><span class="badge b-ok">მიმდინარე</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
+            <tr><td><b>Sigma</b></td><td>16 თებ 2025</td><td>28 ივნ 2025</td><td><span class="badge b-muted">დახურული</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
           </tbody>
         </table>
       </div>
-
-      <div class="flex between" style="margin-bottom:8px"><h3 class="mb-0">📆 სასწავლო წლები / სემესტრები — თბილისი</h3><button class="btn sm primary" data-modal="mAddYear">＋ სასწავლო წლის დამატება</button></div>
-      <div class="grid g-2">
-        <div class="card pad">
-          <div class="flex between"><h3 class="mb-0">2025/26</h3><span class="badge b-ok">მიმდინარე</span></div>
-          <hr class="sep">
-          <div class="flex between" style="font-size:13px"><span>I სემესტრი · 05 ოქტ – 07 თებ</span><span class="badge b-ok plain">მიმდინარე</span></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>II სემესტრი · 15 თებ – 27 ივნ</span><span class="badge b-muted plain">დაგეგმილი</span></div>
-          <button class="btn block mt-2" data-modal="mManageYear">✏️ სემესტრების მართვა</button>
-        </div>
-        <div class="card pad">
-          <div class="flex between"><h3 class="mb-0">2024/25</h3><span class="badge b-muted">დახურული</span></div>
-          <hr class="sep">
-          <div class="flex between" style="font-size:13px"><span>I სემესტრი · 06 ოქტ – 09 თებ</span><span class="badge b-muted plain">დახურული</span></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>II სემესტრი · 16 თებ – 28 ივნ</span><span class="badge b-muted plain">დახურული</span></div>
-          <button class="btn block mt-2" data-modal="mManageYear">✏️ სემესტრების მართვა</button>
-        </div>
-        <div class="add-tile" data-modal="mAddYear">
-          <span class="plus">＋</span>
-          <div><b>ახალი სასწავლო წელი</b></div>
-          <small>ორი სემესტრი · თარიღები · ფილიალზე უნიკალური</small>
-        </div>
-      </div>
-      <div class="note mt-2">ℹ️ სემესტრის „დახურულად" მონიშვნა ავტომ. ამოძრავებს ფილიალის ჯგუფებს მომდევნო სემესტრზე/კატეგორიაზე.</div>
+      <div class="note mt-2">ℹ️ სემესტრის „დახურულად" მონიშვნა ავტომ. ამოძრავებს ჯგუფებს მომდევნო სემესტრზე/კატეგორიაზე.</div>
     </section>
 
     </div><!-- /content -->
@@ -1265,14 +1149,8 @@
         <div class="field"><label>ჯგუფის ნომერი</label><input class="input" placeholder="მაგ. #13"></div>
         <div class="field"><label>ასაკ. კატეგორია</label><select class="select"><option>Genesis (6–8)</option><option>Nexus (9–11)</option><option>Quantum (12–13)</option><option>Apex (14–16)</option></select></div>
       </div>
-      <div class="form-row">
-        <div class="field"><label>პროგრამა</label><select class="select"><option>Robotics</option><option>Mob Application</option><option>Web Development</option><option>Minecraft</option><option>Global Leadership</option></select></div>
-        <div class="field"><label>სასწავლო წელი</label><select class="select"><option>2025/26</option><option>2026/27</option></select></div>
-      </div>
-      <div class="field"><label>დაწყების სემესტრი</label><input class="input" value="I სემესტრი" readonly></div>
-      <div class="field"><label>ტრენერზე მიბმა</label><select class="select"><option>ლ. ბერიძე (Robotics)</option><option>ნ. ჯავახიშვილი (Mob App)</option><option>ს. აბაშიძე (Web Dev)</option><option>ი. კვარაცხელია (Minecraft)</option><option>თ. მამულაშვილი (Global Leadership)</option></select></div>
-      <div class="field"><label>ოთახი</label><input class="input" placeholder="Lab 1"></div>
-      <div class="note">ℹ️ ჯგუფი იქმნება ერთ ასაკობრივ კატეგორიაში, სასწავლო წლის <b>I სემესტრში</b>, და ავტომ. ებმება ამ კატეგორიის მოდულს. მისი გადასვლა მომდევნო სემესტრზე/კატეგორიაზე ხდება სემესტრის „დახურულად" მონიშვნით.</div>
+      <div class="field"><label>მიღება (Intake)</label><select class="select"><option>Alpha (2025 შემოდგომა)</option><option>Delta (2026 გაზაფხული)</option><option>Sigma (2025 გაზაფხული)</option></select></div>
+      <div class="note">ℹ️ ჯგუფის <b>პროგრამა ავტომ. განისაზღვრება მიღებისა და ასაკობრივი კატეგორიის მიხედვით</b> და ებმება ამ კატეგორიის მოდულს. სემესტრის „დახურულად" მონიშვნით ჯგუფი გადადის მომდევნო სემესტრზე/კატეგორიაზე.</div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">ჯგუფის შექმნა</button></div>
   </div>
@@ -1297,9 +1175,9 @@
   <div class="modal">
     <div class="m-head"><h3>მოსწავლის ამოკლება — ჯგუფი #4_Genesis</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="note">⚠️ აირჩიეთ სამიდან ერთი ვარიანტი. მოსწავლის ისტორია (დახურული სემესტრები, მოდულები, ქულები) შენარჩუნდება პროფილში.</div>
+      <div class="note">⚠️ აირჩიეთ ერთი ვარიანტი. მოსწავლის ისტორია (დახურული სემესტრები, მოდულები, ქულები) შენარჩუნდება პროფილში.</div>
       <div class="field mt-2"><label>ქმედება</label>
-        <span class="pill-tabbar"><span class="p active" data-show="optWaiting">მომლოდინეებში</span><span class="p" data-show="optLeave">გასვლა</span><span class="p" data-show="optMove">სხვა ჯგუფში</span></span>
+        <span class="pill-tabbar"><span class="p active" data-show="optWaiting">მომლოდინეებში</span><span class="p" data-show="optLeave">გასვლა</span><span class="p" data-show="optMove">სხვა ჯგუფში</span><span class="p" data-show="optGrad">Graduated</span></span>
       </div>
       <div class="opt-block active" id="optWaiting">
         <div class="note">🕒 მოსწავლე გადავა მომლოდინეთა სიაში (ელოდება ჯგუფის ადგილს თავის ასაკობრივ კატეგორიაში).</div>
@@ -1315,8 +1193,12 @@
       </div>
       <div class="opt-block" id="optMove">
         <div class="note">🔀 მოსწავლე გადავა სხვა ჯგუფში (იმავე ასაკობრივი კატეგორიის).</div>
-        <div class="field mt-1"><label>ახალი ჯგუფი</label><select class="select"><option>#7_Genesis · Robotics · ლ. ბერიძე</option><option>#12_Genesis · Coding · ი. კვარაცხელია</option><option>#15_Genesis · Robotics · თ. მამულაშვილი</option></select></div>
+        <div class="field mt-1"><label>ახალი ჯგუფი</label><select class="select"><option>#7_Genesis · Alpha</option><option>#12_Genesis · Delta</option><option>#15_Genesis · Sigma</option></select></div>
         <div class="field"><label>გადაყვანის თარიღი</label><input class="input" type="date"></div>
+      </div>
+      <div class="opt-block" id="optGrad">
+        <div class="note">🎓 Graduated — მოსწავლემ სწავლა დაასრულა და მომდევნო კურსზე გაგრძელებას აღარ აპირებს.</div>
+        <div class="field mt-1"><label>დამთავრების თარიღი</label><input class="input" type="date"></div>
       </div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დადასტურება</button></div>
@@ -1330,7 +1212,7 @@
     <div class="m-body">
       <div class="note">🔁 I სემესტრის დახურვისას ჯგუფი ავტომ. გადადის მომდევნო ეტაპზე. მოსწავლეებს ეთვლებათ დახურული სემესტრი და დასწავლილი მოდულ(ებ)ი — ქულებითა და SteveCoins-ით (იხ. მოსწავლის ისტორია).</div>
       <div class="form-row mt-2">
-        <div class="field"><label>დახურული სემესტრი</label><input class="input" value="2025/26 · I სემესტრი" readonly></div>
+        <div class="field"><label>დახურული სემესტრი</label><input class="input" value="Alpha · I სემესტრი" readonly></div>
         <div class="field"><label>დახურვის თარიღი</label><input class="input" type="date"></div>
       </div>
       <div class="field"><label>მომდევნო ეტაპი (ავტომ.)</label><select class="select"><option>II სემესტრი (იმავე კატეგორიაში)</option><option>მომდევნო წელი — I სემესტრი</option><option>მომდევნო ასაკობრივი კატეგორია</option><option>პროგრამის დასრულება</option></select></div>
@@ -1361,18 +1243,14 @@
     <div class="m-head"><h3>ჯგუფის რედაქტირება — #1</h3><button class="m-close">×</button></div>
     <div class="m-body">
       <div class="form-row">
-        <div class="field"><label>ჯგუფის ნომერი</label><input class="input" value="#1"></div>
-        <div class="field"><label>სემესტრი</label><select class="select"><option>I (შემოდგომა)</option><option>II (გაზაფხული)</option></select></div>
-      </div>
-      <div class="form-row">
-        <div class="field"><label>პროგრამა</label><select class="select"><option>Robotics</option><option>Mob Application</option><option>Web Development</option><option>Minecraft</option><option>Global Leadership</option></select></div>
+        <div class="field"><label>ჯგუფის ნომერი</label><input class="input" value="#4_Genesis"></div>
         <div class="field"><label>ასაკ. კატეგორია</label><select class="select"><option>Genesis</option><option>Nexus</option><option>Quantum</option><option>Apex</option></select></div>
       </div>
-      <div class="field"><label>ტრენერი</label><select class="select"><option>ლ. ბერიძე (Robotics)</option><option>ნ. ჯავახიშვილი (Mob App)</option><option>ს. აბაშიძე (Web Dev)</option><option>ი. კვარაცხელია (Minecraft)</option></select></div>
       <div class="form-row">
-        <div class="field"><label>ოთახი</label><input class="input" value="Lab 1"></div>
+        <div class="field"><label>მიღება (Intake)</label><select class="select"><option>Alpha</option><option>Delta</option><option>Sigma</option></select></div>
         <div class="field"><label>სტატუსი</label><select class="select"><option>მიმდინარე</option><option>დაგეგმილი</option><option>დასრულებული</option></select></div>
       </div>
+      <div class="note">ℹ️ პროგრამა განისაზღვრება მიღებისა და ასაკობრივი კატეგორიის მიხედვით.</div>
     </div>
     <div class="m-foot"><button class="btn danger m-close">ჯგუფის წაშლა</button><button class="btn m-close" style="margin-left:auto">გაუქმება</button><button class="btn primary m-close">შენახვა</button></div>
   </div>
@@ -1384,39 +1262,26 @@
     <div class="m-head"><h3>სტატუსის შეცვლა — ნიკა ბერიძე</h3><button class="m-close">×</button></div>
     <div class="m-body">
       <div class="field"><label>ახალი სტატუსი</label>
-        <span class="pill-tabbar"><span class="p active">Active</span><span class="p">Waiting list</span><span class="p">Suspended</span></span>
+        <span class="pill-tabbar"><span class="p active" data-show="stActive">Active</span><span class="p" data-show="stWaiting">Waiting list</span><span class="p" data-show="stSuspended">Suspended</span><span class="p" data-show="stGrad">Graduated</span></span>
       </div>
-      <div class="note">ℹ️ ახალი სტატუსისთვის დამახასიათებელი ველები ივსება ხელით. „ალუმნი" ცალკე სტატუსი არ არის — ის სასწავლო წლის დასრულებით ენიჭება (იხ. პროფილი).</div>
-      <div class="mt-2"><b style="font-size:13px">Suspended — დამატებითი ველები</b>
-        <div class="form-row mt-1">
+      <div class="note">ℹ️ არჩეული სტატუსისთვის დამახასიათებელი ველები ივსება ხელით.</div>
+      <div class="opt-block active" id="stActive"><div class="note mt-2">✅ მოსწავლე აქტიურია — დამატებითი ველი არ სჭირდება.</div></div>
+      <div class="opt-block" id="stWaiting">
+        <div class="field mt-2"><label>სიაში შეყვანის თარიღი</label><input class="input" type="date"></div>
+      </div>
+      <div class="opt-block" id="stSuspended">
+        <div class="form-row mt-2">
           <div class="field"><label>გასვლის თარიღი</label><input class="input" type="date"></div>
           <div class="field"><label>გასვლის მიზეზი</label><select class="select"><option>ფინანსური</option><option>გადავიდა სხვა მიღებაში</option><option>ინტერესის დაკარგვა</option><option>სხვა</option></select></div>
         </div>
+        <div class="field"><label>კომენტარი</label><textarea class="textarea" placeholder="დეტალები…"></textarea></div>
       </div>
-      <div class="mt-1"><b style="font-size:13px">Waiting list — სიაში შეყვანის თარიღი</b>
-        <div class="field mt-1"><input class="input" type="date"></div>
+      <div class="opt-block" id="stGrad">
+        <div class="note mt-2">🎓 Graduated — მოსწავლემ სწავლა დაასრულა და მომდევნო კურსზე გაგრძელებას აღარ აპირებს.</div>
+        <div class="field mt-1"><label>დამთავრების თარიღი</label><input class="input" type="date"></div>
       </div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">სტატუსის განახლება</button></div>
-  </div>
-</div>
-
-<!-- MODAL: mark academic year complete → grants/updates Alumni (last completed year) -->
-<div class="modal-overlay" id="mCompleteYear">
-  <div class="modal">
-    <div class="m-head"><h3>წლის დასრულება — ნიკა ბერიძე</h3><button class="m-close">×</button></div>
-    <div class="m-body">
-      <div class="note">🎓 „ალუმნი" ნიშნავს ასაკობრივ კატეგორიაში პროგრამის წლის დასრულებას (არა 1–11 წლის). მიეთითება ბოლო დასრულებული კატეგორია და მისი წელი; მოსწავლეს შეუძლია გააგრძელოს მომდევნო წელი ან კატეგორია.</div>
-      <div class="form-row mt-2">
-        <div class="field"><label>ასაკობრივი კატეგორია</label><select class="select"><option>Genesis (6–8)</option><option selected>Nexus (9–11)</option><option>Quantum (12–13)</option><option>Apex (14–16)</option></select></div>
-        <div class="field"><label>დასრულებული წელი (კატეგორიაში)</label><select class="select"><option>I წელი</option><option>II წელი</option><option>III წელი</option></select></div>
-      </div>
-      <div class="form-row">
-        <div class="field"><label>დასრულების თარიღი</label><input class="input" type="date"></div>
-        <div class="field"><label>მომდევნო ეტაპი</label><select class="select"><option>მომდევნო წელი იმავე კატეგორიაში</option><option>გადადის მომდევნო ასაკობრივ კატეგორიაში</option><option>ასრულებს პროგრამას (კურსდამთავრებული)</option></select></div>
-      </div>
-    </div>
-    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">დადასტურება</button></div>
   </div>
 </div>
 
@@ -1432,31 +1297,18 @@
   </div>
 </div>
 
-<!-- MODAL: assign trainer to a module (module teacher) -->
-<div class="modal-overlay" id="mAssignModuleTeacher">
-  <div class="modal">
-    <div class="m-head"><h3>მოდულზე მიბმა — ლევან ბერიძე</h3><button class="m-close">×</button></div>
-    <div class="m-body">
-      <div class="field"><label>მოდული</label><select class="select"><option>რობოტიკა &amp; კოდირება — Genesis</option><option>რობოტიკა → პროგრამირება — Nexus</option><option>Mobile App Development — Quantum</option><option>Web Development — Apex</option><option>Global Leadership — ყველა კატეგ.</option></select></div>
-      <div class="field"><label>როლი</label><select class="select"><option>მასწავლებელი (მთავარი)</option><option>დამხმარე ლექტორი</option></select></div>
-      <div class="note">ℹ️ მიბმის შემდეგ ლექტორი ცხრილში ამოვა <b>მხოლოდ ამ მოდულის ლექციის ჩანიშვნისას</b> (ლექტორის მითითების ველში).</div>
-    </div>
-    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">მიბმა</button></div>
-  </div>
-</div>
-
 <!-- MODAL: edit schedule slot -->
 <div class="modal-overlay" id="mAssignLecturer">
   <div class="modal">
     <div class="m-head"><h3>ლექტორის მითითება</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="note">ℹ️ ლექცია სლოტში ჩააგდეთ გეგმიდან — ახლა მიუთითეთ ვინ ჩაატარებს. სიაში მხოლოდ <b>ამ მოდულის მასწავლებლები</b> ჩანან.</div>
+      <div class="note">ℹ️ ლექცია სლოტში ჩააგდეთ გეგმიდან — ახლა მიუთითეთ ვინ ჩაატარებს.</div>
       <div class="form-row mt-2">
         <div class="field"><label>ჯგუფი</label><input class="input" value="#2 Quantum" readonly></div>
         <div class="field"><label>დრო</label><input class="input" value="10:00–11:15" readonly></div>
       </div>
-      <div class="field"><label>ლექცია / მოდული (გეგმიდან)</label><input class="input" value="GL_ALPHA #31 — Global Leadership" readonly></div>
-      <div class="field"><label>ლექტორი * <span class="muted" style="font-weight:400">(Global Leadership-ის მასწავლებლები)</span></label><select class="select"><option value="">— აირჩიეთ ლექტორი —</option><option>ენრი ლომინაძე</option><option>საბა სამხარაძე</option><option>თ. მამულაშვილი</option></select></div>
+      <div class="field"><label>ლექცია (გეგმიდან)</label><input class="input" value="GL_ALPHA #31 — Signature Day" readonly></div>
+      <div class="field"><label>ლექტორი *</label><select class="select"><option value="">— აირჩიეთ ლექტორი —</option><option>ენრი ლომინაძე</option><option>თომა ფოცხვერაშვილი</option><option>ბესო მესხია</option><option>რეზო დარსაველიძე</option><option>საბა სამხარაძე</option></select></div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">შენახვა</button></div>
   </div>
@@ -1482,40 +1334,19 @@
   </div>
 </div>
 
-<!-- MODAL: add academic year (Tbilisi) -->
-<div class="modal-overlay" id="mAddYear">
+<!-- MODAL: add semester / intake (name + start/end dates) -->
+<div class="modal-overlay" id="mAddSemester">
   <div class="modal">
-    <div class="m-head"><h3>ახალი სასწავლო წელი — თბილისი</h3><button class="m-close">×</button></div>
+    <div class="m-head"><h3>ახალი სემესტრი (მიღება)</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="field"><label>სასწავლო წელი</label><input class="input" placeholder="მაგ. 2026/27"></div>
-      <hr class="sep">
-      <b style="font-size:13px">I სემესტრი</b>
-      <div class="form-row mt-1">
-        <div class="field"><label>დაწყება</label><input class="input" type="date"></div>
-        <div class="field"><label>დასრულება</label><input class="input" type="date"></div>
+      <div class="field"><label>სახელი</label><input class="input" placeholder="მაგ. Omega"></div>
+      <div class="form-row">
+        <div class="field"><label>დაწყების თარიღი</label><input class="input" type="date"></div>
+        <div class="field"><label>დასრულების თარიღი</label><input class="input" type="date"></div>
       </div>
-      <b style="font-size:13px">II სემესტრი</b>
-      <div class="form-row mt-1">
-        <div class="field"><label>დაწყება</label><input class="input" type="date"></div>
-        <div class="field"><label>დასრულება</label><input class="input" type="date"></div>
-      </div>
-      <div class="note">ℹ️ სასწავლო წელი და მისი ორი სემესტრი უნიკალურია თბილისის ფილიალისთვის.</div>
+      <div class="note">ℹ️ სემესტრი (მიღება) ხდება წელიწადში ორჯერ. მოსწავლეს რეგისტრაციისას ენიჭება მიღება — ეს, ასაკობრივ კატეგორიასთან ერთად, განსაზღვრავს მის სასწავლო პროგრამას.</div>
     </div>
     <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">შექმნა</button></div>
-  </div>
-</div>
-
-<!-- MODAL: manage semesters of a year -->
-<div class="modal-overlay" id="mManageYear">
-  <div class="modal">
-    <div class="m-head"><h3>სემესტრების მართვა — 2025/26 · თბილისი</h3><button class="m-close">×</button></div>
-    <div class="m-body">
-      <div class="train-row"><span class="t-num">I</span><span class="t-title">I სემესტრი · 05 ოქტ – 07 თებ</span><span class="badge b-ok plain">მიმდინარე</span></div>
-      <div class="train-row"><span class="t-num">II</span><span class="t-title">II სემესტრი · 15 თებ – 27 ივნ</span><span class="badge b-muted plain">დაგეგმილი</span></div>
-      <div class="field mt-2"><label>სემესტრის სტატუსი</label><select class="select"><option>მიმდინარე</option><option>დაგეგმილი</option><option>დახურული</option></select></div>
-      <div class="note">🔁 სემესტრის „დახურულად" მონიშვნა ავტომ. ამოძრავებს ფილიალის ჯგუფებს მომდევნო სემესტრზე/კატეგორიაზე.</div>
-    </div>
-    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">შენახვა</button></div>
   </div>
 </div>
 

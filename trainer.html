@@ -19,11 +19,8 @@
     </a>
     <span class="role-chip" style="background:rgba(170,203,92,.22); border-color:rgba(170,203,92,.4)">🎓 ტრენერი</span>
 
-    <div class="nav-group-label">მთავარი</div>
-    <div class="nav-item active" data-target="dashboard" data-title="მთავარი პანელი" data-crumb="Dashboard"><span class="ic">📊</span> მთავარი პანელი</div>
-
     <div class="nav-group-label">სასწავლო</div>
-    <div class="nav-item" data-target="groups"    data-title="ჩემი ჯგუფები"><span class="ic">👥</span> ჩემი ჯგუფები <span class="count">2</span></div>
+    <div class="nav-item active" data-target="groups"    data-title="ჩემი ჯგუფები"><span class="ic">👥</span> ჩემი ჯგუფები <span class="count">2</span></div>
     <div class="nav-item" data-target="schedule"  data-title="განრიგი"><span class="ic">📅</span> განრიგი</div>
 
     <div class="nav-group-label">დოკუმენტბრუნვა</div>
@@ -40,7 +37,7 @@
 
   <div class="main">
     <div class="topbar">
-      <div><div class="crumb"><span id="crumb">Dashboard</span></div><h1 id="page-title">მთავარი პანელი</h1></div>
+      <div><div class="crumb"><span id="crumb">სასწავლო</span></div><h1 id="page-title">ჩემი ჯგუფები</h1></div>
       <div class="spacer"></div>
       <div class="search">🔎 <span>ძებნა — მოსწავლე, ჯგუფი…</span></div>
       <div class="icon-btn">🔔<span class="dot"></span></div>
@@ -49,37 +46,7 @@
     <div class="content">
 
     <!-- DASHBOARD -->
-    <section class="view active" data-view="dashboard">
-      <div class="page-head">
-        <div class="titles"><h2>გამარჯობა, სანდრო 👋</h2><p>Web Development · Apex · თბილისი — დღეს გაქვთ 1 მეცადინეობა</p></div>
-      </div>
-      <div class="grid g-4">
-        <div class="kpi"><div class="k-ic tint-savoy">👥</div><div class="k-val">2</div><div class="k-label">აქტიური ჯგუფი</div></div>
-        <div class="kpi"><div class="k-ic tint-green">🧑‍🎓</div><div class="k-val">32</div><div class="k-label">სულ მოსწავლე</div></div>
-        <div class="kpi"><div class="k-ic tint-yellow">📑</div><div class="k-val">2</div><div class="k-label">შესავსები რეპორტი</div><span class="k-delta down">1 ვადა 2 დღეში</span></div>
-        <div class="kpi"><div class="k-ic tint-cerise">⭐</div><div class="k-val">4.9</div><div class="k-label">საშ. შეფასება</div></div>
-      </div>
-
-      <div class="grid g-2 mt-2">
-        <div class="card">
-          <div class="card-head"><h3>დღევანდელი განრიგი</h3><div class="actions"><a href="#" data-goto="schedule">სრული →</a></div></div>
-          <div class="card-body">
-            <div class="list-row"><div class="badge b-info plain" style="flex-direction:column; padding:8px 12px"><b>19:00</b></div><div class="grow"><b>ჯგუფი #7 · Web Development</b><div class="muted" style="font-size:12px">Apex · Module 3 — JS · Lab 3 · 16 მოსწ.</div></div></div>
-            <div class="list-row"><div class="badge b-muted plain" style="flex-direction:column; padding:8px 12px"><b>—</b></div><div class="grow"><b>ჯგუფი #8 · Web Development</b><div class="muted" style="font-size:12px">ხვალ 19:00</div></div></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-head"><h3>ჩემი ჯგუფები</h3><div class="actions"><a href="#" data-goto="groups">ყველა →</a></div></div>
-          <div class="card-body">
-            <div class="list-row"><span class="badge b-info plain">#7</span><div class="grow"><b>Web Development</b><div class="muted" style="font-size:12px">16 მოსწ. · M3/5</div></div><button class="btn sm" data-goto="group-7">გახსნა</button></div>
-            <div class="list-row"><span class="badge b-info plain">#8</span><div class="grow"><b>Web Development</b><div class="muted" style="font-size:12px">16 მოსწ. · M3/5</div></div><button class="btn sm" data-goto="group-8">გახსნა</button></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GROUPS (list) -->
-    <section class="view" data-view="groups">
+    <section class="view active" data-view="groups">
       <div class="page-head"><div class="titles"><h2>ჩემი ჯგუფები</h2><p>მიბმული ჯგუფები · გახსენით ჯგუფის სამართავად (განრიგი, დასწრება, გამოცდები, შეფასება, მასალა, SteveCoin)</p></div></div>
       <div class="grid g-3">
         <div class="card pad">
