@@ -78,7 +78,7 @@
     <!-- ==================== DASHBOARD ==================== -->
     <section class="view active" data-view="branches">
       <div class="page-head">
-        <div class="titles"><h2>ფილიალები</h2><p>მრავალფილიალიანი სტრუქტურა · გახსენით ფილიალი დეტალებისა და სემესტრების სამართავად</p></div>
+        <div class="titles"><h2>ფილიალები</h2><p>მრავალფილიალიანი სტრუქტურა · გახსენით ფილიალი დეტალების სამართავად (სემესტრები იმართება ცენტრალიზებულად — პარამეტრები)</p></div>
         <div class="actions"><button class="btn primary" data-modal="mAddBranch">＋ ფილიალის დამატება</button></div>
       </div>
       <div class="grid g-3">
@@ -87,7 +87,6 @@
           <div class="muted" style="font-size:12px; margin-top:6px">ვაჟა-ფშაველა 45 · მენ. ქ. დოლიძე</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლე / ტრენერი / ჯგუფი</span><b>384 · 21 · 26</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>I სემესტრი</span><b>18 ოქტ – 7 თებ</b></div>
           <button class="btn block mt-2" data-goto="branch-detail">მართვა →</button>
         </div>
         <div class="card pad">
@@ -95,7 +94,6 @@
           <div class="muted" style="font-size:12px; margin-top:6px">ჭავჭავაძის 88 · მენ. რ. ბერიძე</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლე / ტრენერი / ჯგუფი</span><b>268 · 16 · 26</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>I სემესტრი</span><b>26 ოქტ – 22 თებ</b></div>
           <button class="btn block mt-2" data-goto="branch-detail">მართვა →</button>
         </div>
         <div class="card pad">
@@ -103,7 +101,6 @@
           <div class="muted" style="font-size:12px; margin-top:6px">თამარ მეფის 22 · მენ. ა. ჩხეიძე</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლე / ტრენერი / ჯგუფი</span><b>212 · 13 · 18</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>I სემესტრი</span><b>11 ოქტ – 8 თებ</b></div>
           <button class="btn block mt-2" data-goto="branch-detail">მართვა →</button>
         </div>
         <div class="card pad">
@@ -111,7 +108,6 @@
           <div class="muted" style="font-size:12px; margin-top:6px">რუსთაველის 14 · მენ. ლ. კაპანაძე</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლე / ტრენერი / ჯგუფი</span><b>174 · 11 · 26</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>I სემესტრი</span><b>18 ოქტ – 7 თებ</b></div>
           <button class="btn block mt-2" data-goto="branch-detail">მართვა →</button>
         </div>
         <div class="card pad">
@@ -119,7 +115,6 @@
           <div class="muted" style="font-size:12px; margin-top:6px">დ. აღმაშენებლის 3 · მენ. თ. ხურცილავა</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლე / ტრენერი / ჯგუფი</span><b>121 · 8 · 22</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>I სემესტრი</span><b>18 ოქტ – 7 თებ</b></div>
           <button class="btn block mt-2" data-goto="branch-detail">მართვა →</button>
         </div>
         <div class="card pad">
@@ -127,7 +122,6 @@
           <div class="muted" style="font-size:12px; margin-top:6px">წერეთლის 7 · მენ. ნ. გელაშვილი</div>
           <hr class="sep">
           <div class="flex between" style="font-size:13px"><span>მოსწავლე / ტრენერი / ჯგუფი</span><b>89 · 7 · 21</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>I სემესტრი</span><b>18 ოქტ – 7 თებ</b></div>
           <button class="btn block mt-2" data-goto="branch-detail">მართვა →</button>
         </div>
         <div class="add-tile" data-modal="mAddBranch">
@@ -145,28 +139,16 @@
         <div class="titles"><h2>თბილისი</h2><p>ვაჟა-ფშაველა 45 · მენეჯერი: ქ. დოლიძე · 384 მოსწავლე · 26 ჯგუფი</p></div>
         <div class="actions"><button class="btn">✏️ რედაქტირება</button></div>
       </div>
-      <div class="grid g-2-1">
-        <div class="card">
-          <div class="card-head"><h3>სემესტრები</h3><div class="actions"><button class="btn sm primary" data-modal="mAddSemester">＋ სემესტრის მიბმა</button></div></div>
-          <table class="tbl">
-            <thead><tr><th>სემესტრი</th><th>დაწყება</th><th>დასრულება</th><th>გადახდის deadline</th><th>სტატუსი</th><th></th></tr></thead>
-            <tbody>
-              <tr><td><b>I სემესტრი (შემოდგომა)</b></td><td>18 ოქტ 2025</td><td>7 თებ 2026</td><td>ყოველი თვის 5</td><td><span class="badge b-ok">მიმდინარე</span></td><td class="text-r"><button class="btn sm ghost">✏️</button></td></tr>
-              <tr><td><b>II სემესტრი (გაზაფხული)</b></td><td>14 თებ 2026</td><td>27 ივნ 2026</td><td>ყოველი თვის 5</td><td><span class="badge b-info">დაგეგმილი</span></td><td class="text-r"><button class="btn sm ghost">✏️</button></td></tr>
-            </tbody>
-          </table>
-          <div class="card-body note">ℹ️ გადახდისა და შეხსენების ლოგიკები დამოკიდებულია ფილიალის სემესტრის ვადებზე.</div>
-        </div>
-        <div class="card pad">
-          <h3>ესკალაციის ლოგიკა</h3>
-          <p class="muted" style="font-size:12.5px">გადაუხდელობის 4-ეტაპიანი პროცესი</p>
-          <div class="stepper mt-1" style="flex-direction:column; gap:8px">
-            <div class="step done"><span class="n">1</span> SMS — +1 დღე</div>
-            <div class="step done"><span class="n">2</span> Voice (ბოტი) — +3 დღე</div>
-            <div class="step active"><span class="n">3</span> Voice — +5 დღე</div>
-            <div class="step"><span class="n">4</span> მენეჯერს — +7 დღე</div>
-            <div class="step"><span class="n">✕</span> გარიცხვა — +10 დღე</div>
-          </div>
+      <div class="note" style="margin-bottom:16px">ℹ️ სასწავლო წლები/სემესტრები იმართება <b>ცენტრალიზებულად</b> — პარამეტრების გვერდზე, არა ფილიალის ჭრილში.</div>
+      <div class="card pad" style="max-width:520px">
+        <h3>ესკალაციის ლოგიკა</h3>
+        <p class="muted" style="font-size:12.5px">გადაუხდელობის 4-ეტაპიანი პროცესი</p>
+        <div class="stepper mt-1" style="flex-direction:column; gap:8px">
+          <div class="step done"><span class="n">1</span> SMS — +1 დღე</div>
+          <div class="step done"><span class="n">2</span> Voice (ბოტი) — +3 დღე</div>
+          <div class="step active"><span class="n">3</span> Voice — +5 დღე</div>
+          <div class="step"><span class="n">4</span> მენეჯერს — +7 დღე</div>
+          <div class="step"><span class="n">✕</span> გარიცხვა — +10 დღე</div>
         </div>
       </div>
     </section>
@@ -499,8 +481,7 @@
       </div>
       <div class="grid g-3">
         <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">#4_Genesis</span><span class="badge b-ok">I სემ. · მიმდინარე</span></div>
-          <h3 class="mt-1">Robotics</h3>
+          <div class="flex between"><h3 class="mb-0" style="font-size:16px">#4_Genesis</h3><span class="badge b-ok">I სემ. · მიმდინარე</span></div>
           <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Genesis</span><span class="badge b-muted plain">🎟️ Alpha</span></div>
           <div class="muted mt-1" style="font-size:12.5px">თბილისი</div>
           <hr class="sep">
@@ -511,8 +492,7 @@
           <button class="btn block mt-2" data-goto="group-detail">ჯგუფის გვერდი →</button>
         </div>
         <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">#2_Quantum</span><span class="badge b-ok">II სემ. · მიმდინარე</span></div>
-          <h3 class="mt-1">Mob Application</h3>
+          <div class="flex between"><h3 class="mb-0" style="font-size:16px">#2_Quantum</h3><span class="badge b-ok">II სემ. · მიმდინარე</span></div>
           <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Quantum</span><span class="badge b-muted plain">🎟️ Sigma</span></div>
           <div class="muted mt-1" style="font-size:12.5px">თბილისი</div>
           <hr class="sep">
@@ -523,8 +503,7 @@
           <button class="btn block mt-2" data-goto="group-detail">ჯგუფის გვერდი →</button>
         </div>
         <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">#9_Nexus</span><span class="badge b-warn">იწყება (Delta)</span></div>
-          <h3 class="mt-1">Robotics</h3>
+          <div class="flex between"><h3 class="mb-0" style="font-size:16px">#9_Nexus</h3><span class="badge b-warn">იწყება (Delta)</span></div>
           <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Nexus</span><span class="badge b-muted plain">🎟️ Delta</span></div>
           <div class="muted mt-1" style="font-size:12.5px">თბილისი</div>
           <hr class="sep">
@@ -1212,12 +1191,9 @@
         <select class="select" data-optselect>
           <option value="roleStudent">მოსწავლე</option>
           <option value="roleParent">მშობელი</option>
-          <option value="roleGeneric">ტრენერი</option>
+          <option value="roleGeneric">ლექტორი</option>
           <option value="roleManager">ფილიალის მენეჯერი</option>
-          <option value="roleGeneric">ფინანსური დეპარტამენტი</option>
-          <option value="roleGeneric">დირექტორი</option>
-          <option value="roleGeneric">ბექოფისი (კადრები)</option>
-          <option value="roleGeneric">სუპერ ადმინისტრატორი</option>
+          <option value="roleGeneric">ადმინისტრატორი</option>
         </select>
       </div>
 
