@@ -685,96 +685,115 @@
     </section>
 
     <!-- ==================== SCHEDULE (build & manage) ==================== -->
-    <!-- ==================== LEARNING MODULES ==================== -->
+    <!-- ==================== LEARNING MODULES — intake picker ==================== -->
     <section class="view" data-view="modules">
       <div class="page-head">
-        <div class="titles"><h2>სასწავლო მოდულები</h2><p>თითო ასაკობრივ კატეგორიაზე — მრავალწლიანი კურსი; ტრეინინგები ნაწილდება წლების სემესტრებზე თითო-თითოდ, მასალის მიბმით</p></div>
+        <div class="titles"><h2>სასწავლო მოდულები</h2><p>აირჩიეთ <b>მიღება</b> → ასაკობრივი კატეგორია → მოდული</p></div>
+      </div>
+      <div class="note" style="margin-bottom:14px">ℹ️ მოდულები დალაგებულია მიღების მიხედვით. ჯერ აირჩიეთ მიღება (Intake), შემდეგ ასაკობრივი კატეგორია.</div>
+      <div class="grid g-3">
+        <div class="card pad" data-goto="modules-cat" style="cursor:pointer">
+          <div class="flex between"><span class="badge b-ok">🎟️ Alpha</span><span class="badge b-muted plain">მიმდინარე</span></div>
+          <h3 class="mt-1">Alpha — 2025 შემოდგომა</h3>
+          <div class="muted" style="font-size:12.5px">მიღება (Intake)</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>ასაკ. კატეგორიები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>სტატუსი</span><span class="badge b-ok plain">მიმდინარე</span></div>
+          <div class="btn block mt-2">კატეგორიები →</div>
+        </div>
+        <div class="card pad" data-goto="modules-cat" style="cursor:pointer">
+          <div class="flex between"><span class="badge b-info">🎟️ Delta</span><span class="badge b-muted plain">დაგეგმილი</span></div>
+          <h3 class="mt-1">Delta — 2026 გაზაფხული</h3>
+          <div class="muted" style="font-size:12.5px">მიღება (Intake)</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>ასაკ. კატეგორიები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>სტატუსი</span><span class="badge b-info plain">დაგეგმილი</span></div>
+          <div class="btn block mt-2">კატეგორიები →</div>
+        </div>
+        <div class="card pad" data-goto="modules-cat" style="cursor:pointer">
+          <div class="flex between"><span class="badge b-muted">🎟️ Sigma</span><span class="badge b-muted plain">დახურული</span></div>
+          <h3 class="mt-1">Sigma — 2025 გაზაფხული</h3>
+          <div class="muted" style="font-size:12.5px">მიღება (Intake)</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>ასაკ. კატეგორიები</span><b>4</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>სტატუსი</span><span class="badge b-muted plain">დახურული</span></div>
+          <div class="btn block mt-2">კატეგორიები →</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULES — category picker (within intake) ==================== -->
+    <section class="view" data-view="modules-cat">
+      <span class="back-link" data-goto="modules">← მიღებები</span>
+      <div class="page-head">
+        <div class="titles"><h2>მიღება: Alpha — ასაკობრივი კატეგორიები</h2><p>აირჩიეთ ასაკობრივი კატეგორია (განსაზღვრავს კურსის ხანგრძლივობას)</p></div>
+      </div>
+      <div class="grid g-4">
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-muted plain">8 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 წ.</h3><div class="muted" style="font-size:12px">16 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-muted plain">6 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 წ.</h3><div class="muted" style="font-size:12px">12 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-muted plain">4 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 წ.</h3><div class="muted" style="font-size:12px">8 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">2 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 წ.</h3><div class="muted" style="font-size:12px">4 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULES — list (within intake + category) ==================== -->
+    <section class="view" data-view="modules-list">
+      <span class="back-link" data-goto="modules-cat">← ასაკობრივი კატეგორიები</span>
+      <div class="page-head">
+        <div class="titles"><h2>Alpha · Nexus (9–11)</h2><p>ამ მიღება-კატეგორიის მოდულები — მართვა</p></div>
         <div class="actions"><button class="btn primary" data-modal="mAddModule">＋ მოდულის შექმნა</button></div>
       </div>
       <div class="grid g-3">
         <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">🤖 Genesis</span><span class="badge b-muted plain">8 წელი</span></div>
-          <h3 class="mt-1">რობოტიკა &amp; კოდირება</h3>
-          <div class="muted" style="font-size:12.5px">Genesis · ასაკი 6–8</div>
-          <hr class="sep">
-          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>16</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>320</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>256</b></div>
-          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
-        </div>
-        <div class="card pad">
           <div class="flex between"><span class="badge b-ok plain">🤖 Nexus</span><span class="badge b-muted plain">6 წელი</span></div>
           <h3 class="mt-1">რობოტიკა → პროგრამირება</h3>
-          <div class="muted" style="font-size:12.5px">Nexus · ასაკი 9–11</div>
+          <div class="muted" style="font-size:12.5px">ტექნოლოგიის მოდული · 12 სემესტრი</div>
           <hr class="sep">
-          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>12</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>240</b></div>
+          <div class="flex between" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>240</b></div>
           <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>200</b></div>
           <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
         </div>
         <div class="card pad">
-          <div class="flex between"><span class="badge b-warn plain">🧠 Quantum</span><span class="badge b-muted plain">4 წელი</span></div>
-          <h3 class="mt-1">Mobile App Development</h3>
-          <div class="muted" style="font-size:12.5px">Quantum · ასაკი 12–13</div>
-          <hr class="sep">
-          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>8</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>160</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>128</b></div>
-          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
-        </div>
-        <div class="card pad">
-          <div class="flex between"><span class="badge b-danger plain">🌐 Apex</span><span class="badge b-muted plain">ყველა კატეგ.</span></div>
-          <h3 class="mt-1">Web Development</h3>
-          <div class="muted" style="font-size:12.5px">Apex · ასაკი 14–16</div>
-          <hr class="sep">
-          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>4</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>80</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>64</b></div>
-          <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
-        </div>
-        <div class="card pad">
-          <div class="flex between"><span class="badge b-info plain">💼 All</span><span class="badge b-muted plain">ყველა კატეგ.</span></div>
+          <div class="flex between"><span class="badge b-info plain">💼 Companion</span><span class="badge b-muted plain">6 წელი</span></div>
           <h3 class="mt-1">Global Leadership</h3>
-          <div class="muted" style="font-size:12.5px">ყველა ასაკ. კატეგორია</div>
+          <div class="muted" style="font-size:12.5px">კომპანიონი მოდული · პარალელური</div>
           <hr class="sep">
-          <div class="flex between" style="font-size:13px"><span>📆 სემესტრები</span><b>4</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>80</b></div>
-          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>80</b></div>
+          <div class="flex between" style="font-size:13px"><span>🎓 ტრეინინგები</span><b>240</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 მასწ. მასალა</span><b>200</b></div>
           <button class="btn block mt-2" data-goto="module-detail">მართვა →</button>
         </div>
         <div class="add-tile" data-modal="mAddModule">
           <span class="plus">＋</span>
           <div><b>ახალი მოდული</b></div>
-          <small>ასაკ. კატეგორია · წლების რაოდენობა · ტრეინინგები სემესტრებზე</small>
+          <small>ტრეინინგები ნაწილდება სემესტრებზე</small>
         </div>
       </div>
-      <div class="note mt-2">ℹ️ მოდულის ტრეინინგები კვებავს <b>სასწავლო ცხრილს</b> — ჯგუფი გადის მოდულში წინასწარ გაწერილ ტრეინინგებს თანმიმდევრობით, რაც განსაზღვრავს რომელი ლექციებია კონკრეტულ თვეში ჩასატარებელი.</div>
+      <div class="note mt-2">ℹ️ მოდულის ტრეინინგები კვებავს <b>სასწავლო ცხრილს</b> — ჯგუფი გადის მოდულში წინასწარ გაწერილ ტრეინინგებს თანმიმდევრობით.</div>
     </section>
 
-    <!-- ==================== MODULE DETAIL (inner) ==================== -->
+    <!-- ==================== MODULE DETAIL (inner) — predefined semester slots ==================== -->
     <section class="view" data-view="module-detail">
-      <span class="back-link" data-goto="modules">← სასწავლო მოდულები</span>
+      <span class="back-link" data-goto="modules-list">← მოდულები (Alpha · Nexus)</span>
       <div class="page-head">
-        <div class="titles"><h2>Nexus — რობოტიკა → პროგრამირება</h2><p>Nexus (9–11 წლის მიღება) · 6 კურსი (წელი) · 12 სემესტრი · ტრეინინგები / შუალედური / გამოცდა ნაწილდება სემესტრებზე</p></div>
+        <div class="titles"><h2>Nexus — რობოტიკა → პროგრამირება</h2><p>მიღება: Alpha · Nexus (9–11) · 6 კურსი · 12 სემესტრი — წინასწარ განსაზღვრული სლოტები</p></div>
         <div class="actions"><button class="btn">✏️ რედაქტირება</button></div>
       </div>
       <div class="grid g-4" style="margin-bottom:16px">
         <div class="kpi"><div class="k-ic tint-savoy">🎓</div><div class="k-val">6</div><div class="k-label">კურსი (წელი)</div></div>
-        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val">12</div><div class="k-label">სემესტრი</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val">12</div><div class="k-label">სემესტრის სლოტი</div></div>
         <div class="kpi"><div class="k-ic tint-yellow">📋</div><div class="k-val">240</div><div class="k-label">ტრეინინგი</div></div>
         <div class="kpi"><div class="k-ic tint-cerise">📎</div><div class="k-val">200</div><div class="k-label">მიბმული მასალა</div></div>
       </div>
-      <div class="note" style="margin-bottom:12px">ℹ️ კურსის ხანგრძლივობა განისაზღვრება ასაკობრივი კატეგორიით — Genesis 8 წელი · Nexus 6 წელი · Quantum 4 წელი · Apex 2 წელი. ქვემოთ ნაჩვენებია პირველი 2 კურსი (მოდული გრძელდება სულ 6 კურსამდე).</div>
+      <div class="note" style="margin-bottom:12px">ℹ️ სემესტრის სლოტების რაოდენობა განისაზღვრება კატეგორიით (Nexus = 12). თითო სლოტში ემატება <b>ტრეინინგი</b>, <b>შუალედური</b> და <b>გამოცდა</b>.</div>
         <div class="mod-year">
           <div class="y-head"><span>🎓</span><h4>I კურსი — რობოტიკა &amp; კოდირება</h4><span class="badge b-warn plain" style="margin-left:auto">კურსი 1</span></div>
           <div class="mod-sems">
             <div class="mod-sem">
-              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-info plain">5 ჩანაწერი</span></div>
+              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-info plain">4 ჩანაწერი</span></div>
               <div class="train-row"><span class="t-num">1</span><span class="t-title">RB — Br.1 Pirate Ship</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="train-row"><span class="t-num">2</span><span class="t-title">RB — Br.2 Merry-Go-Round</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row"><span class="t-num">3</span><span class="t-title">RB — Br.3 Crane</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა — პროგრამის ბოლოს</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="sem-actions">
                 <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
                 <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
@@ -783,12 +802,11 @@
               <div class="note" style="margin-top:6px; font-size:11px">ტრეინინგები ROADMAP-ის თანმიმდევრობით</div>
             </div>
             <div class="mod-sem">
-              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-ok plain">5 ჩანაწერი</span></div>
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-ok plain">4 ჩანაწერი</span></div>
               <div class="train-row"><span class="t-num">1</span><span class="t-title">AlgoPlay — პროგრამირების საფუძვლები</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="train-row"><span class="t-num">2</span><span class="t-title">Al.2 Waving Flag — კოდი</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row"><span class="t-num">3</span><span class="t-title">Al.3 Cowboy — მუდმ. მოძრაობა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა — სემესტრის ბოლოს</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="sem-actions">
                 <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
                 <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
@@ -805,8 +823,8 @@
               <div class="sem-head"><b>I სემესტრი</b><span class="badge b-info plain">4 ჩანაწერი</span></div>
               <div class="train-row"><span class="t-num">1</span><span class="t-title">Mobile App — MOD#1 · DAY#1</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="train-row"><span class="t-num">2</span><span class="t-title">Mobile App — MOD#1 · DAY#2</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row"><span class="t-num">…</span><span class="t-title">(16 ტრეინინგი / სემ.)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა — 1–2 მოდულის შემდეგ</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">…</span><span class="t-title">(16 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="sem-actions">
                 <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
                 <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
@@ -815,11 +833,10 @@
               <div class="note" style="margin-top:6px; font-size:11px">ტრეინინგები ROADMAP-ის თანმიმდევრობით</div>
             </div>
             <div class="mod-sem">
-              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-ok plain">4 ჩანაწერი</span></div>
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-ok plain">3 ჩანაწერი</span></div>
               <div class="train-row"><span class="t-num">1</span><span class="t-title">Mobile App — MOD#3 · DAY#1</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row"><span class="t-num">2</span><span class="t-title">Mobile App — MOD#4 · DAY#1</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row"><span class="t-num">…</span><span class="t-title">(24 ტრეინინგი / სემ.)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-              <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა — 3–5 მოდულის შემდეგ</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row"><span class="t-num">…</span><span class="t-title">(24 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+              <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
               <div class="sem-actions">
                 <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
                 <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
@@ -829,7 +846,106 @@
             </div>
           </div>
         </div>
-      <div class="note">ℹ️ თითო სემესტრზე ემატება <b>ტრეინინგი</b>, <b>შუალედური</b> და <b>გამოცდა</b> (სამი ღილაკი). ყველა ჩანაწერზე იბმება სასწავლო მასალა. ჯგუფი გადის ამ თანმიმდევრობას თითო სესიაზე.</div>
+        <div class="mod-year">
+          <div class="y-head"><span>🎓</span><h4>III კურსი</h4><span class="badge b-warn plain" style="margin-left:auto">კურსი 3</span></div>
+          <div class="mod-sems">
+            <div class="mod-sem">
+              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+            <div class="mod-sem">
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+          </div>
+        </div>
+        <div class="mod-year">
+          <div class="y-head"><span>🎓</span><h4>IV კურსი</h4><span class="badge b-warn plain" style="margin-left:auto">კურსი 4</span></div>
+          <div class="mod-sems">
+            <div class="mod-sem">
+              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+            <div class="mod-sem">
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+          </div>
+        </div>
+        <div class="mod-year">
+          <div class="y-head"><span>🎓</span><h4>V კურსი</h4><span class="badge b-warn plain" style="margin-left:auto">კურსი 5</span></div>
+          <div class="mod-sems">
+            <div class="mod-sem">
+              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+            <div class="mod-sem">
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+          </div>
+        </div>
+        <div class="mod-year">
+          <div class="y-head"><span>🎓</span><h4>VI კურსი</h4><span class="badge b-warn plain" style="margin-left:auto">კურსი 6</span></div>
+          <div class="mod-sems">
+            <div class="mod-sem">
+              <div class="sem-head"><b>I სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+            <div class="mod-sem">
+              <div class="sem-head"><b>II სემესტრი</b><span class="badge b-muted plain">0 ჩანაწერი</span></div>
+              <div class="note" style="text-align:center; border-style:dashed">ცარიელი სლოტი — დაამატეთ ტრეინინგი / შუალედური / გამოცდა</div>
+              <div class="sem-actions">
+                <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
+                <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
+                <button class="btn sm ghost" data-modal="mAddModExam">＋ გამოცდა</button>
+              </div>
+              <div class="note" style="margin-top:6px; font-size:11px">ცარიელი — შესავსები</div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <section class="view" data-view="schedule">
