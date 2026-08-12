@@ -1064,6 +1064,7 @@
           <option value="roleParent">მშობელი</option>
         </select>
       </div>
+      <div class="note mt-1">🆔 <b>პირადი ნომერი სავალდებულოა ყველა მომხმარებლისთვის</b> — ის გამოიყენება როგორც სისტემაში შესვლის მომხმარებლის სახელი (login).</div>
 
       <!-- ROLE: STUDENT (synced from external system) -->
       <div class="opt-block active" id="roleStudent">
@@ -1076,7 +1077,7 @@
           <div><small>სახელი გვარი</small><div><b>ნიკოლოზ ბერიძე</b></div></div>
           <div><small>დაბადების თარიღი</small><div><b>07/12/2015</b></div></div>
           <div><small>მოქალაქეობა</small><div><b>საქართველო</b></div></div>
-          <div><small>პირადი ნომერი</small><div><b>61001xxxxxx</b></div></div>
+          <div><small>პირადი ნომერი <span class="badge b-info plain" style="padding:0 5px">login</span></small><div><b>61001xxxxxx</b></div></div>
           <div><small>სკოლა</small><div><b>მე-6 საჯარო</b></div></div>
           <div><small>ფილიალი</small><div><b>თბილისი</b></div></div>
           <div><small>სტუდენტის ტელ.</small><div><b>—</b></div></div>
@@ -1089,6 +1090,7 @@
           <div><small>ასაკ. კატეგორია</small><div><b>Nexus</b></div></div>
           <div><small>სტატუსი</small><div><span class="badge b-ok">Active</span></div></div>
         </div>
+        <div class="note mt-1">ℹ️ პირადი ნომერი მოსწავლეს გარე სისტემიდან სინქრონდება და გამოიყენება როგორც მისი login.</div>
         <div class="field mt-2"><label>Email (უსერისთვის)</label><input class="input" placeholder="mail@example.com"></div>
       </div>
 
@@ -1098,8 +1100,9 @@
         <div class="field mt-1"><label>მოსწავლე (მიბმისთვის)</label>
           <select class="select"><option>ნიკა ბერიძე · პ/ნ 61001…</option><option>მარიამ ლომიძე · პ/ნ 60012…</option><option>ანა ხარაზი · პ/ნ 01030…</option><option>ლუკა ცერცვაძე · პ/ნ 61003…</option></select>
         </div>
-        <div class="form-row"><div class="field"><label>სახელი და გვარი</label><input class="input" placeholder="მშობლის სახელი გვარი"></div><div class="field"><label>კავშირი მოსწავლესთან</label><select class="select"><option>დედა</option><option>მამა</option><option>მეურვე</option><option>სხვა</option></select></div></div>
-        <div class="form-row"><div class="field"><label>ტელეფონი</label><input class="input" placeholder="+995"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
+        <div class="form-row"><div class="field"><label>სახელი და გვარი</label><input class="input" placeholder="მშობლის სახელი გვარი"></div><div class="field"><label>პირადი ნომერი <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="მაგ. 01001012345"></div></div>
+        <div class="form-row"><div class="field"><label>კავშირი მოსწავლესთან</label><select class="select"><option>დედა</option><option>მამა</option><option>მეურვე</option><option>სხვა</option></select></div><div class="field"><label>ტელეფონი</label><input class="input" placeholder="+995"></div></div>
+        <div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div>
       </div>
 
       <div class="field mt-1"><label>ფილიალი</label><input class="input" value="თბილისი" disabled></div>
