@@ -33,7 +33,7 @@
 
     <div class="nav-group-label">Finance</div>
     <div class="nav-item" data-target="finance"  data-title="Payments (Branch)"><span class="ic">💳</span> Payments</div>
-    <div class="nav-item" data-target="debts"    data-title="Debts"><span class="ic">⏰</span> Debts <span class="count">11</span></div>
+    <div class="nav-item" data-target="debts"    data-title="Debts"><span class="ic">⏰</span> Debts</div>
 
     <div class="nav-group-label">Documents</div>
     <div class="nav-item" data-target="reports"  data-title="Reports"><span class="ic">📑</span> Reports <span class="count">2</span></div>
@@ -1001,71 +1001,14 @@
 
     <!-- ==================== FINANCE ==================== -->
     <section class="view" data-view="finance">
-      <div class="page-head">
-        <div class="titles"><h2>Payments — Tbilisi</h2><p>Branch payments overview · manual allocation of unallocated payments</p></div>
-        <div class="actions"><button class="btn">🔄 Refresh</button></div>
-      </div>
-
-      <div class="note">👁 The branch manager has <b>read</b> access to finances and can allocate unallocated payments to students of their branch. Full Fina integration and centralized reporting are at the finance department and administrator level.</div>
-
-      <div class="grid g-4 mt-2">
-        <div class="kpi"><div class="k-ic tint-green">✅</div><div class="k-val">341</div><div class="k-label">Paid (month)</div></div>
-        <div class="kpi"><div class="k-ic tint-yellow">📥</div><div class="k-val">4</div><div class="k-label">Unallocated</div></div>
-        <div class="kpi"><div class="k-ic tint-cerise">⏳</div><div class="k-val">11</div><div class="k-label">Debt</div></div>
-        <div class="kpi"><div class="k-ic tint-savoy">💵</div><div class="k-val">₾ 96k</div><div class="k-label">Revenue (month)</div></div>
-      </div>
-
-      <div class="card mt-2">
-        <div class="card-body flex wrap">
-          <div class="select" style="width:auto">Group: All ▾</div>
-          <div class="select" style="width:auto">Program: All ▾</div>
-          <div class="select" style="width:auto">Status: All ▾</div>
-          <div class="search" style="min-width:220px; margin-left:auto">🔎 <span>Search by ID or name…</span></div>
-        </div>
-      </div>
-
-      <div class="card mt-2">
-        <div class="card-head"><h3>Unallocated payments — Tbilisi</h3><span class="badge b-warn plain">4</span></div>
-        <div class="card-body">
-          <p class="muted" style="font-size:13px">Payments whose ID did not match a Tbilisi student — require manual allocation.</p>
-          <table class="tbl">
-            <thead><tr><th>Date</th><th>Sender</th><th>Purpose</th><th>Amount</th><th>Attach to student</th><th></th></tr></thead>
-            <tbody>
-              <tr><td>28 Jul</td><td>N. Lomidze</td><td>„Tuition fee“</td><td><b>₾ 300</b></td><td><select class="select" style="padding:6px 10px"><option>— Select student —</option><option>Mariam Lomidze (#5)</option></select></td><td class="text-r"><button class="btn sm green">Attach</button></td></tr>
-              <tr><td>27 Jul</td><td>G. Tsertsvadze</td><td>„For Luka“</td><td><b>₾ 300</b></td><td><select class="select" style="padding:6px 10px"><option>— Select student —</option></select></td><td class="text-r"><button class="btn sm green">Attach</button></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card mt-2">
-        <div class="card-head"><h3>Recent payments</h3></div>
-        <table class="tbl">
-          <thead><tr><th>Date</th><th>Student</th><th>Group</th><th>Amount</th><th>Method</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>28 Jul</td><td>Nika Beridze</td><td>#3</td><td>₾300</td><td>Bank</td><td><span class="badge b-ok">Auto-linked</span></td></tr>
-            <tr><td>28 Jul</td><td>Barbare Gelashvili</td><td>#1</td><td>₾300</td><td>Card</td><td><span class="badge b-ok">Paid</span></td></tr>
-            <tr><td>27 Jul</td><td>Mariam Lomidze</td><td>#5</td><td>₾180</td><td>Bank</td><td><span class="badge b-warn">Partial</span></td></tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="page-head"><div class="titles"><h2>Payments</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
     </section>
 
     <!-- ==================== DEBTS ==================== -->
     <section class="view" data-view="debts">
-      <div class="page-head">
-        <div class="titles"><h2>Debts — Tbilisi</h2><p>Automatic control and reminders · escalation based on semester deadlines</p></div>
-        <div class="actions"><button class="btn">⤓ Export</button></div>
-      </div>
-      <div class="card">
-        <table class="tbl">
-          <thead><tr><th>Student</th><th>Group</th><th>Amount</th><th>Overdue</th><th>Escalation stage</th><th></th></tr></thead>
-          <tbody>
-            <tr><td><div class="u"><span class="avatar sm cerise">L.Ts</span><div><div class="nm">Luka Tsertsvadze</div><div class="sub">Web Dev · #7</div></div></div></td><td>#7</td><td><b>₾ 300</b></td><td>12 days</td><td><div class="stepper"><span class="step done" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">1</span></span><span class="step done" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">2</span></span><span class="step active" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">3</span></span><span class="step" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">4</span></span></div></td><td></td></tr>
-            <tr><td><div class="u"><span class="avatar sm yellow">M.L</span><div><div class="nm">Mariam Lomidze</div><div class="sub">Mob App · #5</div></div></div></td><td>#5</td><td><b>₾ 120</b></td><td>4 days</td><td><div class="stepper"><span class="step done" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">1</span></span><span class="step active" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">2</span></span><span class="step" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">3</span></span><span class="step" style="padding:3px 7px"><span class="n" style="width:16px;height:16px">4</span></span></div></td><td></td></tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="page-head"><div class="titles"><h2>Debts</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
     </section>
 
     <!-- ==================== REPORTS ==================== -->
@@ -1103,23 +1046,8 @@
 
     <!-- ==================== NOTIFICATIONS (sent log — Tbilisi only) ==================== -->
     <section class="view" data-view="notifications">
-      <div class="page-head">
-        <div class="titles"><h2>Notifications — Tbilisi</h2><p>Sent notifications log — only Tbilisi branch students</p></div>
-        <div class="actions"><button class="btn">⤓ Export</button></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3>Send log</h3><div class="actions"><div class="search" style="min-width:200px">🔎 <span>Search…</span></div></div></div>
-        <table class="tbl">
-          <thead><tr><th>Time</th><th>Recipient</th><th>Escalation level</th></tr></thead>
-          <tbody>
-            <tr><td>Today 09:05</td><td>Mariam Lomidze</td><td><span class="badge b-warn">Level 2</span></td></tr>
-            <tr><td>Today 08:40</td><td>New students (3)</td><td><span class="badge b-muted">Level 0 · info</span></td></tr>
-            <tr><td>Today 08:22</td><td>Saba Tabaghua</td><td><span class="badge b-danger">Level 3</span></td></tr>
-            <tr><td>Yesterday 18:30</td><td>Ana Kharazi</td><td><span class="badge b-info">Level 1</span></td></tr>
-            <tr><td>Yesterday 17:10</td><td>Luka Tsertsvadze</td><td><span class="badge b-warn">Level 2</span></td></tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="page-head"><div class="titles"><h2>Notifications</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
     </section>
 
     <!-- ==================== USERS (Tbilisi; branch auto, not selectable) ==================== -->
