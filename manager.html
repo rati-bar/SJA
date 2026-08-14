@@ -487,20 +487,53 @@
       <div class="page-head">
         <div class="titles"><h2>Module Templates</h2><p>A master template per age category — <b>automatically feeds</b> every intake-category module's semesters (lecture order, materials)</p></div>
       </div>
-      <div class="note" style="margin-bottom:14px">ℹ️ Lectures and files defined in the template are automatically inserted into a new intake-category module. Afterwards, lectures and files can be edited separately for each intake-category (without changing the template).</div>
+      <div class="note" style="margin-bottom:14px">ℹ️ <b>New modules are created here</b> — open an age category to see its module list and add a new one. The number of semesters is predefined by the age category. These templates then auto-feed every intake-category module.</div>
       <div class="grid g-4">
-        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-muted plain">16 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 yrs.</h3><div class="muted" style="font-size:12px">320 lectures · 260 files</div><div class="btn block mt-2">Template →</div></div>
-        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-muted plain">12 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 yrs.</h3><div class="muted" style="font-size:12px">240 lectures · 200 files</div><div class="btn block mt-2">Template →</div></div>
-        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-muted plain">8 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 yrs.</h3><div class="muted" style="font-size:12px">160 lectures · 130 files</div><div class="btn block mt-2">Template →</div></div>
-        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">4 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 yrs.</h3><div class="muted" style="font-size:12px">80 lectures · 60 files</div><div class="btn block mt-2">Template →</div></div>
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-muted plain">16 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 yrs.</h3><div class="muted" style="font-size:12px">3 module templates</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-muted plain">12 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 yrs.</h3><div class="muted" style="font-size:12px">2 module templates</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-muted plain">8 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 yrs.</h3><div class="muted" style="font-size:12px">2 module templates</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">4 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 yrs.</h3><div class="muted" style="font-size:12px">1 module template</div><div class="btn block mt-2">Modules →</div></div>
       </div>
+    </section>
+
+    <!-- ==================== TEMPLATE — module list within an age category ==================== -->
+    <section class="view" data-view="template-cat">
+      <span class="back-link" data-goto="templates">← Module Templates</span>
+      <div class="page-head">
+        <div class="titles"><h2>Module Templates — Nexus (9–11)</h2><p>Master modules for this age category · <b>12 semesters</b> (predefined by category)</p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddTemplate">＋ New module</button></div>
+      </div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <h3 class="mt-0">Robotics → Programming</h3>
+          <div class="muted" style="font-size:12.5px">Technology module · 12 semesters</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🎓 Lectures</span><b>240</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 Materials</span><b>200</b></div>
+          <button class="btn block mt-2" data-goto="template-detail">Open template →</button>
+        </div>
+        <div class="card pad">
+          <h3 class="mt-0">Global Leadership</h3>
+          <div class="muted" style="font-size:12.5px">Companion module · 12 semesters</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🎓 Lectures</span><b>240</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 Materials</span><b>180</b></div>
+          <button class="btn block mt-2" data-goto="template-detail">Open template →</button>
+        </div>
+        <div class="add-tile" data-modal="mAddTemplate">
+          <span class="plus">＋</span>
+          <div><b>New module</b></div>
+          <small>Semesters predefined by category (12)</small>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ A module created here is a <b>master template</b> for the Nexus category. Instantiate it per intake from the <b>Learning Modules</b> menu.</div>
     </section>
 
     <!-- ==================== TEMPLATE DETAIL (master lectures + materials) ==================== -->
     <section class="view" data-view="template-detail">
-      <span class="back-link" data-goto="templates">← Module Templates</span>
+      <span class="back-link" data-goto="template-cat">← Nexus modules</span>
       <div class="page-head">
-        <div class="titles"><h2>Template — Nexus (9–11)</h2><p>Master lectures and materials · 12 semesters — this feeds every Nexus intake-category module</p></div>
+        <div class="titles"><h2>Template — Robotics → Programming (Nexus)</h2><p>Master lectures and materials · 12 semesters — this feeds every Nexus intake-category module</p></div>
         <div class="actions"><button class="btn">⤓ Export to Excel</button><button class="btn primary" data-modal="mAddTraining">＋ Lecture to template</button></div>
       </div>
       <div class="grid g-2">
@@ -645,7 +678,7 @@
       <span class="back-link" data-goto="modules-cat">← Age categories</span>
       <div class="page-head">
         <div class="titles"><h2>Alpha · Nexus (9–11)</h2><p>This intake-category's modules — manage</p></div>
-        <div class="actions"><button class="btn primary" data-modal="mAddModule">＋ Create module</button></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddModule">＋ Add module (from template)</button></div>
       </div>
       <div class="grid g-3">
         <div class="card pad">
@@ -666,11 +699,11 @@
         </div>
         <div class="add-tile" data-modal="mAddModule">
           <span class="plus">＋</span>
-          <div><b>New module</b></div>
-          <small>Trainings are distributed across semesters</small>
+          <div><b>Add module from template</b></div>
+          <small>Pick from this category's templates</small>
         </div>
       </div>
-      <div class="note mt-2">ℹ️ The module's trainings feed the <b>Schedule</b> — the group goes through the pre-defined trainings in the module in sequence.</div>
+      <div class="note mt-2">ℹ️ Modules here are <b>instantiated from the Nexus templates</b> — a brand-new module is not created here. To add a new master module, use the <b>Module Templates</b> menu. The module's lectures feed the <b>Schedule</b>.</div>
     </section>
 
     <!-- ==================== MODULE DETAIL (inner) — flat semester slots ==================== -->
@@ -1444,17 +1477,36 @@
 <!-- MODAL: create learning module -->
 <div class="modal-overlay" id="mAddModule">
   <div class="modal">
-    <div class="m-head"><h3>New learning module</h3><button class="m-close">×</button></div>
+    <div class="m-head"><h3>Add module — Alpha · Nexus (9–11)</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="field"><label>Age category</label><select class="select"><option>Genesis (6–8) — 8 years</option><option selected>Nexus (9–11) — 6 years</option><option>Quantum (12–13) — 4 years</option><option>Apex (14–16) — 2 years</option><option>All categories (Global Leadership)</option></select></div>
+      <div class="field"><label>Module template (Nexus)</label><select class="select"><option>Robotics → Programming</option><option>Global Leadership</option></select></div>
+      <div class="form-row">
+        <div class="field"><label>Age category</label><input class="input" value="Nexus (9–11)" readonly></div>
+        <div class="field"><label>Semesters (total)</label><input class="input" value="12" readonly></div>
+      </div>
+      <div class="note">ℹ️ This <b>instantiates the selected template</b> for the Alpha · Nexus intake — lectures and materials are copied from the template and become editable for this intake-category. A brand-new module is <b>not</b> created here; create new master modules in the <b>Module Templates</b> menu.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add and open structure</button></div>
+  </div>
+</div>
+
+<!-- MODAL: new module template (master, within an age category) -->
+<div class="modal-overlay" id="mAddTemplate">
+  <div class="modal">
+    <div class="m-head"><h3>New module — Nexus (9–11)</h3><button class="m-close">×</button></div>
+    <div class="m-body">
       <div class="field"><label>Module name</label><input class="input" placeholder="e.g. Robotics → Programming"></div>
+      <div class="form-row">
+        <div class="field"><label>Age category</label><input class="input" value="Nexus (9–11)" readonly></div>
+        <div class="field"><label>Module kind</label><select class="select"><option>Technology module</option><option>Companion module</option></select></div>
+      </div>
       <div class="form-row">
         <div class="field"><label>Duration (years) — by category</label><input class="input" value="6" readonly></div>
         <div class="field"><label>Semesters (total)</label><input class="input" value="12" readonly></div>
       </div>
-      <div class="note">ℹ️ The course duration is automatically determined by the age category (Genesis 8 · Nexus 6 · Quantum 4 · Apex 2 years) — 2 semesters per year. Each semester adds trainings, a midterm and an exam — with attached materials.</div>
+      <div class="note">ℹ️ The number of semesters is <b>predefined by the age category</b> (Genesis 16 · Nexus 12 · Quantum 8 · Apex 4). The module opens with empty semester slots — add lectures, midterms and exams with their materials.</div>
     </div>
-    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create and open structure</button></div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create and open template</button></div>
   </div>
 </div>
 
