@@ -255,7 +255,7 @@ hr.sep { border:none; border-top:1px solid var(--line); margin:18px 0; }
 .flex { display:flex; align-items:center; gap:10px; }
 .flex.wrap{ flex-wrap:wrap; } .flex.between{ justify-content:space-between; }
 .mt-0{margin-top:0}.mt-1{margin-top:8px}.mt-2{margin-top:16px}.mb-0{margin-bottom:0}
-.text-r{ text-align:right; } .nowrap{ white-space:nowrap; }
+.text-r{ text-align:right; } .text-c{ text-align:center; } .nowrap{ white-space:nowrap; }
 .pill-tabbar{ display:inline-flex; background:var(--surface-2); border:1px solid var(--line); border-radius:999px; padding:3px; }
 .pill-tabbar .p{ padding:6px 14px; border-radius:999px; font-size:12.5px; font-weight:600; color:var(--muted); cursor:pointer;}
 .pill-tabbar .p.active{ background:var(--savoy); color:#fff; }

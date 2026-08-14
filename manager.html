@@ -1058,11 +1058,11 @@
       </div>
       <div class="card">
         <div class="card-head"><h3>Tbilisi users</h3><div class="actions">
-          <div class="select" style="width:auto">Role: All ▾</div>
+          <div class="select" style="width:auto">Group: All ▾</div>
           <div class="search" style="min-width:200px">🔎 <span>Search…</span></div>
         </div></div>
         <table class="tbl">
-          <thead><tr><th>User</th><th>Role</th><th>Last login</th><th>Status</th><th></th></tr></thead>
+          <thead><tr><th>User</th><th>Group</th><th>Last login</th><th>Status</th><th></th></tr></thead>
           <tbody>
             <tr><td><div class="u"><span class="avatar sm yellow">S.A</span><span class="nm">Sandro Abashidze</span></div></td><td><span class="badge b-info plain">Trainer</span></td><td>Today</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
             <tr><td><div class="u"><span class="avatar sm">N.B</span><span class="nm">Nika Beridze</span></div></td><td><span class="badge b-info plain">Student</span></td><td>Today</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
@@ -1137,13 +1137,13 @@
   <div class="modal">
     <div class="m-head"><h3>Add user</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="field"><label>Role</label>
+      <div class="field"><label>User group</label>
         <select class="select" data-optselect>
-          <option value="roleStudent">Student</option>
-          <option value="roleParent">Parent</option>
+          <option value="roleStudent">🔒 Students (system)</option>
+          <option value="roleParent">🔒 Parents (system)</option>
         </select>
       </div>
-      <div class="note mt-1">🆔 <b>Personal ID is required for all users</b> — it is used as the login username for the system.</div>
+      <div class="note mt-1">🆔 <b>Personal ID is required for all users</b> — it is used as the login username for the system. User groups and their permissions are managed by the administrator.</div>
 
       <!-- ROLE: STUDENT (synced from external system) -->
       <div class="opt-block active" id="roleStudent">

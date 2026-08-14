@@ -47,7 +47,7 @@
     <div class="nav-item" data-target="knowledge"  data-title="AI Knowledge Base"><span class="ic">🤖</span> AI / Knowledge Base</div>
 
     <div class="nav-group-label">System</div>
-    <div class="nav-item" data-target="roles"     data-title="User Management"><span class="ic">👥</span> Users</div>
+    <div class="nav-item" data-target="roles"     data-title="Users & Groups"><span class="ic">👥</span> Users &amp; Groups</div>
     <div class="nav-item" data-target="params"    data-title="Settings — academic years/semesters"><span class="ic">⚙️</span> Settings</div>
 
     <div class="sidebar-foot">
@@ -1198,28 +1198,124 @@
     <!-- ==================== ROLES ==================== -->
     <section class="view" data-view="roles">
       <div class="page-head">
-        <div class="titles"><h2>User Management</h2><p>Centralized management · a role and branch are assigned when adding a user</p></div>
-        <div class="actions"><button class="btn primary" data-modal="mAddUser">＋ Add user</button></div>
+        <div class="titles"><h2>Users &amp; Groups</h2><p>Manage users and user groups · menu access and CRUD permissions are defined <b>per group</b></p></div>
+        <div class="actions"><button class="btn" data-modal="mAddUserGroup">＋ New group</button><button class="btn primary" data-modal="mAddUser">＋ Add user</button></div>
       </div>
-      <div class="card">
-        <div class="card-head"><h3>Users</h3><div class="actions">
-          <div class="select" style="width:auto">Role: All ▾</div>
-          <div class="select" style="width:auto">Branch: All ▾</div>
-          <div class="search" style="min-width:200px">🔎 <span>Search…</span></div>
-        </div></div>
-        <table class="tbl">
-          <thead><tr><th>User</th><th>Role</th><th>Branch</th><th>Last login</th><th>Status</th><th></th></tr></thead>
+      <div class="card" data-tabs>
+        <div class="card-head" style="padding:0">
+          <div class="tabs" style="margin:0; border:none; padding:0 8px">
+            <div class="tab active" data-tab="ug1">Users</div>
+            <div class="tab" data-tab="ug2">Groups</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- USERS -->
+          <div class="tab-panel active" data-panel="ug1">
+            <div class="flex wrap mb-0" style="gap:8px">
+              <div class="select" style="width:auto">Group: All ▾</div>
+              <div class="select" style="width:auto">Branch: All ▾</div>
+              <div class="select" style="width:auto">Status: All ▾</div>
+              <div class="search" style="min-width:200px; margin-left:auto">🔎 <span>Search by name or ID…</span></div>
+            </div>
+            <table class="tbl mt-2">
+              <thead><tr><th>User</th><th>Personal ID (login)</th><th>Group</th><th>Branch</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+                <tr><td><div class="u"><span class="avatar sm">N.K</span><span class="nm">Nino Kvaratskhelia</span></div></td><td>01001011111</td><td><span class="badge b-info plain">Super Admin</span></td><td>All</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm green">K.D</span><span class="nm">Keti Dolidze</span></div></td><td>01008022222</td><td><span class="badge b-info plain">Branch Manager</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm">E.A</span><span class="nm">Eka Avaliani</span></div></td><td>01010033333</td><td><span class="badge b-warn plain">Finance</span></td><td>Backoffice</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm yellow">S.A</span><span class="nm">Sandro Abashidze</span></div></td><td>01011044444</td><td><span class="badge b-muted plain">🔒 Trainers</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm">N.B</span><span class="nm">Nika Beridze</span></div></td><td>61001055555</td><td><span class="badge b-muted plain">🔒 Students</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm cerise">T.B</span><span class="nm">Tamar Beridze</span></div></td><td>01012066666</td><td><span class="badge b-muted plain">🔒 Parents</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+              </tbody>
+            </table>
+            <div class="note mt-2">ℹ️ A user's access is inherited from the group(s) they belong to. Use <b>Change group</b> to move a user between groups.</div>
+          </div>
+          <!-- GROUPS -->
+          <div class="tab-panel" data-panel="ug2">
+            <div class="note mb-0">ℹ️ <b>Students</b>, <b>Parents</b> and <b>Trainers</b> are 🔒 system groups — they carry the special interfaces and core logic, so they can't be deleted or renamed (permissions are viewable). All other groups are fully admin-managed and unlimited.</div>
+            <table class="tbl mt-2">
+              <thead><tr><th>Group</th><th>Type</th><th>Members</th><th>Menu access</th><th></th></tr></thead>
+              <tbody>
+                <tr><td><b>🔒 Students</b></td><td><span class="badge b-muted">System · locked</span></td><td>1 248</td><td class="muted">Student interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>🔒 Parents</b></td><td><span class="badge b-muted">System · locked</span></td><td>1 090</td><td class="muted">Parent interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>🔒 Trainers</b></td><td><span class="badge b-muted">System · locked</span></td><td>84</td><td class="muted">Trainer interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>Super Admin</b></td><td><span class="badge b-info">Custom</span></td><td>2</td><td class="muted">All menus · full CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Administrator</b></td><td><span class="badge b-info">Custom</span></td><td>5</td><td class="muted">All menus · most CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Branch Manager</b></td><td><span class="badge b-info">Custom</span></td><td>6</td><td class="muted">Branch-scoped menus</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Finance</b></td><td><span class="badge b-info">Custom</span></td><td>3</td><td class="muted">Payments · Debts · Reports</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Backoffice</b></td><td><span class="badge b-info">Custom</span></td><td>4</td><td class="muted">Read-only · shared</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+              </tbody>
+            </table>
+            <div class="add-tile mt-2" data-modal="mAddUserGroup" style="max-width:280px"><span class="plus">＋</span><div><b>New group</b></div><small>Custom · unlimited</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== USER GROUP DETAIL (permissions) ==================== -->
+    <section class="view" data-view="usergroup-detail">
+      <span class="back-link" data-goto="roles">← Users &amp; Groups</span>
+      <div class="page-head">
+        <div class="titles"><h2>Group — Finance</h2><p>Custom group · define menu access and CRUD permissions for all its members</p></div>
+        <div class="actions"><button class="btn danger">🗑 Delete group</button><button class="btn primary">💾 Save permissions</button></div>
+      </div>
+
+      <div class="grid g-1-2">
+        <!-- Members -->
+        <div class="card pad">
+          <div class="flex between mb-0"><h3 class="mb-0" style="font-size:15px">Members</h3><button class="btn sm primary" data-modal="mEditUserGroups">＋ Add member</button></div>
+          <table class="tbl compact mt-2">
+            <thead><tr><th>User</th><th>Personal ID</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><div class="u"><span class="avatar sm">E.A</span><span class="nm">Eka Avaliani</span></div></td><td>01010033333</td><td class="text-r"><a href="#">✕</a></td></tr>
+              <tr><td><div class="u"><span class="avatar sm green">D.T</span><span class="nm">Dato Tavadze</span></div></td><td>01009044444</td><td class="text-r"><a href="#">✕</a></td></tr>
+              <tr><td><div class="u"><span class="avatar sm yellow">M.B</span><span class="nm">Maka Barbakadze</span></div></td><td>01007055555</td><td class="text-r"><a href="#">✕</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Menu access -->
+        <div class="card pad">
+          <h3 class="mb-0" style="font-size:15px">Menu access</h3>
+          <div class="note mt-1">Tick the menus this group can see.</div>
+          <div class="grid g-2 mt-1" style="gap:4px 14px; font-size:13px">
+            <label><input type="checkbox"> Branches</label>
+            <label><input type="checkbox" checked> Students</label>
+            <label><input type="checkbox"> Trainers</label>
+            <label><input type="checkbox"> Groups</label>
+            <label><input type="checkbox"> Learning Modules</label>
+            <label><input type="checkbox"> Module Templates</label>
+            <label><input type="checkbox"> Schedule</label>
+            <label><input type="checkbox"> Exams</label>
+            <label><input type="checkbox"> Projects</label>
+            <label><input type="checkbox" checked> Payments</label>
+            <label><input type="checkbox" checked> Debts</label>
+            <label><input type="checkbox" checked> Reports</label>
+            <label><input type="checkbox"> Evaluations</label>
+            <label><input type="checkbox"> Documents</label>
+            <label><input type="checkbox" checked> Notifications</label>
+            <label><input type="checkbox"> Settings</label>
+            <label><input type="checkbox"> Users &amp; Groups</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- CRUD permissions -->
+      <div class="card mt-2">
+        <div class="card-head"><h3>CRUD permissions</h3><span class="muted" style="font-size:12px">Per resource · View / Create / Update / Delete</span></div>
+        <table class="tbl compact">
+          <thead><tr><th>Resource</th><th class="text-c">View</th><th class="text-c">Create</th><th class="text-c">Update</th><th class="text-c">Delete</th></tr></thead>
           <tbody>
-            <tr><td><div class="u"><span class="avatar sm">N.K</span><span class="nm">Nino Kvaratskhelia</span></div></td><td><span class="badge b-info plain">Super Admin</span></td><td>All</td><td>Now</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
-            <tr><td><div class="u"><span class="avatar sm">G.M</span><span class="nm">Giorgi Maisuradze</span></div></td><td><span class="badge b-info plain">Director</span></td><td>All</td><td>30 min ago</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">K.D</span><span class="nm">Keti Dolidze</span></div></td><td><span class="badge b-info plain">Branch Manager</span></td><td>Tbilisi</td><td>1 h ago</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
-            <tr><td><div class="u"><span class="avatar sm yellow">S.A</span><span class="nm">Sandro Abashidze</span></div></td><td><span class="badge b-info plain">Trainer</span></td><td>Tbilisi</td><td>Today</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
-            <tr><td><div class="u"><span class="avatar sm">N.B</span><span class="nm">Nika Beridze</span></div></td><td><span class="badge b-info plain">Student</span></td><td>Tbilisi</td><td>Today</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
-            <tr><td><div class="u"><span class="avatar sm cerise">T.B</span><span class="nm">Tamar Beridze</span></div></td><td><span class="badge b-info plain">Parent</span></td><td>Tbilisi</td><td>2 h ago</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
-            <tr><td><div class="u"><span class="avatar sm green">E.A</span><span class="nm">Eka Avaliani</span></div></td><td><span class="badge b-muted plain">Backoffice</span></td><td>Shared</td><td>Yesterday</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
+            <tr><td>Students</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Payments</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Debts</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Reports</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Groups</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Learning Modules</td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Users &amp; Groups</td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
           </tbody>
         </table>
       </div>
+      <div class="note mt-2">🔒 For the <b>Students</b>, <b>Parents</b> and <b>Trainers</b> system groups this screen is read-only — their menus and permissions are fixed by their dedicated interfaces.</div>
     </section>
 
     <!-- ==================== PARAMETERS (academic years / semesters, per branch) ==================== -->
@@ -1261,16 +1357,19 @@
   <div class="modal">
     <div class="m-head"><h3>Add user</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="field"><label>Role</label>
+      <div class="field"><label>User group</label>
         <select class="select" data-optselect>
-          <option value="roleStudent">Student</option>
-          <option value="roleParent">Parent</option>
-          <option value="roleTrainer">Lecturer</option>
+          <option value="roleStudent">🔒 Students (system)</option>
+          <option value="roleParent">🔒 Parents (system)</option>
+          <option value="roleTrainer">🔒 Trainers (system)</option>
           <option value="roleManager">Branch Manager</option>
           <option value="roleAdmin">Administrator</option>
+          <option value="roleGeneric2">Finance</option>
+          <option value="roleGeneric2">Super Admin</option>
+          <option value="roleGeneric2">Backoffice</option>
         </select>
       </div>
-      <div class="note mt-1">🆔 <b>Personal ID is required for every user</b> — it is used as the login username for the system.</div>
+      <div class="note mt-1">🆔 <b>Personal ID is required for every user</b> — it is used as the login username for the system. Access is inherited from the selected group.</div>
 
       <!-- ROLE: STUDENT (synced from external system) -->
       <div class="opt-block active" id="roleStudent">
@@ -1335,9 +1434,44 @@
         <div class="field"><label>Branch assignment</label><select class="select"><option>Backoffice (shared — all branches)</option><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
       </div>
 
+      <!-- CUSTOM GROUP (Finance / Super Admin / Backoffice / any admin-made group) -->
+      <div class="opt-block" id="roleGeneric2">
+        <div class="form-row"><div class="field"><label>Full Name</label><input class="input" placeholder="Full Name"></div><div class="field"><label>Personal ID <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="e.g. 01001012345"></div></div>
+        <div class="form-row"><div class="field"><label>Phone</label><input class="input" placeholder="+995"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
+        <div class="field"><label>Branch assignment</label><select class="select"><option>Backoffice (shared — all branches)</option><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+        <div class="note">🔐 Menu access and CRUD permissions come from the group's settings (Users &amp; Groups → group → Permissions).</div>
+      </div>
+
       <div class="note mt-1">📩 After adding, an SMS + Email with a registration link is sent automatically.</div>
     </div>
     <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add</button></div>
+  </div>
+</div>
+
+<!-- MODAL: new user group -->
+<div class="modal-overlay" id="mAddUserGroup">
+  <div class="modal">
+    <div class="m-head"><h3>New user group</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Group name</label><input class="input" placeholder="e.g. Finance, Marketing, HR…"></div>
+      <div class="field"><label>Description</label><input class="input" placeholder="What is this group for?"></div>
+      <div class="field"><label>Copy permissions from</label><select class="select"><option>— None (start empty) —</option><option>Administrator</option><option>Branch Manager</option><option>Finance</option><option>Backoffice</option></select></div>
+      <div class="note">ℹ️ Custom groups are unlimited. After creating, set the group's <b>menu access</b> and <b>CRUD permissions</b> on its page. The 🔒 Students / Parents / Trainers system groups can't be recreated — they own the dedicated interfaces.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create group</button></div>
+  </div>
+</div>
+
+<!-- MODAL: change a user's group -->
+<div class="modal-overlay" id="mEditUserGroups">
+  <div class="modal">
+    <div class="m-head"><h3>Change group — Eka Avaliani</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>User</label><input class="input" value="Eka Avaliani · 01010033333" readonly></div>
+      <div class="field"><label>Group</label><select class="select"><option>🔒 Students (system)</option><option>🔒 Parents (system)</option><option>🔒 Trainers (system)</option><option>Super Admin</option><option>Administrator</option><option>Branch Manager</option><option selected>Finance</option><option>Backoffice</option></select></div>
+      <div class="note">ℹ️ Moving a user changes their menus and CRUD rights to those of the new group immediately. A user can belong to one group.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Save</button></div>
   </div>
 </div>
 
