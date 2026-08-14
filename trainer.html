@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SJA — ტრენერის ინტერფეისი</title>
+<title>SJA — Trainer Interface</title>
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="assets/sja.css">
 </head>
@@ -13,32 +13,32 @@
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <a class="brand" href="index.html" title="მთავარი / როლის არჩევა">
+    <a class="brand" href="index.html" title="Home / Role selection">
       <img src="assets/logo.png" alt="SJA">
       <div><div class="b-title">Steve Jobs<br>American Academy</div><div class="b-sub">Trainer</div></div>
     </a>
-    <span class="role-chip" style="background:rgba(170,203,92,.22); border-color:rgba(170,203,92,.4)">🎓 ტრენერი</span>
+    <span class="role-chip" style="background:rgba(170,203,92,.22); border-color:rgba(170,203,92,.4)">🎓 Trainer</span>
 
-    <div class="nav-group-label">სასწავლო</div>
-    <div class="nav-item active" data-target="lessons"  data-title="გაკვეთილები"><span class="ic">📅</span> გაკვეთილები</div>
+    <div class="nav-group-label">Teaching</div>
+    <div class="nav-item active" data-target="lessons"  data-title="Lessons"><span class="ic">📅</span> Lessons</div>
 
-    <div class="nav-group-label">დოკუმენტბრუნვა</div>
-    <div class="nav-item" data-target="reports"     data-title="რეპორტები"><span class="ic">📑</span> რეპორტები <span class="count">2</span></div>
+    <div class="nav-group-label">Documents</div>
+    <div class="nav-item" data-target="reports"     data-title="Reports"><span class="ic">📑</span> Reports <span class="count">2</span></div>
 
-    <div class="nav-group-label">დახმარება</div>
-    <div class="nav-item" data-target="knowledge" data-title="AI ასისტენტი"><span class="ic">🤖</span> AI ასისტენტი</div>
-    <div class="nav-item" data-target="profile"   data-title="პროფილი"><span class="ic">👤</span> პროფილი</div>
+    <div class="nav-group-label">Help</div>
+    <div class="nav-item" data-target="knowledge" data-title="AI Assistant"><span class="ic">🤖</span> AI Assistant</div>
+    <div class="nav-item" data-target="profile"   data-title="Profile"><span class="ic">👤</span> Profile</div>
 
-    <div class="sidebar-foot"><div class="who"><span class="avatar green">ს.ა</span>
-      <div><div style="color:#fff; font-size:13px; font-weight:600">სანდრო აბაშიძე</div><div style="color:#9aa6cf; font-size:11px">Web Development · თბილისი</div></div></div>
+    <div class="sidebar-foot"><div class="who"><span class="avatar green">S.A</span>
+      <div><div style="color:#fff; font-size:13px; font-weight:600">Sandro Abashidze</div><div style="color:#9aa6cf; font-size:11px">Web Development · Tbilisi</div></div></div>
     </div>
   </aside>
 
   <div class="main">
     <div class="topbar">
-      <div><div class="crumb"><span id="crumb">სასწავლო</span></div><h1 id="page-title">გაკვეთილები</h1></div>
+      <div><div class="crumb"><span id="crumb">Teaching</span></div><h1 id="page-title">Lessons</h1></div>
       <div class="spacer"></div>
-      <div class="search">🔎 <span>ძებნა — მოსწავლე, ჯგუფი…</span></div>
+      <div class="search">🔎 <span>Search — student, group…</span></div>
       <div class="icon-btn">🔔<span class="dot"></span></div>
     </div>
 
@@ -46,18 +46,18 @@
 
     <!-- LESSONS (grid of lectures across the trainer's groups) -->
     <section class="view active" data-view="lessons">
-      <div class="page-head"><div class="titles"><h2>გაკვეთილები</h2><p>ჩემი ლექციები ყველა ჯგუფში · გახსენით ლექცია მასალის, დასწრების, SteveCoin-ისა და დავალების სამართავად</p></div>
-        <div class="actions"><span class="pill-tabbar"><span class="p active">კვირა</span><span class="p">თვე</span></span></div>
+      <div class="page-head"><div class="titles"><h2>Lessons</h2><p>My lectures across all groups · open a lecture to manage materials, attendance, SteveCoin and assignments</p></div>
+        <div class="actions"><span class="pill-tabbar"><span class="p active">Week</span><span class="p">Month</span></span></div>
       </div>
       <div class="card">
         <table class="tbl">
-          <thead><tr><th>დღე / თარიღი</th><th>დრო</th><th>ჯგუფი</th><th>თემა</th><th>სტატუსი</th><th></th></tr></thead>
+          <thead><tr><th>Day / Date</th><th>Time</th><th>Group</th><th>Topic</th><th>Status</th><th></th></tr></thead>
           <tbody>
-            <tr><td class="nowrap"><b>ორშ 1 დეკ</b> · მიმდ.</td><td>19:00–21:00</td><td>#7</td><td>Module 3 — JS Events</td><td><span class="badge b-warn">მიმდინარე</span></td><td class="text-r"><button class="btn sm primary" data-goto="lesson-detail">გახსნა →</button></td></tr>
-            <tr><td class="nowrap">ხუთ 4 დეკ</td><td>19:00–21:00</td><td>#7</td><td>Module 3 — DOM</td><td><span class="badge b-muted">დაგეგმილი</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">გახსნა →</button></td></tr>
-            <tr><td class="nowrap">კვ 7 დეკ</td><td>19:00–21:00</td><td>#8</td><td>Module 3 — JavaScript</td><td><span class="badge b-muted">დაგეგმილი</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">გახსნა →</button></td></tr>
-            <tr><td class="nowrap">ხუთ 27 ნოე</td><td>19:00–21:00</td><td>#7</td><td>Module 3 — შემაჯამებელი</td><td><span class="badge b-ok">ჩატარებული</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">გახსნა →</button></td></tr>
-            <tr><td class="nowrap">ორშ 24 ნოე</td><td>19:00–21:00</td><td>#7</td><td>JS — DOM (ქვიზი)</td><td><span class="badge b-ok">ჩატარებული</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">გახსნა →</button></td></tr>
+            <tr><td class="nowrap"><b>Mon 1 Dec</b> · in prog.</td><td>19:00–21:00</td><td>#7</td><td>Module 3 — JS Events</td><td><span class="badge b-warn">In progress</span></td><td class="text-r"><button class="btn sm primary" data-goto="lesson-detail">Open →</button></td></tr>
+            <tr><td class="nowrap">Thu 4 Dec</td><td>19:00–21:00</td><td>#7</td><td>Module 3 — DOM</td><td><span class="badge b-muted">Planned</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">Open →</button></td></tr>
+            <tr><td class="nowrap">Sun 7 Dec</td><td>19:00–21:00</td><td>#8</td><td>Module 3 — JavaScript</td><td><span class="badge b-muted">Planned</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">Open →</button></td></tr>
+            <tr><td class="nowrap">Thu 27 Nov</td><td>19:00–21:00</td><td>#7</td><td>Module 3 — Recap</td><td><span class="badge b-ok">Conducted</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">Open →</button></td></tr>
+            <tr><td class="nowrap">Mon 24 Nov</td><td>19:00–21:00</td><td>#7</td><td>JS — DOM (Quiz)</td><td><span class="badge b-ok">Conducted</span></td><td class="text-r"><button class="btn sm" data-goto="lesson-detail">Open →</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -65,69 +65,69 @@
 
     <!-- LESSON DETAIL (inner — materials / attendance+SteveCoin / homework upload / submitted homework) -->
     <section class="view" data-view="lesson-detail">
-      <span class="back-link" data-goto="lessons">← გაკვეთილები</span>
-      <div class="page-head"><div class="titles"><h2>ლექცია — Module 3 · JS Events</h2><p>ჯგუფი #7 · Apex · Web Development · ორშ 1 დეკ · 19:00</p></div></div>
+      <span class="back-link" data-goto="lessons">← Lessons</span>
+      <div class="page-head"><div class="titles"><h2>Lecture — Module 3 · JS Events</h2><p>Group #7 · Apex · Web Development · Mon 1 Dec · 19:00</p></div></div>
       <div class="card" data-tabs>
         <div class="card-head" style="padding:0">
           <div class="tabs" style="margin:0; border:none; padding:0 8px">
-            <div class="tab active" data-tab="l1">სასწავლო მასალა</div>
-            <div class="tab" data-tab="l2">დასწრება &amp; SteveCoin</div>
-            <div class="tab" data-tab="l3">დავალების ატვირთვა</div>
-            <div class="tab" data-tab="l4">შესრულებული დავალებები</div>
+            <div class="tab active" data-tab="l1">Learning Materials</div>
+            <div class="tab" data-tab="l2">Attendance &amp; SteveCoin</div>
+            <div class="tab" data-tab="l3">Upload Homework</div>
+            <div class="tab" data-tab="l4">Submitted Homework</div>
           </div>
         </div>
         <div class="card-body">
           <!-- Materials -->
           <div class="tab-panel active" data-panel="l1">
-            <div class="flex between mb-0"><h4 style="font-size:13px; margin:0">ლექციის სასწავლო მასალა</h4><button class="btn sm primary" data-modal="mMaterial">⤴ მასალის მიბმა</button></div>
+            <div class="flex between mb-0"><h4 style="font-size:13px; margin:0">Lecture learning materials</h4><button class="btn sm primary" data-modal="mMaterial">⤴ Attach material</button></div>
             <table class="tbl compact mt-2">
-              <thead><tr><th>მასალა</th><th>ტიპი</th><th>თარიღი</th><th></th></tr></thead>
+              <thead><tr><th>Material</th><th>Type</th><th>Date</th><th></th></tr></thead>
               <tbody>
-                <tr><td>WebDev_module_3_events.pdf</td><td>PDF</td><td>27 ნოე</td><td class="text-r"><a href="#">⤓ ჩამოტვირთვა</a> · <a href="#">🗑</a></td></tr>
-                <tr><td>JS Events — ვიდეო გაკვეთილი <span class="muted" style="font-size:11px">(MP4 · 72MB)</span></td><td>ვიდეო</td><td>27 ნოე</td><td class="text-r"><a href="#">⤓ ჩამოტვირთვა</a> · <a href="#">🗑</a></td></tr>
-                <tr><td>CodeSandbox — Events (ბმული)</td><td>ბმული</td><td>27 ნოე</td><td class="text-r"><a href="#">გახსნა</a> · <a href="#">🗑</a></td></tr>
+                <tr><td>WebDev_module_3_events.pdf</td><td>PDF</td><td>27 Nov</td><td class="text-r"><a href="#">⤓ Download</a> · <a href="#">🗑</a></td></tr>
+                <tr><td>JS Events — video lesson <span class="muted" style="font-size:11px">(MP4 · 72MB)</span></td><td>Video</td><td>27 Nov</td><td class="text-r"><a href="#">⤓ Download</a> · <a href="#">🗑</a></td></tr>
+                <tr><td>CodeSandbox — Events (link)</td><td>Link</td><td>27 Nov</td><td class="text-r"><a href="#">Open</a> · <a href="#">🗑</a></td></tr>
               </tbody>
             </table>
-            <div class="note mt-2">ℹ️ ვიდეო მასალა მოსწავლეს ხელმისაწვდომია მხოლოდ ჩამოსატვირთად (ონლაინ ყურების გარეშე).</div>
+            <div class="note mt-2">ℹ️ Video material is available to students only for download (no online viewing).</div>
           </div>
           <!-- Attendance + SteveCoin (per lecture) -->
           <div class="tab-panel" data-panel="l2">
-            <div class="flex between mb-0"><h4 style="font-size:13px; margin:0">დასწრება — ეს ლექცია</h4><button class="btn sm green">💾 შენახვა</button></div>
+            <div class="flex between mb-0"><h4 style="font-size:13px; margin:0">Attendance — this lecture</h4><button class="btn sm green">💾 Save</button></div>
             <table class="tbl compact mt-2">
-              <thead><tr><th>მოსწავლე</th><th>დასწრება</th><th>SteveCoin</th></tr></thead>
+              <thead><tr><th>Student</th><th>Attendance</th><th>SteveCoin</th></tr></thead>
               <tbody>
-                <tr><td class="nowrap">ლუკა ცერცვაძე</td><td><span class="badge b-ok" style="cursor:pointer">✔ დაესწრო</span></td><td class="text-r"><button class="btn sm">🪙 მინიჭება</button></td></tr>
-                <tr><td class="nowrap">საბა ტაბაღუა</td><td><span class="badge b-ok" style="cursor:pointer">✔ დაესწრო</span></td><td class="text-r"><button class="btn sm">🪙 მინიჭება</button></td></tr>
-                <tr><td class="nowrap">ელენე სახოკია</td><td><span class="badge b-danger" style="cursor:pointer">✖ გააცდინა</span></td><td class="text-r"><button class="btn sm">🪙 მინიჭება</button></td></tr>
-                <tr><td class="nowrap">გიო კვირკველია</td><td><span class="badge b-ok" style="cursor:pointer">✔ დაესწრო</span></td><td class="text-r"><button class="btn sm">🪙 მინიჭება</button></td></tr>
+                <tr><td class="nowrap">Luka Tsertsvadze</td><td><span class="badge b-ok" style="cursor:pointer">✔ Present</span></td><td class="text-r"><button class="btn sm">🪙 Assign</button></td></tr>
+                <tr><td class="nowrap">Saba Tabaghua</td><td><span class="badge b-ok" style="cursor:pointer">✔ Present</span></td><td class="text-r"><button class="btn sm">🪙 Assign</button></td></tr>
+                <tr><td class="nowrap">Elene Sakhokia</td><td><span class="badge b-danger" style="cursor:pointer">✖ Absent</span></td><td class="text-r"><button class="btn sm">🪙 Assign</button></td></tr>
+                <tr><td class="nowrap">Gio Kvirkvelia</td><td><span class="badge b-ok" style="cursor:pointer">✔ Present</span></td><td class="text-r"><button class="btn sm">🪙 Assign</button></td></tr>
               </tbody>
             </table>
-            <div class="note mt-2">✔ დაესწრო · ✖ გააცდინა · სტატუსზე დაჭერით იცვლება. 🪙 — SteveCoin-ის მინიჭება კონკრეტულ მოსწავლეზე ამ ლექციისთვის.</div>
+            <div class="note mt-2">✔ Present · ✖ Absent · click the status to toggle it. 🪙 — assign SteveCoin to a specific student for this lecture.</div>
           </div>
           <!-- Upload homework (for this lecture) -->
           <div class="tab-panel" data-panel="l3">
-            <h4 style="font-size:13px; margin:0">ამ ლექციის დავალება</h4>
+            <h4 style="font-size:13px; margin:0">Assignment for this lecture</h4>
             <div class="form-row mt-2">
-              <div class="field"><label>დავალების სათაური</label><input class="input" value="JS Events — პრაქტიკული"></div>
-              <div class="field"><label>ჩაბარების ვადა</label><input class="input" type="date" value="2025-12-08"></div>
+              <div class="field"><label>Assignment title</label><input class="input" value="JS Events — practical"></div>
+              <div class="field"><label>Due date</label><input class="input" type="date" value="2025-12-08"></div>
             </div>
-            <div class="field"><label>აღწერა / ინსტრუქცია</label><textarea class="textarea">დაამატეთ ღონისძიების დამმუშავებლები (click, input) ფორმის ვალიდაციისთვის. ატვირთეთ .zip ან CodeSandbox-ის ბმული.</textarea></div>
-            <div class="field"><label>დანართი (ფაილი / ბმული)</label>
-              <div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ გადმოათრიეთ ფაილი ან ჩასვით ბმული</div>
+            <div class="field"><label>Description / Instructions</label><textarea class="textarea">Add event handlers (click, input) for form validation. Upload a .zip or a CodeSandbox link.</textarea></div>
+            <div class="field"><label>Attachment (file / link)</label>
+              <div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Drag a file here or paste a link</div>
             </div>
-            <button class="btn primary mt-2">📌 დავალების გამოქვეყნება</button>
-            <div class="note mt-2">ℹ️ გამოქვეყნების შემდეგ დავალება გამოჩნდება მოსწავლის „ჩემი პროგრამის" დავალებების ჩამონათვალში ამ ლექციასთან.</div>
+            <button class="btn primary mt-2">📌 Publish assignment</button>
+            <div class="note mt-2">ℹ️ After publishing, the assignment will appear in the student's "My Program" assignment list next to this lecture.</div>
           </div>
           <!-- Review submitted homework -->
           <div class="tab-panel" data-panel="l4">
-            <div class="flex between mb-0"><h4 style="font-size:13px; margin:0">შესრულებული დავალებები</h4><span class="badge b-info">ჩაბარდა 3 / 16</span></div>
+            <div class="flex between mb-0"><h4 style="font-size:13px; margin:0">Submitted Homework</h4><span class="badge b-info">Submitted 3 / 16</span></div>
             <table class="tbl compact mt-2">
-              <thead><tr><th>მოსწავლე</th><th>ჩაბარება</th><th>თარიღი</th><th>სტატუსი</th><th></th></tr></thead>
+              <thead><tr><th>Student</th><th>Submission</th><th>Date</th><th>Status</th><th></th></tr></thead>
               <tbody>
-                <tr><td class="nowrap">ლუკა ცერცვაძე</td><td><a href="#">luka_events.zip ⤓</a></td><td>3 დეკ</td><td><span class="badge b-warn">შესამოწმებელი</span></td><td class="text-r"><button class="btn sm primary" data-modal="mReviewHw">შემოწმება</button></td></tr>
-                <tr><td class="nowrap">საბა ტაბაღუა</td><td><a href="#">CodeSandbox (ბმული)</a></td><td>4 დეკ</td><td><span class="badge b-ok">შემოწმებული · 9/10</span></td><td class="text-r"><button class="btn sm" data-modal="mReviewHw">ნახვა</button></td></tr>
-                <tr><td class="nowrap">გიო კვირკველია</td><td><a href="#">gio_events.zip ⤓</a></td><td>5 დეკ</td><td><span class="badge b-warn">შესამოწმებელი</span></td><td class="text-r"><button class="btn sm primary" data-modal="mReviewHw">შემოწმება</button></td></tr>
-                <tr><td class="nowrap">ელენე სახოკია</td><td class="muted">— არ ჩაბარებულა —</td><td>—</td><td><span class="badge b-danger">ვადაგადაცილებული</span></td><td class="text-r"><button class="btn sm" disabled>—</button></td></tr>
+                <tr><td class="nowrap">Luka Tsertsvadze</td><td><a href="#">luka_events.zip ⤓</a></td><td>3 Dec</td><td><span class="badge b-warn">To review</span></td><td class="text-r"><button class="btn sm primary" data-modal="mReviewHw">Review</button></td></tr>
+                <tr><td class="nowrap">Saba Tabaghua</td><td><a href="#">CodeSandbox (link)</a></td><td>4 Dec</td><td><span class="badge b-ok">Reviewed · 9/10</span></td><td class="text-r"><button class="btn sm" data-modal="mReviewHw">View</button></td></tr>
+                <tr><td class="nowrap">Gio Kvirkvelia</td><td><a href="#">gio_events.zip ⤓</a></td><td>5 Dec</td><td><span class="badge b-warn">To review</span></td><td class="text-r"><button class="btn sm primary" data-modal="mReviewHw">Review</button></td></tr>
+                <tr><td class="nowrap">Elene Sakhokia</td><td class="muted">— not submitted —</td><td>—</td><td><span class="badge b-danger">Overdue</span></td><td class="text-r"><button class="btn sm" disabled>—</button></td></tr>
               </tbody>
             </table>
           </div>
@@ -137,38 +137,38 @@
 
     <!-- REPORTS -->
         <section class="view" data-view="reports">
-      <div class="page-head"><div class="titles"><h2>რეპორტები</h2></div></div>
-      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>ეს სექცია მალე დაემატება.</p></div>
+      <div class="page-head"><div class="titles"><h2>Reports</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
     </section>
 
     <!-- KNOWLEDGE -->
         <section class="view" data-view="knowledge">
-      <div class="page-head"><div class="titles"><h2>AI ასისტენტი</h2></div></div>
-      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>ეს სექცია მალე დაემატება.</p></div>
+      <div class="page-head"><div class="titles"><h2>AI Assistant</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
     </section>
 
     <!-- PROFILE -->
     <section class="view" data-view="profile">
-      <div class="page-head"><div class="titles"><h2>პროფილი</h2><p>პირადი მონაცემები, კვალიფიკაცია და გრაფიკი</p></div></div>
+      <div class="page-head"><div class="titles"><h2>Profile</h2><p>Personal details, qualification and schedule</p></div></div>
       <div class="grid g-1-2">
         <div class="card pad" style="text-align:center">
-          <span class="avatar green" style="width:80px; height:80px; font-size:28px; margin:0 auto">ს.ა</span>
-          <h3 class="mt-2 mb-0">სანდრო აბაშიძე</h3>
-          <div class="muted">Web Development ტრენერი · თბილისი</div>
-          <div class="flex" style="justify-content:center; margin-top:10px"><span class="badge b-ok">⭐ 4.9</span><span class="badge b-info">2 ჯგუფი</span></div>
+          <span class="avatar green" style="width:80px; height:80px; font-size:28px; margin:0 auto">S.A</span>
+          <h3 class="mt-2 mb-0">Sandro Abashidze</h3>
+          <div class="muted">Web Development Trainer · Tbilisi</div>
+          <div class="flex" style="justify-content:center; margin-top:10px"><span class="badge b-ok">⭐ 4.9</span><span class="badge b-info">2 groups</span></div>
         </div>
         <div class="card pad">
-          <h3>დეტალები</h3>
+          <h3>Details</h3>
           <div class="form-row mt-1">
-            <div class="field"><label>სახელი გვარი</label><input class="input" value="სანდრო აბაშიძე"></div>
-            <div class="field"><label>ტელეფონი</label><input class="input" value="+995 599 00 00 00"></div>
+            <div class="field"><label>Full Name</label><input class="input" value="Sandro Abashidze"></div>
+            <div class="field"><label>Phone</label><input class="input" value="+995 599 00 00 00"></div>
           </div>
           <div class="form-row">
             <div class="field"><label>Email</label><input class="input" value="s.abashidze@sja.ge"></div>
-            <div class="field"><label>პროგრამა</label><input class="input" value="Web Development"></div>
+            <div class="field"><label>Program</label><input class="input" value="Web Development"></div>
           </div>
-          <div class="field"><label>კვალიფიკაცია / ბიო</label><textarea class="textarea">Web Development ინსტრუქტორი, 8 წლიანი გამოცდილება. მუშაობს Apexს ჯგუფებთან (HTML/CSS/JS). Meta სერტიფიცირებული.</textarea></div>
-          <button class="btn primary">შენახვა</button>
+          <div class="field"><label>Qualification / Bio</label><textarea class="textarea">Web Development instructor, 8 years of experience. Works with Apex groups (HTML/CSS/JS). Meta certified.</textarea></div>
+          <button class="btn primary">Save</button>
         </div>
       </div>
     </section>
@@ -180,39 +180,39 @@
 <!-- MODAL: attach material -->
 <div class="modal-overlay" id="mMaterial">
   <div class="modal">
-    <div class="m-head"><h3>სასწავლო მასალის მიბმა</h3><button class="m-close">×</button></div>
+    <div class="m-head"><h3>Attach learning material</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="field"><label>სათაური</label><input class="input" placeholder="მაგ. Module 4 — Fetch API"></div>
+      <div class="field"><label>Title</label><input class="input" placeholder="e.g. Module 4 — Fetch API"></div>
       <div class="form-row">
-        <div class="field"><label>ტიპი</label><select class="select"><option>ფაილი (PDF/სლაიდი)</option><option>ბმული</option><option>ვიდეო</option></select></div>
-        <div class="field"><label>ხილვადობა</label><select class="select"><option>გამოქვეყნებული</option><option>დრაფტი</option></select></div>
+        <div class="field"><label>Type</label><select class="select"><option>File (PDF/slide)</option><option>Link</option><option>Video</option></select></div>
+        <div class="field"><label>Visibility</label><select class="select"><option>Published</option><option>Draft</option></select></div>
       </div>
-      <div class="field"><label>ფაილი / ბმული</label>
-        <div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ გადმოათრიეთ ფაილი ან ჩასვით ბმული</div>
+      <div class="field"><label>File / link</label>
+        <div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Drag a file here or paste a link</div>
       </div>
     </div>
-    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">მიბმა</button></div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Attach</button></div>
   </div>
 </div>
 
 <!-- MODAL: review submitted homework -->
 <div class="modal-overlay" id="mReviewHw">
   <div class="modal">
-    <div class="m-head"><h3>დავალების შემოწმება — ლუკა ცერცვაძე</h3><button class="m-close">×</button></div>
+    <div class="m-head"><h3>Homework review — Luka Tsertsvadze</h3><button class="m-close">×</button></div>
     <div class="m-body">
-      <div class="hist-block"><div class="h-head"><b>JS Events — პრაქტიკული</b><span class="badge b-muted plain" style="margin-left:auto">ჩაბარდა 3 დეკ</span></div>
+      <div class="hist-block"><div class="h-head"><b>JS Events — practical</b><span class="badge b-muted plain" style="margin-left:auto">Submitted 3 Dec</span></div>
         <div class="h-body">
-          <div class="list-row"><span>📎</span><div class="grow">luka_events.zip</div><a href="#">⤓ ჩამოტვირთვა</a></div>
-          <div class="note mt-1">კომენტარი მოსწავლისგან: „ვალიდაცია დავამატე, submit-ზეც მუშაობს."</div>
+          <div class="list-row"><span>📎</span><div class="grow">luka_events.zip</div><a href="#">⤓ Download</a></div>
+          <div class="note mt-1">Comment from student: "I added validation, it also works on submit."</div>
         </div>
       </div>
       <div class="form-row mt-2">
-        <div class="field"><label>შეფასება (10-დან)</label><input class="input" style="width:100px" placeholder="—"></div>
+        <div class="field"><label>Grade (out of 10)</label><input class="input" style="width:100px" placeholder="—"></div>
         <div class="field"><label>SteveCoin</label><input class="input" style="width:100px" placeholder="+5"></div>
       </div>
-      <div class="field"><label>უკუკავშირი</label><textarea class="textarea" placeholder="კომენტარი მოსწავლისთვის…"></textarea></div>
+      <div class="field"><label>Feedback</label><textarea class="textarea" placeholder="Comment for the student…"></textarea></div>
     </div>
-    <div class="m-foot"><button class="btn m-close">გაუქმება</button><button class="btn primary m-close">✔ შეფასების შენახვა</button></div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">✔ Save grade</button></div>
   </div>
 </div>
 

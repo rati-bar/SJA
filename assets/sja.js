@@ -151,7 +151,7 @@
       '<div class="s-time">' + time + '</div>' +
       '<div class="s-grp">' + grp + '</div>' +
       '<div class="s-les">' + les + '</div>' +
-      '<div class="s-lect">⚠ ლექტორი მიუთითეთ</div>';
+      '<div class="s-lect">⚠ Assign a lecturer</div>';
     dragged.classList.add('used');
     // Dropping a lecture pops the lecturer-assignment field
     var m = document.getElementById('mAssignLecturer');

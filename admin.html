@@ -28,6 +28,7 @@
     <div class="nav-item" data-target="trainers"  data-title="ტრენერების ბაზა"><span class="ic">👩‍🏫</span> ტრენერები <span class="count">84</span></div>
     <div class="nav-item" data-target="groups"    data-title="სასწავლო ჯგუფები"><span class="ic">👥</span> ჯგუფები <span class="count">96</span></div>
     <div class="nav-item" data-target="modules"   data-title="სასწავლო მოდულები"><span class="ic">📚</span> სასწავლო მოდულები</div>
+    <div class="nav-item" data-target="templates" data-title="სასწავლო მოდულების ტემპლეიტები"><span class="ic">🧩</span> მოდულების ტემპლეიტები</div>
     <div class="nav-item" data-target="schedule"  data-title="სასწავლო ცხრილი"><span class="ic">📆</span> სასწავლო ცხრილი</div>
     <div class="nav-item" data-target="exams"     data-title="გამოცდები / კალენდარი"><span class="ic">🗓️</span> გამოცდები</div>
     <div class="nav-item" data-target="projects"  data-title="პროექტები"><span class="ic">🏆</span> პროექტები</div>
@@ -171,6 +172,7 @@
             <div class="select" style="width:auto">მიღება (Intake): ყველა ▾</div>
             <div class="search" style="min-width:220px; margin-left:auto">🔎 <span>ძებნა სახელით ან პ/ნ-ით…</span></div>
           </div>
+          <div class="note mt-2">🎓 ალუმნის სტატუსი ენიჭება <b>2 წელიწადში ერთხელ</b> — ალუმნის სვეტში იწერება ბოლო დასრულებული ასაკობრივი კატეგორია და წელი.</div>
           <div class="flex wrap mt-2">
             <div class="select" style="width:auto">ჯგუფი: ყველა ▾</div>
             <div class="select" style="width:auto">დაფინანსება %: ყველა ▾</div>
@@ -453,11 +455,17 @@
             <div><small>კვალიფიკაცია</small><div><b>Robotics ინსტრუქტორი, 6 წ.</b></div></div>
             <div><small>სერტიფიკატები</small><div><b>LEGO Education, Arduino</b></div></div>
             <div><small>პროგრამა</small><div><b>Robotics (Bricks, Galileo)</b></div></div>
+            <div><small>მუშაობის დაწყების თარიღი</small><div><b>01/09/2019</b></div></div>
             <div><small>ტელეფონი</small><div><b>+995 599 22 33 44</b></div></div>
             <div><small>Email</small><div><b>l.beridze@sja.ge</b></div></div>
             <div><small>სტატუსი</small><div><span class="badge b-ok">აქტიური</span></div></div>
           </div>
         </div>
+      </div>
+      <div class="grid g-3 mt-2">
+        <div class="kpi"><div class="k-ic tint-savoy">🕐</div><div class="k-val">1 240 სთ</div><div class="k-label">ლექციები სულ (საათი)</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📅</div><div class="k-val">72 სთ</div><div class="k-label">ამ თვეში (საათი)</div></div>
+        <div class="kpi"><div class="k-ic tint-yellow">🗓️</div><div class="k-val" style="font-size:18px">01/09/2019</div><div class="k-label">მუშაობის დაწყების თარიღი</div></div>
       </div>
       <div class="card pad mt-2">
         <h3>სამუშაო გრაფიკი</h3>
@@ -594,6 +602,46 @@
     </section>
 
     <!-- ==================== SCHEDULE (build & manage) ==================== -->
+    <!-- ==================== MODULE TEMPLATES (master, per age category) ==================== -->
+    <section class="view" data-view="templates">
+      <div class="page-head">
+        <div class="titles"><h2>სასწავლო მოდულების ტემპლეიტები</h2><p>თითო ასაკობრივი კატეგორიის სამაგისტრო ტემპლეიტი — <b>ავტომ. კვებავს</b> ყოველი მიღება-კატეგორიის მოდულის სემესტრებს (ლექციების რიგითობა, მასალები)</p></div>
+      </div>
+      <div class="note" style="margin-bottom:14px">ℹ️ ტემპლეიტში გაწერილი ლექციები და ფაილები ავტომ. ჩაისმება ახალი მიღება-კატეგორიის მოდულში. თითოეული მიღება-კატეგორიისთვის მერე შესაძლებელია ლექციებისა და ფაილების ცალკე რედაქტირება (ტემპლეიტის ცვლილების გარეშე).</div>
+      <div class="grid g-4">
+        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-muted plain">16 სემესტრი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 წ.</h3><div class="muted" style="font-size:12px">320 ლექცია · 260 ფაილი</div><div class="btn block mt-2">ტემპლეიტი →</div></div>
+        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-muted plain">12 სემესტრი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 წ.</h3><div class="muted" style="font-size:12px">240 ლექცია · 200 ფაილი</div><div class="btn block mt-2">ტემპლეიტი →</div></div>
+        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-muted plain">8 სემესტრი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 წ.</h3><div class="muted" style="font-size:12px">160 ლექცია · 130 ფაილი</div><div class="btn block mt-2">ტემპლეიტი →</div></div>
+        <div class="card pad" data-goto="template-detail" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">4 სემესტრი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 წ.</h3><div class="muted" style="font-size:12px">80 ლექცია · 60 ფაილი</div><div class="btn block mt-2">ტემპლეიტი →</div></div>
+      </div>
+    </section>
+
+    <!-- ==================== TEMPLATE DETAIL (master lectures + materials) ==================== -->
+    <section class="view" data-view="template-detail">
+      <span class="back-link" data-goto="templates">← მოდულების ტემპლეიტები</span>
+      <div class="page-head">
+        <div class="titles"><h2>ტემპლეიტი — Nexus (9–11)</h2><p>სამაგისტრო ლექციები და მასალები · 12 სემესტრი — ეს კვებავს ყველა Nexus მიღება-კატეგორიის მოდულს</p></div>
+        <div class="actions"><button class="btn">⤓ Excel-ში ექსპორტი</button><button class="btn primary" data-modal="mAddTraining">＋ ლექცია ტემპლეიტში</button></div>
+      </div>
+      <div class="grid g-2">
+        <div class="card pad">
+          <div class="sem-head"><b>სემესტრი 1 — ტემპლეიტი</b><span class="badge b-info plain">22 ჩანაწერი</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">RB — Br.1 Pirate Ship</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">RB — Br.2 Merry-Go-Round</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ლექცია)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>სემესტრი 2 — ტემპლეიტი</b><span class="badge b-ok plain">22 ჩანაწერი</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">AlgoPlay — პროგრამირების საფუძვლები</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Al.2 Waving Flag — კოდი</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ლექცია)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ ტემპლეიტის ცვლილება არ ცვლის უკვე მიმდინარე მიღება-კატეგორიების მოდულებს — ის მოქმედებს <b>ახალ</b> მიღება-კატეგორიებზე. მიმდინარეს რედაქტირება ხდება მოდულის გვერდიდან.</div>
+    </section>
+
     <!-- ==================== LEARNING MODULES — intake picker ==================== -->
     <section class="view" data-view="modules">
       <div class="page-head">
@@ -635,10 +683,10 @@
         <div class="titles"><h2>მიღება: Alpha — ასაკობრივი კატეგორიები</h2><p>აირჩიეთ ასაკობრივი კატეგორია (განსაზღვრავს კურსის ხანგრძლივობას)</p></div>
       </div>
       <div class="grid g-4">
-        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-muted plain">8 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 წ.</h3><div class="muted" style="font-size:12px">16 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
-        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-muted plain">6 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 წ.</h3><div class="muted" style="font-size:12px">12 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
-        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-muted plain">4 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 წ.</h3><div class="muted" style="font-size:12px">8 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
-        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">2 წელი</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 წ.</h3><div class="muted" style="font-size:12px">4 სემესტრი</div><div class="btn block mt-2">მოდულები →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-ok plain">📆 ახლა: სემესტრი 2 / 16</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 წ.</h3><div class="muted" style="font-size:12px">ამ მიღების ჯგუფები ამ სემესტრში</div><div class="btn block mt-2">მოდულები →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-ok plain">📆 ახლა: სემესტრი 2 / 12</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 წ.</h3><div class="muted" style="font-size:12px">ამ მიღების ჯგუფები ამ სემესტრში</div><div class="btn block mt-2">მოდულები →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-ok plain">📆 ახლა: სემესტრი 2 / 8</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 წ.</h3><div class="muted" style="font-size:12px">ამ მიღების ჯგუფები ამ სემესტრში</div><div class="btn block mt-2">მოდულები →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-ok plain">📆 ახლა: სემესტრი 2 / 4</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 წ.</h3><div class="muted" style="font-size:12px">ამ მიღების ჯგუფები ამ სემესტრში</div><div class="btn block mt-2">მოდულები →</div></div>
       </div>
     </section>
 
@@ -680,7 +728,7 @@
       <span class="back-link" data-goto="modules-list">← მოდულები (Alpha · Nexus)</span>
       <div class="page-head">
         <div class="titles"><h2>Nexus — რობოტიკა → პროგრამირება</h2><p>მიღება: Alpha · Nexus (9–11) · 12 სემესტრი — წინასწარ განსაზღვრული სლოტები</p></div>
-        <div class="actions"></div>
+        <div class="actions"><button class="btn">⤓ Excel-ში ექსპორტი</button></div>
       </div>
       <div class="grid g-4" style="margin-bottom:16px">
         <div class="kpi"><div class="k-ic tint-savoy">🎓</div><div class="k-val">6</div><div class="k-label">წელი</div></div>
@@ -688,14 +736,14 @@
         <div class="kpi"><div class="k-ic tint-yellow">📋</div><div class="k-val">240</div><div class="k-label">ტრეინინგი</div></div>
         <div class="kpi"><div class="k-ic tint-cerise">📎</div><div class="k-val">200</div><div class="k-label">მიბმული მასალა</div></div>
       </div>
-      <div class="note" style="margin-bottom:12px">ℹ️ სემესტრის სლოტების რაოდენობა განისაზღვრება კატეგორიით (Nexus = 12; ორივე სემესტრში ხდება მიღება). თითო სლოტში ემატება <b>ტრეინინგი</b>, <b>შუალედური</b> და <b>გამოცდა</b>.</div>
+      <div class="note" style="margin-bottom:12px">ℹ️ სემესტრის სლოტების რაოდენობა განისაზღვრება კატეგორიით (Nexus = 12). ლექციები და მიბმული ფაილები <b>ავტომ. მოდის ამ კატეგორიის ტემპლეიტიდან</b>, მაგრამ <b>თითოეული მიღება-კატეგორიისთვის ცალკე რედაქტირებადია</b> (✏️). ✔ ნიშნავს რომ ლექცია <b>ჩატარდა</b> — მონიშვნას ახდენს ფილიალის მენეჯერი/ადმინი.</div>
       <div class="grid g-2">
         <div class="card pad">
-          <div class="sem-head"><b>სემესტრი 1</b><span class="badge b-info plain">4 ჩანაწერი</span></div>
-          <div class="train-row"><span class="t-num">1</span><span class="t-title">RB — Br.1 Pirate Ship</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-          <div class="train-row"><span class="t-num">2</span><span class="t-title">RB — Br.2 Merry-Go-Round</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-          <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="sem-head"><b>სემესტრი 1</b><span class="badge b-ok plain">✔ ჩატარდა 12 / 22</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">RB — Br.1 Pirate Ship</span><span class="badge b-ok plain">✔ ჩატარდა</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">RB — Br.2 Merry-Go-Round</span><span class="badge b-ok plain">✔ ჩატარდა</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="badge b-muted plain" style="cursor:pointer" title="ჩატარებულად მონიშვნა">◻ ჩასატარებელი</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">შუალედური გამოცდა</span><span class="badge b-muted plain" style="cursor:pointer" title="ჩატარებულად მონიშვნა">◻ ჩასატარებელი</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
           <div class="sem-actions">
             <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
             <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>
@@ -703,11 +751,11 @@
           </div>
         </div>
         <div class="card pad">
-          <div class="sem-head"><b>სემესტრი 2</b><span class="badge b-ok plain">4 ჩანაწერი</span></div>
-          <div class="train-row"><span class="t-num">1</span><span class="t-title">AlgoPlay — პროგრამირების საფუძვლები</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-          <div class="train-row"><span class="t-num">2</span><span class="t-title">Al.2 Waving Flag — კოდი</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-          <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
-          <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="sem-head"><b>სემესტრი 2</b><span class="badge b-warn plain">✔ ჩატარდა 3 / 22</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">AlgoPlay — პროგრამირების საფუძვლები</span><span class="badge b-ok plain">✔ ჩატარდა</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Al.2 Waving Flag — კოდი</span><span class="badge b-muted plain" style="cursor:pointer" title="ჩატარებულად მონიშვნა">◻ ჩასატარებელი</span><span class="t-mat" data-modal="mAttachMaterial" title="ლექციის რედაქტირება">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(სულ 20 ტრეინინგი)</span><span class="badge b-muted plain" style="cursor:pointer" title="ჩატარებულად მონიშვნა">◻ ჩასატარებელი</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
+          <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">დასკვნითი გამოცდა</span><span class="badge b-muted plain" style="cursor:pointer" title="ჩატარებულად მონიშვნა">◻ ჩასატარებელი</span><span class="t-mat" data-modal="mAttachMaterial">📎 მასალა</span></div>
           <div class="sem-actions">
             <button class="btn sm ghost" data-modal="mAddTraining">＋ ტრეინინგი</button>
             <button class="btn sm ghost" data-modal="mAddMidterm">＋ შუალედური</button>

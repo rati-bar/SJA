@@ -8,80 +8,80 @@ management platform. Built for **Etape 0 — UX/UI design** of the SOW.
 
 ## Structure
 
-| File | Role | აღწერა |
+| File | Role | Description |
 |------|------|--------|
-| `index.html` | — | პირველი გვერდი: როლის არჩევის landing page |
-| `admin.html` | ადმინისტრატორი | პლატფორმის სრული მართვა (ყველა ფილიალი) |
-| `manager.html` | ფილიალის მენეჯერი | ერთი ფილიალის მართვა (თბილისი) |
-| `trainer.html` | ტრენერი | სასწავლო პროცესის მართვა + SteveCoin |
-| `student.html` | სტუდენტი | პირადი კაბინეტი (დავალებები, SteveCoin, სიახლეები) |
-| `parent.html` | მშობელი | შვილის მონიტორინგი + სწავლის საფასურის გადახდა |
-| `assets/sja.css` | — | ბრენდის დიზაინ-სისტემა (SJA brandbook) |
+| `index.html` | — | Landing page: role selection |
+| `admin.html` | Administrator | Full platform management (all branches) |
+| `manager.html` | Branch Manager | Management of a single branch (Tbilisi) |
+| `trainer.html` | Trainer | Learning process management + SteveCoin |
+| `student.html` | Student | Personal cabinet (assignments, SteveCoin, news) |
+| `parent.html` | Parent | Child monitoring + tuition fee payment |
+| `assets/sja.css` | — | Brand design system (SJA brandbook) |
 | `assets/sja.js` | — | navigation / tab switching (dependency-free) |
-| `assets/logo.svg` | — | SJA ლოგო |
+| `assets/logo.svg` | — | SJA logo |
 
-## მონაცემები
+## Data
 
-დემო მონაცემები აღებულია რეალური ექსელის ფაილებიდან (აკადემიური კალენდარი და
-გამოცდების განრიგი 2025/26):
+Demo data is taken from real Excel files (academic calendar and
+exam schedule 2025/26):
 
-- **ფილიალები:** თბილისი, ბათუმი, ქუთაისი, ზუგდიდი, ფოთი, ზესტაფონი
-- **პროგრამები:** Robotics, Mob Application, Web Development, Minecraft, + Global Leadership (კომპანიონი)
-- **სასწავლო კურსის კატეგორიები** (მოსვლის ასაკით, განსაზღვრავს კურსის ხანგრძლივობას):
-  - Genesis (6–8 წ.) — 8-წლიანი კურსი
-  - Nexus (9–11 წ.) — 6-წლიანი კურსი
-  - Quantum (12–13 წ.) — 4-წლიანი კურსი
-  - Apex (14–16 წ.) — 2-წლიანი კურსი
-- **მიღებები (Intakes):** ყოველ სემესტრში, დასახელებული (მაგ. Sigma — 2025 გაზაფხული, Alpha — 2025 შემოდგომა, Delta — 2026 გაზაფხული). მოსწავლის პროგრამა = ასაკ. კატეგორია + მიღება.
-- **სემესტრები:** I (შემოდგომა) და II (გაზაფხული) — ფილიალის ჭრილში
-- **გამოცდები:** ქვიზი · შუალედური · დასკვნითი გამოცდა · შემაჯამებელი მეცადინეობა
+- **Branches:** Tbilisi, Batumi, Kutaisi, Zugdidi, Poti, Zestaponi
+- **Programs:** Robotics, Mob Application, Web Development, Minecraft, + Global Leadership (companion)
+- **Learning course categories** (by age at entry, which determines course duration):
+  - Genesis (6–8 yrs) — 8-year course
+  - Nexus (9–11 yrs) — 6-year course
+  - Quantum (12–13 yrs) — 4-year course
+  - Apex (14–16 yrs) — 2-year course
+- **Intakes:** every semester, named (e.g. Sigma — Spring 2025, Alpha — Fall 2025, Delta — Spring 2026). A student's program = Age Category + Intake.
+- **Semesters:** I (Fall) and II (Spring) — per branch
+- **Exams:** quiz · midterm · final exam · summary session
 
-პირველი გვერდიდან შესაძლებელია თითოეული როლის ინტერფეისში გადასვლა. თითოეულ
-role-ს აქვს გვერდითი მენიუ, საიდანაც იხსნება ამ როლის ფუნქციონალის ცალკეული ეკრანები.
+From the landing page you can navigate into each role's interface. Each
+role has a side menu from which the individual screens of that role's functionality open.
 
 ## Roles & functionality covered
 
-### 🛠️ ადმინისტრატორი (`admin.html`)
-Dashboard · ფილიალები (სემესტრის ვადები, ესკალაციის ლოგიკა) · მოსწავლეთა ბაზა
-(რეგისტრაცია, პროფილი, გადახდის სტატუსი) · ტრენერების ბაზა · სასწავლო ჯგუფები და
-ლექციების განრიგი · ჩარიცხვები და ფინანსები (ავტომ. მიბმა, დაუხარისხებელი ჩარიცხვები,
-Fina ინტეგრაცია, KPI) · დავალიანებები · რეპორტები (შაბლონები, განრიგი, არქივი) ·
-შეფასებები/გამოკითხვები · დოკუმენტების საცავი · შეტყობინებები (SMS/Voice/Email,
-Citynet, 4-ეტაპიანი ესკალაცია) · AI ცოდნის ბაზა · როლები და წვდომები · პარამეტრები.
+### 🛠️ Administrator (`admin.html`)
+Dashboard · Branches (semester deadlines, escalation logic) · Student database
+(registration, profile, payment status) · Trainer database · Learning groups and
+lesson schedule · Enrollments/Payments and Finance (auto-matching, unallocated enrollments,
+Fina integration, KPI) · Debts · Reports (templates, schedule, archive) ·
+Assessments/surveys · Document storage · Notifications (SMS/Voice/Email,
+Citynet, 4-stage escalation) · AI Knowledge Base · Roles and access · Settings.
 
-### 🏢 ფილიალის მენეჯერი (`manager.html`)
-ადმინისტრატორის მენიუდან გადმოტანილი ფუნქციონალი, შემოფარგლული **ერთი ფილიალით**
-(თბილისი — ფილიალზე დაფუძნებული წვდომა): Dashboard · მოსწავლის რეგისტრაცია და მართვა ·
-ტრენერები · ჯგუფები · გამოცდები/აკადემიური კალენდარი · ჩარიცხვები (ნახვა + დაუხარისხებელი
-ჩარიცხვების მიბმა) · დავალიანებები · რეპორტები · შეფასებები · დოკუმენტები · შეტყობინებები ·
-AI ასისტენტი · პროფილი. (მრავალფილიალიანი მართვა, როლების წვდომა და სისტემური პარამეტრები
-რჩება მხოლოდ ადმინისტრატორთან.)
+### 🏢 Branch Manager (`manager.html`)
+Functionality carried over from the administrator menu, limited to a **single branch**
+(Tbilisi — branch-based access): Dashboard · Student registration and management ·
+Trainers · Groups · Exams/academic calendar · Enrollments/Payments (view + matching of
+unallocated enrollments) · Debts · Reports · Assessments · Documents · Notifications ·
+AI Assistant · Profile. (Multi-branch management, role access and system settings
+remain with the Administrator only.)
 
-### როლების განაწილება (დოკ. „როლების განაწილება პლათფორმაზე“)
+### Role distribution (doc. "Role distribution on the platform")
 
-| როლი | Edit | View |
+| Role | Edit | View |
 |------|------|------|
-| სუპერ ადმინისტრატორი | ყველაფერი + ახალი ფუნქციები | ყველაფერი |
-| დირექტორი | ყველაფერი | ყველაფერი |
-| ფილიალის მენეჯერი | თავისი ფილიალის ყველა საქაღალდე | Contracts (ხელმოწ.) · სხვა ფილიალები |
-| ტრენერი | ClassDojo — SteveCoin | ცხრილები/ჯგუფები/სტუდენტები, Teaching Materials, QA შედეგები |
-| სტუდენტი | საშ. დავალების ატვირთვა | ცხრილი, დავალებები, სიახლეები, პირადი მონაცემები |
-| მშობელი | სწავლის საფასურის გადახდა | შვილის ცხრილი, დავალებები, სიახლეები, პირადი მონაცემები |
+| Super Administrator | Everything + new features | Everything |
+| Director | Everything | Everything |
+| Branch Manager | All folders of their own branch | Contracts (signature) · Other branches |
+| Trainer | ClassDojo — SteveCoin | Schedules/groups/students, Teaching Materials, QA results |
+| Student | Homework upload | Schedule, assignments, news, personal data |
+| Parent | Tuition fee payment | Child's schedule, assignments, news, personal data |
 
-### 🎓 ტრენერი (`trainer.html`)
-Dashboard · ჩემი ჯგუფები · განრიგი · დასწრება და შეფასება · სასწავლო მასალა ·
-რეპორტების შევსება ვადებით · თვითშეფასება და მიღებული შეფასებები · AI ასისტენტი · პროფილი.
+### 🎓 Trainer (`trainer.html`)
+Dashboard · My groups · Schedule · Attendance and assessment · Learning material ·
+Filling out reports with deadlines · Self-assessment and received assessments · AI Assistant · Profile.
 
-### 🧑‍💻 სტუდენტი (`student.html`)
-Dashboard · განრიგი · ჩემი კურსი (მოდულები) · ქულები/დასწრება · გადახდები (ბარათით /
-საბსქრიფშენ, ისტორია, ქვითრები) · ტრენერის შეფასება · დოკუმენტები · AI დახმარება ·
-პროფილი (პაროლის დაყენება).
+### 🧑‍💻 Student (`student.html`)
+Dashboard · Schedule · My course (modules) · Scores/attendance · Payments (by card /
+subscription, history, receipts) · Trainer assessment · Documents · AI help ·
+Profile (password setup).
 
 ## Brand
 
-SJA brandbook-იდან აღებული: Savoy Blue `#4E62AA`, Yellow Green `#AACB5C`,
+Taken from the SJA brandbook: Savoy Blue `#4E62AA`, Yellow Green `#AACB5C`,
 Hunyadi Yellow `#E5A436`, Cerise `#CF435E`, navy `#22315F`.
 
 ## Usage
 
-გახსენით `index.html` ბრაუზერში. სტატიკური ფაილებია — build არ სჭირდება.
+Open `index.html` in a browser. These are static files — no build needed.
