@@ -135,13 +135,17 @@ Authorization is **group-based**. Managed by the Admin under **Users & Groups**.
 
 - Every user belongs to **one user group**. Menu access and CRUD rights are
   defined **per group** and inherited by members.
-- **System groups (locked):** `Students`, `Parents`, `Trainers`. They own the
-  three dedicated end-user interfaces and their core logic — they cannot be
-  renamed or deleted, and their permissions are fixed/read-only.
-- **Custom groups (unlimited):** Super Admin, Administrator, Branch Manager,
-  Finance, Backoffice, and any group the admin creates. For each: toggle
-  **menu access** (per menu) and **CRUD permissions** (per resource:
-  View / Create / Update / Delete).
+- **System groups (locked) — each with its own dedicated interface:**
+  `Students` (`student.html`), `Parents` (`parent.html`), `Trainers`
+  (`trainer.html`), `Branch Manager` (`manager.html`). They carry the special
+  interfaces and core logic — they cannot be renamed or deleted, and their
+  permissions are fixed/read-only.
+- **Custom groups (unlimited):** Super Admin, Administrator, Finance,
+  Backoffice, and any group the admin creates. **Every custom group runs on the
+  Administrator interface (`admin.html`)**, restricted by its permissions — for
+  each, toggle **menu access** (per menu) and **CRUD permissions** (per
+  resource: View / Create / Update / Delete). There is no separate interface per
+  custom group; permissions alone shape what its members see and can do.
 
 Data-model tables: `user_group`, `group_menu_permission`,
 `group_resource_permission`, and `app_user.group_id`. See the ER workbook.

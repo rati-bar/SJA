@@ -1232,18 +1232,18 @@
           </div>
           <!-- GROUPS -->
           <div class="tab-panel" data-panel="ug2">
-            <div class="note mb-0">ℹ️ <b>Students</b>, <b>Parents</b> and <b>Trainers</b> are 🔒 system groups — they carry the special interfaces and core logic, so they can't be deleted or renamed (permissions are viewable). All other groups are fully admin-managed and unlimited.</div>
+            <div class="note mb-0">ℹ️ <b>Students</b>, <b>Parents</b>, <b>Trainers</b> and <b>Branch Manager</b> are 🔒 system groups — each has its own dedicated interface and core logic, so they can't be deleted or renamed (permissions are viewable). All other groups use the <b>Administrator interface</b>, restricted by their permissions, and are fully admin-managed and unlimited.</div>
             <table class="tbl mt-2">
-              <thead><tr><th>Group</th><th>Type</th><th>Members</th><th>Menu access</th><th></th></tr></thead>
+              <thead><tr><th>Group</th><th>Type</th><th>Members</th><th>Interface / access</th><th></th></tr></thead>
               <tbody>
                 <tr><td><b>🔒 Students</b></td><td><span class="badge b-muted">System · locked</span></td><td>1 248</td><td class="muted">Student interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
                 <tr><td><b>🔒 Parents</b></td><td><span class="badge b-muted">System · locked</span></td><td>1 090</td><td class="muted">Parent interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
                 <tr><td><b>🔒 Trainers</b></td><td><span class="badge b-muted">System · locked</span></td><td>84</td><td class="muted">Trainer interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
-                <tr><td><b>Super Admin</b></td><td><span class="badge b-info">Custom</span></td><td>2</td><td class="muted">All menus · full CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
-                <tr><td><b>Administrator</b></td><td><span class="badge b-info">Custom</span></td><td>5</td><td class="muted">All menus · most CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
-                <tr><td><b>Branch Manager</b></td><td><span class="badge b-info">Custom</span></td><td>6</td><td class="muted">Branch-scoped menus</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
-                <tr><td><b>Finance</b></td><td><span class="badge b-info">Custom</span></td><td>3</td><td class="muted">Payments · Debts · Reports</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
-                <tr><td><b>Backoffice</b></td><td><span class="badge b-info">Custom</span></td><td>4</td><td class="muted">Read-only · shared</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>🔒 Branch Manager</b></td><td><span class="badge b-muted">System · locked</span></td><td>6</td><td class="muted">Branch Manager interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>Super Admin</b></td><td><span class="badge b-info">Custom</span></td><td>2</td><td class="muted">Admin interface · full CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Administrator</b></td><td><span class="badge b-info">Custom</span></td><td>5</td><td class="muted">Admin interface · most CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Finance</b></td><td><span class="badge b-info">Custom</span></td><td>3</td><td class="muted">Admin interface · Payments · Debts · Reports</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Backoffice</b></td><td><span class="badge b-info">Custom</span></td><td>4</td><td class="muted">Admin interface · read-only</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
               </tbody>
             </table>
             <div class="add-tile mt-2" data-modal="mAddUserGroup" style="max-width:280px"><span class="plus">＋</span><div><b>New group</b></div><small>Custom · unlimited</small></div>
@@ -1315,7 +1315,7 @@
           </tbody>
         </table>
       </div>
-      <div class="note mt-2">🔒 For the <b>Students</b>, <b>Parents</b> and <b>Trainers</b> system groups this screen is read-only — their menus and permissions are fixed by their dedicated interfaces.</div>
+      <div class="note mt-2">🔒 For the <b>Students</b>, <b>Parents</b>, <b>Trainers</b> and <b>Branch Manager</b> system groups this screen is read-only — their menus and permissions are fixed by their dedicated interfaces. Custom groups run on the <b>Administrator interface</b> and are constrained by the toggles above.</div>
     </section>
 
     <!-- ==================== PARAMETERS (academic years / semesters, per branch) ==================== -->
@@ -1362,14 +1362,14 @@
           <option value="roleStudent">🔒 Students (system)</option>
           <option value="roleParent">🔒 Parents (system)</option>
           <option value="roleTrainer">🔒 Trainers (system)</option>
-          <option value="roleManager">Branch Manager</option>
+          <option value="roleManager">🔒 Branch Manager (system)</option>
           <option value="roleAdmin">Administrator</option>
           <option value="roleGeneric2">Finance</option>
           <option value="roleGeneric2">Super Admin</option>
           <option value="roleGeneric2">Backoffice</option>
         </select>
       </div>
-      <div class="note mt-1">🆔 <b>Personal ID is required for every user</b> — it is used as the login username for the system. Access is inherited from the selected group.</div>
+      <div class="note mt-1">🆔 <b>Personal ID is required for every user</b> — it is used as the login username for the system. Access is inherited from the selected group. System groups (Students/Parents/Trainers/Branch Manager) have their own interfaces; all other groups use the <b>Administrator interface</b>, restricted by permissions.</div>
 
       <!-- ROLE: STUDENT (synced from external system) -->
       <div class="opt-block active" id="roleStudent">
@@ -1439,7 +1439,7 @@
         <div class="form-row"><div class="field"><label>Full Name</label><input class="input" placeholder="Full Name"></div><div class="field"><label>Personal ID <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="e.g. 01001012345"></div></div>
         <div class="form-row"><div class="field"><label>Phone</label><input class="input" placeholder="+995"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
         <div class="field"><label>Branch assignment</label><select class="select"><option>Backoffice (shared — all branches)</option><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
-        <div class="note">🔐 Menu access and CRUD permissions come from the group's settings (Users &amp; Groups → group → Permissions).</div>
+        <div class="note">🔐 Custom groups run on the <b>Administrator interface</b>; their menu access and CRUD permissions come from the group's settings (Users &amp; Groups → group → Permissions).</div>
       </div>
 
       <div class="note mt-1">📩 After adding, an SMS + Email with a registration link is sent automatically.</div>
