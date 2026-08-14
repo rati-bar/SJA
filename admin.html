@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SJA — Administrator Interface</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/sja.css">
+</head>
+<body>
+<span class="blob b1"></span>
+<div class="app">
+
+  <!-- ============================= SIDEBAR ============================= -->
+  <aside class="sidebar">
+    <a class="brand" href="index.html" title="Home / Role selection">
+      <img src="assets/logo.png" alt="SJA">
+      <div>
+        <div class="b-title">Steve Jobs<br>American Academy</div>
+        <div class="b-sub">Admin</div>
+      </div>
+    </a>
+    <span class="role-chip">🛠️ Administrator</span>
+
+    <div class="nav-group-label">Organization</div>
+    <div class="nav-item active" data-target="branches"  data-title="Branches"><span class="ic">🏢</span> Branches <span class="count">6</span></div>
+    <div class="nav-item" data-target="students"  data-title="Student Database"><span class="ic">🧑‍🎓</span> Students <span class="count">1 248</span></div>
+    <div class="nav-item" data-target="trainers"  data-title="Trainer Database"><span class="ic">👩‍🏫</span> Trainers <span class="count">84</span></div>
+    <div class="nav-item" data-target="groups"    data-title="Learning Groups"><span class="ic">👥</span> Groups <span class="count">96</span></div>
+    <div class="nav-item" data-target="modules"   data-title="Learning Modules"><span class="ic">📚</span> Learning Modules</div>
+    <div class="nav-item" data-target="templates" data-title="Module Templates"><span class="ic">🧩</span> Module Templates</div>
+    <div class="nav-item" data-target="schedule"  data-title="Schedule"><span class="ic">📆</span> Schedule</div>
+    <div class="nav-item" data-target="exams"     data-title="Exams / Calendar"><span class="ic">🗓️</span> Exams</div>
+    <div class="nav-item" data-target="projects"  data-title="Projects"><span class="ic">🏆</span> Projects</div>
+
+    <div class="nav-group-label">Finance</div>
+    <div class="nav-item" data-target="finance"   data-title="Payments and Finance"><span class="ic">💳</span> Payments</div>
+    <div class="nav-item" data-target="debts"     data-title="Debts"><span class="ic">⏰</span> Debts</div>
+
+    <div class="nav-group-label">Documents</div>
+    <div class="nav-item" data-target="reports"   data-title="Reports"><span class="ic">📑</span> Reports</div>
+    <div class="nav-item" data-target="evaluations" data-title="Evaluations / Surveys"><span class="ic">⭐</span> Evaluations</div>
+    <div class="nav-item" data-target="documents" data-title="Document Storage"><span class="ic">📁</span> Documents</div>
+
+    <div class="nav-group-label">Communication</div>
+    <div class="nav-item" data-target="notifications" data-title="Notifications"><span class="ic">🔔</span> Notifications</div>
+    <div class="nav-item" data-target="knowledge"  data-title="AI Knowledge Base"><span class="ic">🤖</span> AI / Knowledge Base</div>
+
+    <div class="nav-group-label">System</div>
+    <div class="nav-item" data-target="roles"     data-title="Users & Groups"><span class="ic">👥</span> Users &amp; Groups</div>
+    <div class="nav-item" data-target="params"    data-title="Settings — academic years/semesters"><span class="ic">⚙️</span> Settings</div>
+
+    <div class="sidebar-foot">
+      <div class="who">
+        <span class="avatar">N.K</span>
+        <div style="min-width:0">
+          <div style="color:#fff; font-size:13px; font-weight:600">Nino Kvaratskhelia</div>
+          <div style="color:#9aa6cf; font-size:11px">Super Admin</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================= MAIN ============================= -->
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <div class="crumb"><span id="crumb">Organization</span></div>
+        <h1 id="page-title">Branches</h1>
+      </div>
+      <div class="spacer"></div>
+      <div class="search">🔎 <span>Search — student, trainer, payment…</span></div>
+      <div class="select" style="width:auto; display:flex; align-items:center; gap:8px; background:#fff">🏢 All branches ▾</div>
+      <div class="icon-btn">🔔<span class="dot"></span></div>
+    </div>
+
+    <div class="content">
+
+    <!-- ==================== DASHBOARD ==================== -->
+    <section class="view active" data-view="branches">
+      <div class="page-head">
+        <div class="titles"><h2>Branches</h2><p>Multi-branch structure · open a branch to manage its details (semesters are managed centrally — Settings)</p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddBranch">＋ Add branch</button></div>
+      </div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <div class="flex between"><div class="u"><span class="avatar sm">T</span><b>Tbilisi</b></div><span class="badge b-ok">Active</span></div>
+          <div class="muted" style="font-size:12px; margin-top:6px">Vazha-Pshavela 45 · Mgr. K. Dolidze</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Student / Trainer / Group</span><b>384 · 21 · 26</b></div>
+          <button class="btn block mt-2" data-goto="branch-detail">Manage →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><div class="u"><span class="avatar sm green">B</span><b>Batumi</b></div><span class="badge b-ok">Active</span></div>
+          <div class="muted" style="font-size:12px; margin-top:6px">Chavchavadze 88 · Mgr. R. Beridze</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Student / Trainer / Group</span><b>268 · 16 · 26</b></div>
+          <button class="btn block mt-2" data-goto="branch-detail">Manage →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><div class="u"><span class="avatar sm yellow">K</span><b>Kutaisi</b></div><span class="badge b-ok">Active</span></div>
+          <div class="muted" style="font-size:12px; margin-top:6px">Tamar Mepe 22 · Mgr. A. Chkheidze</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Student / Trainer / Group</span><b>212 · 13 · 18</b></div>
+          <button class="btn block mt-2" data-goto="branch-detail">Manage →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><div class="u"><span class="avatar sm cerise">Z</span><b>Zugdidi</b></div><span class="badge b-ok">Active</span></div>
+          <div class="muted" style="font-size:12px; margin-top:6px">Rustaveli 14 · Mgr. L. Kapanadze</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Student / Trainer / Group</span><b>174 · 11 · 26</b></div>
+          <button class="btn block mt-2" data-goto="branch-detail">Manage →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><div class="u"><span class="avatar sm">P</span><b>Poti</b></div><span class="badge b-warn">Config. needed</span></div>
+          <div class="muted" style="font-size:12px; margin-top:6px">D. Aghmashenebeli 3 · Mgr. T. Khurtsilava</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Student / Trainer / Group</span><b>121 · 8 · 22</b></div>
+          <button class="btn block mt-2" data-goto="branch-detail">Manage →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><div class="u"><span class="avatar sm green">Z</span><b>Zestaponi</b></div><span class="badge b-ok">Active</span></div>
+          <div class="muted" style="font-size:12px; margin-top:6px">Tsereteli 7 · Mgr. N. Gelashvili</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Student / Trainer / Group</span><b>89 · 7 · 21</b></div>
+          <button class="btn block mt-2" data-goto="branch-detail">Manage →</button>
+        </div>
+        <div class="add-tile" data-modal="mAddBranch">
+          <span class="plus">＋</span>
+          <div><b>Add branch</b></div>
+          <small>Name, address, manager</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRANCH DETAIL (inner) ==================== -->
+    <section class="view" data-view="branch-detail">
+      <span class="back-link" data-goto="branches">← Branches</span>
+      <div class="page-head">
+        <div class="titles"><h2>Tbilisi</h2><p>Vazha-Pshavela 45 · Manager: K. Dolidze · 384 students · 26 groups</p></div>
+        <div class="actions"><button class="btn">✏️ Edit</button></div>
+      </div>
+      <div class="note" style="margin-bottom:16px">ℹ️ Academic years/semesters are managed <b>centrally</b> — on the Settings page, not within the branch.</div>
+      <div class="card pad" style="max-width:520px">
+        <h3>Escalation logic</h3>
+        <p class="muted" style="font-size:12.5px">4-stage non-payment process</p>
+        <div class="stepper mt-1" style="flex-direction:column; gap:8px">
+          <div class="step done"><span class="n">1</span> SMS — +1 day</div>
+          <div class="step done"><span class="n">2</span> Voice (bot) — +3 days</div>
+          <div class="step active"><span class="n">3</span> Voice — +5 days</div>
+          <div class="step"><span class="n">4</span> To manager — +7 days</div>
+          <div class="step"><span class="n">✕</span> Expulsion — +10 days</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STUDENTS ==================== -->
+    <section class="view" data-view="students">
+      <div class="page-head">
+        <div class="titles"><h2>Student Database</h2><p>All statuses · age category defines the course (6–16 yrs) · main grid shows only key fields, the rest — in the profile</p></div>
+        <div class="actions"><button class="btn">⤓ Export</button></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-body">
+          <div class="flex wrap">
+            <div class="select" style="width:auto">Status: All ▾</div>
+            <div class="select" style="width:auto">Branch: All ▾</div>
+            <div class="select" style="width:auto">Age Cat.: All ▾</div>
+            <div class="select" style="width:auto">Year (cat.): All ▾</div>
+            <div class="select" style="width:auto">🎓 Alumni (cat. · year): All ▾</div>
+            <div class="select" style="width:auto">Intake: All ▾</div>
+            <div class="search" style="min-width:220px; margin-left:auto">🔎 <span>Search by name or personal ID…</span></div>
+          </div>
+          <div class="note mt-2">🎓 Alumni status is assigned <b>once every 2 years</b> — the alumni column records the last completed age category and year.</div>
+          <div class="flex wrap mt-2">
+            <div class="select" style="width:auto">Group: All ▾</div>
+            <div class="select" style="width:auto">Funding %: All ▾</div>
+            <div class="select" style="width:auto">School: All ▾</div>
+            <div class="select" style="width:auto">Citizenship: All ▾</div>
+            <div class="select" style="width:auto">SteveCoins: All ▾</div>
+            <span class="wire-tag" style="margin-left:auto; align-self:center">Filter — by all fields</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-tabs>
+        <div class="card-head" style="gap:0">
+          <div class="tabs" style="margin:0; border:none">
+            <div class="tab active" data-tab="all">All <span class="badge b-muted plain" style="margin-left:6px">1 248</span></div>
+            <div class="tab" data-tab="active">Active <span class="badge b-ok plain" style="margin-left:6px">1 091</span></div>
+            <div class="tab" data-tab="waiting">Waiting list <span class="badge b-info plain" style="margin-left:6px">59</span></div>
+            <div class="tab" data-tab="suspended">Suspended <span class="badge b-muted plain" style="margin-left:6px">98</span></div>
+            <div class="tab" data-tab="graduated">Graduated <span class="badge b-warn plain" style="margin-left:6px">42</span></div>
+          </div>
+        </div>
+        <div class="tab-panel active" data-panel="all">
+          <table class="tbl">
+            <thead><tr><th>Student</th><th>Intake</th><th>Group</th><th title="Current year in category">Year</th><th title="Last compl. cat. · year">🎓 Alumni</th><th>Branch</th><th>🪙 SteveCoins</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+            <tr><td><div class="u"><span class="avatar sm ">N.B</span><div><div class="nm">Nika Beridze</div><div class="sub">ID 61001…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>II</td><td><span class="badge b-warn plain">Nexus · I</span></td><td>Tbilisi</td><td>340</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">M.L</span><div><div class="nm">Mariam Lomidze</div><div class="sub">ID 60012…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#2_Quantum</td><td>I</td><td><span class="badge b-warn plain">Nexus · II</span></td><td>Tbilisi</td><td>210</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">D.K</span><div><div class="nm">David Kharazi</div><div class="sub">ID 01027…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>Batumi</td><td>180</td><td><span class="badge b-muted">Suspended</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">T.G</span><div><div class="nm">Teona Gogichaishvili</div><div class="sub">ID 60018…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td>—</td><td>—</td><td class="text-muted">—</td><td>Batumi</td><td>0</td><td><span class="badge b-info">Waiting list</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">L.T</span><div><div class="nm">Luka Tsertsvadze</div><div class="sub">ID 61003…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>Tbilisi</td><td>410</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">A.K</span><div><div class="nm">Ana Kharazi</div><div class="sub">ID 01030…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>I</td><td class="text-muted">—</td><td>Tbilisi</td><td>260</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-panel" data-panel="active">
+          <table class="tbl">
+            <thead><tr><th>Student</th><th>Intake</th><th>Group</th><th>Year</th><th>🎓 Alumni</th><th>Branch</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <tbody>
+            <tr><td><div class="u"><span class="avatar sm ">N.B</span><div><div class="nm">Nika Beridze</div><div class="sub">ID 61001…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>II</td><td><span class="badge b-warn plain">Nexus · I</span></td><td>Tbilisi</td><td>340</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">M.L</span><div><div class="nm">Mariam Lomidze</div><div class="sub">ID 60012…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#2_Quantum</td><td>I</td><td><span class="badge b-warn plain">Nexus · II</span></td><td>Tbilisi</td><td>210</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">L.T</span><div><div class="nm">Luka Tsertsvadze</div><div class="sub">ID 61003…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#3_Apex</td><td>II</td><td><span class="badge b-warn plain">Apex · I</span></td><td>Tbilisi</td><td>410</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">A.K</span><div><div class="nm">Ana Kharazi</div><div class="sub">ID 01030…</div></div></div></td><td><span class="badge b-info plain">Alpha</span></td><td>#1_Nexus</td><td>I</td><td class="text-muted">—</td><td>Tbilisi</td><td>260</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-panel" data-panel="waiting">
+          <table class="tbl">
+            <thead><tr><th>Student</th><th>Intake</th><th>Branch</th><th>🕒 Date added to list</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <tbody>
+            <tr><td><div class="u"><span class="avatar sm cerise">T.G</span><div><div class="nm">Teona Gogichaishvili</div><div class="sub">ID 60018…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td>Batumi</td><td><span class="badge b-info plain">05/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">D.N</span><div><div class="nm">Dato Nadiradze</div><div class="sub">ID 61022…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td>Tbilisi</td><td><span class="badge b-info plain">12/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">E.C</span><div><div class="nm">Elene Chkheidze</div><div class="sub">ID 60031…</div></div></div></td><td><span class="badge b-info plain">Delta</span></td><td>Kutaisi</td><td><span class="badge b-info plain">20/09/2025</span></td><td>0</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-panel" data-panel="suspended">
+          <table class="tbl">
+            <thead><tr><th>Student</th><th>Intake</th><th>Group (last)</th><th>Branch</th><th>🚪 Withdrawal date</th><th>Withdrawal reason</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <tbody>
+            <tr><td><div class="u"><span class="avatar sm yellow">D.K</span><div><div class="nm">David Kharazi</div><div class="sub">ID 01027…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#3_Apex</td><td>Batumi</td><td><span class="badge b-muted plain">12/03/2025</span></td><td>Financial</td><td>180</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm ">G.T</span><div><div class="nm">Giorgi Tkeshelashvili</div><div class="sub">ID 61044…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>#2_Quantum</td><td>Tbilisi</td><td><span class="badge b-muted plain">28/01/2025</span></td><td>Loss of interest</td><td>95</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-panel" data-panel="graduated">
+          <table class="tbl">
+            <thead><tr><th>Student</th><th>Intake</th><th>Last cat.</th><th>Branch</th><th>🎓 Completion date</th><th>🪙 SteveCoins</th><th></th></tr></thead>
+            <tbody>
+            <tr><td><div class="u"><span class="avatar sm ">L.T</span><div><div class="nm">Lana Tskitishvili</div><div class="sub">ID 01099…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>Apex · II</td><td>Tbilisi</td><td><span class="badge b-warn plain">28/06/2025</span></td><td>980</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">G.K</span><div><div class="nm">Gio Kiknadze</div><div class="sub">ID 01077…</div></div></div></td><td><span class="badge b-info plain">Sigma</span></td><td>Apex · II</td><td>Batumi</td><td><span class="badge b-warn plain">28/06/2025</span></td><td>1120</td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note" style="margin:0 16px 14px">ℹ️ Clicking a tab shows the different fields for that status — Waiting list: date added to list; Suspended: withdrawal date and reason; Graduated: completion date.</div>
+      </div>
+    </section>
+
+    <!-- ==================== STUDENT PROFILE (inner) ==================== -->
+    <section class="view" data-view="student-profile">
+      <span class="back-link" data-goto="students">← Student Database</span>
+      <div class="page-head">
+        <div class="titles" style="display:flex; align-items:center; gap:14px">
+          <span class="avatar" style="width:54px; height:54px; font-size:20px; flex:0 0 auto">N.B</span>
+          <div>
+            <h2 class="mb-0">Nika Beridze</h2>
+            <p style="margin:2px 0 0">Tbilisi · Group #1_Nexus · Nexus · Year II · Intake Alpha (2025 Autumn)</p>
+          </div>
+        </div>
+        <div class="actions"><button class="btn" data-modal="mChangeStatus">🔁 Change status</button><button class="btn">✏️ Edit</button></div>
+      </div>
+      <div class="flex wrap" style="margin-bottom:14px; gap:6px"><span class="badge b-ok">Active</span><span class="badge b-info">Nexus</span><span class="badge b-muted plain">Year II</span><span class="badge b-warn plain">🎓 Alumni: Nexus · I</span></div>
+      <div>
+        <div class="card">
+          <div class="card-body" data-tabs>
+            <div class="tabs">
+              <div class="tab active" data-tab="sp1">Overview</div>
+              <div class="tab" data-tab="sp3">Progress</div>
+              <div class="tab" data-tab="sp7">History</div>
+              <div class="tab" data-tab="sp5">Files</div>
+            </div>
+            <!-- Overview: all student fields -->
+            <div class="tab-panel active" data-panel="sp1">
+              <div class="grid g-3" style="gap:12px">
+                <div><small>Date of Birth</small><div><b>07/12/2015</b></div></div>
+                <div><small>Citizenship</small><div><b>Georgia</b></div></div>
+                <div><small>Personal ID</small><div><b>61001xxxxxx</b></div></div>
+                <div><small>School</small><div><b>Public School No. 6</b></div></div>
+                <div><small>Branch</small><div><b>Tbilisi</b></div></div>
+                <div><small>Student phone</small><div><b>—</b></div></div>
+                <div><small>Parent</small><div><b>Tamar Beridze</b></div></div>
+                <div><small>Parent phone</small><div><b>+995 599 12 34 56</b></div></div>
+                <div><small>Parent email</small><div><b>beridze.family@mail.ge</b></div></div>
+                <div><small>Funding</small><div><b>40%</b></div></div>
+                <div><small>Group</small><div><b>#1_Nexus</b></div></div>
+                <div><small>Intake</small><div><b>Alpha · 2025 Autumn</b></div></div>
+                <div><small>Year (in category)</small><div><b>Nexus · Year II</b></div></div>
+                <div><small>🎓 Alumni (last compl. cat. · year)</small><div><span class="badge b-warn plain">Nexus · I</span></div></div>
+                <div><small>Age Cat.</small><div><b>Nexus</b></div></div>
+                <div><small>Status</small><div><span class="badge b-ok">Active</span></div></div>
+              </div>
+              <hr class="sep">
+              <div><small>Comment</small><div>—</div></div>
+              <hr class="sep">
+              <b style="font-size:13px">Status-specific fields</b>
+              <div class="note mt-1">ℹ️ These fields appear only for a student with the corresponding status — Suspended: withdrawal reason and comment, Waiting list: date added to list.</div>
+              <div class="grid g-2 mt-1">
+                <div class="card pad" style="box-shadow:none">
+                  <span class="badge b-muted">Suspended</span>
+                  <div class="grid g-2 mt-1" style="gap:8px">
+                    <div><small>Withdrawal date</small><div><b>12/03/2025</b></div></div>
+                    <div><small>Withdrawal reason</small><div><b>Financial</b></div></div>
+                  </div>
+                  <div class="mt-1"><small>Comment</small><div>Paid partially; may return in Semester II.</div></div>
+                </div>
+                <div class="card pad" style="box-shadow:none">
+                  <span class="badge b-info">Waiting list</span>
+                  <div class="mt-1"><small>Date added to list</small><div><b>05/09/2025</b></div></div>
+                  <div class="mt-1"><small>Age Cat. (expected)</small><div><b>Genesis</b></div></div>
+                </div>
+              </div>
+            </div>
+            <!-- Progress -->
+            <div class="tab-panel" data-panel="sp3">
+              <div class="flex between" style="margin-bottom:10px"><b style="font-size:13px">Current semester progress</b><button class="btn sm" data-tab-goto="sp7">📅 Progress of past semesters →</button></div>
+              <div class="grid g-4">
+                <div class="kpi"><div class="k-ic tint-yellow">🪙</div><div class="k-val">340</div><div class="k-label">SteveCoins (total)</div></div>
+                <div class="kpi"><div class="k-ic tint-savoy">P</div><div class="k-val">92</div><div class="k-label">Midterm (P)</div></div>
+                <div class="kpi"><div class="k-ic tint-green">Q</div><div class="k-val">—</div><div class="k-label">Final (Q)</div></div>
+                <div class="kpi"><div class="k-ic tint-cerise">✅</div><div class="k-val">94%</div><div class="k-label">Attendance</div></div>
+              </div>
+              <hr class="sep">
+              <div class="flex between"><h4 style="font-size:13px">Participation in projects</h4><button class="btn sm primary" data-modal="mLinkToProject">＋ Link to project</button></div>
+              <table class="tbl compact mt-1">
+                <thead><tr><th>Project</th><th>Result</th><th>🪙</th></tr></thead>
+                <tbody>
+                  <tr><td>Robotics Championship 2025</td><td><span class="badge b-warn">Won</span></td><td>+50</td></tr>
+                  <tr><td>Demo Day</td><td><span class="badge b-info">Participation</span></td><td>+15</td></tr>
+                </tbody>
+              </table><hr class="sep">
+              <h4 style="font-size:13px">Attendance by module — SteveCoins awarded per lecture (evaluation)</h4>
+
+              <div class="flex between mt-2"><b style="font-size:12.5px">💼 Global Leadership</b><span class="nowrap"><span class="badge b-ok plain">Attendance 95%</span> <span class="badge b-warn plain">🪙 Total 120</span></span></div>
+              <table class="tbl compact mt-1">
+                <thead><tr><th>Date</th><th>Lecture</th><th>Lecturer</th><th>Attendance</th><th>🪙</th></tr></thead>
+                <tbody>
+                  <tr><td>18 Oct</td><td>GL_ALPHA #27 — Signature Day</td><td>E. Lominadze</td><td><span class="badge b-ok">Attended</span></td><td>+10</td></tr>
+                  <tr><td>25 Oct</td><td>GL_ALPHA #28 — International Ed.</td><td>E. Lominadze</td><td><span class="badge b-ok">Attended</span></td><td>+8</td></tr>
+                  <tr><td colspan="4" class="text-muted">… 12 lectures</td><td>120</td></tr>
+                </tbody>
+              </table>
+
+              <div class="flex between mt-2"><b style="font-size:12.5px">🤖 Robotics (Galileo Technic)</b><span class="nowrap"><span class="badge b-ok plain">Attendance 92%</span> <span class="badge b-warn plain">🪙 Total 130</span></span></div>
+              <table class="tbl compact mt-1">
+                <thead><tr><th>Date</th><th>Lecture</th><th>Lecturer</th><th>Attendance</th><th>🪙</th></tr></thead>
+                <tbody>
+                  <tr><td>18 Oct</td><td>RB #18 — Br.30 Pumpjack</td><td>T. Potskhverashvili</td><td><span class="badge b-ok">Attended</span></td><td>+10</td></tr>
+                  <tr><td>25 Oct</td><td>RB #19 — Br.31 Fortune</td><td>T. Potskhverashvili</td><td><span class="badge b-danger">Missed</span></td><td>0</td></tr>
+                  <tr><td colspan="4" class="text-muted">… 20 lectures</td><td>130</td></tr>
+                </tbody>
+              </table>
+
+              <div class="flex between mt-2"><b style="font-size:12.5px">💻 Coding Basics (Algo Play)</b><span class="nowrap"><span class="badge b-ok plain">Attendance 96%</span> <span class="badge b-warn plain">🪙 Total 90</span></span></div>
+              <table class="tbl compact mt-1">
+                <thead><tr><th>Date</th><th>Lecture</th><th>Lecturer</th><th>Attendance</th><th>🪙</th></tr></thead>
+                <tbody>
+                  <tr><td>1 Nov</td><td>Cod #12 — Al.19 Jumpover</td><td>B. Meskhia</td><td><span class="badge b-ok">Attended</span></td><td>+9</td></tr>
+                  <tr><td colspan="4" class="text-muted">… 20 lectures</td><td>90</td></tr>
+                </tbody>
+              </table>
+
+              
+            </div>
+            <!-- History: groups / closed semesters / modules -->
+            <div class="tab-panel" data-panel="sp7">
+              <div class="note">🎓 Student history — which groups they were in, which semesters they closed, which modules they studied, and with what scores and SteveCoins each was closed.</div>
+              <div class="mt-2"></div>
+              <div class="hist-block current">
+                <div class="h-head"><b>2025/26 · Semester I · Group #1_Nexus · Nexus II</b><span class="badge b-ok" style="margin-left:auto">Current</span></div>
+                <div class="h-body">
+                  <table class="tbl compact">
+                    <thead><tr><th>Module</th><th>P</th><th>Q</th><th>🪙</th></tr></thead>
+                    <tbody>
+                  <tr><td>🤖 Robotics (Galileo)</td><td>—</td><td>—</td><td>130</td></tr>
+                  <tr><td>💼 Global Leadership</td><td>—</td><td>—</td><td>120</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="hist-block ">
+                <div class="h-head"><b>2024/25 · Semester II · Group #1_Nexus · Nexus I</b><span class="badge b-muted" style="margin-left:auto">Closed</span></div>
+                <div class="h-body">
+                  <table class="tbl compact">
+                    <thead><tr><th>Module</th><th>P</th><th>Q</th><th>🪙</th></tr></thead>
+                    <tbody>
+                  <tr><td>💻 Coding Basics (Algo Play)</td><td>—</td><td>91</td><td>90</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="hist-block ">
+                <div class="h-head"><b>2024/25 · Semester I · Group #1_Nexus · Nexus I</b><span class="badge b-muted" style="margin-left:auto">Closed</span></div>
+                <div class="h-body">
+                  <table class="tbl compact">
+                    <thead><tr><th>Module</th><th>P</th><th>Q</th><th>🪙</th></tr></thead>
+                    <tbody>
+                  <tr><td>🤖 Robotics (Galileo)</td><td>88</td><td>—</td><td>130</td></tr>
+                  <tr><td>💼 Global Leadership</td><td>—</td><td>—</td><td>120</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="note">ℹ️ A "closed" semester = the group's semester was closed; the module's final scores (P/Q) and SteveCoins are recorded in the history.</div>
+            </div>
+            <!-- Files -->
+            <div class="tab-panel" data-panel="sp5">
+              <div class="list-row"><span>📄</span><div class="grow">contract_2025.pdf</div><a href="#">⤓</a></div>
+              <div class="list-row"><span>📄</span><div class="grow">ID_copy.pdf</div><a href="#">⤓</a></div>
+              <button class="btn mt-1" data-modal="mAttachFile">⤴ Attach file</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRAINERS ==================== -->
+    <section class="view" data-view="trainers">
+      <div class="page-head">
+        <div class="titles"><h2>Trainer Database</h2><p>Profile · qualification · work schedule</p></div>
+        <div class="actions"></div>
+      </div>
+      <div class="card">
+        <table class="tbl">
+          <thead><tr><th>Trainer</th><th>Program</th><th>Branch</th><th>Rating</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="u"><span class="avatar sm">L.B</span><div><div class="nm">Levan Beridze</div><div class="sub">Robotics Instructor</div></div></div></td><td>Robotics</td><td>Tbilisi</td><td><span class="badge b-ok">⭐ 4.8</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">S.A</span><div><div class="nm">Sandro Abashidze</div><div class="sub">Web Dev Instructor</div></div></div></td><td>Web Development</td><td>Tbilisi</td><td><span class="badge b-ok">⭐ 4.9</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">T.M</span><div><div class="nm">Tamar Mamulashvili</div><div class="sub">Global Leadership</div></div></div></td><td>Global Leadership</td><td>Tbilisi</td><td><span class="badge b-ok">⭐ 4.9</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">Profile →</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">N.J</span><div><div class="nm">Natia Javakhishvili</div><div class="sub">Mob App Instructor</div></div></div></td><td>Mob Application</td><td>Batumi</td><td><span class="badge b-ok">⭐ 4.7</span></td><td class="text-r"><button class="btn sm ghost" data-goto="trainer-profile">Profile →</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== TRAINER PROFILE (inner) ==================== -->
+    <section class="view" data-view="trainer-profile">
+      <span class="back-link" data-goto="trainers">← Trainer Database</span>
+      <div class="page-head"><div class="titles"><h2>Levan Beridze</h2><p>Robotics Instructor · Tbilisi</p></div>
+        <div class="actions"><button class="btn">✏️ Edit</button></div>
+      </div>
+      <div class="grid g-1-2">
+        <div class="card pad" style="text-align:center">
+          <span class="avatar" style="width:80px; height:80px; font-size:28px; margin:0 auto">L.B</span>
+          <h3 class="mt-2 mb-0">Levan Beridze</h3>
+          <div class="muted">Robotics · Tbilisi</div>
+          <div class="flex" style="justify-content:center; margin-top:10px"><span class="badge b-ok">⭐ 4.8</span></div>
+        </div>
+        <div class="card pad">
+          <h3>Details</h3>
+          <div class="grid g-2 mt-1">
+            <div><small>Qualification</small><div><b>Robotics Instructor, 6 yrs</b></div></div>
+            <div><small>Certificates</small><div><b>LEGO Education, Arduino</b></div></div>
+            <div><small>Program</small><div><b>Robotics (Bricks, Galileo)</b></div></div>
+            <div><small>Work start date</small><div><b>01/09/2019</b></div></div>
+            <div><small>Phone</small><div><b>+995 599 22 33 44</b></div></div>
+            <div><small>Email</small><div><b>l.beridze@sja.ge</b></div></div>
+            <div><small>Status</small><div><span class="badge b-ok">Active</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid g-3 mt-2">
+        <div class="kpi"><div class="k-ic tint-savoy">🕐</div><div class="k-val">1 240 h</div><div class="k-label">Total lectures (hours)</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📅</div><div class="k-val">72 h</div><div class="k-label">This month (hours)</div></div>
+        <div class="kpi"><div class="k-ic tint-yellow">🗓️</div><div class="k-val" style="font-size:18px">01/09/2019</div><div class="k-label">Work start date</div></div>
+      </div>
+      <div class="card pad mt-2">
+        <h3>Work schedule</h3>
+        <div class="note mt-1">ℹ️ A trainer is not linked to groups or modules — their schedule is set in the Schedule by assigning them as lecturer.</div>
+        <table class="tbl compact mt-1">
+          <thead><tr><th>Day</th><th>Time</th><th>Lecture</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td>15:00–17:00</td><td>Robotics — RB #18</td></tr>
+            <tr><td>Monday</td><td>17:30–19:30</td><td>Robotics — RB #19</td></tr>
+            <tr><td>Sunday</td><td>12:00–14:00</td><td>Coding — Al.19</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== GROUPS ==================== -->
+    <section class="view" data-view="groups">
+      <div class="page-head">
+        <div class="titles"><h2>Learning Groups</h2><p>A group's program is defined by <b>intake</b> and <b>age category</b></p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddGroup">＋ Create group</button></div>
+      </div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <div class="flex between"><h3 class="mb-0" style="font-size:16px">#4_Genesis</h3><span class="badge b-ok">Sem. I · Current</span></div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Genesis</span><span class="badge b-muted plain">🎟️ Alpha</span></div>
+          <div class="muted mt-1" style="font-size:12.5px">Tbilisi</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Students</span><b>14 / 16</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Module (cat.)</span><a data-goto="module-detail">Robotics &amp; Coding →</a></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Progress (20 trainings)</span><b>13/20</b></div>
+          <div class="progress mt-1"><span class="green" style="width:65%"></span></div>
+          <button class="btn block mt-2" data-goto="group-detail">Group page →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><h3 class="mb-0" style="font-size:16px">#2_Quantum</h3><span class="badge b-ok">Sem. II · Current</span></div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Quantum</span><span class="badge b-muted plain">🎟️ Sigma</span></div>
+          <div class="muted mt-1" style="font-size:12.5px">Tbilisi</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Students</span><b>12 / 15</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Module (cat.)</span><a data-goto="module-detail">Mobile App Development →</a></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Progress (5 modules)</span><b>M2/5</b></div>
+          <div class="progress mt-1"><span class="yellow" style="width:45%"></span></div>
+          <button class="btn block mt-2" data-goto="group-detail">Group page →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><h3 class="mb-0" style="font-size:16px">#9_Nexus</h3><span class="badge b-warn">Starting (Delta)</span></div>
+          <div class="flex mt-1" style="gap:6px; flex-wrap:wrap"><span class="badge b-warn plain">🎒 Nexus</span><span class="badge b-muted plain">🎟️ Delta</span></div>
+          <div class="muted mt-1" style="font-size:12.5px">Tbilisi</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Students</span><b>9 / 16</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Module (cat.)</span><a data-goto="module-detail">Robotics → Programming →</a></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Progress</span><b>0%</b></div>
+          <div class="progress mt-1"><span style="width:2%"></span></div>
+          <button class="btn block mt-2" data-goto="group-detail">Group page →</button>
+        </div>
+        <div class="add-tile" data-modal="mAddGroup">
+          <span class="plus">＋</span>
+          <div><b>Add new group</b></div>
+          <small>Age Cat. · Intake</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GROUP DETAIL (inner) ==================== -->
+    <section class="view" data-view="group-detail">
+      <span class="back-link" data-goto="groups">← Learning Groups</span>
+      <div class="page-head">
+        <div class="titles"><h2>Group #4_Genesis — Robotics</h2><p>Tbilisi · Genesis (6–8) · Intake: Alpha · Semester I</p></div>
+        <div class="actions"><button class="btn" data-modal="mEditGroup">✏️ Edit</button></div>
+      </div>
+      <div class="grid g-4" style="margin-bottom:16px">
+        <div class="kpi"><div class="k-ic tint-savoy">👥</div><div class="k-val">14 / 16</div><div class="k-label">Student</div></div>
+        <div class="kpi"><div class="k-ic tint-yellow">🎒</div><div class="k-val" style="font-size:18px">Genesis</div><div class="k-label">Age Cat.</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val" style="font-size:18px">Alpha</div><div class="k-label">Intake · Semester I</div></div>
+        <div class="kpi"><div class="k-ic tint-cerise">📋</div><div class="k-val">13 / 20</div><div class="k-label">Training</div></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-body flex wrap" style="align-items:center">
+          <b style="font-size:13px">🔁 Semester management:</b>
+          <span class="badge b-ok">Semester I — Current</span>
+          <span class="badge b-muted plain">Semester II — Closed</span>
+          
+          <button class="btn sm primary" data-modal="mCloseSemester">✔ Close Semester I</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Students enrolled in the group</h3><div class="actions"><button class="btn sm primary" data-modal="mAddStudentToGroup">＋ Add student</button></div></div>
+        <div style="overflow-x:auto">
+        <table class="tbl" style="min-width:820px">
+          <thead><tr><th>Student</th><th>Parent</th><th>Student phone</th><th>Parent phone</th><th>Parent email</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="u"><span class="avatar sm ">N.B</span><div><div class="nm">Nika Beridze</div><div class="sub">ID 61001…</div></div></div></td><td>Tamar Beridze</td><td>—</td><td>+995 599 12 34 56</td><td>beridze.family@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">Remove</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">A.K</span><div><div class="nm">Ana Kharazi</div><div class="sub">ID 01030…</div></div></div></td><td>Levan Kharazi</td><td>+995 555 20 40 60</td><td>+995 577 11 22 33</td><td>kharazi.l@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">Remove</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">S.G</span><div><div class="nm">Saba Gelashvili</div><div class="sub">ID 61010…</div></div></div></td><td>Nino Gelashvili</td><td>—</td><td>+995 599 44 55 66</td><td>nino.g@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">Remove</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm cerise">M.K</span><div><div class="nm">Mariam Kvirkvelia</div><div class="sub">ID 60022…</div></div></div></td><td>Ia Kvirkvelia</td><td>+995 558 70 80 90</td><td>+995 591 30 20 10</td><td>ia.kvirkvelia@mail.ge</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm ghost" data-goto="student-profile">Profile →</button> <button class="btn sm danger" data-modal="mRemoveFromGroup">Remove</button></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ Adding/removing a student is done from this page. The group is linked to the <b>Genesis</b> age category module and goes through its trainings sequentially.</div>
+    </section>
+
+    <!-- ==================== EXAMS ==================== -->
+    <section class="view" data-view="exams">
+      <div class="page-head">
+        <div class="titles"><h2>Exams and academic calendar</h2><p>Quiz · Midterm · Final exam — for any branch (Semester I 2025/26)</p></div>
+        <div class="actions"><button class="btn">⤓ Export</button><button class="btn primary" data-modal="mAddExam">＋ Add exam</button></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-body flex wrap">
+          <div class="select" style="width:auto">Branch: All ▾</div>
+          <span class="badge b-info">🟦 Quiz</span>
+          <span class="badge b-warn">🟧 Midterm</span>
+          <span class="badge b-danger">🟥 Final</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Exam schedule by group</h3></div>
+        <table class="tbl">
+          <thead><tr><th>Branch</th><th>Group</th><th>Program</th><th>Age cat.</th><th>Quiz</th><th>Midterm</th><th>Final</th></tr></thead>
+          <tbody>
+            <tr><td>Tbilisi</td><td><b>#1</b></td><td>Robotics</td><td>Genesis</td><td>15 Nov</td><td><span class="badge b-warn">29 Nov</span></td><td><span class="badge b-danger">24 Jan</span></td></tr>
+            <tr><td>Tbilisi</td><td><b>#3</b></td><td>Robotics</td><td>Nexus</td><td>2 Dec</td><td><span class="badge b-warn">6 Dec</span></td><td><span class="badge b-danger">31 Jan</span></td></tr>
+            <tr><td>Tbilisi</td><td><b>#7</b></td><td>Web Development</td><td>Apex</td><td>22 Nov</td><td><span class="badge b-warn">29 Nov</span></td><td><span class="badge b-danger">7 Feb</span></td></tr>
+            <tr><td>Batumi</td><td><b>#3</b></td><td>Web Development</td><td>Apex</td><td>28 Nov</td><td><span class="badge b-warn">5 Dec</span></td><td><span class="badge b-danger">13 Feb</span></td></tr>
+            <tr><td>Kutaisi</td><td><b>#6</b></td><td>Minecraft</td><td>Quantum</td><td>25 Nov</td><td><span class="badge b-warn">2 Dec</span></td><td><span class="badge b-danger">10 Feb</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== SCHEDULE (build & manage) ==================== -->
+    <!-- ==================== MODULE TEMPLATES (master, per age category) ==================== -->
+    <section class="view" data-view="templates">
+      <div class="page-head">
+        <div class="titles"><h2>Module Templates</h2><p>One master template per age category — <b>auto-feeds</b> the semesters of every intake-category module (lecture order, materials)</p></div>
+      </div>
+      <div class="note" style="margin-bottom:14px">ℹ️ <b>New modules are created here</b> — open an age category to see its module list and add a new one. The number of semesters is predefined by the age category. These templates then auto-feed every intake-category module.</div>
+      <div class="grid g-4">
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-muted plain">16 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 yrs</h3><div class="muted" style="font-size:12px">3 module templates</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-muted plain">12 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 yrs</h3><div class="muted" style="font-size:12px">2 module templates</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-muted plain">8 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 yrs</h3><div class="muted" style="font-size:12px">2 module templates</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="template-cat" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">4 semesters</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 yrs</h3><div class="muted" style="font-size:12px">1 module template</div><div class="btn block mt-2">Modules →</div></div>
+      </div>
+    </section>
+
+    <!-- ==================== TEMPLATE — module list within an age category ==================== -->
+    <section class="view" data-view="template-cat">
+      <span class="back-link" data-goto="templates">← Module Templates</span>
+      <div class="page-head">
+        <div class="titles"><h2>Module Templates — Nexus (9–11)</h2><p>Master modules for this age category · <b>12 semesters</b> (predefined by category)</p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddTemplate">＋ New module</button></div>
+      </div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <h3 class="mt-0">Robotics → Programming</h3>
+          <div class="muted" style="font-size:12.5px">Technology module · 12 semesters</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🎓 Lectures</span><b>240</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 Materials</span><b>200</b></div>
+          <button class="btn block mt-2" data-goto="template-detail">Open template →</button>
+        </div>
+        <div class="card pad">
+          <h3 class="mt-0">Global Leadership</h3>
+          <div class="muted" style="font-size:12.5px">Companion module · 12 semesters</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🎓 Lectures</span><b>240</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 Materials</span><b>180</b></div>
+          <button class="btn block mt-2" data-goto="template-detail">Open template →</button>
+        </div>
+        <div class="add-tile" data-modal="mAddTemplate">
+          <span class="plus">＋</span>
+          <div><b>New module</b></div>
+          <small>Semesters predefined by category (12)</small>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ A module created here is a <b>master template</b> for the Nexus category. Instantiate it per intake from the <b>Learning Modules</b> menu.</div>
+    </section>
+
+    <!-- ==================== TEMPLATE DETAIL (master lectures + materials) ==================== -->
+    <section class="view" data-view="template-detail">
+      <span class="back-link" data-goto="template-cat">← Nexus modules</span>
+      <div class="page-head">
+        <div class="titles"><h2>Template — Robotics → Programming (Nexus)</h2><p>Master lectures and materials · 12 semesters — this feeds all Nexus intake-category modules</p></div>
+        <div class="actions"><button class="btn">⤓ Export to Excel</button><button class="btn primary" data-modal="mAddTraining">＋ Lecture to template</button></div>
+      </div>
+      <div class="grid g-2">
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 1 — Template</b><span class="badge b-info plain">22 entries</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">RB — Br.1 Pirate Ship</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">RB — Br.2 Merry-Go-Round</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 2 — Template</b><span class="badge b-ok plain">22 entries</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">AlgoPlay — Programming fundamentals</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Al.2 Waving Flag — code</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">Final exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 3 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 3 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 3 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 4 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 4 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 4 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 5 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 5 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 5 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 6 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 6 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 6 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 7 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 7 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 7 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 8 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 8 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 8 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 9 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 9 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 9 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 10 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 10 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 10 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 11 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 11 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 11 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 12 — Template</b><span class="badge b-muted plain">22 records</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Module block 12 — Lecture 1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Module block 12 — Lecture 2</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 lectures total)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">Final exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ Changing the template does not change already active intake-category modules — it applies to <b>new</b> intake-categories. Active ones are edited from the module page.</div>
+    </section>
+
+    <!-- ==================== LEARNING MODULES — intake picker ==================== -->
+    <section class="view" data-view="modules">
+      <div class="page-head">
+        <div class="titles"><h2>Learning Modules</h2><p>Select <b>Intake</b> → Age Category → Module</p></div>
+      </div>
+      <div class="note" style="margin-bottom:14px">ℹ️ Modules are sorted by intake. First select an Intake, then an age category.</div>
+      <div class="grid g-3">
+        <div class="card pad" data-goto="modules-cat" style="cursor:pointer">
+          <span class="badge b-ok">🎟️ Alpha</span>
+          <h3 class="mt-1">Alpha — 2025 Autumn</h3>
+          <div class="muted" style="font-size:12.5px">Intake</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Age Categories</span><b>4</b></div>
+          <div class="btn block mt-2">Categories →</div>
+        </div>
+        <div class="card pad" data-goto="modules-cat" style="cursor:pointer">
+          <span class="badge b-info">🎟️ Delta</span>
+          <h3 class="mt-1">Delta — 2026 Spring</h3>
+          <div class="muted" style="font-size:12.5px">Intake</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Age Categories</span><b>4</b></div>
+          <div class="btn block mt-2">Categories →</div>
+        </div>
+        <div class="card pad" data-goto="modules-cat" style="cursor:pointer">
+          <span class="badge b-muted">🎟️ Sigma</span>
+          <h3 class="mt-1">Sigma — 2025 Spring</h3>
+          <div class="muted" style="font-size:12.5px">Intake</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>Age Categories</span><b>4</b></div>
+          <div class="btn block mt-2">Categories →</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULES — category picker (within intake) ==================== -->
+    <section class="view" data-view="modules-cat">
+      <span class="back-link" data-goto="modules">← Intakes</span>
+      <div class="page-head">
+        <div class="titles"><h2>Intake: Alpha — age categories</h2><p>Select an age category (defines the course duration)</p></div>
+      </div>
+      <div class="grid g-4">
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-ok plain">📆 Now: Semester 2 / 16</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 yrs</h3><div class="muted" style="font-size:12px">This intake's groups this semester</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-ok plain">📆 Now: Semester 2 / 12</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 yrs</h3><div class="muted" style="font-size:12px">This intake's groups this semester</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-ok plain">📆 Now: Semester 2 / 8</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 yrs</h3><div class="muted" style="font-size:12px">This intake's groups this semester</div><div class="btn block mt-2">Modules →</div></div>
+        <div class="card pad" data-goto="modules-list" style="cursor:pointer"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-ok plain">📆 Now: Semester 2 / 4</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 yrs</h3><div class="muted" style="font-size:12px">This intake's groups this semester</div><div class="btn block mt-2">Modules →</div></div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULES — list (within intake + category) ==================== -->
+    <section class="view" data-view="modules-list">
+      <span class="back-link" data-goto="modules-cat">← Age Categories</span>
+      <div class="page-head">
+        <div class="titles"><h2>Alpha · Nexus (9–11)</h2><p>This intake-category's modules — manage</p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddModule">＋ Add module (from template)</button></div>
+      </div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <h3 class="mt-0">Robotics → Programming</h3>
+          <div class="muted" style="font-size:12.5px">Technology module · 12 semesters · 6 years</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🎓 Trainings</span><b>240</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 Teaching material</span><b>200</b></div>
+          <button class="btn block mt-2" data-goto="module-detail">Manage →</button>
+        </div>
+        <div class="card pad">
+          <h3 class="mt-0">Global Leadership</h3>
+          <div class="muted" style="font-size:12.5px">Companion module · 12 semesters · parallel</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🎓 Trainings</span><b>240</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>📎 Teaching material</span><b>200</b></div>
+          <button class="btn block mt-2" data-goto="module-detail">Manage →</button>
+        </div>
+        <div class="add-tile" data-modal="mAddModule">
+          <span class="plus">＋</span>
+          <div><b>Add module from template</b></div>
+          <small>Pick from this category's templates</small>
+        </div>
+      </div>
+      <div class="note mt-2">ℹ️ Modules here are <b>instantiated from the Nexus templates</b> — a brand-new module is not created here. To add a new master module, use the <b>Module Templates</b> menu. The module's lectures feed <b>the Schedule</b>.</div>
+    </section>
+
+    <!-- ==================== MODULE DETAIL (inner) — flat semester slots ==================== -->
+    <section class="view" data-view="module-detail">
+      <span class="back-link" data-goto="modules-list">← Modules (Alpha · Nexus)</span>
+      <div class="page-head">
+        <div class="titles"><h2>Nexus — Robotics → Programming</h2><p>Intake: Alpha · Nexus (9–11) · 12 semesters — predefined slots</p></div>
+        <div class="actions"><button class="btn">⤓ Export to Excel</button></div>
+      </div>
+      <div class="grid g-4" style="margin-bottom:16px">
+        <div class="kpi"><div class="k-ic tint-savoy">🎓</div><div class="k-val">6</div><div class="k-label">Year</div></div>
+        <div class="kpi"><div class="k-ic tint-green">📆</div><div class="k-val">12</div><div class="k-label">Semester slot</div></div>
+        <div class="kpi"><div class="k-ic tint-yellow">📋</div><div class="k-val">240</div><div class="k-label">Training</div></div>
+        <div class="kpi"><div class="k-ic tint-cerise">📎</div><div class="k-val">200</div><div class="k-label">Attached materials</div></div>
+      </div>
+      <div class="note" style="margin-bottom:12px">ℹ️ The number of semester slots is defined by category (Nexus = 12). Lectures and attached files <b>come automatically from this category's template</b>, but <b>are separately editable for each intake-category</b> (✏️). ✔ means that the lecture <b>was conducted</b> — marked by the branch manager/admin.</div>
+      <div class="grid g-2">
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 1</b><span class="badge b-ok plain">✔ Conducted 12 / 22</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">RB — Br.1 Pirate Ship</span><span class="badge b-ok plain">✔ Conducted</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">RB — Br.2 Merry-Go-Round</span><span class="badge b-ok plain">✔ Conducted</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 trainings total)</span><span class="badge b-muted plain" style="cursor:pointer" title="Mark as conducted">◻ To conduct</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="badge b-muted plain" style="cursor:pointer" title="Mark as conducted">◻ To conduct</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 2</b><span class="badge b-warn plain">✔ Conducted 3 / 22</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">AlgoPlay — Programming fundamentals</span><span class="badge b-ok plain">✔ Conducted</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">2</span><span class="t-title">Al.2 Waving Flag — code</span><span class="badge b-muted plain" style="cursor:pointer" title="Mark as conducted">◻ To conduct</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(20 trainings total)</span><span class="badge b-muted plain" style="cursor:pointer" title="Mark as conducted">◻ To conduct</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">Final exam</span><span class="badge b-muted plain" style="cursor:pointer" title="Mark as conducted">◻ To conduct</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 3</b><span class="badge b-info plain">3 entries</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Mobile App — MOD#1 · DAY#1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(16 trainings)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row assess"><span class="t-num">🎓</span><span class="t-title">Midterm exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 4</b><span class="badge b-ok plain">3 entries</span></div>
+          <div class="train-row"><span class="t-num">1</span><span class="t-title">Mobile App — MOD#3 · DAY#1</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row"><span class="t-num">…</span><span class="t-title">(24 trainings)</span><span class="t-mat" data-modal="mEditLecture" title="Edit lecture">✏️</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="train-row exam"><span class="t-num">🏁</span><span class="t-title">Final exam</span><span class="t-mat" data-modal="mAttachMaterial">📎 Material</span></div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 5</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 6</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 7</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 8</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 9</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 10</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 11</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="sem-head"><b>Semester 12</b><span class="badge b-muted plain">0 entries</span></div>
+          <div class="note" style="text-align:center; border-style:dashed">Empty slot — add training / midterm / exam</div>
+          <div class="sem-actions">
+            <button class="btn sm ghost" data-modal="mAddTraining">＋ Training</button>
+            <button class="btn sm ghost" data-modal="mAddMidterm">＋ Midterm</button>
+            <button class="btn sm ghost" data-modal="mAddModExam">＋ Exam</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" data-view="schedule">
+      <div class="page-head">
+        <div class="titles"><h2>Schedule</h2><p>Monthly schedule — classes only on weekends · drag the week's lectures to conduct into empty slots</p></div>
+        <div class="actions"><button class="btn" data-modal="mRoadmap">📋 ROADMAP</button><button class="btn primary" data-modal="mAssignLecturer">✏️ Edit slot</button></div>
+      </div>
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-body flex wrap">
+          <div class="select" style="width:auto">Branch: Tbilisi ▾</div>
+          <div class="select" style="width:auto">Month: October 2025 ▾</div>
+          <span class="wire-tag" style="margin-left:auto; align-self:center">🖱️ drag &amp; drop — lecture → slot → lecturer</span>
+        </div>
+      </div>
+
+      <div class="sched-wrap">
+        <div class="card palette">
+          <div class="card-head"><h3 style="font-size:14px">This week's lectures</h3></div>
+          <div class="palette-list">
+            <div class="pal-group">Predefined (ROADMAP)</div>
+          <div class="dnd-chip" draggable="true" data-grp="#2 Quantum" data-lesson="GL_ALPHA #31 — Signature Day"><div class="c-grp">#2 Quantum</div><div class="c-les">GL_ALPHA #31 — Signature Day</div></div>
+          <div class="dnd-chip" draggable="true" data-grp="#3 Apex" data-lesson="GL_ALPHA #31 — Signature Day"><div class="c-grp">#3 Apex</div><div class="c-les">GL_ALPHA #31 — Signature Day</div></div>
+          <div class="dnd-chip g-green" draggable="true" data-grp="#3 Apex" data-lesson="Web 17 — Lesson 1 (Part C)"><div class="c-grp">#3 Apex</div><div class="c-les">Web 17 — Lesson 1 (Part C)</div></div>
+          <div class="dnd-chip g-yellow" draggable="true" data-grp="#2 Quantum" data-lesson="Mobile App — MOD#1 · DAY#2"><div class="c-grp">#2 Quantum</div><div class="c-les">Mobile App — MOD#1 · DAY#2</div></div>
+          <div class="dnd-chip g-yellow" draggable="true" data-grp="#5 Quantum" data-lesson="Mobile App Development"><div class="c-grp">#5 Quantum</div><div class="c-les">Mobile App Development</div></div>
+          <div class="dnd-chip g-cerise" draggable="true" data-grp="#1 Nexus" data-lesson="Cod #12 — Al.19 Jumpover"><div class="c-grp">#1 Nexus</div><div class="c-les">Cod #12 — Al.19 Jumpover</div></div>
+          <div class="dnd-chip g-cerise" draggable="true" data-grp="#4 Genesis" data-lesson="RB #19 — Br.31 Fortune"><div class="c-grp">#4 Genesis</div><div class="c-les">RB #19 — Br.31 Fortune</div></div>
+          <div class="dnd-chip" draggable="true" data-grp="#4 Genesis" data-lesson="GL_DELTA #15"><div class="c-grp">#4 Genesis</div><div class="c-les">GL_DELTA #15</div></div>
+            <div class="note" style="margin-top:8px">📋 List from the group's module ROADMAP — which lectures are to be conducted this month.</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="month-grid">
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">4 Oct</div><div class="d-dow">Saturday</div></div>
+            <div class="day-slots">
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-grp">#2 Quantum</div><div class="s-les">GL_ALPHA #30</div><div class="s-lect">👤 Enri Lominadze</div></div>
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-grp">#2 Quantum</div><div class="s-les">Mobile App — MOD#1 · DAY#1</div><div class="s-lect">👤 Toma Potskhverashvili</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-grp">#1 Nexus</div><div class="s-les">GL_ALPHA #27</div><div class="s-lect">👤 Enri Lominadze</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">5 Oct</div><div class="d-dow">Sunday</div></div>
+            <div class="day-slots">
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-grp">#5 Quantum</div><div class="s-les">Mobile App Development</div><div class="s-lect">👤 Toma Potskhverashvili</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot filled" data-modal="mAssignLecturer" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-grp">#4 Genesis</div><div class="s-les">RB #18 · Br.30 Pumpjack</div><div class="s-lect">👤 Toma Potskhverashvili</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">11 Oct</div><div class="d-dow">Saturday</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">12 Oct</div><div class="d-dow">Sunday</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">18 Oct</div><div class="d-dow">Saturday</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">19 Oct</div><div class="d-dow">Sunday</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sat"><div class="d-date">25 Oct</div><div class="d-dow">Saturday</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          <div class="day-col">
+            <div class="day-head sun"><div class="d-date">26 Oct</div><div class="d-dow">Sunday</div></div>
+            <div class="day-slots">
+              <div class="slot empty" data-time="10:00–11:15"><div class="s-time">10:00–11:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="11:30–12:45"><div class="s-time">11:30–12:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="13:00–14:15"><div class="s-time">13:00–14:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="14:30–15:45"><div class="s-time">14:30–15:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="16:00–17:15"><div class="s-time">16:00–17:15</div><div class="s-hint">＋ Drop a lecture</div></div>
+              <div class="slot empty" data-time="17:30–18:45"><div class="s-time">17:30–18:45</div><div class="s-hint">＋ Drop a lecture</div></div>
+            </div>
+          </div>
+          </div>
+          <div class="note mt-2">ℹ️ After a lecture is dropped into a slot, the following opens automatically: <b>lecturer assignment field</b>. One module is taught by different lecturers — the lecturer changes per slot.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="view" data-view="projects">
+      <div class="page-head">
+        <div class="titles"><h2>Projects</h2><p>Create/edit projects · each result (participation / win / completion) generates predefined SteveCoins</p></div>
+        <div class="actions"><button class="btn primary" data-modal="mAddProject">＋ Create project</button></div>
+      </div>
+      <div class="grid g-3">
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-info plain">🏆 Robotics</span><span class="badge b-ok">Active</span></div>
+          <h3 class="mt-1">Robotics Championship 2025</h3>
+          <div class="muted" style="font-size:12.5px">10–15 Dec · Tbilisi</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🪙 Participation</span><b>+15</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🪙 Win</span><b>+50</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🪙 Completion</span><b>+30</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Linked students</span><b>24</b></div>
+          <button class="btn block mt-2" data-goto="project-detail">Manage →</button>
+        </div>
+        <div class="card pad">
+          <div class="flex between"><span class="badge b-warn plain">🏆 Mob App</span><span class="badge b-ok">Active</span></div>
+          <h3 class="mt-1">Demo Day</h3>
+          <div class="muted" style="font-size:12.5px">20 Dec · all branches</div>
+          <hr class="sep">
+          <div class="flex between" style="font-size:13px"><span>🪙 Participation</span><b>+15</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🪙 Win</span><b>+40</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>🪙 Completion</span><b>+25</b></div>
+          <div class="flex between mt-1" style="font-size:13px"><span>Linked students</span><b>38</b></div>
+          <button class="btn block mt-2" data-goto="project-detail">Manage →</button>
+        </div>
+        <div class="add-tile" data-modal="mAddProject">
+          <span class="plus">＋</span>
+          <div><b>New project</b></div>
+          <small>SteveCoins for participation/win/completion</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECT DETAIL (inner) ==================== -->
+    <section class="view" data-view="project-detail">
+      <span class="back-link" data-goto="projects">← Projects</span>
+      <div class="page-head">
+        <div class="titles"><h2>Robotics Championship 2025</h2><p>10–15 Dec · 24 students linked · SteveCoins: Part. +15 · Win +50 · Compl. +30</p></div>
+        <div class="actions"><button class="btn" data-modal="mAddProject">✏️ Edit</button><button class="btn primary" data-modal="mLinkStudent">＋ Link student</button></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Linked students</h3><div class="actions"><div class="search" style="min-width:200px">🔎 <span>Search…</span></div></div></div>
+        <table class="tbl">
+          <thead><tr><th>Student</th><th>Group</th><th>Result</th><th>Awarded 🪙</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="u"><span class="avatar sm">N.B</span><span class="nm">Nika Beridze</span></div></td><td>#1_Nexus</td><td><span class="badge b-warn">Win</span></td><td>+50</td><td class="text-r"><button class="btn sm">✏️</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm green">A.K</span><span class="nm">Ana Kharazi</span></div></td><td>#1_Nexus</td><td><span class="badge b-ok">Completion</span></td><td>+30</td><td class="text-r"><button class="btn sm">✏️</button></td></tr>
+            <tr><td><div class="u"><span class="avatar sm yellow">L.T</span><span class="nm">Luka Tsertsvadze</span></div></td><td>#3_Apex</td><td><span class="badge b-info">Participation</span></td><td>+15</td><td class="text-r"><button class="btn sm">✏️</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== FINANCE ==================== -->
+    <section class="view" data-view="finance">
+      <div class="page-head"><div class="titles"><h2>Payments</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
+    </section>
+
+    <!-- ==================== DEBTS ==================== -->
+    <section class="view" data-view="debts">
+      <div class="page-head"><div class="titles"><h2>Debts</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
+    </section>
+
+    <!-- ==================== REPORTS ==================== -->
+        <section class="view" data-view="reports">
+      <div class="page-head"><div class="titles"><h2>Reports</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
+    </section>
+
+    <!-- ==================== EVALUATIONS ==================== -->
+        <section class="view" data-view="evaluations">
+      <div class="page-head"><div class="titles"><h2>Evaluations</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
+    </section>
+
+    <!-- ==================== DOCUMENTS ==================== -->
+    <section class="view" data-view="documents">
+      <div class="page-head">
+        <div class="titles"><h2>Document Storage</h2><p>Centralized storage · role-based access</p></div>
+      </div>
+      <div class="card">
+        <div class="coming-soon">
+          <div class="cs-ic">📁</div>
+          <h2>Coming soon</h2>
+          <p>The centralized document storage module is under development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NOTIFICATIONS ==================== -->
+    <section class="view" data-view="notifications">
+      <div class="page-head"><div class="titles"><h2>Notifications</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
+    </section>
+
+    <!-- ==================== KNOWLEDGE / AI ==================== -->
+        <section class="view" data-view="knowledge">
+      <div class="page-head"><div class="titles"><h2>AI / Knowledge Base</h2></div></div>
+      <div class="coming-soon"><div class="cs-ic">🚧</div><h2>Coming soon</h2><p>This section will be added soon.</p></div>
+    </section>
+
+    <!-- ==================== ROLES ==================== -->
+    <section class="view" data-view="roles">
+      <div class="page-head">
+        <div class="titles"><h2>Users &amp; Groups</h2><p>Manage users and user groups · menu access and CRUD permissions are defined <b>per group</b></p></div>
+        <div class="actions"><button class="btn" data-modal="mAddUserGroup">＋ New group</button><button class="btn primary" data-modal="mAddUser">＋ Add user</button></div>
+      </div>
+      <div class="card" data-tabs>
+        <div class="card-head" style="padding:0">
+          <div class="tabs" style="margin:0; border:none; padding:0 8px">
+            <div class="tab active" data-tab="ug1">Users</div>
+            <div class="tab" data-tab="ug2">Groups</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- USERS -->
+          <div class="tab-panel active" data-panel="ug1">
+            <div class="flex wrap mb-0" style="gap:8px">
+              <div class="select" style="width:auto">Group: All ▾</div>
+              <div class="select" style="width:auto">Branch: All ▾</div>
+              <div class="select" style="width:auto">Status: All ▾</div>
+              <div class="search" style="min-width:200px; margin-left:auto">🔎 <span>Search by name or ID…</span></div>
+            </div>
+            <table class="tbl mt-2">
+              <thead><tr><th>User</th><th>Personal ID (login)</th><th>Group</th><th>Branch</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+                <tr><td><div class="u"><span class="avatar sm">N.K</span><span class="nm">Nino Kvaratskhelia</span></div></td><td>01001011111</td><td><span class="badge b-info plain">Super Admin</span></td><td>All</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm green">K.D</span><span class="nm">Keti Dolidze</span></div></td><td>01008022222</td><td><span class="badge b-info plain">Branch Manager</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm">E.A</span><span class="nm">Eka Avaliani</span></div></td><td>01010033333</td><td><span class="badge b-warn plain">Finance</span></td><td>Backoffice</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm yellow">S.A</span><span class="nm">Sandro Abashidze</span></div></td><td>01011044444</td><td><span class="badge b-muted plain">🔒 Trainers</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm">N.B</span><span class="nm">Nika Beridze</span></div></td><td>61001055555</td><td><span class="badge b-muted plain">🔒 Students</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+                <tr><td><div class="u"><span class="avatar sm cerise">T.B</span><span class="nm">Tamar Beridze</span></div></td><td>01012066666</td><td><span class="badge b-muted plain">🔒 Parents</span></td><td>Tbilisi</td><td><span class="badge b-ok">Active</span></td><td class="text-r"><button class="btn sm" data-modal="mEditUserGroups">Change group</button></td></tr>
+              </tbody>
+            </table>
+            <div class="note mt-2">ℹ️ A user's access is inherited from the group(s) they belong to. Use <b>Change group</b> to move a user between groups.</div>
+          </div>
+          <!-- GROUPS -->
+          <div class="tab-panel" data-panel="ug2">
+            <div class="note mb-0">ℹ️ <b>Students</b>, <b>Parents</b>, <b>Trainers</b> and <b>Branch Manager</b> are 🔒 system groups — each has its own dedicated interface and core logic, so they can't be deleted or renamed (permissions are viewable). All other groups use the <b>Administrator interface</b>, restricted by their permissions, and are fully admin-managed and unlimited.</div>
+            <table class="tbl mt-2">
+              <thead><tr><th>Group</th><th>Type</th><th>Members</th><th>Interface / access</th><th></th></tr></thead>
+              <tbody>
+                <tr><td><b>🔒 Students</b></td><td><span class="badge b-muted">System · locked</span></td><td>1 248</td><td class="muted">Student interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>🔒 Parents</b></td><td><span class="badge b-muted">System · locked</span></td><td>1 090</td><td class="muted">Parent interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>🔒 Trainers</b></td><td><span class="badge b-muted">System · locked</span></td><td>84</td><td class="muted">Trainer interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>🔒 Branch Manager</b></td><td><span class="badge b-muted">System · locked</span></td><td>6</td><td class="muted">Branch Manager interface</td><td class="text-r"><button class="btn sm" data-goto="usergroup-detail">Permissions →</button></td></tr>
+                <tr><td><b>Super Admin</b></td><td><span class="badge b-info">Custom</span></td><td>2</td><td class="muted">Admin interface · full CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Administrator</b></td><td><span class="badge b-info">Custom</span></td><td>5</td><td class="muted">Admin interface · most CRUD</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Finance</b></td><td><span class="badge b-info">Custom</span></td><td>3</td><td class="muted">Admin interface · Payments · Debts · Reports</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+                <tr><td><b>Backoffice</b></td><td><span class="badge b-info">Custom</span></td><td>4</td><td class="muted">Admin interface · read-only</td><td class="text-r"><button class="btn sm primary" data-goto="usergroup-detail">Manage →</button></td></tr>
+              </tbody>
+            </table>
+            <div class="add-tile mt-2" data-modal="mAddUserGroup" style="max-width:280px"><span class="plus">＋</span><div><b>New group</b></div><small>Custom · unlimited</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== USER GROUP DETAIL (permissions) ==================== -->
+    <section class="view" data-view="usergroup-detail">
+      <span class="back-link" data-goto="roles">← Users &amp; Groups</span>
+      <div class="page-head">
+        <div class="titles"><h2>Group — Finance</h2><p>Custom group · define menu access and CRUD permissions for all its members</p></div>
+        <div class="actions"><button class="btn danger">🗑 Delete group</button><button class="btn primary">💾 Save permissions</button></div>
+      </div>
+
+      <div class="grid g-1-2">
+        <!-- Members -->
+        <div class="card pad">
+          <div class="flex between mb-0"><h3 class="mb-0" style="font-size:15px">Members</h3><button class="btn sm primary" data-modal="mEditUserGroups">＋ Add member</button></div>
+          <table class="tbl compact mt-2">
+            <thead><tr><th>User</th><th>Personal ID</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><div class="u"><span class="avatar sm">E.A</span><span class="nm">Eka Avaliani</span></div></td><td>01010033333</td><td class="text-r"><a href="#">✕</a></td></tr>
+              <tr><td><div class="u"><span class="avatar sm green">D.T</span><span class="nm">Dato Tavadze</span></div></td><td>01009044444</td><td class="text-r"><a href="#">✕</a></td></tr>
+              <tr><td><div class="u"><span class="avatar sm yellow">M.B</span><span class="nm">Maka Barbakadze</span></div></td><td>01007055555</td><td class="text-r"><a href="#">✕</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Menu access -->
+        <div class="card pad">
+          <h3 class="mb-0" style="font-size:15px">Menu access</h3>
+          <div class="note mt-1">Tick the menus this group can see.</div>
+          <div class="grid g-2 mt-1" style="gap:4px 14px; font-size:13px">
+            <label><input type="checkbox"> Branches</label>
+            <label><input type="checkbox" checked> Students</label>
+            <label><input type="checkbox"> Trainers</label>
+            <label><input type="checkbox"> Groups</label>
+            <label><input type="checkbox"> Learning Modules</label>
+            <label><input type="checkbox"> Module Templates</label>
+            <label><input type="checkbox"> Schedule</label>
+            <label><input type="checkbox"> Exams</label>
+            <label><input type="checkbox"> Projects</label>
+            <label><input type="checkbox" checked> Payments</label>
+            <label><input type="checkbox" checked> Debts</label>
+            <label><input type="checkbox" checked> Reports</label>
+            <label><input type="checkbox"> Evaluations</label>
+            <label><input type="checkbox"> Documents</label>
+            <label><input type="checkbox" checked> Notifications</label>
+            <label><input type="checkbox"> Settings</label>
+            <label><input type="checkbox"> Users &amp; Groups</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- CRUD permissions -->
+      <div class="card mt-2">
+        <div class="card-head"><h3>CRUD permissions</h3><span class="muted" style="font-size:12px">Per resource · View / Create / Update / Delete</span></div>
+        <table class="tbl compact">
+          <thead><tr><th>Resource</th><th class="text-c">View</th><th class="text-c">Create</th><th class="text-c">Update</th><th class="text-c">Delete</th></tr></thead>
+          <tbody>
+            <tr><td>Students</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Payments</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Debts</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Reports</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Groups</td><td class="text-c"><input type="checkbox" checked></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Learning Modules</td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+            <tr><td>Users &amp; Groups</td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td><td class="text-c"><input type="checkbox"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note mt-2">🔒 For the <b>Students</b>, <b>Parents</b>, <b>Trainers</b> and <b>Branch Manager</b> system groups this screen is read-only — their menus and permissions are fixed by their dedicated interfaces. Custom groups run on the <b>Administrator interface</b> and are constrained by the toggles above.</div>
+    </section>
+
+    <!-- ==================== PARAMETERS (academic years / semesters, per branch) ==================== -->
+    <section class="view" data-view="params">
+      <div class="page-head">
+        <div class="titles"><h2>Settings — categories and semesters</h2><p>A student's program is defined by two things: <b>Age Category</b> (by entry age) and <b>Intake</b> (Intake / semester)</p></div>
+      </div>
+
+      <h3 style="margin:0 0 8px">🎓 Course categories</h3>
+      <div class="note" style="margin-bottom:10px">ℹ️ A child's category and course duration are determined by the age at which they joined the school. (organization level)</div>
+      <div class="grid g-4" style="margin-bottom:20px">
+        <div class="card pad"><div class="flex between"><span class="badge b-info">Genesis</span><span class="badge b-muted plain">8 years</span></div><h3 class="mt-1 mb-0" style="font-size:15px">6–8 yrs</h3><div class="muted" style="font-size:12px">Entry age</div></div>
+        <div class="card pad"><div class="flex between"><span class="badge b-ok">Nexus</span><span class="badge b-muted plain">6 years</span></div><h3 class="mt-1 mb-0" style="font-size:15px">9–11 yrs</h3><div class="muted" style="font-size:12px">Entry age</div></div>
+        <div class="card pad"><div class="flex between"><span class="badge b-warn">Quantum</span><span class="badge b-muted plain">4 years</span></div><h3 class="mt-1 mb-0" style="font-size:15px">12–13 yrs</h3><div class="muted" style="font-size:12px">Entry age</div></div>
+        <div class="card pad"><div class="flex between"><span class="badge b-danger">Apex</span><span class="badge b-muted plain">2 years</span></div><h3 class="mt-1 mb-0" style="font-size:15px">14–16 yrs</h3><div class="muted" style="font-size:12px">Entry age</div></div>
+      </div>
+
+      <div class="flex between" style="margin-bottom:8px"><h3 class="mb-0">🎟️ Semesters (intakes)</h3><button class="btn sm primary" data-modal="mAddSemester">＋ Add semester</button></div>
+      <div class="note" style="margin-bottom:10px">ℹ️ Every semester has a name (Sigma / Alpha / Delta …) and a start/end date. A student's program = age category + intake.</div>
+      <div class="card">
+        <table class="tbl compact">
+          <thead><tr><th>Name</th><th>Start</th><th>End</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><b>Delta</b></td><td>15 Feb 2026</td><td>27 Jun 2026</td><td><span class="badge b-info">Planned</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
+            <tr><td><b>Alpha</b></td><td>05 Oct 2025</td><td>07 Feb 2026</td><td><span class="badge b-ok">Current</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
+            <tr><td><b>Sigma</b></td><td>16 Feb 2025</td><td>28 Jun 2025</td><td><span class="badge b-muted">Closed</span></td><td class="text-r"><a href="#">✏️</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note mt-2">ℹ️ Marking a semester as "closed" automatically moves groups to the next semester/category.</div>
+    </section>
+
+
+    </div><!-- /content -->
+  </div><!-- /main -->
+</div>
+<!-- MODAL: add user (centralized; admin can assign branch, incl. shared Backoffice) -->
+<div class="modal-overlay" id="mAddUser">
+  <div class="modal">
+    <div class="m-head"><h3>Add user</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>User group</label>
+        <select class="select" data-optselect>
+          <option value="roleStudent">🔒 Students (system)</option>
+          <option value="roleParent">🔒 Parents (system)</option>
+          <option value="roleTrainer">🔒 Trainers (system)</option>
+          <option value="roleManager">🔒 Branch Manager (system)</option>
+          <option value="roleAdmin">Administrator</option>
+          <option value="roleGeneric2">Finance</option>
+          <option value="roleGeneric2">Super Admin</option>
+          <option value="roleGeneric2">Backoffice</option>
+        </select>
+      </div>
+      <div class="note mt-1">🆔 <b>Personal ID is required for every user</b> — it is used as the login username for the system. Access is inherited from the selected group. System groups (Students/Parents/Trainers/Branch Manager) have their own interfaces; all other groups use the <b>Administrator interface</b>, restricted by permissions.</div>
+
+      <!-- ROLE: STUDENT (synced from external system) -->
+      <div class="opt-block active" id="roleStudent">
+        <div class="note">🔄 Students are synced from an external system. Select a student who does not yet have a user account — fields will load automatically.</div>
+        <div class="field mt-1"><label>Student (without user)</label>
+          <select class="select"><option>Nikoloz Beridze · ID 61001…</option><option>Ana Kharazi · ID 01030…</option><option>Saba Gelashvili · ID 61010…</option><option>Mariam Kvirkvelia · ID 60022…</option><option>Dato Nadiradze · ID 61022…</option></select>
+        </div>
+        <div class="flex between mt-2"><b style="font-size:13px">Student data</b><span class="wire-tag">Synced · read-only</span></div>
+        <div class="grid g-3 mt-1" style="gap:10px">
+          <div><small>Full Name</small><div><b>Nikoloz Beridze</b></div></div>
+          <div><small>Date of Birth</small><div><b>07/12/2015</b></div></div>
+          <div><small>Citizenship</small><div><b>Georgia</b></div></div>
+          <div><small>Personal ID <span class="badge b-info plain" style="padding:0 5px">login</span></small><div><b>61001xxxxxx</b></div></div>
+          <div><small>School</small><div><b>Public School No. 6</b></div></div>
+          <div><small>Branch</small><div><b>Tbilisi</b></div></div>
+          <div><small>Student phone</small><div><b>—</b></div></div>
+          <div><small>Parent</small><div><b>Tamar Beridze</b></div></div>
+          <div><small>Parent phone</small><div><b>+995 599 12 34 56</b></div></div>
+          <div><small>Parent email</small><div><b>beridze.family@mail.ge</b></div></div>
+          <div><small>Funding</small><div><b>40%</b></div></div>
+          <div><small>Group</small><div><b>#1_Nexus</b></div></div>
+          <div><small>Intake</small><div><b>Alpha · 2025 Autumn</b></div></div>
+          <div><small>Age Cat.</small><div><b>Nexus</b></div></div>
+          <div><small>Status</small><div><span class="badge b-ok">Active</span></div></div>
+        </div>
+        <div class="note mt-1">ℹ️ The student's personal ID is synced from the external system and used as their login.</div>
+        <div class="field mt-2"><label>Email (for the user)</label><input class="input" placeholder="mail@example.com"></div>
+      </div>
+
+      <!-- ROLE: PARENT -->
+      <div class="opt-block" id="roleParent">
+        <div class="note">👪 Select the student to whom the parent will be linked.</div>
+        <div class="field mt-1"><label>Student (to link)</label>
+          <select class="select"><option>Nika Beridze · ID 61001…</option><option>Mariam Lomidze · ID 60012…</option><option>Ana Kharazi · ID 01030…</option><option>Luka Tsertsvadze · ID 61003…</option><option>Saba Gelashvili · ID 61010…</option></select>
+        </div>
+        <div class="form-row"><div class="field"><label>Full Name</label><input class="input" placeholder="Parent's full name"></div><div class="field"><label>Personal ID <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="e.g. 01001012345"></div></div>
+        <div class="form-row"><div class="field"><label>Relationship to Student</label><select class="select"><option>Mother</option><option>Father</option><option>Guardian</option><option>Other</option></select></div><div class="field"><label>Phone</label><input class="input" placeholder="+995"></div></div>
+        <div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div>
+      </div>
+
+      <!-- ROLE: TRAINER / LECTURER -->
+      <div class="opt-block" id="roleTrainer">
+        <div class="form-row"><div class="field"><label>Full Name</label><input class="input" placeholder="Full Name"></div><div class="field"><label>Personal ID <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="e.g. 01001012345"></div></div>
+        <div class="form-row"><div class="field"><label>Phone</label><input class="input" placeholder="+995"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
+        <div class="field"><label>Branch</label><select class="select"><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+        <div class="field"><label>Program / Track</label><select class="select"><option>Robotics</option><option>Mob Application</option><option>Web Development</option><option>Minecraft</option><option>Global Leadership</option></select></div>
+        <div class="field"><label>Qualification / bio</label><textarea class="textarea" placeholder="Education, experience, certificates…"></textarea></div>
+      </div>
+
+      <!-- ROLE: BRANCH MANAGER -->
+      <div class="opt-block" id="roleManager">
+        <div class="note">🏢 Select the branch to which the manager will be assigned.</div>
+        <div class="field mt-1"><label>Branch (to link)</label><select class="select"><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+        <div class="form-row"><div class="field"><label>Full Name</label><input class="input" placeholder="Full Name"></div><div class="field"><label>Personal ID <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="e.g. 01001012345"></div></div>
+        <div class="form-row"><div class="field"><label>Phone</label><input class="input" placeholder="+995"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
+      </div>
+
+      <!-- ROLE: ADMINISTRATOR -->
+      <div class="opt-block" id="roleAdmin">
+        <div class="form-row"><div class="field"><label>Full Name</label><input class="input" placeholder="Full Name"></div><div class="field"><label>Personal ID <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="e.g. 01001012345"></div></div>
+        <div class="form-row"><div class="field"><label>Phone</label><input class="input" placeholder="+995"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
+        <div class="field"><label>Branch assignment</label><select class="select"><option>Backoffice (shared — all branches)</option><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+      </div>
+
+      <!-- CUSTOM GROUP (Finance / Super Admin / Backoffice / any admin-made group) -->
+      <div class="opt-block" id="roleGeneric2">
+        <div class="form-row"><div class="field"><label>Full Name</label><input class="input" placeholder="Full Name"></div><div class="field"><label>Personal ID <span class="muted" style="font-size:11px">(login)</span></label><input class="input" placeholder="e.g. 01001012345"></div></div>
+        <div class="form-row"><div class="field"><label>Phone</label><input class="input" placeholder="+995"></div><div class="field"><label>Email</label><input class="input" placeholder="mail@example.com"></div></div>
+        <div class="field"><label>Branch assignment</label><select class="select"><option>Backoffice (shared — all branches)</option><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+        <div class="note">🔐 Custom groups run on the <b>Administrator interface</b>; their menu access and CRUD permissions come from the group's settings (Users &amp; Groups → group → Permissions).</div>
+      </div>
+
+      <div class="note mt-1">📩 After adding, an SMS + Email with a registration link is sent automatically.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add</button></div>
+  </div>
+</div>
+
+<!-- MODAL: new user group -->
+<div class="modal-overlay" id="mAddUserGroup">
+  <div class="modal">
+    <div class="m-head"><h3>New user group</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Group name</label><input class="input" placeholder="e.g. Finance, Marketing, HR…"></div>
+      <div class="field"><label>Description</label><input class="input" placeholder="What is this group for?"></div>
+      <div class="field"><label>Copy permissions from</label><select class="select"><option>— None (start empty) —</option><option>Administrator</option><option>Branch Manager</option><option>Finance</option><option>Backoffice</option></select></div>
+      <div class="note">ℹ️ Custom groups are unlimited. After creating, set the group's <b>menu access</b> and <b>CRUD permissions</b> on its page. The 🔒 Students / Parents / Trainers system groups can't be recreated — they own the dedicated interfaces.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create group</button></div>
+  </div>
+</div>
+
+<!-- MODAL: change a user's group -->
+<div class="modal-overlay" id="mEditUserGroups">
+  <div class="modal">
+    <div class="m-head"><h3>Change group — Eka Avaliani</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>User</label><input class="input" value="Eka Avaliani · 01010033333" readonly></div>
+      <div class="field"><label>Group</label><select class="select"><option>🔒 Students (system)</option><option>🔒 Parents (system)</option><option>🔒 Trainers (system)</option><option>Super Admin</option><option>Administrator</option><option>Branch Manager</option><option selected>Finance</option><option>Backoffice</option></select></div>
+      <div class="note">ℹ️ Moving a user changes their menus and CRUD rights to those of the new group immediately. A user can belong to one group.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Save</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add branch -->
+<div class="modal-overlay" id="mAddBranch">
+  <div class="modal">
+    <div class="m-head"><h3>Add branch</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>Name</label><input class="input" placeholder="e.g. Rustavi"></div>
+        <div class="field"><label>Branch Manager</label><select class="select"><option>— Select —</option><option>Add new…</option></select></div>
+      </div>
+      <div class="field"><label>Address</label><input class="input" placeholder="Street, No."></div>
+      <div class="field"><label>Payment due (day of month)</label><input class="input" value="5"></div>
+      <div class="note">ℹ️ Semesters are added separately — from the branch details page (Settings · Semesters).</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create branch</button></div>
+  </div>
+</div>
+
+<!-- MODAL: link semester (branch detail) -->
+<div class="modal-overlay" id="mAddSemester">
+  <div class="modal">
+    <div class="m-head"><h3>Link semester — Tbilisi</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Semester</label><select class="select"><option>Semester I (Autumn)</option><option>Semester II (Spring)</option></select></div>
+      <div class="form-row">
+        <div class="field"><label>Start</label><input class="input" type="date" value="2026-02-14"></div>
+        <div class="field"><label>End</label><input class="input" type="date" value="2026-06-27"></div>
+      </div>
+      <div class="field"><label>Payment due (day of month)</label><input class="input" value="5"></div>
+      <div class="note">ℹ️ Payment and reminder logic will be based on this semester's dates.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Attach</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add group (with branch + trainer assignment) -->
+<div class="modal-overlay" id="mAddGroup">
+  <div class="modal">
+    <div class="m-head"><h3>Add new group</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>Branch</label><select class="select"><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+        <div class="field"><label>Group number</label><input class="input" placeholder="e.g. #13"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Age Cat.</label><select class="select"><option>Genesis (6–8)</option><option>Nexus (9–11)</option><option>Quantum (12–13)</option><option>Apex (14–16)</option></select></div>
+        <div class="field"><label>Intake</label><select class="select"><option>Alpha (2025 Autumn)</option><option>Delta (2026 Spring)</option><option>Sigma (2025 Spring)</option></select></div>
+      </div>
+      <div class="note">ℹ️ A group's <b>program is automatically defined by intake and age category</b> and it is linked to that category's module. Marking a semester as "closed" moves the group to the next semester/category.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create group</button></div>
+  </div>
+</div>
+
+<!-- MODAL: edit group (Edit group details) -->
+<div class="modal-overlay" id="mEditGroup">
+  <div class="modal">
+    <div class="m-head"><h3>Edit group — #1</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>Branch</label><select class="select"><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+        <div class="field"><label>Group number</label><input class="input" value="#4_Genesis"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Age Cat.</label><select class="select"><option>Genesis</option><option>Nexus</option><option>Quantum</option><option>Apex</option></select></div>
+        <div class="field"><label>Intake</label><select class="select"><option>Alpha</option><option>Delta</option><option>Sigma</option></select></div>
+      </div>
+      <div class="field"><label>Status</label><select class="select"><option>Current</option><option>Planned</option><option>Completed</option></select></div>
+      <div class="note">ℹ️ The program is defined by intake and age category.</div>
+    </div>
+    <div class="m-foot"><button class="btn danger m-close">Delete group</button><button class="btn m-close" style="margin-left:auto">Cancel</button><button class="btn primary m-close">Save</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add a student to a group -->
+<div class="modal-overlay" id="mAddStudentToGroup">
+  <div class="modal">
+    <div class="m-head"><h3>Add student — Group #4_Genesis</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Student</label><input class="input" placeholder="🔎 Search by name or personal ID…"></div>
+      <div class="note">ℹ️ Only students of this age category (Genesis) are listed — Active or from the waiting list. Adding them allocates group places.</div>
+      <div class="list-row mt-1"><span class="avatar sm green">D.N</span><div class="grow"><div class="nm">Dato Nadiradze</div><div class="sub">Waiting list · Genesis</div></div><button class="btn sm primary m-close">＋ Add</button></div>
+      <div class="list-row"><span class="avatar sm yellow">E.C</span><div class="grow"><div class="nm">Elene Chkheidze</div><div class="sub">Active · Genesis</div></div><button class="btn sm primary m-close">＋ Add</button></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Close</button></div>
+  </div>
+</div>
+
+<!-- MODAL: remove a student from a group (one of three actions) -->
+<div class="modal-overlay" id="mRemoveFromGroup">
+  <div class="modal">
+    <div class="m-head"><h3>Remove student — Group #4_Genesis</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="note">⚠️ Select one option. The student's history (closed semesters, modules, scores) is preserved in the profile.</div>
+      <div class="field mt-2"><label>Action</label>
+        <span class="pill-tabbar"><span class="p active" data-show="optWaiting">To waiting list</span><span class="p" data-show="optLeave">Withdrawal</span><span class="p" data-show="optMove">To another group</span><span class="p" data-show="optGrad">Graduated</span></span>
+      </div>
+      <div class="opt-block active" id="optWaiting">
+        <div class="note">🕒 The student will move to the waiting list (awaiting a group place in their age category).</div>
+        <div class="field mt-1"><label>Date added to waiting list</label><input class="input" type="date"></div>
+      </div>
+      <div class="opt-block" id="optLeave">
+        <div class="note">🚪 The student will leave the school (Suspended).</div>
+        <div class="form-row mt-1">
+          <div class="field"><label>Withdrawal date</label><input class="input" type="date"></div>
+          <div class="field"><label>Withdrawal reason</label><select class="select"><option>Financial</option><option>Loss of interest</option><option>Moved to another intake</option><option>Other</option></select></div>
+        </div>
+        <div class="field"><label>Comment</label><textarea class="textarea" placeholder="Details…"></textarea></div>
+      </div>
+      <div class="opt-block" id="optMove">
+        <div class="note">🔀 The student will move to another group (of the same age category).</div>
+        <div class="field mt-1"><label>New group</label><select class="select"><option>#7_Genesis · Alpha</option><option>#12_Genesis · Delta</option><option>#15_Genesis · Sigma</option></select></div>
+        <div class="field"><label>Transfer date</label><input class="input" type="date"></div>
+      </div>
+      <div class="opt-block" id="optGrad">
+        <div class="note">🎓 Graduated — the student has completed their studies and does not intend to continue to the next course.</div>
+        <div class="field mt-1"><label>Completion date</label><input class="input" type="date"></div>
+      </div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Confirm</button></div>
+  </div>
+</div>
+
+<!-- MODAL: close a semester → group auto-progresses -->
+<div class="modal-overlay" id="mCloseSemester">
+  <div class="modal">
+    <div class="m-head"><h3>Close semester — Group #4_Genesis</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="note">🔁 When Semester I is closed, the group automatically moves to the next stage. Students are credited with the closed semester and the studied module(s) — with scores and SteveCoins (see student history).</div>
+      <div class="form-row mt-2">
+        <div class="field"><label>Closed semester</label><input class="input" value="Alpha · Semester I" readonly></div>
+        <div class="field"><label>Closing date</label><input class="input" type="date"></div>
+      </div>
+      <div class="field"><label>Next stage (auto)</label><select class="select"><option>Semester II (in the same category)</option><option>Next year — Semester I</option><option>Next age category</option><option>Program completion</option></select></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Close and transfer</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add semester / intake (name + start/end dates) -->
+<div class="modal-overlay" id="mAddSemester">
+  <div class="modal">
+    <div class="m-head"><h3>New semester (intake)</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Name</label><input class="input" placeholder="e.g. Omega"></div>
+      <div class="form-row">
+        <div class="field"><label>Start date</label><input class="input" type="date"></div>
+        <div class="field"><label>End date</label><input class="input" type="date"></div>
+      </div>
+      <div class="note">ℹ️ A semester (intake) happens twice a year. At registration a student is assigned an intake — this, together with the age category, defines their study program.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add exam (any branch) -->
+<div class="modal-overlay" id="mAddExam">
+  <div class="modal">
+    <div class="m-head"><h3>Add exam</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Type</label>
+        <span class="pill-tabbar"><span class="p active">Quiz</span><span class="p">Midterm exam</span><span class="p">Final exam</span></span>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Branch</label><select class="select"><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option><option>Zugdidi</option><option>Poti</option><option>Zestaponi</option></select></div>
+        <div class="field"><label>Group</label><select class="select"><option>Group #1 · Robotics</option><option>Group #3 · Robotics</option><option>Group #7 · Web Development</option></select></div>
+      </div>
+      <div class="field"><label>Date</label><input class="input" type="date" value="2025-11-29"></div>
+      <div class="field"><label>Note (optional)</label><input class="input" placeholder="e.g. Module 3 summary"></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add</button></div>
+  </div>
+</div>
+
+<!-- MODAL: change student status (status-specific fields filled manually) -->
+<div class="modal-overlay" id="mChangeStatus">
+  <div class="modal">
+    <div class="m-head"><h3>Change status — Nika Beridze</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>New status</label>
+        <span class="pill-tabbar"><span class="p active" data-show="stActive">Active</span><span class="p" data-show="stWaiting">Waiting list</span><span class="p" data-show="stSuspended">Suspended</span><span class="p" data-show="stGrad">Graduated</span></span>
+      </div>
+      <div class="note">ℹ️ Fields specific to the selected status are filled in manually.</div>
+      <div class="opt-block active" id="stActive"><div class="note mt-2">✅ The student is active — no additional fields needed.</div></div>
+      <div class="opt-block" id="stWaiting">
+        <div class="field mt-2"><label>Date added to list</label><input class="input" type="date"></div>
+      </div>
+      <div class="opt-block" id="stSuspended">
+        <div class="form-row mt-2">
+          <div class="field"><label>Withdrawal date</label><input class="input" type="date"></div>
+          <div class="field"><label>Withdrawal reason</label><select class="select"><option>Financial</option><option>Moved to another intake</option><option>Loss of interest</option><option>Other</option></select></div>
+        </div>
+        <div class="field"><label>Comment</label><textarea class="textarea" placeholder="Details…"></textarea></div>
+      </div>
+      <div class="opt-block" id="stGrad">
+        <div class="note mt-2">🎓 Graduated — the student has completed their studies and does not intend to continue to the next course.</div>
+        <div class="field mt-1"><label>Completion date</label><input class="input" type="date"></div>
+      </div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Update status</button></div>
+  </div>
+</div>
+
+<!-- MODAL: attach file to student -->
+<div class="modal-overlay" id="mAttachFile">
+  <div class="modal">
+    <div class="m-head"><h3>Attach file</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Type</label><select class="select"><option>Contract</option><option>Document</option><option>Certificate</option><option>Other</option></select></div>
+      <div class="field"><label>File</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Drag or select a file</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Attach</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add / edit project -->
+<div class="modal-overlay" id="mAddProject">
+  <div class="modal">
+    <div class="m-head"><h3>Project</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Name</label><input class="input" placeholder="e.g. Robotics Championship 2025"></div>
+      <div class="form-row">
+        <div class="field"><label>Program / Track</label><select class="select"><option>Robotics</option><option>Mob Application</option><option>Web Development</option><option>Minecraft</option><option>Global Leadership</option><option>Shared</option></select></div>
+        <div class="field"><label>Branch</label><select class="select"><option>All branches</option><option>Tbilisi</option><option>Batumi</option><option>Kutaisi</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Start</label><input class="input" type="date"></div>
+        <div class="field"><label>End</label><input class="input" type="date"></div>
+      </div>
+      <hr class="sep">
+      <b style="font-size:13px">🪙 SteveCoins by result</b>
+      <div class="form-row mt-1">
+        <div class="field"><label>Participation</label><input class="input" value="15"></div>
+        <div class="field"><label>Win</label><input class="input" value="50"></div>
+      </div>
+      <div class="field"><label>Completion</label><input class="input" value="30"></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Save</button></div>
+  </div>
+</div>
+
+<!-- MODAL: link student to project (outcome → coins) -->
+<div class="modal-overlay" id="mLinkStudent">
+  <div class="modal">
+    <div class="m-head"><h3>Link student — Robotics Championship 2025</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Student</label><input class="input" placeholder="🔎 Search by name or personal ID…"></div>
+      <div class="field"><label>Result</label>
+        <span class="pill-tabbar"><span class="p active">Participation (+15)</span><span class="p">Win (+50)</span><span class="p">Completion (+30)</span></span>
+      </div>
+      <div class="note">🪙 SteveCoins matching the selected result are automatically added to the student's balance.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Link and credit</button></div>
+  </div>
+</div>
+
+<!-- MODAL: link THIS student to a project from the profile (project + outcome → coins) -->
+<div class="modal-overlay" id="mLinkToProject">
+  <div class="modal">
+    <div class="m-head"><h3>Link to project — Nika Beridze</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Project</label><select class="select"><option>Robotics Championship 2025</option><option>Demo Day</option><option>Web Hackathon 2026</option></select></div>
+      <div class="field"><label>Result</label>
+        <span class="pill-tabbar"><span class="p active">Participation</span><span class="p">Win</span><span class="p">Completion</span></span>
+      </div>
+      <div class="note">🪙 The SteveCoins defined for the selected project's result are automatically added to the student's balance.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Link and credit</button></div>
+  </div>
+</div>
+
+<!-- MODAL: edit schedule slot (lesson from roadmap + lecturer) -->
+<div class="modal-overlay" id="mAssignLecturer">
+  <div class="modal">
+    <div class="m-head"><h3>Assign lecturer</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="note">ℹ️ Drop the lecture into the slot from the plan — now specify who will conduct it.</div>
+      <div class="form-row mt-2">
+        <div class="field"><label>Group</label><input class="input" value="#2 Quantum" readonly></div>
+        <div class="field"><label>Time</label><input class="input" value="10:00–11:15" readonly></div>
+      </div>
+      <div class="field"><label>Lecture (from plan)</label><input class="input" value="GL_ALPHA #31 — Signature Day" readonly></div>
+      <div class="field"><label>Lecturer *</label><select class="select"><option value="">— Select lecturer —</option><option>Enri Lominadze</option><option>Toma Potskhverashvili</option><option>Beso Meskhia</option><option>Rezo Darsavelidze</option><option>Saba Samkharadze</option></select></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Save</button></div>
+  </div>
+</div>
+
+<!-- MODAL: roadmap reference -->
+<div class="modal-overlay" id="mRoadmap">
+  <div class="modal lg">
+    <div class="m-head"><h3>ROADMAP — program plan</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Program</label><select class="select"><option>Robotics / AlgoPlay — Nexus</option><option>Global Leadership</option><option>Mobile App Development</option><option>Web Development</option></select></div>
+      <table class="tbl compact">
+        <thead><tr><th>#</th><th>Lecture</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Programming fundamentals · AlgoPlay technical blocks</td></tr>
+          <tr><td>2</td><td>Al.2 — Waving Flag · coding system</td></tr>
+          <tr><td>3</td><td>Al.3 — Cowboy · "constant motion" argument</td></tr>
+          <tr><td>4</td><td>Al.4 — Windmill · "motion direction" argument</td></tr>
+          <tr><td>5</td><td>Al.5 — Pendulum Ride · "motion duration" argument</td></tr>
+          <tr><td>…</td><td>…</td></tr>
+        </tbody>
+      </table>
+      <div class="note mt-1">📋 The ROADMAP defines the sequence of lectures; slots in the schedule are filled according to this plan.</div>
+    </div>
+    <div class="m-foot"><button class="btn primary m-close">Close</button></div>
+  </div>
+</div>
+
+<!-- MODAL: create learning module -->
+<div class="modal-overlay" id="mAddModule">
+  <div class="modal">
+    <div class="m-head"><h3>Add module — Alpha · Nexus (9–11)</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Module template (Nexus)</label><select class="select"><option>Robotics → Programming</option><option>Global Leadership</option></select></div>
+      <div class="form-row">
+        <div class="field"><label>Age Category</label><input class="input" value="Nexus (9–11)" readonly></div>
+        <div class="field"><label>Semesters (total)</label><input class="input" value="12" readonly></div>
+      </div>
+      <div class="note">ℹ️ This <b>instantiates the selected template</b> for the Alpha · Nexus intake — lectures and materials are copied from the template and become editable for this intake-category. A brand-new module is <b>not</b> created here; create new master modules in the <b>Module Templates</b> menu.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add and open structure</button></div>
+  </div>
+</div>
+
+<!-- MODAL: new module template (master, within an age category) -->
+<div class="modal-overlay" id="mAddTemplate">
+  <div class="modal">
+    <div class="m-head"><h3>New module — Nexus (9–11)</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Module name</label><input class="input" placeholder="e.g. Robotics → Programming"></div>
+      <div class="field"><label>Age Category</label><input class="input" value="Nexus (9–11)" readonly></div>
+      <div class="form-row">
+        <div class="field"><label>Duration (years) — by category</label><input class="input" value="6" readonly></div>
+        <div class="field"><label>Semesters (total)</label><input class="input" value="12" readonly></div>
+      </div>
+      <div class="note">ℹ️ The number of semesters is <b>predefined by the age category</b> (Genesis 16 · Nexus 12 · Quantum 8 · Apex 4). The module opens with empty semester slots — add lectures, midterms and exams with their materials.</div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Create and open template</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add training to a semester -->
+<div class="modal-overlay" id="mAddTraining">
+  <div class="modal">
+    <div class="m-head"><h3>Add training</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>Year</label><select class="select"><option>Year I</option><option>Year II</option></select></div>
+        <div class="field"><label>Semester</label><select class="select"><option>Semester I</option><option>Semester II</option></select></div>
+      </div>
+      <div class="field"><label>Training title</label><input class="input" placeholder="e.g. Al.5 Pendulum Ride — motion duration"></div>
+      <div class="field"><label>Sequence (# session)</label><input class="input" type="number" value="6"></div>
+      <div class="field"><label>Learning Materials</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Attach syllabus / lesson plan / assignment / exam material</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add midterm to a semester -->
+<div class="modal-overlay" id="mAddMidterm">
+  <div class="modal">
+    <div class="m-head"><h3>Add midterm exam</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>Course (year)</label><select class="select"><option>Course I</option><option>Course II</option></select></div>
+        <div class="field"><label>Semester</label><select class="select"><option>Semester I</option><option>Semester II</option></select></div>
+      </div>
+      <div class="field"><label>When conducted</label><input class="input" placeholder="e.g. after completing modules 1–2 (16 trainings)"></div>
+      <div class="field"><label>Midterm (P) — max score</label><input class="input" type="number" value="100"></div>
+      <div class="field"><label>Exam material</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Attach exam material / procedure</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add</button></div>
+  </div>
+</div>
+
+<!-- MODAL: add final exam to a semester -->
+<div class="modal-overlay" id="mAddModExam">
+  <div class="modal">
+    <div class="m-head"><h3>Add final exam</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>Course (year)</label><select class="select"><option>Course I</option><option>Course II</option></select></div>
+        <div class="field"><label>Semester</label><select class="select"><option>Semester I</option><option selected>Semester II</option></select></div>
+      </div>
+      <div class="field"><label>When conducted</label><input class="input" placeholder="e.g. after completing the semester / program"></div>
+      <div class="field"><label>Final (Q) — max score</label><input class="input" type="number" value="100"></div>
+      <div class="field"><label>Exam material</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Attach exam material / procedure</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Add</button></div>
+  </div>
+</div>
+
+<!-- MODAL: attach learning material to a training -->
+<div class="modal-overlay" id="mAttachMaterial">
+  <div class="modal">
+    <div class="m-head"><h3>Attach learning material</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="field"><label>Material type</label><select class="select"><option>Syllabus</option><option>Lesson plan</option><option>Homework</option><option>Exam material</option><option>Presentation / other</option></select></div>
+      <div class="field"><label>File or link</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Drag a file or paste a link</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Attach</button></div>
+  </div>
+</div>
+
+<!-- MODAL: edit a lecture (all fields + attached files) -->
+<div class="modal-overlay" id="mEditLecture">
+  <div class="modal">
+    <div class="m-head"><h3>Edit lecture</h3><button class="m-close">×</button></div>
+    <div class="m-body">
+      <div class="form-row">
+        <div class="field"><label>Lecture title</label><input class="input" value="RB — Br.1 Pirate Ship"></div>
+        <div class="field"><label>Sequence (# session)</label><input class="input" type="number" value="1"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Type</label><select class="select"><option>Training</option><option>Midterm</option><option>Final exam</option></select></div>
+        <div class="field"><label>Duration (min)</label><input class="input" type="number" value="120"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Year</label><select class="select"><option>Year I</option><option>Year II</option><option>Year III</option></select></div>
+        <div class="field"><label>Semester</label><select class="select"><option>Semester 1</option><option>Semester 2</option><option>Semester 3</option></select></div>
+      </div>
+      <div class="field"><label>Description / notes</label><textarea class="textarea" placeholder="Lesson goals, plan, notes…">Build the Pirate Ship model, explore the pendulum mechanism and motion.</textarea></div>
+      <div class="form-row">
+        <div class="field"><label>Conducted status</label><div class="pill-tabbar"><span class="p active">✔ Conducted</span><span class="p">◻ To conduct</span></div></div>
+        <div class="field"><label>Conducted date</label><input class="input" type="date" value="2025-10-20"></div>
+      </div>
+      <hr class="sep">
+      <div class="flex between"><b style="font-size:13px">Attached files</b><span class="wire-tag">materials</span></div>
+      <div class="hist-block mt-1"><div class="h-body">
+        <div class="list-row"><span>📄</span><div class="grow">Br1_PirateShip.pdf</div><a href="#">⤓ Download</a> · <a href="#">🗑</a></div>
+        <div class="list-row"><span>🎬</span><div class="grow">PirateShip_demo.mp4 <span class="muted" style="font-size:11px">(MP4 · 60MB)</span></div><a href="#">⤓ Download</a> · <a href="#">🗑</a></div>
+        <div class="list-row"><span>🔗</span><div class="grow">LEGO build guide (link)</div><a href="#">Open</a> · <a href="#">🗑</a></div>
+      </div></div>
+      <div class="field mt-1"><label>Add file or link</label><div class="note" style="text-align:center; border-style:dashed; cursor:pointer">⤴ Drag a file or paste a link</div></div>
+    </div>
+    <div class="m-foot"><button class="btn m-close">Cancel</button><button class="btn primary m-close">Save lecture</button></div>
+  </div>
+</div>
+
+<script src="assets/sja.js"></script>
+</body>
+</html>
